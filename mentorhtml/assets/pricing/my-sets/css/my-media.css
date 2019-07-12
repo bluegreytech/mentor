@@ -1,0 +1,639 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+
+@media only screen and (min-width: 778px) {
+  .new-pricing-page .pricing-btn.btn-action:hover {
+    background: #007fb6!important;
+    color: #fff!important;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+  }
+
+  .new-pricing-page .price-list-box .price-list.learn .pricing-btn.btn-action:hover {
+    background: #f7aa06!important;
+    color: #fff!important;
+  }
+
+  .new-pricing-page .price-list-box .price-list.explore .pricing-btn.btn-action:hover {
+    background: #d3452e!important;
+    color: #fff!important;
+  }
+
+  .new-pricing-page .price-list-box .price-list.realize .pricing-btn.btn-action:hover {
+    background: #008f4d!important;
+    color: #fff!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-for-desktop {
+    display: none;
+  }
+
+  .logo-for-mobile {
+    display: inline-block;
+  }
+
+  .new-pricing-page .faq-section .fa {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+    .new-pricing-page .testimonials-section #content-slider li .testi-img {
+    width: 100px;
+    height: 100px;
+
+    padding: 3px;
+   
+}
+
+    .tap-mobile-title {
+        display:none!important
+    }
+    .tap-mobile-text {
+        display:block!important
+    }
+    .new-pricing-page .signup-banner .validation{
+   display:none
+}
+
+    .new-pricing-page .price-list-box .pricing-tab.upgrade-selection .drop-down .col-md-4 {
+    display:block!important
+}
+    .new-pricing-page .price-list-box .pricing-tab.upgrade-selection .drop-down .col-md-4.active-tab {
+    display:block!important
+ 
+}
+    .new-pricing-page .price-list-box .pricing-tab.upgrade-selection .drop-down  {
+    display:none!important
+}
+.new-pricing-page .price-list-box .pricing-tab.upgrade-selection .select-down .col-md-4  {
+   text-align:center
+}
+.new-pricing-page .price-list-box .pricing-tab.upgrade-selection  .select-down .fa.fa-angle-down {
+     display:none!important
+}
+    .new-pricing-page .price-list-box .pricing-tab.upgrade-selection {
+     margin-left: 0px;
+}
+  .new-pricing-page .price-list-box .price-list .view-features .pricing-btn {
+    background: #fff;
+    width: 180px;
+  }
+
+  .new-pricing-page .submit-banner .submit-form-box textarea {
+    height: 94px;
+    margin-bottom: 15px;
+  }
+
+  .new-pricing-page .submit-banner .submit-dropdown .selectedtext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .new-pricing-page .compare-features {
+    display: none;
+  }
+
+  .cycle-bg-image {
+    background-position-x: center;
+  }
+
+  .new-pricing-page .fa-tooltip .tooltip-popup {
+    right: 5px;
+    left: inherit;
+    top: 12px;
+  }
+
+  .new-pricing-page .fa-tooltip .tooltip-popup:after {
+    display: none;
+  }
+
+  h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    line-height: normal!important;
+  }
+
+  .new-pricing-page .price-list-box .tab-details .price-list ul,
+    .new-pricing-page .price-list-box .tab-details .price-list h1,
+    .new-pricing-page .price-list-box .tab-details .price-list p.disc,
+    .new-pricing-page .price-list-box .tab-details .rate {
+    min-height: 1px!important;
+  }
+
+  .scroll-call {
+    display: none!important;
+  }
+
+  .new-banner-head {
+    margin-top: 50px;
+  }
+
+  .new-pricing-page h6 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .new-pricing-page .testimonials-section #content-slider li small {
+    font-size: 14px;
+  }
+
+  .new-pricing-page .pricing-main-heading {
+    padding-top: 35px!important;
+  }
+
+  .new-pricing-page .pricing-main-heading h1 {
+  }
+
+  .new-banner-head#pricing-banner {
+    background: url(../../../../../mindlerdashboard.imgix.net/pricing-page/pricing-banner.jpg);
+    background-size: auto 208px!important;
+    background-position: center;
+  }
+
+  .new-pricing-page .price-list-box {
+    background: #eee!important;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .drop-down {
+    position: absolute;
+    z-index: 9;
+    top: 64px;
+    border: 1px solid #ddd;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1px 6px 0 rgba(162, 162, 162, 0.5);
+    box-shadow: 0 1px 6px 0 rgba(162, 162, 162, 0.5);
+    -webkit-box-shadow: 0 1px 6px 0 rgba(162, 162, 162, 0.5);
+    box-shadow: 0 1px 6px 0 rgba(162, 162, 162, 0.5);
+    width:100%
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .col-md-4.active-tab {
+    background: #f6f6f6;
+    color: #484848;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .col-md-4.active-tab p {
+    color: #888;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .select-down .fa.fa-angle-down {
+    position: absolute;
+    color: #fff;
+    z-index: 999;
+    right: 15px;
+    font-size: 26px;
+    top: 20px;
+    font-weight: 400!important;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .select-down .col-md-4 {
+    background: #007fb6;
+    color: #fff;
+    border-radius: 4px;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .select-down .col-md-4 p {
+    color: #fff;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .select-down {
+    display: block;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .drop-down {
+    display: none;
+  }
+
+  .new-pricing-page .price-list-box .vertical-tab .col-md-12 {
+    background: #007fb6;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 5px!important;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .new-pricing-page .price-list-box .vertical-tab .col-md-12 p {
+    font-size: 13px;
+    margin-top: 2px;
+    line-height: 16px;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+
+  .new-pricing-page .price-list-box .horizontal-tab {
+    padding: 0 15px;
+    z-index: 9;
+  }
+
+  .new-pricing-page .price-list-box {
+    padding-top: 0px;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab {
+    position: relative;
+    left: 0;
+    margin-left: 0;
+    border-radius: 4px;
+    overflow: visible;
+    border: 0;
+    z-index: 9;
+    background: #fff;
+    width: 100%;
+    top: -30px;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .col-md-4 {
+    padding: 12px 20px!important;
+    font-weight: 600;
+    font-size: 18px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    min-height: 1px;
+    text-align: left;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .col-md-4 p {
+    font-size: 13px;
+    margin-top: 2px;
+    line-height: 16px;
+  }
+
+  .new-pricing-page .price-list-box .pricing-tab .col-md-4 .span-line {
+    height: 58px;
+    margin-top: -30px;
+  }
+
+  .new-pricing-page .price-list-box .for-8-9,
+    .new-pricing-page .price-list-box .for-graduates {
+    padding: 0;
+  }
+
+  .new-pricing-page .price-list-box .tab-details .col-md-4,
+    .new-pricing-page .price-list-box .tab-details .col-md-3,
+    .new-pricing-page .price-list-box .tab-details .col-md-6 {
+    margin-bottom: 60px;
+  }
+
+  .program-feature-section {
+    display: none;
+  }
+
+  .new-pricing-page .career-guidance-baaner {
+    background: #007fb6;
+    height: auto;
+    color: #fff;
+    background-position: center;
+  }
+
+  .new-pricing-page .career-guidance-baaner .col-md-12 {
+    padding-left: 15px!important;
+    text-align: center;
+  }
+
+  .new-pricing-page .career-guidance-baaner .col-md-12 .height {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .new-pricing-page .career-guidance-baaner .col-md-12 .height h2 {
+    margin-bottom: 15px!important;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 .height div {
+    background: rgba(126, 125, 124, 0.91);
+    text-align: center;
+    color: #fff;
+    margin: 0px!important;
+    padding: 0 20px;
+    line-height: normal!important;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 .height div:first-child {
+    padding-top: 20px!important;
+        /* line-height:40px!important; */
+    padding-bottom: 0px!important;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 .height div:last-child {
+    padding-bottom: 20px;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 .height div:nth-child(2) {
+    padding-bottom: 10px;
+    padding-top: 10px!important;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 span {
+        /* display:inline; */;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 span .fa-circle {
+    color: #fff;
+  }
+
+  .new-pricing-page .student-baaner {
+    background: url(../../../../../mindlerimages.imgix.net/home/pricing-student-banner.jpg);
+    background-size: auto 440px;
+    height: 440px;
+    background-position: right -380px top;
+  }
+
+  .new-pricing-page .student-baaner .col-md-12 .height {
+    height: 440px;
+  }
+
+  .new-pricing-page .spotlight-banner {
+    text-align: center;
+  }
+
+  .spotlight-banner.p-row .row .img-part {
+    text-align: center;
+  }
+
+  .spotlight-banner.p-row .row .img-part img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .spotlight-banner.p-row .row h3 {
+    margin-bottom: 20px;
+  }
+
+  .spotlight-banner.p-row .row h6 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+
+  .spotlight-banner.p-row .row .content-part div {
+    display: initial;
+    height: auto;
+  }
+
+  .new-pricing-page .call-banner {
+    background: #e1f4f8;
+    padding: 40px 0;
+    height: auto;
+    text-align: center;
+  }
+
+  .new-pricing-page .call-banner .height {
+    height: 100%;
+    display: block;
+  }
+
+  .new-pricing-page .call-banner .contact-banner-details {
+    padding-left: 0;
+    background: #e1f4f8;
+  }
+
+  .new-pricing-page .call-banner .contact-banner-details div:first-child {
+    font-size: 24px!important;
+    line-height: normal!important;
+    margin-bottom: 12px!important;
+  }
+
+  .new-pricing-page .call-banner .contact-banner-details div:nth-child(2) {
+    font-size: 22px!important;
+    line-height: normal!important;
+    margin-bottom: 5px!important;
+  }
+
+  .new-pricing-page .call-banner .contact-banner-details div:nth-child(3) {
+    font-size: 15px!important;
+    line-height: normal!important;
+  }
+
+  .new-pricing-page .call-banner .pricing-mobile-show {
+    margin-bottom: 20px;
+  }
+
+  .new-pricing-page .faq-section .faq-box p {
+    padding: 10px;
+    padding-top: 0px;
+    margin-top: 0px;
+    line-height: normal;
+    display: none;
+  }
+
+  .new-pricing-page .faq-section .faq-box strong {
+    padding: 10px;
+    line-height: normal;
+    font-size: 15px;
+    margin-bottom: 0px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+  }
+
+  .new-pricing-page .faq-section .faq-box {
+    margin-top: 8px;
+    background: #f9f9f9;
+    position: relative;
+  }
+
+  .new-pricing-page .text-gray {
+    margin-bottom: 30px!important;
+  }
+
+  .pricing-mobile-show {
+    display: block;
+  }
+
+  .pricing-desktop-show {
+    display: none;
+  }
+
+  .new-pricing-page .faq-section .fa {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    color: #aaa;
+    font-size: 17px;
+    display: block!important;
+  }
+
+  .new-pricing-page .faq-section {
+    padding: 40px 0;
+  }
+
+  .new-pricing-page .signup-banner {
+    background: #007fb6;
+    color: #fff;
+    text-align: center;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .new-pricing-page .signup-banner .height {
+    display: table-cell;
+    vertical-align: middle;
+    height: auto;
+  }
+
+  .new-pricing-page .signup-banner .height input {
+    float: left;
+    width: 100%;
+  }
+
+  .new-pricing-page .signup-banner .height .btn-orange {
+    border-radius: 2px;
+    width: 100%;
+    float: left;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .new-pricing-page .signup-banner .height div:first-child {
+    font-size: 24px!important;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .new-pricing-page .signup-banner .height div:nth-child(2) {
+    line-height: 20px!important;
+    margin-bottom: 0px!important;
+  }
+
+
+  .new-pricing-page .signup-banner .height div.validation{
+     margin-bottom: 0px!important;
+     display:none
+}
+  .new-pricing-page .signup-banner div.validation-mobile {
+   display:block;
+          margin-bottom: 0px!important;
+}
+
+
+  .new-pricing-page .signup-banner .height div:nth-child(2) br {
+    display: none;
+  }
+
+  .new-pricing-page textarea {
+    font-size: 13px;
+  }
+
+  .new-pricing-page .submit-banner .submit-dropdown .selectedtext {
+    font-size: 13px;
+  }
+
+  .new-pricing-page .submit-banner .submit-form-box {
+    padding: 20px;
+  }
+
+  .new-pricing-page .submit-banner {
+    background: url(../../../../../mindlerdashboard.imgix.net/pricing-page/mobile-bg-2.jpg) no-repeat #f7f5f5;
+    background-size: auto 634px;
+    height: auto;
+    background-position: top right -88px;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  .new-pricing-page .submit-banner .submit-form-box .col-md-6 {
+    padding: 0!important;
+  }
+
+  .new-pricing-page .submit-banner .submit-form-box .btn-orange {
+    margin-top: 0px;
+  }
+
+  .testimonials-section {
+    background: #007fb6;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .new-pricing-page .testimonials-section #content-slider li .testi-img {
+    margin: auto;
+    float: none;
+  }
+
+  #content-slider li p .img-comma {
+    width: 20px;
+  }
+
+  .new-pricing-page .testimonials-section #content-slider li p {
+    padding-left: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .new-pricing-page .testimonials-section #content-slider li small {
+    padding-left: 30px;
+  }
+
+  .new-pricing-page .testimonials-section .item .lSSlideOuter .lSPager.lSpg {
+    margin-top: 30px!important;
+  }
+
+  .new-pricing-page .submit-banner .submit-dropdown ul {
+    top: 38px;
+    z-index: 99;
+  }
+
+  .new-pricing-page .price-list-box .price-list .rate,
+    .new-pricing-page .price-list-box .price-list p.disc,
+    .new-pricing-page .price-list-box .price-list ul,
+    .new-pricing-page .price-list-box .price-list .icon-box {
+    min-height: 0px;
+  }
+
+  .new-pricing-page .price-list-box .price-list {
+    padding-bottom: 50px;
+  }
+
+  .new-pricing-page .price-list-box .price-list.learn .pricing-btn.btn-action {
+    background: #f7aa06;
+    color: #fff!important;
+  }
+
+  .new-pricing-page .price-list-box .price-list.explore .pricing-btn.btn-action {
+    background: #d3452e;
+    color: #fff!important;
+  }
+
+  .new-pricing-page .price-list-box .price-list.preview .pricing-btn.btn-action {
+    background: #007fb6;
+    color: #fff!important;
+  }
+
+  .new-pricing-page .price-list-box .price-list.realize .pricing-btn.btn-action {
+    background: #008f4d;
+    color: #fff!important;
+  }
+
+  .new-pricing-page .price-list-box .price-list .view-features {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .new-pricing-page .submit-banner .submit-dropdown ul {
+    top: 37px;
+    z-index: 99;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .new-pricing-page .fa-tooltip:hover .tooltip-popup {
+    display: block;
+  }
+}

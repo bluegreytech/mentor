@@ -55,3 +55,20 @@ ERROR - 2019-07-11 06:32:37 --> Severity: Notice --> Undefined variable: IsActiv
 ERROR - 2019-07-11 06:32:37 --> Severity: Notice --> Undefined variable: ProgramId C:\xampps\htdocs\mentor\admin\application\views\Program\ProgramAdd.php 122
 ERROR - 2019-07-11 06:34:18 --> 404 Page Not Found: App-assets/images
 ERROR - 2019-07-11 06:35:17 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:51:31 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:51:31 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-07-11 12:51:31 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-07-11 12:51:44 --> Severity: Notice --> Undefined variable: session C:\xampp\htdocs\mentor\admin\application\controllers\Login.php 44
+ERROR - 2019-07-11 12:51:44 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:51:50 --> Severity: Notice --> Undefined variable: session C:\xampp\htdocs\mentor\admin\application\controllers\Login.php 44
+ERROR - 2019-07-11 12:51:50 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:52:00 --> Severity: Notice --> Undefined variable: session C:\xampp\htdocs\mentor\admin\application\controllers\Login.php 44
+ERROR - 2019-07-11 12:52:00 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:52:39 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:52:40 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-11 12:52:40 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-11 12:52:40 --> 404 Page Not Found: Program/app-assets
+ERROR - 2019-07-11 12:52:48 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:52:48 --> 404 Page Not Found: Userrole/app-assets
+ERROR - 2019-07-11 12:52:51 --> 404 Page Not Found: App-assets/images
+ERROR - 2019-07-11 12:52:51 --> 404 Page Not Found: Userrole/app-assets
