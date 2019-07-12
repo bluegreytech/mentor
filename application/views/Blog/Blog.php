@@ -1,4 +1,7 @@
-<?php include 'header.php';?>
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->view('common/header');
+?>
 
 <section class="header-layer login-bg">
    <div class="black-sheet">
@@ -81,4 +84,6 @@
   </div>
 </section>
 
-<?php include 'footer.php';?>
+<?php 
+ $this->load->view('common/footer');
+?>
