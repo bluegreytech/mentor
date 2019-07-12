@@ -934,3 +934,105 @@ ERROR - 2019-07-12 12:35:40 --> Severity: Warning --> include(): Failed opening 
 ERROR - 2019-07-12 12:36:33 --> 404 Page Not Found: Default/images
 ERROR - 2019-07-12 12:36:33 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
 ERROR - 2019-07-12 12:36:33 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:15 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:37:15 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:15 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:15 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:37:15 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:15 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:16 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:37:16 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:16 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:29 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:37:34 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:45:48 --> 404 Page Not Found: Home/Registeruser
+ERROR - 2019-07-12 12:45:48 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:45:48 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:45:53 --> 404 Page Not Found: Home/Registeruser
+ERROR - 2019-07-12 12:45:53 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:45:53 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:46:46 --> 404 Page Not Found: Home/Registeruser
+ERROR - 2019-07-12 12:46:46 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:46:46 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:46:48 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:46:48 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:46:48 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:46:50 --> 404 Page Not Found: Home/Registeruser
+ERROR - 2019-07-12 12:46:50 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:46:50 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:48:37 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:37 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:37 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:48:37 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:37 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:38 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:48:38 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:38 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:40 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:48:40 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:40 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:42 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:48:42 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:42 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:48:42 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:42 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:42 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:42 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:48:42 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:48:42 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:16 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:49:16 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:16 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:16 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:49:16 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:16 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:16 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:49:16 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:16 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:18 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:49:18 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:18 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:20 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:49:20 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:20 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:20 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:49:20 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:20 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:20 --> 404 Page Not Found: Assets/prelogin_new
+ERROR - 2019-07-12 12:49:20 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:49:20 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:50:10 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-12 12:50:10 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:50:10 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:50:10 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:50:10 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:50:10 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:50:10 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-12 12:50:10 --> Severity: Warning --> include(C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-12 12:50:10 --> Severity: Warning --> include(): Failed opening 'C:\xampp\htdocs\mentor\application\views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182

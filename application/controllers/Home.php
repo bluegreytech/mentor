@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 		$this->load->view('Home/Home');
 	 }
 
-	 public function Registeruser(){
+	 public function Register(){
 		$this->load->view('Register/Registeradd');
 	 }
 	public function login()

@@ -41,9 +41,9 @@
                      <i class="fa fa-phone"></i>+91 8128738522
                      </a>
                      <a href="<?php echo base_url()?>About" style="">About Us</a>
-                     <a target="_blank" href="schools.php">Mentoring at School</a>
-                     <a href="<?php echo base_url()?>Contact" style="">Contact Us</a>
-                     <a href="<?php echo base_url()?>Home/Registeruser"">Sign Up </a>
+                     <a target="_blank" href="<?php echo base_url()?>home/contact">Mentoring at School</a>
+                     <a href="<?php echo base_url()?>home/ontact" style="">Contact Us</a>
+                     <a href="<?php echo base_url();?>home/register">Sign Up </a>
                   </div>
                 </div>
             </div>
@@ -440,7 +440,7 @@
                 </li>
                 <li  class="blue-link">
                      <span>New user?</span>
-                     <a href="register.php">Sign up</a>
+                     <a href="<?php echo base_url();?>home/register">Sign up</a>
                 </li>
                
             </ul>
