@@ -52,7 +52,7 @@
             <div class="container" >
                <div class="row" >
                   <div class="col-md-2 left">
-                     <a href="index.php">
+                     <a href="<?php echo base_url(); ?>Home">
                      <img src="<?php echo base_url(); ?>default/images/home/mentor-big-bluec6eb.png?w=300" class="logo-blue logo-desktop"  >
                      
                      </a>
@@ -353,7 +353,7 @@
                         </div>
                      </div>
                     </div>
-                     <a href="blog/index.html" target="_blank">Blog<span class="active-line"></span></a>
+                     <a href="<?php echo base_url()?>Blog" target="_blank">Blog<span class="active-line"></span></a>
                      <a href="<?php echo base_url()?>About/Pricing">Pricing<span class="active-line"></span></a>
                      <a href="<?php echo base_url(); ?>Home/login" >Log In<span class="active-line"></span>
                     </a>
@@ -432,7 +432,7 @@
                </li>
                <li> <a href="pricing.php">Pricing</a></li>
                <li><a href="#">Career Library</a></li>
-               <li><a href="#">Blog</a></li>
+               <li><a href="<?php echo base_url()?>Blog">Blog</a></li>
                <li><a href="contact-us.php">Contact us</a></li>
                 <li class="blue-link"> 
                      <span>Existing user?</span>
