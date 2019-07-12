@@ -57,12 +57,12 @@ $this->load->view('common/header');
                <p>   <small>-Using-</small>              </p>
                <div class="col-md-6 social-link-facebook" style="padding-left:0; padding-right:5px">
                   <a href="#" class="socialbutton">
-                  <img src="assets/prelogin_new/img/facebook-icon.png"/>facebook
+                  <img src="<?php echo base_url()?>default/assets/prelogin_new/img/facebook-icon.png"/>facebook
                   </a>
                </div>
                <div class="col-md-6 social-link-google"  style="padding-right:0; padding-left:5px">
                   <a href="#" class="socialbutton">
-                  <img src="assets/prelogin_new/img/google-icon.png"  />google
+                  <img src="<?php echo base_url()?>default/assets/prelogin_new/img/google-icon.png"  />google
                   </a>
                </div>
               <div class="clear"></div><p><small>-Or Using-</small></p>
