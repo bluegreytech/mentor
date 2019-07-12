@@ -41,9 +41,9 @@
                      <i class="fa fa-phone"></i>+91 8128738522
                      </a>
                      <a href="<?php echo base_url()?>About" style="">About Us</a>
-                     <a target="_blank" href="schools.php">Mentoring at School</a>
-                     <a href="<?php echo base_url()?>Contact" style="">Contact Us</a>
-                     <a href="<?php echo base_url()?>Home/Registeruser"">Sign Up </a>
+                     <a target="_blank" href="<?php echo base_url()?>home/contact">Mentoring at School</a>
+                     <a href="<?php echo base_url()?>home/contact" style="">Contact Us</a>
+                     <a href="<?php echo base_url();?>home/register">Sign Up </a>
                   </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             <div class="container" >
                <div class="row" >
                   <div class="col-md-2 left">
-                     <a href="<?php echo base_url(); ?>Home">
+                     <a href="index.php">
                      <img src="<?php echo base_url(); ?>default/images/home/mentor-big-bluec6eb.png?w=300" class="logo-blue logo-desktop"  >
                      
                      </a>
@@ -353,7 +353,7 @@
                         </div>
                      </div>
                     </div>
-                     <a href="<?php echo base_url()?>Blog" target="_blank">Blog<span class="active-line"></span></a>
+                     <a href="blog/index.html" target="_blank">Blog<span class="active-line"></span></a>
                      <a href="<?php echo base_url()?>About/Pricing">Pricing<span class="active-line"></span></a>
                      <a href="<?php echo base_url(); ?>Home/login" >Log In<span class="active-line"></span>
                     </a>
@@ -432,7 +432,7 @@
                </li>
                <li> <a href="pricing.php">Pricing</a></li>
                <li><a href="#">Career Library</a></li>
-               <li><a href="<?php echo base_url()?>Blog">Blog</a></li>
+               <li><a href="#">Blog</a></li>
                <li><a href="contact-us.php">Contact us</a></li>
                 <li class="blue-link"> 
                      <span>Existing user?</span>
@@ -440,7 +440,7 @@
                 </li>
                 <li  class="blue-link">
                      <span>New user?</span>
-                     <a href="register.php">Sign up</a>
+                     <a href="<?php echo base_url();?>home/register">Sign up</a>
                 </li>
                
             </ul>
