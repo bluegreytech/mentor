@@ -787,7 +787,7 @@ body.push-left {
 
 .btn-new-orange {
   border-radius: 2px;
-  background: #950c06;
+  background: #ae140e;
   color: #fff;
   margin-left: 0;
   display: inline-block;
@@ -796,7 +796,7 @@ body.push-left {
 }
 
 .btn-new-orange:hover {
-  background: #de6110!important;
+  background: #950c06!important;
   color: #fff!important;
 }
 
@@ -1123,6 +1123,31 @@ margin-bottom: 40px;
   min-height: 72px;
 }
 
+
+.custom-blog .blog-post {
+  display: inline-block;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 0px 1px 0px #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.custom-blog .blog-post .post-header {
+  padding: 0 20px 15px;
+}
+
+.custom-blog .blog-post .post-header a {
+  color: #484848;
+}
+
+.custom-blog .blog-post a:hover {
+  color: #bb342f;
+}
+
+.custom- .blog-post .post-header h5 {
+  min-height: 72px;
+}
 #preloader .loader {
   width: 60px;
   height: 60px;
@@ -1485,9 +1510,7 @@ input:-webkit-autofill,select:-webkit-autofill,textarea:-webkit-autofill {
   box-shadow: 0 2px 20px rgba(0,0,0,.03);
   background: #fff;
   text-align: center;
-  position: absolute!important;
   left: 50%;
-  top: -175px;
   z-index: 99;
   border-radius: 4px;
   margin-left: -200px!important;
@@ -1540,7 +1563,7 @@ input:-webkit-autofill,select:-webkit-autofill,textarea:-webkit-autofill {
 #new-login-screens .new-btn-orange {
   outline: 0;
   color: #fff;
-  background-color: #d45400;
+  background-color: #bb342f;
   padding: 10px 20px;
   border-radius: 4px;
   border: 0;
@@ -1553,7 +1576,7 @@ input:-webkit-autofill,select:-webkit-autofill,textarea:-webkit-autofill {
 }
 
 #new-login-screens .new-btn-orange:hover {
-  background-color: #bb4b01;
+  background-color: #ae140e;
   color: #fff;
 }
 
@@ -12841,4 +12864,13 @@ left: inherit;
 
 /*close new success-stoty */
 
-
+.box{
+  padding: 30px;
+    background: #bb342f;
+    font-size: 32px;
+    color: #fff;
+    margin-top: 20px;
+}
+.box span{
+  font-size: 18px;
+}
