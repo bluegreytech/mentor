@@ -1,0 +1,377 @@
+﻿
+
+
+
+
+footer {
+
+}
+.programs-page .programs-page-header h2 {
+    font-size: 36px;
+    
+}
+.programs-page .programs-page-header p {
+    font-size: 18px;
+    max-width: 435px;
+    line-height: 25px;
+    margin: auto;
+}
+.programs-page.programs-page-10-12 .programs-cards p.sub-tag {
+   min-height: 1px;
+}.programs-page .programs-cards p.sub-title {
+  min-height: 1px;
+}
+.programs-page.programs-page-10-12 .help-box .help-tab-details .details-box .right .line {
+}
+.new-top-header .new-header-2 .left img.logo-blue {
+margin-bottom: 8px;
+}
+.ad-news-college img.tet{
+max-width:160px 
+}
+.ad-news-college img.tfe{
+max-width:180px 
+}
+.ad-news-college img.et{
+max-width:85px 
+}
+.ad-news-college img.bwb{
+max-width:120px 
+}
+.ad-news-college{
+padding:25px 0;
+text-align:center;
+}
+.ad-news-college h4 {
+font-size: 16px;
+margin-bottom:20px 
+}
+.ad-news-college .col-md-3 p {
+}
+section.bty{
+padding:25px 0;
+text-align:center;
+}
+section.bty h4 {
+font-size: 16px;
+margin-bottom:10px 
+}
+section.bty img.bpf-1{
+max-width:120px 
+}
+section.bty img.bpf-2{
+max-width:90px 
+}
+section.bty img.bpf-3{
+max-width:95px 
+}
+section.bty img.bpf-4{
+max-width:130px 
+}
+section.bty img.bpf-5{
+max-width:150px 
+}
+section.bty img.bpf-6{
+max-width:80px 
+}
+section.bty .col-md-3{
+}
+section.bty .flex-box{
+vertical-align: middle;
+width: 531px;
+height: 65px;
+display: table-cell;
+text-align: center;
+}
+.landing-page-footer {
+}
+.landing-page-footer {
+background: #f6f6f6;
+padding: 25px 0;
+}
+.landing-page-footer p{
+margin:0;
+font-size: 14px;
+color:#888;
+text-align:center 
+}
+.programs-page.college-duniya-page .sub-menu .call-action{
+display:none 
+}
+.programs-page.college-duniya-page .sub-menu.fixed .call-action{
+display:block 
+}
+.programs-page.college-duniya-page .sub-menu.fixed .call-action a{
+font-size: 11px;
+padding-top: 5px;
+margin-left: 20px;
+color: #484848;
+display: inline-block;
+}
+.programs-page.college-duniya-page .sub-menu.fixed .call-action a.call-mindler .fa {
+margin-right: 3px;
+color: #ea6915;
+float: left;
+margin-top: 3px;
+}
+.programs-page.college-duniya-page .sub-menu.fixed .prg-signup-field {
+margin-top:8px;
+}
+.programs-page.college-duniya-page .sub-menu.fixed ul li {
+margin: 0 10px!important;
+padding: 15px 5px;
+}
+.programs-page.college-duniya-page .sub-menu.fixed ul li a{
+font-size: 14px;
+}
+.programs-page.college-duniya-page .sub-menu .prg-logo {
+}
+.programs-page.college-duniya-page .sub-menu .prg-logo {
+max-width: 140px;
+float: left;
+margin-top: 10px;
+margin-right:10px 
+}
+.programs-page.college-duniya-page .sub-menu .prg-clollege-logo {
+max-width: 140px;
+float: left;
+margin-top: 8px;
+display:none 
+}
+.programs-page.college-duniya-page .sub-menu.fixed .prg-clollege-logo {
+display:block 
+}
+.new-top-header .new-header-2 .right a.contact-link{
+text-align: left;
+width: auto!important;
+font-size: 13px;
+padding: 0;
+margin-top: 11px;
+float: right;
+margin-right: 20px;
+pointer-events:none
+}
+.new-top-header .new-header-2 .right a.contact-link .career-tag{
+font-size: 12px;
+color:#888 
+}
+.new-top-header .new-header-2 .signup-field {
+margin-left: 15px;
+display: inline-block;
+float: right;
+}
+.programs-page.college-duniya-page .testimonials-section {
+background: url(../../../../../mindlerimages.imgix.net/program-pricing/testimonial-bg.jpg) no-repeat;
+padding: 50px 0;
+background-size: 100% 100%;
+background-position: center;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li .testi-img {
+width: 100px;
+height: 100px;
+background: #7955ad;
+border-radius: 50%;
+border: 2px #b094da solid;
+overflow: hidden;
+padding: 3px;
+float: right;
+-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.6);
+box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.6);
+margin-top: 15px;
+}
+.programs-page.college-duniya-page .testimonials-section .item .lSSlideOuter .lSPager.lSpg > li a {
+border-radius: 50%;
+height: 8px;
+width: 8px;
+transition: all 0.5s linear 0s;
+border: 0px #428bca solid;
+background: #a687d4 
+}
+.programs-page.college-duniya-page .testimonials-section .item .lSSlideOuter .lSPager.lSpg > li.active a {
+background: #ffffff!important;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li small {
+padding-left: 35px;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li p {
+padding-left: 35px;
+margin-bottom:15px;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li p .img-comma {
+position: absolute;
+left: 0px;
+top: 4px;
+max-width: 25px;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li p .img-comma {
+position: absolute;
+left: 0px;
+top: 4px;
+max-width: 25px;
+}
+.new-top-header .new-header-2 .left img.cd-logo {
+margin-left:15px;
+max-width:180px
+}
+.new-top-header .new-header-2 .left img.logo-blue.logo-desktop {
+max-width: 190px;
+}
+.content-slider-programs.lightSlider.lSSlide {
+height:auto!important 
+}
+.programs-page .help-box .help-tab-details .details-box .left .img-screen-box {
+padding-bottom: 15px;
+}
+.new-pricing-page .testimonials-section .item .lSSlideOuter .lSPager.lSpg {
+margin-top: 20px!important;
+}
+.programs-page .sub-menu.fixed ul li.contactus {
+   display:none
+}.new-pricing-page .testimonials-section #content-slider li p {
+
+    font-weight: 400;
+
+}
+ .programs-page.programs-page-10-12 .programs-cards ul.feature-short {
+    min-height: 145px;
+}.programs-page.programs-page-10-12 .programs-cards ul.feature-details {
+    min-height: 563px;
+}
+
+
+ .programs-page .programs-page-header h2 {
+
+      padding-top: 0px!important
+
+}
+
+.new-pricing-page .call-banner {
+    display:none
+}
+footer .footer-box .footer-row {
+    display:none
+}footer .footer-box .footer-row.footer-copyright {
+    display:block;
+    margin-top: 15px;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+   
+    .new-top-header .new-header-2 .right a.contact-link{
+
+pointer-events:initial
+}
+    .programs-page .sub-menu.fixed {
+    top: 52px!important;
+}
+    section.bty  .col-md-2{
+    
+    width:33.33%;
+    float:left
+ 
+}section.bty img.bpf-1{
+max-width:100px 
+}
+section.bty img.bpf-2{
+max-width:75px 
+}
+section.bty img.bpf-3{
+max-width:85px 
+}
+section.bty img.bpf-4{
+max-width:100px 
+}
+section.bty img.bpf-5{
+max-width:125px 
+}
+section.bty img.bpf-6{
+max-width:70px 
+}
+   .ad-news-college img , .ad-news-college img.margin-bottom-20 {
+    margin-bottom: 25px!important;
+}.ad-news-college {
+    padding-bottom: 0px;
+    text-align: center;
+}
+    .programs-page.college-duniya-page .sub-menu.fixed ul li {
+    margin: 0 9px!important;
+    padding: 15px 0px;
+}
+    .programs-page .sub-menu.fixed ul li.contactus {
+    display: inline-block
+}
+    .product-class-tag {
+
+    display: none!important;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li .testi-img {
+margin-top: 0;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li .testi-img {
+float: none;
+}
+.programs-page.college-duniya-page .testimonials-section #content-slider li p {
+}
+.programs-page.college-duniya-page .sub-menu.fixed ul li a {
+font-size: 13px;
+}.programs-page.college-duniya-page .sub-menu ul li a {
+font-size: 13px;
+}
+.programs-page.college-duniya-page .sub-menu.fixed .call-action,.programs-page.college-duniya-page .sub-menu.fixed .prg-clollege-logo {
+display: none;
+}
+.new-top-header .new-header-2 {
+padding: 5px 0!important;
+}
+.new-top-header .new-header-2 .left img.logo-blue {margin-top: 9px!important;max-width: 120px!important;}
+.new-top-header .new-header-2 .left img.cd-logo {
+margin-left:5px;
+max-width:120px
+}
+.new-top-header .new-header-2 .fa-bars {margin-top: 12px!important;}
+.new-header-2 {
+padding: 0px 0!important;
+}
+}
+
+
+@media only screen and (max-width: 667px) {
+
+    .new-pricing-page .call-banner {
+    display:block
+}
+    .programs-page .programs-cards {
+
+    width: 100%;
+    float: left;
+}
+ .programs-page .programs-page-header h2 {
+font-size: 28px;
+    max-width: 300px;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top:80px;
+        padding-top: 20px!important;line-height: normal!important;
+}
+ .programs-page .programs-page-header p {
+    font-size: 14px;
+ 
+    line-height: normal;
+    
+}
+ 
+ }
+@media only screen and (max-width: 320px) {
+    .programs-page .programs-page-header h2 {
+
+      padding-top: 0px!important
+
+}
+.programs-page.college-duniya-page .sub-menu.fixed ul li {
+    margin: 0 9px!important;
+    padding: 15px 0px;
+}
+}

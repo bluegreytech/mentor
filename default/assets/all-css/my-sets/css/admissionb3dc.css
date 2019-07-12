@@ -1,0 +1,474 @@
+﻿.programs-page .sub-menu {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    display: block!important;
+  }
+  
+  .programs-page .sub-menu .prg-logo {
+    max-width: 179px!important;
+    float: left!important;
+    margin-top: 11px!important;
+    display: block!important;
+  }
+  
+  .programs-page .sub-menu ul {
+    float: right!important;
+  }
+  
+  .programs-page .sub-menu ul li {
+    margin: 0 10px!important;
+    padding: 20px 20px!important;
+  }
+  
+  .programs-page.programs-page-10-12.admission-page .programs-page-header {
+    background: url(../../../../../mindlerimages.imgix.net/home/admission-cover.png) no-repeat center bottom;
+    background-size: 90%;
+    background-position: center bottom -40px;
+  }
+  
+  .programs-page.admission-page .programs-page-header h2 {
+    font-size: 34px;
+    line-height: normal;
+    margin-top: 70px;
+  }
+  
+  .programs-page.admission-page .programs-page-header p {
+    font-size: 20px;
+  }
+  
+  .programs-page.admission-page .programs-page-header .btn-row {
+    margin-top: 40px;
+  }
+  
+  .programs-page.admission-page .programs-page-header .btn-row a {
+    font-size: 15px;
+    line-height: 20px;
+    color: #007fb6;
+  }
+  
+  .programs-page.admission-page .programs-page-header .btn-row .fa {
+    display: inline-block;
+    font-size: 20px;
+    margin-top: -8px;
+  }
+  
+  .programs-page.admission-page .sub-menu {
+    background: #fff;
+    text-align: center;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+  }
+  
+  .programs-page.admission-page .sub-menu.shadow {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .admission-nav {
+    text-align: center;
+  }
+  
+  .help-box p {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .programs-page.admission-page .help-box.fixed {
+    margin-top: 0px;
+  }
+  
+  .programs-page.admission-page .sec-padding {
+    padding: 60px 0!important;
+  }
+  
+  .programs-page.college-duniya-page .testimonials-section {
+    padding: 60px 0!important;
+  }
+  
+  .help-box .admission-nav strong {
+    font-size: 15px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .help-box .admission-nav .icon {
+    margin-bottom: 15px;
+  }
+  
+  .help-box .admission-nav .icon img {
+    max-width: 70px;
+  }
+  
+  .help-box .admission-nav .col-md-4 {
+    margin-top: 35px;
+  }
+  
+  .programs-page.admission-page .sub-menu .mobile {
+    display: none;
+  }
+  
+  .admission-text-mobile {
+    display: none;
+  }
+  
+  .admission-buynow {
+    display: none;
+  }
+  
+  .ad-call {
+    display: none;
+  }
+  
+.admission-block{
+    background: #0000008c;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    display: none
+}
+.admission-modal{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    display: none
+
+
+}
+.admission-modal .admission-modal-body{
+    width: 100%;
+    max-width: 600px;
+    padding: 25px 60px;
+    background: #fff;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative
+}
+
+.admission-modal .admission-modal-body .ad-close{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 15px 15px;
+  cursor: pointer;
+}
+.admission-modal .admission-modal-body .ad-close .fa{
+  
+  font-size: 18px;
+    color: #666;
+ }
+ .admission-modal .admission-modal-body .ad-close:hover .fa {
+  color: #484848;
+}
+.admission-modal .admission-modal-body .admission-modal-content .form-group {
+  margin-top: 35px;
+  position: relative;
+}
+.admission-modal .admission-modal-body .admission-modal-content .form-group .alert{
+  font-size: 10px;
+  color: red;
+  padding: 0;
+  margin: 0;
+
+}
+.admission-modal .admission-modal-body .admission-modal-content .form-group .snff-name {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    border-bottom: 1px #e9e9e9 solid;
+    padding-bottom: 5px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0;
+    color: #484848!important
+}
+.admission-modal .admission-modal-body .admission-modal-content .form-group .snff-name:focus {
+
+  border-bottom: 1px #007fb6 solid;
+
+}
+.admission-modal .admission-modal-body .admission-modal-content .form-group.un-focused .animated-label {
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    font-size: 14px;
+    color: #aaa;
+    text-transform: none;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.4,0,.2,1);
+    letter-spacing: normal;
+    pointer-events: none;
+    font-weight: 300;
+}
+
+.admission-modal .admission-modal-body .admission-modal-content .form-group.focused label.animated-label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    top: -22px;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier(0.4,0,.2,1);
+}
+.admission-modal .admission-modal-body .admission-modal-content label {
+    color: #007fb6;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.admission-modal .admission-modal-body h4 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom:30px;
+    text-align: center;
+}
+
+.admission-modal .admission-modal-body .btn-continue {
+    color: #fff;
+    border-radius: 2px;
+    padding: 7px 20px;
+    font-size: 14px;
+    margin-top:10px;
+    display: inline-block;
+    font-weight: 600;
+    background: #ea6915;
+    border: 1px #d45c0e solid;
+}
+
+.admission-modal .admission-modal-body .btn-continue .fa{
+  font-size: 18px;
+  float: right;
+  margin-top: 1px;
+  margin-left: 10px;
+}
+.admission-modal .admission-modal-body .text-capi{
+
+  text-transform: capitalize
+}
+.body-block {
+  overflow: hidden;
+  position: fixed;
+}
+
+.admission-btn{background: #ccc;
+color: #fff!important;
+    border-radius: 2px;
+    padding: 8px 25px;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: 600;
+    background: #ea6915;
+    border: 1px #d45c0e solid;
+} 
+.programs-page.college-duniya-page.admission-page .testimonials-section #content-slider li .testi-img {
+  width: 90px;
+  height: 90px
+}
+
+.admission-modal .admission-modal-content.thankyou-box{
+  text-align: center;
+
+
+}
+.admission-modal .admission-modal-content.thankyou-box h4{
+ margin-bottom: 15px
+
+}
+.admission-modal .admission-modal-content.thankyou-box p{
+font-size: 14px
+}
+
+
+
+  @media only screen and (max-width: 667px) {
+  
+    .admission-modal {
+     
+      padding: 15px;
+  }
+  .admission-modal .admission-modal-body {
+
+    padding: 25px 25px;
+ 
+    margin-top:30px;
+   
+}
+
+.admission-modal .admission-modal-body h4 {
+  font-size: 18px;
+  font-weight: 400;
+
+}
+.admission-modal .admission-modal-body .ad-close {
+ 
+  padding: 10px 10px;
+
+}
+    .programs-page.admission-page .call-banner {
+      display: none;
+    }
+  
+    .adimission-navigate {
+      font-size: 14px!important;
+      padding: 8px 16px!important;
+    }
+  
+    .ad-call {
+      display: block;
+    }
+  
+    .admission-btn {
+      font-size: 14px!important;
+      font-weight: 600!important;
+      padding: 7px 18px!important;
+    }
+  
+    .programs-page.college-duniya-page .ad-news-college .col-md-3 p br {
+      display: none;
+    }
+  
+    .admission-buynow {
+      display: block;
+    }
+  
+    .admission-text-desk {
+      display: none;
+    }
+  
+    .admission-text-mobile {
+      display: block;
+    }
+  
+    .programs-page.programs-page-10-12.admission-page .programs-page-header {
+      background: url(../../../../../mindlerimages.imgix.net/home/admission-cover-2.png) no-repeat center bottom;
+      background-size: 95%;
+      background-position: center bottom 0px;
+    }
+  
+    .programs-page .sub-menu ul li.why-mindler {
+      display: inline-block;
+    }
+  
+    .programs-page.admission-page .sec-padding {
+      padding: 30px 15px!important;
+    }
+  
+    .programs-page.college-duniya-page .testimonials-section {
+      padding: 30px 0px!important;
+    }
+  
+    .programs-page.admission-page .faq-section.sec-padding, .programs-page.admission-page .form-box.sec-padding {
+      padding: 30px 0px!important;
+    }
+  
+    .programs-page.admission-page .sub-menu.fixed {
+      top: 0px!important;
+    }
+  
+    .programs-page.college-duniya-page.admission-page .sub-menu ul li {
+      margin: 0 0px!important;
+      padding: 15px 5px!important;
+    }
+  
+    .programs-page.college-duniya-page.admission-page .sub-menu .sub-menu.fixed ul li {
+      margin: 0 0px!important;
+      padding: 15px 5px!important;
+    }
+  
+    .programs-page.college-duniya-page.admission-page .programs-page-header h2 {
+      font-size: 26px!important;
+      max-width: 100%!important;
+    }
+  
+    .programs-page.admission-page .programs-page-header p {
+      font-size: 18px!important;
+    }
+  
+    .programs-page.admission-page .h3-title {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+  
+    .programs-page.admission-page .sub-menu {
+      -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    .programs-page.admission-page .sub-menu .why-mindler {
+      display: none;
+    }
+  
+    .programs-page.admission-page .sub-menu .mobile {
+      display: inline-block;
+    }
+  
+    .programs-page.admission-page .sub-menu .desk {
+      display: none;
+    }
+  
+    .programs-page .sub-menu .prg-logo {
+      max-width: 140px!important;
+    }
+  
+    .help-box p {
+      font-size: 13px;
+      text-align: center;
+    }
+  
+    .help-box .admission-nav strong {
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: block;
+    }
+  
+    .help-box .admission-nav .icon img {
+      max-width: 55px;
+    }
+  
+    .programs-page.programs-page-10-12.admission-page .programs-page-header {
+      height: 420px!important;
+    }
+  
+    .programs-page.admission-page .programs-page-header h2 {
+      margin-top: 45px;
+      padding: 0 15px;
+    }
+  
+    .programs-page .sub-menu ul {
+      float: left!important;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width:320px) {
+    .programs-page.college-duniya-page.admission-page .sub-menu ul li {
+      margin: 0 0px!important;
+      padding: 15px 3px!important;
+    }
+  
+    .programs-page.college-duniya-page.admission-page .sub-menu .sub-menu.fixed ul li {
+      margin: 0 0px!important;
+      padding: 15px 3px!important;
+    }
+  
+    .programs-page.college-duniya-page .sub-menu ul li a {
+      font-size: 12px;
+    }
+  
+    .programs-page.college-duniya-page .sub-menu.fixed ul li a {
+      font-size: 12px;
+    }
+  }

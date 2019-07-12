@@ -10,10 +10,12 @@ class Home extends CI_Controller {
       
     }
 	 public function index(){
-	 	
+		$this->load->view('Home/Home');
 	 }
 
-	
+	 public function Registeruser(){
+		$this->load->view('Register/Registeradd');
+	 }
 	public function login()
 	{
 		if($this->input->post('logins'))
@@ -50,7 +52,7 @@ class Home extends CI_Controller {
 					} 
 				}
 
-		$this->load->view('login');
+		$this->load->view('common/login');
 	}
 	public function Page()
 	{
