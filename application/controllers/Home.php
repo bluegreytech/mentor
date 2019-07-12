@@ -9,6 +9,10 @@ class Home extends CI_Controller {
 		$this->load->model('Login_model');
       
     }
+	 public function index(){
+	 	
+	 }
+
 	
 	public function login()
 	{
