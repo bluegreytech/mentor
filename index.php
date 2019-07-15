@@ -248,10 +248,14 @@ switch (ENVIRONMENT)
 			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
 		}
 
+
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
+
 	
 	
+	
+
 
 	// The path to the "views" directory
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))

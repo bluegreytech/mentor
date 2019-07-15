@@ -1379,11 +1379,11 @@ footer .footer-social .fa.fa-linkedin:hover {
   color: #0172b1;
 }
 
-input {
+/*input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
+}*/
 
 .cycle-bg-image {
   display: none!important;
