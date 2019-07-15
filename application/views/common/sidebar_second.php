@@ -24,7 +24,7 @@
                      </div>
                   </li>
 
-                  <li id="tour1"><a href="<?php echo base_url();?>Dashboard" class="active"><span class="icon-home2 fa fa-home"></span><span class="nav-title">Dashboard</span></a>
+                  <li id="tour1"><a href="<?php echo base_url();?>home/dashboard" class="active"><span class="icon-home2 fa fa-home"></span><span class="nav-title">Dashboard</span></a>
                   </li>
                   <li id="tour2"><a href="<?php echo base_url();?>Dashboard/Profile"><span class="icon-home2 fa fa-user"></span><span class="nav-title">My Profile</span></a>
                   </li>

@@ -66,10 +66,7 @@ class Home extends CI_Controller {
 
 		
 	 }
-	//  public function Forgotpassword()
-	// {	
-	// 	$this->load->view('common/Forgotpass');
-	// }
+	
 
 	public function Forgotpassword()
 	{
