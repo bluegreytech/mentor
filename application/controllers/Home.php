@@ -6,22 +6,13 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
       	parent::__construct();
-
-		$this->load->model('Login_model');
-
-      
+		$this->load->model('Login_model'); 
     }
 	
-	
 	public function index() 
-	{
-		
-
+	{	
 		$this->load->view('Home/Home');
 	}
-
-
-	
 
 	 public function adduser(){
 	  	//echo "hello ";die;
@@ -121,6 +112,13 @@ class Home extends CI_Controller {
 
 		$this->load->view('common/login');
 	}
+
+	// public function list()
+	// {
+	// 	$data['adminData']=$this->Login_model->getuser();
+	//    $this->load->view('Dashboard/Profilelist',$data);
+	// }
+	
 	public function dashboard()
 	{
 		if(!check_admin_authentication()){ 

@@ -44,6 +44,7 @@ $this->load->view('common/sidebar_second');
                                     
                                  </div>
                                  <div>
+                                 <input type="hidden"   value="<?php echo $UserId; ?>" name="UserId">
                                     <span class="btn btn-white btn-file btn-xs">
                                     <span class="fileupload-exists show-important">Select image</span>
                                     <input id="register-photo"  type="file" name="userfile"  class="default" />
@@ -58,12 +59,12 @@ $this->load->view('common/sidebar_second');
                                  <label>Full Name</label>
                                  <br>
                                  <!-- <span class="text-cap">Mit Patel</span> -->
-                                 <input id="first_name" required="" name="first_name" class="form-control" type="text" value="Mit Patel">
+                                 <input required="" name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text">
                               </div>
                               <div class="form-group height-min">
                                  <label class="">Email Address</label>
                                  <br>
-                                 <span class="text-low">mitnp17@gmail.com</span>
+                                 <span class="text-low"><?php echo $EmailAddress;?></span>
                                   
                                    </div>
                               <a href="#" class="add-another-email" style="text-decoration: underline; display: block">Add another email</a>
@@ -76,16 +77,17 @@ $this->load->view('common/sidebar_second');
                               <div class="form-group">
                                  <label>Phone Number</label>
                                  <br>
-                                 <input id="phoneno" required="" name="verifyphone" class="form-control" type="text" maxlength="10" value="8200308821">
+                                 <input name="PhoneNumber" class="form-control" type="text" maxlength="13" value="<?php echo $PhoneNumber;?>">
                               </div>
                               <div class="form-group">
                                  <label>Gender</label><br>
-                                 <div class="radio" style="margin-top:0" id="radioRequired">
+                                 <div class="radio" style="margin-top:0">
                                     <label style="padding-left:0">
-                                    <input type="radio" name="gender" Checked value="Male" class="icheck-blue"> Male
+                                    <input type="radio" name="Gender" value="male" <?php  if($Gender=='male'){  echo 'checked'; } ?>
+                                       class="icheck-blue"> Male
                                     </label>
                                     <label>
-                                    <input type="radio" name="gender"  value="Female" class="icheck-blue"> Female
+                                       <input type="radio" name="Gender"  <?php if($Gender=='female') { echo "checked"; }?> value="female" class="icheck-blue"> Female
                                     </label>
                                  </div>
                               </div>
@@ -96,7 +98,7 @@ $this->load->view('common/sidebar_second');
                                  <br>
                                  <div class="input-group" id="dateOfBirth">
                                    
-                                    <input value="07/16/1991" class="form-control" name="dob" required="" placeholder="MM/DD/YYYY" type="text" id="datepicker">
+                                    <input value="<?php echo $DateofBirth ?>" class="form-control" name="DateofBirth" placeholder="MM/DD/YYYY" type="date" id="datepicker">
                                  </div>
                               </div>
                            </div>
@@ -117,24 +119,24 @@ $this->load->view('common/sidebar_second');
                                     <div class="form-group">
                                        <label>School</label>
                                        <br>
-                                       <input required="" value="aaaaaaaa" id="school" name="school" class="form-control" type="text" >
+                                       <input value="<?php echo $EducationName;?>" id="school" name="EducationName" class="form-control" type="text" >
                                     </div>
                                     <div class="form-group">
                                        <label>Board</label>
                                        <br>
-                                       <input required="" value="CBS" id="board" name="board" class="form-control" type="text" >
+                                       <input name="BoardName" class="form-control" type="text" value="<?php echo $BoardName;?>">
                                     </div>
                                  </div>
                                  <div class="col-md-6">
                                     <div class="form-group">
                                        <label>Class</label>
                                        <br>
-                                       <input required="" value="10th" id="class" name="class" class="form-control" type="text" >
+                                       <input  name="ClassStream" class="form-control" type="text" value="<?php echo $ClassStream;?>">
                                     </div>
                                     <div class="form-group">
                                        <label>Year of Graduation</label>
                                        <br>
-                                       <input required="" value="2009" id="graduation" name="graduation" class="form-control" type="text" maxlength="4">
+                                       <input  name="YearofGraduation" class="form-control" type="text" maxlength="4"value="<?php echo $YearofGraduation;?>">
                                     </div>
                                  </div>
                               </div>
@@ -155,25 +157,24 @@ $this->load->view('common/sidebar_second');
                               <div class="form-group">
                                  <label>Father's (or Guardian's) Name</label>
                                  <br>
-                                 <input required="" value="Narendrabhai" id="fathername" name="fathername" class="form-control" type="text">
+                                 <input name="FatherName" class="form-control" type="text"  value="<?php echo $FatherName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Father's (or Guardian's) Profession</label>
                                  <br>
-                                 <input required="" value="Farmar" id="father_profession" name="father_profession" class="form-control" type="text">
+                                 <input  name="FatherProfession" class="form-control" type="text"  value="<?php echo $FatherProfession;?>">
                               </div>
                            </div>
-                           <input type="hidden" id="Hidden2" value="3" name="level">
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label>Mother's (or Guardian's) Name</label>
                                  <br>
-                                 <input required="" value="Daxabahen"  id="mothername" name="mothername" class="form-control" type="text">
+                                 <input  name="MotherName" class="form-control" type="text"  value="<?php echo $MotherName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Mother's (or Guardian's) Profession</label>
                                  <br>
-                                 <input required="" value="House Wife" id="mother_profession" name="mother_profession" class="form-control" type="text">
+                                 <input name="MotherProfession" class="form-control" type="text"  value="<?php echo $MotherProfession;?>">
                               </div>
                            </div>
                            <div class="col-md-12 margin-top-20" >
@@ -300,7 +301,7 @@ $this->load->view('common/sidebar_second');
       </div>
    </section>
 </section>
-</section> s
+</section>
 
 <?php 
  $this->load->view('common/footer_second');
