@@ -7,11 +7,18 @@
                      <div class="profile-main">
                         <div class="img-blue-box">
                            <p class="image">
-                              <img id="sidebar-image" src="<?php echo base_url(); ?>default_2../images/a6.png" />                              <!-- <span class="status"><i class="fa fa-circle text-success"></i></span> -->
+                              <img id="sidebar-image" src="<?php echo base_url(); ?>default/images/a6.png" />                              <!-- <span class="status"><i class="fa fa-circle text-success"></i></span> -->
                            </p>
                         </div>
+                              <?php 
+                                // $UserId=$this->session->userdata('UserId');
+                                 $FirstName=$this->session->userdata('FirstName');
+                                 $LastName=$this->session->userdata('LastName');
+                                // $EmailAddress=$this->session->userdata('EmailAddress');
+                                // $RoleId=$this->session->userdata('RoleId');
+                              ?>
                         <p>
-                           <span class="name">Mit Patel</span>
+                           <span class="name"><?php echo $FirstName.' '.$LastName; ?></span>
                         </p>
                         <p class="mobile-user-id" style="color: #888;font-size: 10px;margin-top: 3px;">User ID: 110892</span></p>
                      </div>
@@ -29,7 +36,7 @@
 
                   <li class="mobile-menu-link change-password" style="border-top:1px #e9e9e9 solid"><a href="javascript:void(0);"  data-toggle="modal" data-target="#modal-change-password" style="padding: 7px 20px;color: #888;">
                      <span class="icon-home2 fa fa-lock "></span> <span class="nav-title font-size-12">Change Password</span></a></li>
-                  <li  class="mobile-menu-link"><a href="#" style="padding: 7px 20px;;color: #888;"><span class="icon-home2 fa fa-sign-out"></span><span class="nav-title font-size-12">Log Out</span></a></li>
+                  <li  class="mobile-menu-link"><a href="<?php echo base_url();?>Home/logout" style="padding: 7px 20px;;color: #888;"><span class="icon-home2 fa fa-sign-out"></span><span class="nav-title font-size-12">Log Out</span></a></li>
                                  </ul>
             </div>
             <!-- sidebar menu end-->

@@ -53,42 +53,43 @@ $this->load->view('common/header');
                      padding: 2px 10px;
                      margin-top: 10px;    display: inline-block;  font-size: 12px;">Create Account</a></p>
                </div>
-               <h4>Log in to Mentor</h4>
-               <p>   <small>-Using-</small>              </p>
-               <div class="col-md-6 social-link-facebook" style="padding-left:0; padding-right:5px">
-                  <a href="#" class="socialbutton">
-                  <img src="<?php echo base_url()?>default/assets/prelogin_new/img/facebook-icon.png"/>facebook
-                  </a>
-               </div>
-               <div class="col-md-6 social-link-google"  style="padding-right:0; padding-left:5px">
-                  <a href="#" class="socialbutton">
-                  <img src="<?php echo base_url()?>default/assets/prelogin_new/img/google-icon.png"/>google
-                  </a>
-               </div>
-              <div class="clear"></div><p><small>-Or Using-</small></p>
+               <h4>Forgot password in to Mentor</h4>
+               <br>
+              
+             
                <?php if(($this->session->flashdata('error'))){ ?>
                      <div class="alert alert-danger" id="errorMessage">
                      <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
                      </div>
                <?php } ?>
-               <form  id="form_valid" method="post">
+               <?php if(($this->session->flashdata('warning'))){ ?>
+                     <div class="alert alert-warning" id="errorMessage">
+                     <strong> <?php echo $this->session->flashdata('warning'); ?></strong> 
+                     </div>
+               <?php } ?>
+               <?php if(($this->session->flashdata('success'))){ ?>
+                     <div class="alert alert-success" id="successMessage">
+                     <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
+                     </div>
+               <?php } ?>
+               <form  id="form_valid" method="post" action="<?php echo base_url();?>Home/Forgotpassword">
                   <div class="placeholder-input">
                      <span class="relative-span">
                      <input name="EmailAddress" type='email' required  class="form-control " placeholder="Email Address"/>
                      </span>
                   </div>
-                  <div class="placeholder-input">
+                  <!-- <div class="placeholder-input">
                      <span class="relative-span type-password">
-                     <input autocomplete="new-password"  name="Password" required type="password"  class="form-control" placeholder="Password" />
+                     <input autocomplete="new-password"  name="ConfirmPassword" required type="password"  class="form-control" placeholder="Re-type password" />
                      </span>
-                  </div>
+                  </div> -->
                   <p>
-                     <input type="submit" name="logins" id="login-btn" class="new-btn-orange" value="Log in">
+                     <input type="submit" name="logins" id="login-btn" class="new-btn-orange" value="Submit">
                   </p>
                </form>
                <p class="bottom-link" style="margin-top: 20px">
                   <span style="float:left">
-                  <a href="<?php echo base_url();?>Home/Forgotpassword/">Forgot Password?</a>
+                  <a href="<?php echo base_url()?>Home/login">Back to Log in</a>
                   </span>
                   <span style="float:right">New to Mentor? 
                   <a href="<?php echo base_url()?>Home/Register">Create Account</a>
@@ -108,6 +109,13 @@ $this->load->view('common/header');
 $(function() { 
     setTimeout(function() {
   $('#errorMessage').fadeOut('fast');
+}, 3000);
+   
+});
+
+$(function() { 
+    setTimeout(function() {
+  $('#successMessage').fadeOut('fast');
 }, 3000);
    
 });

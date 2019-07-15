@@ -1,22 +1,22 @@
 
-<script src="<?php echo base_url(); ?>default_2js/jquery.js"></script>
+<script src="<?php echo base_url(); ?>default_2/js/jquery.js"></script>
 
-<script src="<?php echo base_url(); ?>default_2js/global-plugins.js"></script>
-<script src="<?php echo base_url(); ?>default_2js/theme.js" type="text/javascript" ></script>
-<script src="<?php echo base_url(); ?>default_2js/forms.js" type="text/javascript" ></script>
-<script src="<?php echo base_url(); ?>default_2js/chart.min.js" type="text/javascript" ></script>
-<script src="<?php echo base_url(); ?>default_2js/summernote.min.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>default_2/js/global-plugins.js"></script>
+<script src="<?php echo base_url(); ?>default_2/js/theme.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>default_2/js/forms.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>default_2/js/chart.min.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>default_2/js/summernote.min.js" type="text/javascript" ></script>
 
-<script src="<?php echo base_url(); ?>default_2js/ecommerce.js" type="text/javascript" ></script>
-<script src="<?php echo base_url(); ?>default_2js/lightslider.js"></script>
+<script src="<?php echo base_url(); ?>default_2/js/ecommerce.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>default_2/js/lightslider.js"></script>
 
-<script src="<?php echo base_url(); ?>default_2js/my-function.js?1562847423"></script>
+<script src="<?php echo base_url(); ?>default_2/js/my-function.js?1562847423"></script>
 
-<script src="<?php echo base_url(); ?>default_2js/moment.js"></script>
-<script src="<?php echo base_url(); ?>default_2js/custom-new.js?1562847423"></script>
-<script src="<?php echo base_url(); ?>default_2js/alertify.min.js" type="text/javascript" ></script>
-<script src="<?php echo base_url(); ?>default_2js/enjoyhint.js"></script>
-<script src="<?php echo base_url(); ?>default_2js/jquery-touch.js">
+<script src="<?php echo base_url(); ?>default_2/js/moment.js"></script>
+<script src="<?php echo base_url(); ?>default_2/js/custom-new.js?1562847423"></script>
+<script src="<?php echo base_url(); ?>default_2/js/alertify.min.js" type="text/javascript" ></script>
+<script src="<?php echo base_url(); ?>default_2/js/enjoyhint.js"></script>
+<script src="<?php echo base_url(); ?>default_2/js/jquery-touch.js">
   
 </script>
 

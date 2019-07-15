@@ -1,4 +1,5 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 	// --------------------------------------------------------------------
 
@@ -52,7 +53,7 @@
 				$right_result=$right_detail->row();
 				$rights_id=$right_result->rights_id;
 
-			$query=$CI->db->get_where("rights_assign",array('rights_id'=>$rights_id,'admin_id'=>$CI->session->userdata('admin_id')));
+			$query=$CI->db->get_where("rights_assign",array('rights_id'=>$rights_id,'UserId'=>$CI->session->userdata('UserId')));
 			
 			if($query->num_rows()>0)
 			{
@@ -79,27 +80,27 @@
 	
 	}*/
 	
-	function getThemeName()
-	{
+	// function getThemeName()
+	// {
 		
-		$default_theme_name='default';
+	// 	$default_theme_name='default';
 		
-		$CI =& get_instance();
-		$query = $CI->db->get_where("template_manager",array('active_template'=>1 ,'is_admin_template'=>1));
-		$row = $query->row();
+	// 	$CI =& get_instance();
+	// 	$query = $CI->db->get_where("template_manager",array('active_template'=>1 ,'is_admin_template'=>1));
+	// 	$row = $query->row();
 		
-		$theme_name=trim($row->template_name);
+	// 	$theme_name=trim($row->template_name);
 		
-		if(is_dir(APPPATH.'views/'.$theme_name))
-		{
-			return $theme_name;
-		}
-		else
-		{
-			return $default_theme_name;	
-		}
+	// 	if(is_dir(APPPATH.'views/'.$theme_name))
+	// 	{
+	// 		return $theme_name;
+	// 	}
+	// 	else
+	// 	{
+	// 		return $default_theme_name;	
+	// 	}
 		
-	}
+	// }
 
 	
 	// --------------------------------------------------------------------
@@ -111,14 +112,12 @@
 	 */
 	 
 	function check_admin_authentication()
-	{		
-		$CI =& get_instance();
-		
-                
+	{
+		$CI =& get_instance();   
                 if($CI->session->userdata('UserId')!='')
                 {
                     //check user active
-                    $a_data = get_one_admin($CI->session->userdata('UserId'));
+					$a_data = get_one_admin($CI->session->userdata('UserId'));
                     if($a_data->IsActive == '1'){
                      return true;
                     }
@@ -130,7 +129,6 @@
                 {
                         return false;
                 }
-	
 	}
     
 	function get_one_admin($id)
@@ -149,11 +147,10 @@
 	function get_authenticateadminID()
 	{		
 		$CI =& get_instance();
-		return $CI->session->userdata('admin_id');
+		return $CI->session->userdata('UserId');
 	}
 	
-	
-	
+
 	function checkSuperAdmin()
 	{
 		$CI =& get_instance();
@@ -392,7 +389,7 @@
 	
 		$CI =& get_instance();
 			$CI->db->select('first_name,last_name');
-			$CI->db->where('admin_id',$id);
+			$CI->db->where('UserId',$id);
 			$query=$CI->db->get('admin');
 			if($query->num_rows()>0){
 			return  ucwords($query->row()->first_name.' '.$query->row()->last_name);
@@ -583,10 +580,10 @@
 		
 	}     
 	
-	function getOneAdmin($admin_id=0)
+	function getOneAdmin($UserId=0)
 	{
 		$CI =& get_instance();
-		$query=$CI->db->get_where('admin',array('admin_id'=>$admin_id));
+		$query=$CI->db->get_where('admin',array('UserId'=>$UserId));
 		if($query->num_rows() > 0)
 		{
 			return $query->row();
@@ -602,7 +599,7 @@
 		$CI->db->select('r.rights_name,ra.*');
 		$CI->db->from('rights_assign ra');
 		$CI->db->join('rights r','ra.rights_id=r.rights_id');
-		$CI->db->where('ra.admin_id',get_authenticateadminID());
+		$CI->db->where('ra.UserId',get_authenticateadminID());
 		$query=$CI->db->get();
 		$r=array();
 		if($query->num_rows() > 0)
@@ -714,7 +711,7 @@
     { 
 		$CI =& get_instance();
 		if($where != ''){ $CI->db->where($where);}
-		$CI->db->order_by('admin_id','desc');
+		$CI->db->order_by('UserId','desc');
 		$query= $CI->db->get($table,$limit,$offset);
 		//echo $CI->db->last_query();die;
 		if($query->num_rows()>0)
@@ -726,7 +723,7 @@
     { 
 		$CI =& get_instance();
 		if($where != ''){ $CI->db->where($where);}
-		//  $CI->db->order_by('admin_id','desc');
+		//  $CI->db->order_by('UserId','desc');
 		$query= $CI->db->get($table,$limit,$offset);
 		//echo $this->db->last_query();die;
 		if($query->num_rows()>0)
@@ -899,7 +896,7 @@
 
 		$CI->db->select("*");
 		$CI->db->from("rights_assign");
-		$CI->db->where("admin_id",$id);
+		$CI->db->where("UserId",$id);
 		$query = $CI->db->get();	
 		$num = $query->num_rows();
 		

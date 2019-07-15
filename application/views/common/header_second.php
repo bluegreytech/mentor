@@ -7,9 +7,9 @@
       <meta name="apple-mobile-web-app-capable" content="yes" />
       
       <!--favicon-->
-      <link rel="shortcut icon" type="image/x-icon" href="../asset/prelogin_new/img/favicon.ico">
-      <link rel="icon" type="image/png" href="../asset/prelogin_new/img/favicon.ico">
-      <link rel="apple-touch-icon" href="../asset/prelogin_new/img/favicon.ico">
+      <!-- <link rel="shortcut icon" type="image/x-icon" href="<?php //echo base_url(); ?>default/asset/prelogin_new/img/favicon.ico"> -->
+      <!-- <link rel="icon" type="image/png" href="<?php //echo base_url(); ?>default/asset/prelogin_new/img/favicon.ico"> -->
+      <!-- <link rel="apple-touch-icon" href="<?php //echo base_url(); ?>default/asset/prelogin_new/img/favicon.ico"> -->
 
       <!--CSS-->
       
@@ -39,8 +39,8 @@
       <header class="header fixed-top clearfix">
          <!--logo start-->
          <div class="brand">
-            <a href="index.php" class="logo">
-            <img src="<?php echo base_url(); ?>default_2/../images/home/mentor-big-bluec6eb.png?w=300" />
+            <a href="<?php echo base_url(); ?>Home" class="logo">
+            <img src="<?php echo base_url(); ?>default/images/home/mentor-big-bluec6eb.png?w=300" />
             </a>
             
             <div class="sidebar-toggle-box" style="display:none">
@@ -53,25 +53,39 @@
             ** Start of top navigation **
             *****************************
             -->
+         <?php 
+            if(check_admin_authentication()){ 
+         ?>
+
          <div class="top-nav">
             <ul class="nav navbar-nav navbar-right">
              
                <li class="dropdown for-admin" >
                   <a href="javascript:void(0);" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                   <span class="small-profile-icon">
-                  <img id="header-image" src="<?php echo base_url(); ?>default_2/../images/a6.png" />        
+                  <img id="header-image" src="<?php echo base_url(); ?>default/images/a6.png" />        
                   </span>
-                  <span class="small-profile-title">Mit Patel<span class=" fa fa-angle-down" ></span></span>
+                  <?php 
+                     $UserId=$this->session->userdata('UserId');
+                     $FirstName=$this->session->userdata('FirstName');
+                     $LastName=$this->session->userdata('LastName');
+                     $EmailAddress=$this->session->userdata('EmailAddress');
+                     $RoleId=$this->session->userdata('RoleId');
+                  ?>
+                  <span class="small-profile-title"><?php echo $FirstName.' '.$LastName; ?> <span class=" fa fa-angle-down" ></span></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu ">
-                     <li> <a href="javascript:void(0);" class="font-size-11 color-grey pointer-none">User ID: 110892 </a></li>
+                     <li> <a href="javascript:void(0);" class="font-size-11 color-grey pointer-none">User ID: <?php echo $UserId;?></a></li>
                      <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#modal-change-password" class="change-password-2"><i class="fa fa-lock" style=" width: 12px; float: left; margin-top: 3px; margin-right: 2px;"></i> Change Password</a></li>
-                     <li><a href="#" class=""><i class="fa fa-sign-out" style=" width: 12px; float: left; margin-top: 3px; margin-right: 2px;"></i> Log Out</a></li>
+                     <li><a href="<?php echo base_url();?>Home/logout" class=""><i class="fa fa-sign-out" style=" width: 12px; float: left; margin-top: 3px; margin-right: 2px;"></i> Log Out</a></li>
                   </ul>
                </li>
            
             </ul>
          </div>
+         <?php 
+            } 
+         ?>
       </header>
 
 <!-- chnage password -->
@@ -98,3 +112,4 @@
             </div>
          </div>
       </div>
+     
