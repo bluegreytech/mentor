@@ -48,8 +48,7 @@ $this->load->view('common/header');
                      <p style="background: #f6f6f6;color: #444;padding: 15px 20px;font-size: 13px;border: 1px #e7e7e7 solid;border-radius: 2px;">This email id already exists.<br><a href="login.php" class="emailError my-ghost-btn" style="color: #444;border: #444 solid 1px;padding: 2px 10px;margin-top: 10px;display: inline-block;  font-size: 12px;">Login</a></p>
                   </div>
                   
-                  <h4>Sign up with Mentor
-                  </h4>
+                  <h4>Sign up with Mentor</h4>
                   <p>
                      <small>-Using-</small>
                   </p>
@@ -89,13 +88,8 @@ $this->load->view('common/header');
                      <input type='hidden' name="staged_at"  value='0'>
                      <input type='hidden' name="SourceMedium"  value='LoginPage'>
                   </form>
-                  <p class="bottom-link">Already have an account? 
-                    
-                      <a href="login.php">Log in</a>
-
-                    
-
-                     
+                  <p class="bottom-link">Already have an account?   
+                      <a href="<?php echo base_url()?>home/login">Log in</a>        
                   </p>
                </div>
             </div>

@@ -42,7 +42,7 @@ class Home extends CI_Controller {
 							
 						$this->session->set_userdata($session);
 						$this->session->set_flashdata('success','User Login successfully');
-						redirect('Welcome2');
+						redirect('home/Register');
 					}
 					else
 					{
