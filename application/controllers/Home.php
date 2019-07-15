@@ -88,7 +88,7 @@ class Home extends CI_Controller {
 		if($this->input->post('logins'))
 			{   
 					$EmailAddress = $this->input->post('EmailAddress');
-					$Password = $this->input->post('Password');
+					$Password = md5($this->input->post('Password'));
 					$IsActive = 1;
 					$where = array(
 					"EmailAddress"=>$EmailAddress,
