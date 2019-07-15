@@ -9,8 +9,7 @@ class Program extends CI_Controller
 
 		function Programlist()
 		{	
-			if(!check_admin_authentication()){
-             
+			if(!check_admin_authentication()){ 
 				redirect(base_url());
 			}else{
 					$data['programData']=$this->Program_model->getprogram();

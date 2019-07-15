@@ -1,4 +1,5 @@
 <?php
+
 /**
  * CodeIgniter
  *
@@ -247,16 +248,20 @@ switch (ENVIRONMENT)
 			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
 		}
 
+
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
 
-	//define('APPPATH', $application_folder.'/');
-	//echo APPPATH;die;
+	
+	
+	
+
 
 	// The path to the "views" directory
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
 	{
 		$view_folder = APPPATH.'views';
+	
 	}
 	elseif (is_dir($view_folder))
 	{
@@ -289,7 +294,7 @@ switch (ENVIRONMENT)
 	}
 
 	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
-
+	
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE

@@ -62,31 +62,36 @@ $this->load->view('common/header');
                </div>
                <div class="col-md-6 social-link-google"  style="padding-right:0; padding-left:5px">
                   <a href="#" class="socialbutton">
-                  <img src="<?php echo base_url()?>default/assets/prelogin_new/img/google-icon.png"  />google
+                  <img src="<?php echo base_url()?>default/assets/prelogin_new/img/google-icon.png"/>google
                   </a>
                </div>
               <div class="clear"></div><p><small>-Or Using-</small></p>
-               <form  autocomplete='off' id="loginform" method="post" action="dashboard">
+               <?php if(($this->session->flashdata('error'))){ ?>
+                     <div class="alert alert-danger" id="errorMessage">
+                     <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
+                     </div>
+               <?php } ?>
+               <form  id="form_valid" method="post">
                   <div class="placeholder-input">
                      <span class="relative-span">
-                     <input  id='email' value="" autocomplete='off' name="email" type='email'  class="form-control " placeholder="Email Address"/>
+                     <input name="EmailAddress" type='email' required  class="form-control " placeholder="Email Address"/>
                      </span>
                   </div>
                   <div class="placeholder-input">
                      <span class="relative-span type-password">
-                     <input autocomplete="new-password" id='password' value="" name="password" type="password"  class="form-control" placeholder="Password" />
+                     <input autocomplete="new-password"  name="Password" required type="password"  class="form-control" placeholder="Password" />
                      </span>
                   </div>
                   <p>
-                     <input type="submit" id="login-btn" name="" class="new-btn-orange" value="Log in">
+                     <input type="submit" name="logins" id="login-btn" class="new-btn-orange" value="Log in">
                   </p>
                </form>
                <p class="bottom-link" style="margin-top: 20px">
                   <span style="float:left">
-                  <a href="loginrecoverPassword.php">Forgot Password?</a>
+                  <a href="<?php echo base_url();?>Home/Forgotpassword/">Forgot Password?</a>
                   </span>
                   <span style="float:right">New to Mentor? 
-                  <a href="<?php echo base_url()?>Home/Registeruser">Create Account</a>
+                  <a href="<?php echo base_url()?>Home/Register">Create Account</a>
                   </span>
                </p>
             </div>
@@ -99,4 +104,37 @@ $this->load->view('common/header');
 <?php 
  $this->load->view('common/footer');
 ?>
+<script>
+$(function() { 
+    setTimeout(function() {
+  $('#errorMessage').fadeOut('fast');
+}, 3000);
+   
+});
 
+// $(document).ready(function()
+// {
+// 		$("#form_valid").validate(
+// 		{
+// 					rules: {
+//                   EmailAddress: {
+//                         required: true,
+//                                        },			
+// 					},
+
+// 					messages: {
+
+//                   EmailAddress: {
+// 								required: "Plesae enter email address",
+// 								// pattern : "Enter only characters and numbers and \"space , \" -",
+// 								// minlength: "Please enter at least 5 and maximum to 200 letters!",
+// 													},
+										
+// 									}
+				
+// 		});
+// });
+
+
+
+</script>

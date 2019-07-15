@@ -472,7 +472,7 @@ Student
    <div class="container">
       <h2 class="text-center" style="text-transform:none;">Mentor's Blog</h2>
       <div class="row">
-         <center>  <a  target="_blank" href="#" style="color:#007fb6; text-transform:none;font-size: 14px;">View All <i class="fa fa-angle-right" style="margin-left:2px"></i>
+         <center>  <a  target="_blank" href="<?php echo base_url()?>blog" style="color:#007fb6; text-transform:none;font-size: 14px;">View All <i class="fa fa-angle-right" style="margin-left:2px"></i>
             </a>
          </center>
          <div class="clearfix"></div>

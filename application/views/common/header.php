@@ -53,7 +53,7 @@
             <div class="container" >
                <div class="row" >
                   <div class="col-md-2 left">
-                     <a href="index.php">
+                     <a href="<?php echo base_url()?>home">
                      <img src="<?php echo base_url(); ?>default/images/home/mentor-big-bluec6eb.png?w=300" class="logo-blue logo-desktop"  >
                      
                      </a>
