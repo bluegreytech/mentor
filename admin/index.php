@@ -268,7 +268,7 @@ switch (ENVIRONMENT)
 	}
 
 	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
-
+//echo APPPATH;die;
 	
 
 	// The path to the "views" directory

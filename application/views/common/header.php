@@ -15,6 +15,7 @@
 <!--CSS-->
 <link rel="stylesheet" href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/all.css">
 <link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/global-plugins.css" rel=stylesheet>
+<link href="<?php echo base_url(); ?>default/asset/all-css/css/custom.css">
 <link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/my-styles6f92.css?20190422" rel=stylesheet>
 <link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/my-media6687.css?20190318" rel=stylesheet>
 <link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/lightslider.css" rel=stylesheet>
