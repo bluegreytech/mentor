@@ -8,6 +8,15 @@ class Login_model extends CI_Model
 			$res = $r->row();
 			return $res;
 		}
+
+		function getuser(){
+			$r=$this->db->select('*')
+						->from('tbluser')
+						->get();
+			$res = $r->result();
+			return $res;
+	
+		}
 		function user_insert()
 		{  
 			//echo "<pre>";print_r($_POST);die;
