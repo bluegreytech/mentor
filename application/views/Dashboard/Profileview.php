@@ -2,16 +2,19 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header_second');
 $this->load->view('common/sidebar_second');
+$UserId=$this->session->userdata('UserId');
 ?>
-   
+
+
 <section id="main-content" class="my-profile-details-page">
    <section class="wrapper">
      <div class="c_title">
        <h2> My Profile</h2>
        <span class="pull-right">
-         <a href="<?php echo base_url();?>Dashboard/Profileedit" class="btn btn-primary-ghost btn-xs" style="margin-top: 1px;"><i class="fa fa-edit "></i> Edit Profile
+         <a href="<?php echo base_url();?>Dashboard/Profileedit/<?php echo $UserId ;?>" class="btn btn-primary-ghost btn-xs" style="margin-top: 1px;"><i class="fa fa-edit "></i> Edit Profile
          </a>
        </span>
+      
        <div class="clearfix"></div>
      </div>
      <div class="c_panel panel-blank">
@@ -41,18 +44,19 @@ $this->load->view('common/sidebar_second');
                          <div class="table-responsive about-table" style="padding-left: 15px;">
                            <table class="table">
                              <tbody>
-                               <tr><th style="font-size: 13px;text-transform: capitalize;">Mit Patel</th></tr>
+                               <tr><th style="font-size: 13px;text-transform: capitalize;">
+                               <?php echo $FirstName.' '.$LastName?></th></tr>
                                <tr>
-                                 <td  style="padding-left: 0;text-transform: lowercase;"><i class="fa fa-envelope margin-right-5" aria-hidden="true"  style="width: 15px;    font-size: 11px;"></i>mitnp17@gmail.com</td>
+                                 <td  style="padding-left: 0;text-transform: lowercase;"><i class="fa fa-envelope margin-right-5" aria-hidden="true"  style="width: 15px;    font-size: 11px;"></i> <?php echo $EmailAddress?></td>
                                </tr>
                                <tr>
-                                 <td  style="padding-left:0;"><i class="fa fa-phone margin-right-5" aria-hidden="true"  style="width: 15px;"></i>8200308821</td>
+                                 <td  style="padding-left:0;"><i class="fa fa-phone margin-right-5" aria-hidden="true"  style="width: 15px;"> <?php echo $PhoneNumber?></td>
                                </tr>
                                <tr>
-                                  <td  style="padding-left: 0;"> <i class="fa fa-calendar margin-right-5" aria-hidden="true"  style="width: 13px;float: left;font-size: 10px;margin-top: 3px;"></i>16-07-1991</td>
+                                  <td  style="padding-left: 0;"> <i class="fa fa-calendar margin-right-5" aria-hidden="true"  style="width: 13px;float: left;font-size: 10px;margin-top: 3px;"></i><?php echo $DateofBirth?></td>
                                </tr>
                                <tr>
-                                 <td  style="padding-left: 0;"><i class="fa fa-user  margin-right-5" aria-hidden="true"  style="width: 15px;"></i>Male</td>
+                                 <td  style="padding-left: 0;"><i class="fa fa-user  margin-right-5" aria-hidden="true"  style="width: 15px;"></i><?php echo $Gender?></td>
                                </tr>
                              </tbody>
                            </table>
@@ -77,20 +81,61 @@ $this->load->view('common/sidebar_second');
                      <table class="table">
                         <tbody>
                               <tr>
-                                 <th>School</th>
-                                 <td>aaaaaaaa</td>
+                               
+                                 <?php 
+                                       if($StreamTypeId=='3')
+                                       {
+                                          ?>
+                                          <th>College</th>
+                                          <?php
+                                       }
+                                       else
+                                       {
+                                          ?>
+                                          <th>School</th>
+                                          <?php
+                                       }
+                                    ?>
+                                 <td><?php echo $EducationName?></td>
                               </tr>
                               <tr>
-                                 <th>Board</th>
-                                 <td>CBS</td>
+                              <?php 
+                                       if($StreamTypeId=='3')
+                                       {
+                                        ?>
+                                            <th>University</th>
+                                            <td><?php echo $UnivesityName ;?></td>
+                                        <?php
+                                        }else
+                                        {
+                                        ?>
+                                            <th>Board</th>
+                                            <td><?php echo $BoardName ;?></td>
+                                        <?php 
+                                        }
+                                        ?>
                               </tr>
                               <tr>
-                                 <th>Class</th>
-                                 <td>10th</td>
+                              <?php 
+                                       if($StreamTypeId=='3')
+                                       {
+                                        ?>
+                                            <th>Course</th>
+                                            <td><?php echo $Course ;?></td>
+                                        <?php
+                                        }else
+                                        {
+                                        ?>
+                                             <th>Class</th>
+                                             <td><?php echo $ClassStream?></td>
+                                        <?php 
+                                        }
+                                        ?>
                               </tr>
+                            
                               <tr>
                                  <th>Year of Passing</th>
-                                 <td>2009</td>
+                                 <td><?php echo $YearofGraduation?></td>
                               </tr>          
                         </tbody>
                      </table>
@@ -105,19 +150,19 @@ $this->load->view('common/sidebar_second');
                     <tbody>
                       <tr>
                         <th>Father's Name </th>
-                        <td>Narendrabhai</td>
+                        <td><?php echo $FatherName?></td>
                       </tr>
                       <tr>
                         <th>Father's Profession </th>
-                        <td>Farmar</td>
+                        <td><?php echo $FatherProfession?></td>
                       </tr>
                       <tr>
                         <th>Mother's Name </th>
-                        <td>Daxabahen</td>
+                        <td><?php echo $MotherName?></td>
                       </tr>
                       <tr>
                         <th>Mother's Profession </th>
-                        <td>House Wife</td>
+                        <td><?php echo $MotherProfession?></td>
                       </tr>
                     </tbody>
                   </table>
@@ -129,18 +174,78 @@ $this->load->view('common/sidebar_second');
                 </h4>
                 <div class="table-responsive about-table academic-details-box">
                   <div class="row">
-                     <div class="col-md-12 career-academic ">
+                     <div class="col-md-12 career-academic">
+                    <?php 
+                    if($StreamTypeId=='3')
+                    {
+                    ?>
                       <table class="table">
+
+                      <tbody>
+                        <tr>
+                          <th colspan="2">Academic Scores</th>
+                        </tr>
+                        
+                        <tr>
+                          <th>College </th>
+                          <td><?php echo $ClassX?></td>
+                        </tr>
+                          
+                        <tr>
+                          <th>Class XIIth </th>
+                          <td><?php echo $ClassXII?></td>
+                        </tr>
+
+                        <tr>
+                          <th>Class Xth</th>
+                          <td><?php echo $College?></td>
+                        </tr>
+                                                
+                      </tbody>
+                      </table>
+                      </div>
+                    
+                    <?php
+                    }
+                    else
+                    {
+                    ?>
+
+
+
+
+
+
+                      <table class="table">
+
                         <tbody>
                           <tr>
                             <th colspan="2">Current Year Academic Scores</th>
                           </tr>
+                          <?php 
+                            foreach($subject as $subjectper)
+                            {
+                            ?>
                           <tr>
-                              <td  style="padding-right: 0!important;">Account</td>
-                              <td  class="padding-left-pro">60</td>
+                          
+                          <?php if($subjectper->YearStatus=='Current'){   ?>
+                                <td style="padding-right: 0!important;"> <?php echo $subjectper->EducationSubjectName ?></td>
+                              <td  class="padding-left-pro"><?php echo $subjectper->SubjectCgpa ?></td>
+                               <?php }
+                                ?>
+                           
                            </tr>
-                           <tr><td><a target="_blank" href="#" style="text-decoration:underline;">4.jpg</a></tr>
-                           </td>                        
+                           <?php 
+                            }
+                            ?>
+                           <tr>
+                              <?php if($subjectper->YearStatus=='Current' && $subjectper->MarksheetImage!=''){   ?>
+                                <td><a target="_blank" href="<?php echo base_url(); ?>/upload/Marksheet/<?php echo $subjectper->MarksheetImage?>" style="text-decoration:underline;"><?php echo $subjectper->MarksheetImage?></a></td>
+                                  <?php }
+                                    ?>
+                                
+                          </tr>
+                                                  
                         </tbody>
                       </table>
                     </div>
@@ -150,10 +255,35 @@ $this->load->view('common/sidebar_second');
                           <tr>
                             <th colspan="2">Last Year Academic Scores</th>
                           </tr>
-                          <tr><td><a target="_blank" href="#" style="text-decoration:underline;">1.jpg</a></td></tr>
+                          <?php 
+                            foreach($subject as $subjectper)
+                            {
+                            ?>
+                          <tr>
+                        
+                               <?php if($subjectper->YearStatus=='Last'){   ?>
+                                <td style="padding-right: 0!important;"> <?php echo $subjectper->EducationSubjectName ?></td>
+                              <td  class="padding-left-pro"><?php echo $subjectper->SubjectCgpa ?></td>
+                               <?php }
+                                ?>
+                           </tr>
+                           <?php 
+                            }
+                            ?>
+                           <tr>
+                              <?php if($subjectper->YearStatus=='Last' && $subjectper->MarksheetImage!=''){   ?>
+                                <td><a target="_blank" href="<?php echo base_url(); ?>/upload/Marksheet/<?php echo $subjectper->MarksheetImage?>" style="text-decoration:underline;"><?php echo $subjectper->MarksheetImage?></a></td>
+                                  <?php }
+                                    ?>
+                                
+                          </tr>
                         </tbody>
                       </table>
                     </div>
+                  <?php
+                    }
+                  ?>
+
                   </div>
                 </div>
               </div>
@@ -179,7 +309,7 @@ $this->load->view('common/sidebar_second');
                        <div class="col-md-3" style="padding: 0;">
                          <div class="view-profile-user">
                            <span style="border: 1px #e9e9e9 solid;border-radius: 50%;padding: 2px;display: inline-block;">
-                           <img src="../images/a6.png" />                 
+                           <img src="<?php echo base_url();?>default/images/a6.png" />                 
                            </span>
                          </div>
                        </div>
@@ -188,33 +318,33 @@ $this->load->view('common/sidebar_second');
                            <table class="table">
                              <tbody>
                                <tr>
-                                 <th style="font-size: 13px;text-transform: capitalize;">Mit Patel</th>
+                                 <th style="font-size: 13px;text-transform: capitalize;"><?php echo $FirstName.' '.$LastName?></th>
                                </tr>
                                <tr>
 
                                  <td  style="text-transform: lowercase;">
                                    <i class="fa fa-envelope margin-right-5" aria-hidden="true"  style="width: 15px;"></i>
-                                   mitnp17@gmail.com                                 </td>
+                                   <?php echo $EmailAddress?>                                </td>
                                </tr>
                                
                                <tr>
 
                                  <td>
                                    <i class="fa fa-phone margin-right-5" aria-hidden="true"  style="width: 15px;"></i>
-                                   8200308821                                 </td>
+                                   <?php echo $PhoneNumber?>                                 </td>
                                </tr>
 
                                <tr>
 
                                  <td>
                                    <i class="fa fa-calendar margin-right-5" aria-hidden="true"  style="width: 15px;"></i>
-                                   16-07-1991                                 </td>
+                                   <?php echo $DateofBirth?>                                </td>
                                </tr>
                                <tr>
 
                                  <td>
                                    <i class="fa fa-user  margin-right-5" aria-hidden="true"  style="width: 15px;"></i>
-                                   Male                                 </td>
+                                   <?php echo $Gender?>                              </td>
                                </tr>
                              </tbody>
                            </table>

@@ -113,11 +113,6 @@ class Home extends CI_Controller {
 		$this->load->view('common/login');
 	}
 
-	// public function list()
-	// {
-	// 	$data['adminData']=$this->Login_model->getuser();
-	//    $this->load->view('Dashboard/Profilelist',$data);
-	// }
 	
 	public function dashboard()
 	{
@@ -166,7 +161,6 @@ class Home extends CI_Controller {
 	function Resetpassword($code='')
 	{
 		$UserId=$this->Login_model->checkResetCode($code);
-		print_r($UserId);die;
 		$data = array();
 		 if($UserId!='')
 		 {

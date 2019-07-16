@@ -12,26 +12,51 @@ class Dashboard extends CI_Controller
 	}
 	
 	 
-	 public function Profile(){
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}else
-		{
-			$this->load->view('Dashboard/Profileview');
-		}
-		
-	 }
-
-
-	//  public function Profileedit(){
+	//  public function Profile(){
 	// 	if(!check_admin_authentication()){ 
 	// 		redirect(base_url());
 	// 	}else
 	// 	{
-	// 		$this->load->view('Dashboard/Editprofile');
+	// 		$this->load->view('Dashboard/Profileview');
 	// 	}
 		
 	//  }
+
+	 function Profile($UserId){
+		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}
+		$data=array();
+		$result=$this->Dashboard_model->getdata($UserId);
+		$data['subject']=$this->Dashboard_model->getsubject($UserId);
+		//print_r($result);die;	
+			$data['UserId']=$result['UserId'];
+			$data['FirstName']=$result['FirstName'];
+			$data['LastName']=$result['LastName'];	
+			$data['EmailAddress']=$result['EmailAddress'];
+			$data['DateofBirth']= $result['DateofBirth'];		
+			$data['PhoneNumber']=$result['PhoneNumber'];
+			$data['Gender']= $result['Gender'];	
+			$data['EducationName']= $result['EducationName'];
+			$data['UnivesityName']= $result['UnivesityName'];	
+			$data['BoardName']= $result['BoardName'];	
+			$data['ClassStream']= $result['ClassStream'];	
+			$data['Course']= $result['Course'];
+			$data['YearofGraduation']= $result['YearofGraduation'];	
+			$data['FatherName']= $result['FatherName'];	
+			$data['FatherProfession']= $result['FatherProfession'];	
+			$data['MotherName']= $result['MotherName'];	
+			$data['MotherProfession']= $result['MotherProfession'];
+			$data['StreamTypeId']= $result['StreamTypeId'];	
+			$data['GraduateScoreId']= $result['GraduateScoreId'];	
+			$data['ClassX']= $result['ClassX'];	
+			$data['ClassXII']= $result['ClassXII'];
+			$data['College']= $result['College'];	
+			//echo "<pre>";print_r($data);die;
+		$this->load->view('Dashboard/Profileview',$data);	
+	
+}
+
 
 
 
@@ -43,7 +68,6 @@ class Dashboard extends CI_Controller
 
 	public function Useradd()
 	{      
-		
 				$data=array();
 				$data['UserId']=$this->input->post('UserId');
 				$data['FirstName']=$this->input->post('FirstName');
@@ -84,7 +108,9 @@ class Dashboard extends CI_Controller
 	function Profileedit($UserId){
 			$data=array();
 			$result=$this->Dashboard_model->getdata($UserId);
-			//print_r($result);die;	
+			//echo "<pre>";print_r($result);die;	
+			$data['subject']=$this->Dashboard_model->getsubject($UserId);
+			//print_r($data['subject']);die;
 			$data['UserId']=$result['UserId'];
 			$data['FirstName']=$result['FirstName'];
 			$data['LastName']=$result['LastName'];	
@@ -92,17 +118,26 @@ class Dashboard extends CI_Controller
 			$data['DateofBirth']= $result['DateofBirth'];		
 			$data['PhoneNumber']=$result['PhoneNumber'];
 			$data['Gender']= $result['Gender'];	
-			$data['EducationName']= $result['EducationName'];	
+			$data['EducationName']= $result['EducationName'];
+			$data['UnivesityName']= $result['UnivesityName'];	
 			$data['BoardName']= $result['BoardName'];	
 			$data['ClassStream']= $result['ClassStream'];	
+			$data['Course']= $result['Course'];
 			$data['YearofGraduation']= $result['YearofGraduation'];	
 			$data['FatherName']= $result['FatherName'];	
 			$data['FatherProfession']= $result['FatherProfession'];	
 			$data['MotherName']= $result['MotherName'];	
-			$data['MotherProfession']= $result['MotherProfession'];	
+			$data['MotherProfession']= $result['MotherProfession'];
+			$data['StreamTypeId']= $result['StreamTypeId'];	
+			$data['GraduateScoreId']= $result['GraduateScoreId'];	
+			$data['ClassX']= $result['ClassX'];	
+			$data['ClassXII']= $result['ClassXII'];
+			$data['College']= $result['College'];	
+			
 			$this->load->view('Dashboard/Editprofile',$data);	
 		
 	}
+
 
 	function updatedata($UserId){
 		
