@@ -79,7 +79,7 @@ class Home extends CI_Controller {
 
 	public function login()
 	{
-		//echo "jhjhg";die;
+		
 		if($this->input->post('logins'))
 			{   
 					$EmailAddress = $this->input->post('EmailAddress');
