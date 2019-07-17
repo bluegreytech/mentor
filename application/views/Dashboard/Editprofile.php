@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
+
 $this->load->view('common/header_second');
 $this->load->view('common/sidebar_second');
 ?>

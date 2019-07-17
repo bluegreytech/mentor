@@ -498,3 +498,81 @@ ERROR - 2019-07-17 09:24:54 --> Severity: Warning --> include(): Failed opening 
 ERROR - 2019-07-17 09:24:54 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
 ERROR - 2019-07-17 09:24:54 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
 ERROR - 2019-07-17 09:24:54 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:40:46 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:40:46 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:40:46 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:40:46 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:41:23 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:41:23 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:41:23 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> 404 Page Not Found: Default_2/css
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 09:41:23 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:33:43 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:33:58 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:34:29 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:34:35 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:34:36 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:34:38 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:34:38 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:35:11 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:35:40 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:36:28 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:37:14 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:38:26 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:38:30 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:38:36 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:40:19 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:40:56 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:41:40 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:42:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-17 10:42:30 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:30 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:30 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-17 10:42:30 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:30 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:30 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-17 10:42:30 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:30 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:32 --> 404 Page Not Found: Home/assets
+ERROR - 2019-07-17 10:42:32 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-17 10:42:32 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:32 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:32 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:32 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-17 10:42:47 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:44:22 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:44:35 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:45:36 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:46:38 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:46:59 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:46:59 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:47:00 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:47:00 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php
+ERROR - 2019-07-17 10:47:00 --> syntax error, unexpected ';', expecting ')' at line no 78 in C:\xampps\htdocs\mentor\application\models\Dashboard_model.php

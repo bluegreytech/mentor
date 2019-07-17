@@ -14,8 +14,8 @@
                                 $UserId=$this->session->userdata('UserId');
                                  $FirstName=$this->session->userdata('FirstName');
                                  $LastName=$this->session->userdata('LastName');
-                                // $EmailAddress=$this->session->userdata('EmailAddress');
-                                // $RoleId=$this->session->userdata('RoleId');
+                                 $EmailAddress=$this->session->userdata('EmailAddress');
+                                 $RoleId=$this->session->userdata('RoleId');
                               ?>
                         <p>
                            <span class="name"><?php echo $FirstName.' '.$LastName; ?></span>

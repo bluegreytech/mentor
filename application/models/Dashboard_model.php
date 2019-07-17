@@ -59,15 +59,12 @@ class Dashboard_model extends CI_Model
 
 	function getsubject($UserId)
 	{
-		//echo $UserId;die;
 		$IsActive=1;
 		$query=$this->db->get_where('tblgraduationsubject',array('UserId'=>$UserId,
 																'IsActive'=>$IsActive
 																));
-	    //echo $this->db->last_query();die; 
 		if($query->num_rows()>0)
 		{ 
-			//echo "<pre>";print_r($query->result());die;
 			return $query->result(); 	
 		}else{
 			return '';
@@ -78,14 +75,19 @@ class Dashboard_model extends CI_Model
 	function updatedata(){
 		$id=$this->input->post('UserId');
 		$data=array(
-			'UserId'=>$this->input->post('UserId'),
-			'FullName'=>$this->input->post('FullName'),
-			'EmailAddress'=>$this->input->post('EmailAddress'),
-			'Addresses'=>$this->input->post('Addresses'),
-			'ProfileImage'=>$this->input->post('ProfileImage'),
-			'AdminContact'=>$this->input->post('AdminContact'),
-			'IsActive'=>$this->input->post('IsActive'),
+			$data['RoleId']=$this->input->post('RoleId');
+			$data['StreamTypeId']=$this->input->post('StreamTypeId');
+			$data['FirstName']=$this->input->post('FirstName');
+			$data['LastName']=$this->input->post('LastName');
+			$data['EmailAddress']=$this->input->post('EmailAddress');
+			$data['DateofBirth']=$this->input->post('DateofBirth');
+			$data['PhoneNumber']=$this->input->post('PhoneNumber');
+			$data['Gender']=$this->input->post('Gender');
+			$data['DateofBirth']=$this->input->post('DateofBirth');
+			$data['PhoneNumber']=$this->input->post('PhoneNumber');
+			$data['Gender']=$this->input->post('Gender');
 			  );
+		//	print_r($data);die;
 	    $this->db->where("UserId",$id);
 		$this->db->update('tbluser',$data);		
 		return 1;
