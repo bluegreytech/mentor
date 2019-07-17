@@ -12,17 +12,7 @@ class Dashboard extends CI_Controller
 	}
 	
 
-	 public function Profile(){
-	 	
-		if(!check_user_authentication()){ 
-			//echo"hjkhk";die;
-			redirect(base_url());
-		}
- 
-			$this->load->view('Dashboard/Profileview');
-		
-		
-	 }
+	
 
 
 	
@@ -30,13 +20,15 @@ class Dashboard extends CI_Controller
 	
 
 	 function Profile($UserId){
-		if(!check_admin_authentication()){ 
+
+		if(!check_user_authentication()){ 
+			//echo "hggjhg";die;
 			redirect(base_url());
 		}
 		$data=array();
 		$result=$this->Dashboard_model->getdata($UserId);
 		$data['subject']=$this->Dashboard_model->getsubject($UserId);
-		//print_r($result);die;	
+		print_r($result);die;	
 			$data['UserId']=$result['UserId'];
 			$data['FirstName']=$result['FirstName'];
 			$data['LastName']=$result['LastName'];	
