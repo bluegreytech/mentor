@@ -54,7 +54,7 @@
             *****************************
             -->
          <?php 
-            if(check_admin_authentication()){ 
+            if(check_user_authentication()){ 
          ?>
 
          <div class="top-nav">
