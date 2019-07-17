@@ -25,7 +25,7 @@ class Dashboard extends CI_Controller
 		$data=array();
 		$result=$this->Dashboard_model->getdata($UserId);
 		$data['subject']=$this->Dashboard_model->getsubject($UserId);
-		print_r($result);die;	
+		//print_r($result);die;	
 			$data['UserId']=$result['UserId'];
 			$data['FirstName']=$result['FirstName'];
 			$data['LastName']=$result['LastName'];	
