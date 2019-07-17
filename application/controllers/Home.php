@@ -92,7 +92,6 @@ class Home extends CI_Controller {
 					$where = array(
 					"EmailAddress"=>$EmailAddress,
 					"Password"=>$Password,
-				
 					);
 					$log = $this->Login_model->login_where('tbluser',$where);           
 					$cnt = count($log);
@@ -101,14 +100,13 @@ class Home extends CI_Controller {
 						$session= array(
 								'EmailAddress'=> $log->EmailAddress,
 								'UserId'=> $log->UserId,
-								// 'FirstName'=> $log->FirstName,
-								// 'LastName'=> $log->LastName,
+								'FirstName'=> $log->FirstName,
+								'LastName'=> $log->LastName,
 								'RoleId'=> $log->RoleId,
 							);
-							//echo "jhjhgj";die;
 						$this->session->set_userdata($session);
 						$this->session->set_flashdata('success','User Login successfully');
-						redirect('blog');
+						redirect('Dashboard');
 					}
 					else
 					{

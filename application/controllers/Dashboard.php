@@ -11,18 +11,15 @@ class Dashboard extends CI_Controller
       
 	}
 	
+	public function index()
+	{				
+		$this->load->view('Dashboard/Dashboard');
+	}
 
-	
 
-
-	
-
-	
-
-	 function Profile($UserId){
+	public function Profile($UserId){
 
 		if(!check_user_authentication()){ 
-			//echo "hggjhg";die;
 			redirect(base_url());
 		}
 		$data=array();
@@ -112,7 +109,7 @@ class Dashboard extends CI_Controller
 			$result=$this->Dashboard_model->getdata($UserId);
 			//echo "<pre>";print_r($result);die;	
 			$data['subject']=$this->Dashboard_model->getsubject($UserId);
-			//print_r($data['subject']);die;
+			//echo "<pre>";print_r($data['subject']);die;
 			$data['UserId']=$result['UserId'];
 			$data['FirstName']=$result['FirstName'];
 			$data['LastName']=$result['LastName'];	
@@ -136,7 +133,7 @@ class Dashboard extends CI_Controller
 			$data['ClassX']= $result['ClassX'];	
 			$data['ClassXII']= $result['ClassXII'];
 			$data['College']= $result['College'];	
-			
+			//echo "<pre>";print_r($data);die;
 			$this->load->view('Dashboard/Editprofile',$data);	
 		
 	}

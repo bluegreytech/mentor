@@ -43,7 +43,7 @@ $this->load->view('common/sidebar_second');
                                     <img src="http://mindlerdashboard.imgix.net/a6.png?w=120" /> 
                                  </div>
                                  <div>
-                                 <input type="hidden"   value="<?php echo $UserId; ?>" name="UserId">
+                                 <input type="hidden"  value="<?php echo $UserId; ?>" name="UserId">
                                     <span class="btn btn-white btn-file btn-xs">
                                     <span class="fileupload-exists show-important">Select image</span>
                                     <input id="register-photo"  type="file" name="userfile"  class="default" />
