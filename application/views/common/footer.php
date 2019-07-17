@@ -87,6 +87,8 @@
  <script type="text/javascript" src="<?php echo base_url(); ?>default/asset/all-css/my-sets/js/clipboard.min.js"></script>
 
 <script type="text/javascript" src="<?php echo base_url(); ?>default/asset/all-css/my-sets/js/homepage-functionb3dc.js?1559996786"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>default/js/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 <script type="text/javascript">
 
 

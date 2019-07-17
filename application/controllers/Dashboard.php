@@ -13,12 +13,14 @@ class Dashboard extends CI_Controller
 	
 	 
 	 public function Profile(){
-		if(!check_admin_authentication()){ 
+	 	
+		if(!check_user_authentication()){ 
+			//echo"hjkhk";die;
 			redirect(base_url());
-		}else
-		{
-			$this->load->view('Dashboard/Profileview');
 		}
+ 
+			$this->load->view('Dashboard/Profileview');
+		
 		
 	 }
 

@@ -55,7 +55,6 @@ $this->load->view('common/header');
                </div>
                <h4>Forgot password in to Mentor</h4>
                <br>
-              
              
                <?php if(($this->session->flashdata('error'))){ ?>
                      <div class="alert alert-danger" id="errorMessage">
@@ -72,29 +71,26 @@ $this->load->view('common/header');
                      <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
                      </div>
                <?php } ?>
-               <form  id="form_valid" method="post" action="<?php echo base_url();?>Home/Forgotpassword">
-                  <div class="placeholder-input">
+               <form  id="form_forgotpass" method="post" action="<?php echo base_url();?>Home/Forgotpassword">
+                  <div class="">
                      <span class="relative-span">
-                     <input name="EmailAddress" type='email' required  class="form-control " placeholder="Email Address"/>
+                     <input name="EmailAddress" type='email' class="form-control " placeholder="Email Address"/>
+                           <p id="emailerror" class="pull-left"></p>
                      </span>
                   </div>
-                  <!-- <div class="placeholder-input">
-                     <span class="relative-span type-password">
-                     <input autocomplete="new-password"  name="ConfirmPassword" required type="password"  class="form-control" placeholder="Re-type password" />
+                  <br>
+                   <p class="bottom-link" style="margin-top: 20px">
+                     <span style="float:left">
+                     <a href="<?php echo base_url()?>home/login" class="btn btn-black" style="color: #fff; background-color: #000;">Back to Log in</a>
                      </span>
-                  </div> -->
-                  <p>
+                     <span style="float:right">
                      <input type="submit" name="logins" id="login-btn" class="new-btn-orange" value="Submit">
+                     </span>
                   </p>
+               <br>
+                 
                </form>
-               <p class="bottom-link" style="margin-top: 20px">
-                  <span style="float:left">
-                  <a href="<?php echo base_url()?>Home/login">Back to Log in</a>
-                  </span>
-                  <span style="float:right">New to Mentor? 
-                  <a href="<?php echo base_url()?>Home/Register">Create Account</a>
-                  </span>
-               </p>
+              
             </div>
          </div>
       </div>
@@ -120,28 +116,38 @@ $(function() {
    
 });
 
-// $(document).ready(function()
-// {
-// 		$("#form_valid").validate(
-// 		{
-// 					rules: {
-//                   EmailAddress: {
-//                         required: true,
-//                                        },			
-// 					},
+$(document).ready(function()
+{
+		$("#form_forgotpass").validate(
+		{
+					rules: {
+                  EmailAddress: {
+                        required: true,
+                        email:true
+                        },			
+					},
 
-// 					messages: {
+					messages: {
 
-//                   EmailAddress: {
-// 								required: "Plesae enter email address",
-// 								// pattern : "Enter only characters and numbers and \"space , \" -",
-// 								// minlength: "Please enter at least 5 and maximum to 200 letters!",
-// 													},
+                  EmailAddress: {
+								required: "Plesae enter email address",
+								// pattern : "Enter only characters and numbers and \"space , \" -",
+								// minlength: "Please enter at least 5 and maximum to 200 letters!",
+													},
 										
-// 									}
+									},
+            errorPlacement: function (error, element) {
+            console.log('dd', element.attr("name"))
+            if (element.attr("name") == "EmailAddress") {
+                error.appendTo("#emailerror");
+            } else {
+                error.insertAfter(element)
+            }
+        }
+
 				
-// 		});
-// });
+		});
+});
 
 
 
