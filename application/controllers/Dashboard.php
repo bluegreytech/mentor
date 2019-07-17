@@ -10,11 +10,13 @@ class Dashboard extends CI_Controller
 		$this->load->model('Dashboard_model');
       
 	}
+
 	
 	public function index()
 	{				
 		$this->load->view('Dashboard/Dashboard');
 	}
+
 
 
 	public function Profile($UserId){
