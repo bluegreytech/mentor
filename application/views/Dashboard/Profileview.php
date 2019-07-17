@@ -8,6 +8,16 @@ $UserId=$this->session->userdata('UserId');
 
 <section id="main-content" class="my-profile-details-page">
    <section class="wrapper">
+   <?php if(($this->session->flashdata('error'))){ ?>
+                     <div class="alert alert-danger" id="errorMessage">
+                     <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
+                     </div>
+               <?php } ?>
+                   <?php if(($this->session->flashdata('success'))){ ?>
+                     <div class="alert alert-success" id="successMessage">
+                     <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
+                     </div>
+               <?php } ?>
      <div class="c_title">
        <h2> My Profile</h2>
        <span class="pull-right">
@@ -370,3 +380,19 @@ $UserId=$this->session->userdata('UserId');
 <?php 
  $this->load->view('common/footer_second');
 ?>
+
+<script>
+$(function() { 
+    setTimeout(function() {
+  $('#errorMessage').fadeOut('fast');
+}, 3000);
+   
+});
+$(function() { 
+    setTimeout(function() {
+  $('#successMessage').fadeOut('fast');
+}, 3000);
+   
+});
+
+</script>

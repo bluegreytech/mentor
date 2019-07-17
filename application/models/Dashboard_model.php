@@ -74,23 +74,95 @@ class Dashboard_model extends CI_Model
 
 	function updatedata(){
 		$id=$this->input->post('UserId');
-		$data=array(
-			$data['RoleId']=$this->input->post('RoleId');
-			$data['StreamTypeId']=$this->input->post('StreamTypeId');
-			$data['FirstName']=$this->input->post('FirstName');
-			$data['LastName']=$this->input->post('LastName');
-			$data['EmailAddress']=$this->input->post('EmailAddress');
-			$data['DateofBirth']=$this->input->post('DateofBirth');
-			$data['PhoneNumber']=$this->input->post('PhoneNumber');
-			$data['Gender']=$this->input->post('Gender');
-			$data['DateofBirth']=$this->input->post('DateofBirth');
-			$data['PhoneNumber']=$this->input->post('PhoneNumber');
-			$data['Gender']=$this->input->post('Gender');
-			  );
-		//	print_r($data);die;
-	    $this->db->where("UserId",$id);
-		$this->db->update('tbluser',$data);		
-		return 1;
-	}
+		$EducationId=$this->input->post('EducationId');
+		$UserFamilyId=$this->input->post('UserFamilyId');
+		$GraduateScoreId=$this->input->post('GraduateScoreId');
+		 $data2=array(
+			'EducationId'=>$this->input->post('EducationId'),
+			'UserId'=>$this->input->post('UserId'),
+			'EducationName'=>$this->input->post('EducationName'),
+			'UnivesityName'=>$this->input->post('UnivesityName'),
+			'Course'=>$this->input->post('Course'),
+			'YearofGraduation'=>$this->input->post('YearofGraduation'),
+			);
+			//print_r($data2);die;
+		$this->db->where("EducationId",$EducationId);
+		$this->db->update('tblgraduation',$data2);	
+	
+		if($EducationId!=''){
+			$data=array(
+				'UserId'=>$this->input->post('UserId'),
+				'FirstName'=>$this->input->post('FirstName'),
+				'LastName'=>$this->input->post('LastName'),
+				'EmailAddress'=>$this->input->post('EmailAddress'),
+				'DateofBirth'=>$this->input->post('DateofBirth'),
+				'PhoneNumber'=>$this->input->post('PhoneNumber'),
+				'Gender'=>$this->input->post('Gender'),
+				'DateofBirth'=>$this->input->post('DateofBirth'),
+				'PhoneNumber'=>$this->input->post('PhoneNumber'),
+				'Gender'=>$this->input->post('Gender')
+				  );
+				  // print_r($data);die;
+				$this->db->where("UserId",$id);
+				$this->db->update('tbluser',$data);	
+				//return 1;
+					
+			}
+
+			if($UserFamilyId!=''){
+				$data3=array(
+					'UserFamilyId'=>$this->input->post('UserFamilyId'),
+					'UserId'=>$this->input->post('UserId'),
+					'FatherName'=>$this->input->post('FatherName'),
+					'FatherProfession'=>$this->input->post('FatherProfession'),
+					'MotherName'=>$this->input->post('MotherName'),
+					'MotherProfession'=>$this->input->post('MotherProfession')
+					  );
+					  // print_r($data);die;
+					$this->db->where("UserFamilyId",$UserFamilyId);
+					$this->db->update('tbluserfamilydetail',$data3);	
+					//return 1;
+						
+				}
+				if($GraduateScoreId!=''){
+					$data4=array(
+						'GraduateScoreId'=>$this->input->post('GraduateScoreId'),
+						'UserId'=>$this->input->post('UserId'),
+						'ClassX'=>$this->input->post('ClassX'),
+						'ClassXII'=>$this->input->post('ClassXII'),
+						'College'=>$this->input->post('College')
+						  );
+						  // print_r($data);die;
+						$this->db->where("GraduateScoreId",$GraduateScoreId);
+						$this->db->update('tblgraduatescore',$data4);	
+						//return 1;
+							
+					}
+			
+					if($EducationSubjectId!=''){
+
+						$query=$this->db->select('t1.UserId,t4.EducationSubjectId,t4.EducationSubjectName,t4.SubjectCgpa,t4.MarksheetImage');
+						$this->db->from('tbluser as t1');
+						$this->db->join('tblgraduationsubject as t4', 't1.UserId = t4.UserId', 'LEFT');
+						$this->db->where('t4.EducationSubjectId',$EducationSubjectId);
+						foreach($query->result_array() as $row)
+						{
+							print_r($query->result_array());die;
+							echo $row->EducationSubjectId; 
+							echo $row->EducationSubjectName;
+							echo $row->SubjectCgpa;
+						}
+
+						die;
+
+						//$query=$this->db->get();
+						//return $query->row();
+
+
+					
+					}
+			
+
+		}
 
 }
