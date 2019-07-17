@@ -54,7 +54,8 @@ class Dashboard extends CI_Controller
 			$data['FatherProfession']= $result['FatherProfession'];	
 			$data['MotherName']= $result['MotherName'];	
 			$data['MotherProfession']= $result['MotherProfession'];
-			$data['StreamTypeId']= $result['StreamTypeId'];	
+			$data['StreamTypeId']= $result['StreamTypeId'];
+			$data['StreamStatus']= $result['StreamStatus'];	
 			$data['GraduateScoreId']= $result['GraduateScoreId'];	
 			$data['ClassX']= $result['ClassX'];	
 			$data['ClassXII']= $result['ClassXII'];
@@ -77,15 +78,17 @@ class Dashboard extends CI_Controller
 	{      
 				$data=array();
 				$data['UserId']=$this->input->post('UserId');
+				$data['RoleId']=$this->input->post('RoleId');
+				$data['StreamTypeId']=$this->input->post('StreamTypeId');
 				$data['FirstName']=$this->input->post('FirstName');
 				$data['LastName']=$this->input->post('LastName');
 				$data['EmailAddress']=$this->input->post('EmailAddress');
 				$data['DateofBirth']=$this->input->post('DateofBirth');
 				$data['PhoneNumber']=$this->input->post('PhoneNumber');
 				$data['Gender']=$this->input->post('Gender');
-				// $data['DateofBirth']=$this->input->post('DateofBirth');
-				// $data['PhoneNumber']=$this->input->post('PhoneNumber');
-				// $data['Gender']=$this->input->post('Gender');
+				$data['DateofBirth']=$this->input->post('DateofBirth');
+				$data['PhoneNumber']=$this->input->post('PhoneNumber');
+				$data['Gender']=$this->input->post('Gender');
 				
 				if($_POST){
 					if($this->input->post('UserId')==''){
@@ -136,6 +139,7 @@ class Dashboard extends CI_Controller
 			$data['MotherName']= $result['MotherName'];	
 			$data['MotherProfession']= $result['MotherProfession'];
 			$data['StreamTypeId']= $result['StreamTypeId'];	
+			$data['StreamStatus']= $result['StreamStatus'];
 			$data['GraduateScoreId']= $result['GraduateScoreId'];	
 			$data['ClassX']= $result['ClassX'];	
 			$data['ClassXII']= $result['ClassXII'];
