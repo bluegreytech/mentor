@@ -251,9 +251,8 @@ switch (ENVIRONMENT)
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
-
 	
-	
+	 //print_r(APPPATH);
 	
 
 
