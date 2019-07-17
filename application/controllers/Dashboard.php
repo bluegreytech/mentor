@@ -10,14 +10,6 @@ class Dashboard extends CI_Controller
 		$this->load->model('Dashboard_model');
       
 	}
-	
-
-	
-
-
-	
-
-	
 
 	 function Profile($UserId){
 
