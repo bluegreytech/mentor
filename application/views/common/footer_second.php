@@ -16,9 +16,12 @@
 <script src="<?php echo base_url(); ?>default_2/js/custom-new.js?1562847423"></script>
 <script src="<?php echo base_url(); ?>default_2/js/alertify.min.js" type="text/javascript" ></script>
 <script src="<?php echo base_url(); ?>default_2/js/enjoyhint.js"></script>
-<script src="<?php echo base_url(); ?>default_2/js/jquery-touch.js">
-  
-</script>
+<script src="<?php echo base_url(); ?>default_2/js/jquery-touch.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>default/js/jquery.validate.min.js"></script>
+
+   
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+
 
 
 <script type="text/javascript">

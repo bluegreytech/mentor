@@ -55,46 +55,48 @@ $this->load->view('common/header');
                </div>
                <h4>Reset password in to Mentor</h4>
                <br>
-              
-             
-               <?php if(($this->session->flashdata('error'))){ ?>
+               <?php if($this->session->flashdata('error')){ ?>
                      <div class="alert alert-danger" id="errorMessage">
                      <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
                      </div>
                <?php } ?>
-               <?php if(($this->session->flashdata('warning'))){ ?>
+               <?php if($this->session->flashdata('warning')){ ?>
                      <div class="alert alert-warning" id="errorMessage">
                      <strong> <?php echo $this->session->flashdata('warning'); ?></strong> 
                      </div>
                <?php } ?>
-               <?php if(($this->session->flashdata('success'))){ ?>
+               <?php if($this->session->flashdata('success')){ ?>
                      <div class="alert alert-success" id="successMessage">
                      <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
                      </div>
                <?php } ?>
-               <form  id="form_valid" method="post" action="<?php echo base_url();?>home/resetpassword">
-                  <div class="placeholder-input">
+             <?php $attributes = array('name'=>'frm_reset','id'=>'frm_restpwd','class'=>'reset-form');
+                  echo form_open('home/reset_password/'.$code,$attributes); ?>
+                  <div class="">
                      <span class="relative-span">
-                           <input type="text"   value="<?php echo $UserId; ?>" name="UserId">
-                           <input type="text"   value="<?php echo $code; ?>" name="code">
-                     <input name="Password" type='Password' required  class="form-control " placeholder="Enter new password"/>
+                           <input type="hidden" value="<?php echo $UserId; ?>" name="UserId">
+                           <input type="hidden" value="<?php echo $code; ?>" name="code">
+                           <input name="Password" type='password' class="form-control" placeholder="Enter new password" id="password"/>
+                           <p id="pwderror" class="pull-left"></p>
                      </span>
                   </div>
-                  <!-- <div class="placeholder-input">
+                  <div class="">
                      <span class="relative-span type-password">
-                     <input autocomplete="new-password"  name="ConfirmPassword" required type="password"  class="form-control" placeholder="Re-type password" />
+                           <input autocomplete="new-password"  name="ConfirmPassword"  type="password"  class="form-control" placeholder="Re-type password" />
+                           <p id="cpwderror" class="pull-left"></p>
                      </span>
-                  </div> -->
-                  <p>
+                  </div>
+                   <br>
+                  <div class="form-group">
                      <input type="submit" name="logins" id="login-btn" class="new-btn-orange" value="Submit">
-                  </p>
+                 </div>
                </form>
                <p class="bottom-link" style="margin-top: 20px">
                   <span style="float:left">
-                  <a href="<?php echo base_url()?>Home/login">Back to Log in</a>
+                  <a href="<?php echo base_url()?>home/login">Back to Log in</a>
                   </span>
                   <span style="float:right">New to Mentor? 
-                  <a href="<?php echo base_url()?>Home/Register">Create Account</a>
+                  <a href="<?php echo base_url()?>home/register">Create Account</a>
                   </span>
                </p>
             </div>
@@ -122,28 +124,34 @@ $(function() {
    
 });
 
-// $(document).ready(function()
-// {
-// 		$("#form_valid").validate(
-// 		{
-// 					rules: {
-//                   EmailAddress: {
-//                         required: true,
-//                                        },			
-// 					},
-
-// 					messages: {
-
-//                   EmailAddress: {
-// 								required: "Plesae enter email address",
-// 								// pattern : "Enter only characters and numbers and \"space , \" -",
-// 								// minlength: "Please enter at least 5 and maximum to 200 letters!",
-// 													},
-										
-// 									}
-				
-// 		});
-// });
+ $("#frm_restpwd").validate(
+    {
+    rules:{       
+        Password:{
+            required: true,            
+        },  
+        ConfirmPassword:{
+            required: true,
+            equalTo:"#password",
+        },      
+       
+    },
+    // messages:{
+    //  EmailAddress:"Email Address is required",
+    // },
+    errorPlacement: function (error, element) {
+            console.log('dd', element.attr("name"))
+            if (element.attr("name") == "Password") {
+                error.appendTo("#pwderror");
+            } else if (element.attr("name") == "ConfirmPassword") {
+                  error.appendTo("#cpwderror");
+              
+            }else{
+                  error.insertAfter(element)
+            }
+        }
+    
+});
 
 
 

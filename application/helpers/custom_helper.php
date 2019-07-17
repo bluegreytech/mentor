@@ -111,13 +111,15 @@
 	 * @return	boolen
 	 */
 	 
-	function check_admin_authentication()
+	function check_user_authentication()
 	{
+		//echo "jhjhg";die;;
 		$CI =& get_instance();   
                 if($CI->session->userdata('UserId')!='')
                 {
                     //check user active
 					$a_data = get_one_admin($CI->session->userdata('UserId'));
+					//echo "<pre>";print_r($a_data);die;
                     if($a_data->IsActive == '1'){
                      return true;
                     }
@@ -188,15 +190,15 @@
 	 
 	function email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str)
 	{
-	
-	   //echo $email_address_from;
-	  // echo $email_address_reply;
-	   //echo	$email_to;	
-	  // echo $email_subject;	
-	  // echo $str;
+	// echo "jhjh";die;
+	   // echo $email_address_from; 
+	   // echo $email_address_reply;
+	   // echo	$email_to;	
+	   // echo $email_subject;	
+	   // echo $str; die;
 
 		$CI =& get_instance();
-		$query = $CI->db->get_where("email_setting",array('email_setting_id'=>1));
+		$query = $CI->db->get_where("tblemail_setting",array('email_setting_id'=>1));
 		$email_set=$query->row();
 		 			
 									
@@ -206,6 +208,7 @@
 		
 		if($email_set->mailer=='mail')
 		{
+			//echo "jhjhg";die;
 			// 	$config = Array(
 			// 'protocol' => 'smtp',
 			// 'smtp_host' => 'ssl://smtp.gmail.com',
@@ -216,10 +219,16 @@
 			// 'charset'   => 'iso-8859-1'
 			// );
 			$config['protocol']='smtp';  
-			$config['smtp_host'] = trim("smtp.sendgrid.net");
-            $config['smtp_port']=trim(465);  
-            $config['smtp_user'] = trim("php.sanket@spaculus.info");
-            $config['smtp_pass'] = trim("sanket@123");
+			$config['smtp_host'] = trim("ssl://smtp.googlemail.com");
+            $config['smtp_port']='465';  
+            $config['smtp_user'] = trim("bluegreyindia@gmail.com");
+            $config['smtp_pass'] = trim("Test@123");
+		
+			// $config['protocol']='smtp';  
+			// $config['smtp_host'] = trim("smtp.sendgrid.net");
+  			 // $config['smtp_port']=trim(465);  
+  	 		//  $config['smtp_user'] = trim("php.sanket@spaculus.info");
+   //          $config['smtp_pass'] = trim("sanket@123");
 		
 			// $config['protocol']='smtp';  
 			// $config['smtp_host']=trim($email_set->smtp_host);  
@@ -257,8 +266,8 @@
 		$config['newline'] = "\r\n";
 		
 		$CI->email->initialize($config);
-		 
-		$CI->email->from($email_address_from,"Project Stand Up");
+		// echo "<pre>"; print_r($CI->email->initialize($config)); die;
+	    $CI->email->from($email_address_from,"Mentor");
 		$CI->email->reply_to($email_address_reply);
 		$CI->email->to($email_to);
 		$CI->email->subject($email_subject);
@@ -266,7 +275,7 @@
 		$CI->email->send();
 		// if($CI->email->send()){
 		// 	//echo $CI->email->prin
-		//    echo "send";
+		//    echo "send"; die;
 		// }else{
 		// 		echo $CI->email->print_debugger();
 		// }
@@ -1344,6 +1353,17 @@
 		$CI =& get_instance();		
 		$CI->db->order_by('ptype_id', 'asc');
 		$query = $CI->db->get_where("problem_type");
+		//echo $CI->db->last_query();die;
+		if($query->num_rows() > 0)
+		{
+			return $query->result_array();
+		}
+	}
+
+	function getstandard($id){
+      	$CI =& get_instance();		
+	
+		$query = $CI->db->get_where("tblstandard",array('StreamTypeId'=>$id));
 		//echo $CI->db->last_query();die;
 		if($query->num_rows() > 0)
 		{

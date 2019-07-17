@@ -71,6 +71,11 @@ $this->load->view('common/header');
                      <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
                      </div>
                <?php } ?>
+                   <?php if(($this->session->flashdata('success'))){ ?>
+                     <div class="alert alert-success" id="successMessage">
+                     <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
+                     </div>
+               <?php } ?>
                <form  id="form_valid" method="post">
                   <div class="placeholder-input">
                      <span class="relative-span">
@@ -108,6 +113,12 @@ $this->load->view('common/header');
 $(function() { 
     setTimeout(function() {
   $('#errorMessage').fadeOut('fast');
+}, 3000);
+   
+});
+$(function() { 
+    setTimeout(function() {
+  $('#successMessage').fadeOut('fast');
 }, 3000);
    
 });

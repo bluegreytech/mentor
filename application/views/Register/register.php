@@ -3,10 +3,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
 ?>
-
-
-
-
 <section class="header-layer">
   <div class="black-sheet">
     <div class="container">
@@ -18,14 +14,9 @@ $this->load->view('common/header');
       </div>
     </div>
   </div>
-
-
   <div class="container">
     <div class="row">
-
       <div class="col-md-12 bg-sec">
-
-
       </div>
     </div>
   </div>
@@ -68,7 +59,7 @@ $this->load->view('common/header');
                   <p>
                      <small>-Or Using-</small>
                   </p>
-                  <form method="post" id="registrationForm" action="<?php echo base_url();?>home/adduser">
+                  <form method="post" id="registrationForm" action="<?php echo base_url();?>home/register">
                      <input type="hidden" name="ci_csrf_token" value="" />
                       <div class="placeholder-input">
                         <span class="relative-span"><input  type="text" class="form-control" required="" name="username" id='username'  style="text-transform: capitalize;" placeholder="Username" />
@@ -76,6 +67,9 @@ $this->load->view('common/header');
                       </div>
                       <div class="placeholder-input">
                         <span class="relative-span"><input  type="email" id='email' name="email" required="" value="" class="form-control" placeholder="Email Address"></span>
+                      </div>
+                        <div class="placeholder-input">
+                        <span class="relative-span"><input  type="password" id='password' name="password"  value="" class="form-control" placeholder="******"></span>
                       </div>
                       <div class="placeholder-input">
                         <span class="relative-span"><input  type="text" id='mobile-number' name="phone" required=""  class="mobile-number form-control" placeholder="Mobile Number" /></span>
@@ -98,62 +92,28 @@ $this->load->view('common/header');
                         </div>
                         <div class="form-group" >
                           <label class="pull-left">I Need help with</label>
-                           <select class="form-control" id="Streambox" name="StreamId"> 
-
-                            <option  disabled="" selected=" ">Please Select
-                              </option>
-                            <!--   <?php //if($standardlist){ 
-                                //foreach ($standardlist as $row) {  //echo "<pre>"; print_r($standardlist)?> -->
-                               
-                                
-                               
-                              <option value="Stream">Choosing a Stream</option>
-                              <option value="career">Choosing a Career</option>
-                              <option  value="planningcareer">Planning a Career</option>
-                           <!--  <?php   //} } ?> -->
+                           <select class="form-control" id="Streambox" name="StreamId">
+                            <option  disabled="" selected=" ">Please Select </option>
+                            <?php if($streamlist){ 
+                                foreach ($streamlist as $row) {  echo "<pre>"; print_r($streamlist)?>
+                              <option value="<?php echo $row->StreamTypeId;?>">Choosing a <?php echo $row->StreamName;?></option>
+                            <?php  } } ?> 
                             </select>
                         </div>
-                           <div class="form-group pull-left" id="Stream" name="StandardId">
-                            <label>I AM IN</label>
-                                <label class="radio-inline">
-                                  <input type="radio" name="standard" checked style="cursor: pointer;">Class 8 
-                                </label>
-                                <label class="radio-inline" >
-                                 <input type="radio" name="standard" style="cursor: pointer;">Class 9
-                                </label>
-                           </div>
-                           <div class="form-group pull-left" id="career">
-                              <label>I AM IN</label>
-                                <label class="radio-inline">
-                                  <input type="radio" name="standard" checked style="cursor: pointer;" value="10">Class 10 
-                                </label>
-                                <label class="radio-inline" >
-                                 <input type="radio" name="standard" style="cursor: pointer;" value="11">Class 11
-                                </label>
-                                   <label class="radio-inline" >
-                                 <input type="radio" name="standard" style="cursor: pointer;" value="12 ">Class 12
-                                </label>
-                           </div>
-                           <div class="form-group pull-left" id="planing">
-                              <label>I AM IN</label>
-                                <label class="radio-inline" >
-                                  <input type="radio" name="standard" checked style="cursor: pointer;">Still collage  
-                                </label>
-                                <label class="radio-inline" >
-                                 <input type="radio" name="standard" style="cursor: pointer;">Graduates
-                                </label>                                 
-                           </div>
-                          
+                          <div class="form-group" id="iam" >
+                          <label class="pull-left">I AM IN</label>
+                            <select class="form-control" id="StandardId" name="StandardId">
+                              <option  disabled="" selected="">Please Select </option>
+                            </select>
+                        </div>
+                         
 
                       <div class="lockscreen-email" style="color: red;margin-top: -18px;float: left;"></div>
                                          
                      <p>
                         <input type="submit" class="new-btn-orange" id="submitFrm" value="Sign up" >
                      </p>
-                     <input type='hidden' name="package"  value='0'>
-                     <input type='hidden' name="sub_package_id"  value='0'>
-                     <input type='hidden' name="staged_at"  value='0'>
-                     <input type='hidden' name="SourceMedium"  value='LoginPage'>
+                    
                   </form>
                   <p class="bottom-link">Already have an account? 
                     
@@ -174,35 +134,31 @@ $this->load->view('common/header');
 ?>
 <script>
 $(document).ready(function(){
-    $("#Stream").hide();
-    $("#career").hide();
-     $("#planing").hide();
+  url="<?php echo base_url(); ?>home/getstandard"
+  
+     $("#iam").hide();
     $('#Streambox').on('change', function() {
-      if (this.value == 'Stream')
-      {
-        $("#Stream").show();
-      }
-      else
-      {
-        $("#Stream").hide();
-      }
-       if (this.value == 'career')
-      {
-        $("#career").show();
-      }
-      else
-      {
-        $("#career").hide();
-      }
-    //  alert(this.value);
-      if (this.value == 'planningcareer')
-      {
-        $("#planing").show();
-      }
-      else
-      {
-        $("#planing").hide();
-      }
+       $('#iam').show();
+      var id= this.value ;
+      $.ajax({
+        type: "POST",
+        url: url,
+        data:{id:id},
+        success: function(data){
+         // console.log(data);
+            $('#StandardId').html('<option value="">Please Select</option>'); 
+                    var dataObj = jQuery.parseJSON(data);
+                    //console.log(this.StandardId);
+                    if(dataObj){
+                        $(dataObj).each(function(){
+                            var option = $('<option />');
+                            option.attr('value', this.StandardId).text('Class '+this.Standard);           
+                            $('#StandardId').append(option);
+                        });
+                    }
+        }
+      });    
     });
 });
+
 </script>
