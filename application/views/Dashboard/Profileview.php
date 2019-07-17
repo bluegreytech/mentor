@@ -83,7 +83,7 @@ $UserId=$this->session->userdata('UserId');
                               <tr>
                                
                                  <?php 
-                                       if($StreamTypeId=='3')
+                                       if($StreamStatus=='Graduate ')
                                        {
                                           ?>
                                           <th>College</th>
@@ -100,7 +100,7 @@ $UserId=$this->session->userdata('UserId');
                               </tr>
                               <tr>
                               <?php 
-                                       if($StreamTypeId=='3')
+                                       if($StreamStatus=='Graduate ')
                                        {
                                         ?>
                                             <th>University</th>
@@ -117,7 +117,7 @@ $UserId=$this->session->userdata('UserId');
                               </tr>
                               <tr>
                               <?php 
-                                       if($StreamTypeId=='3')
+                                       if($StreamStatus=='Graduate ')
                                        {
                                         ?>
                                             <th>Course</th>
@@ -176,7 +176,7 @@ $UserId=$this->session->userdata('UserId');
                   <div class="row">
                      <div class="col-md-12 career-academic">
                     <?php 
-                    if($StreamTypeId=='3')
+                    if($StreamStatus=='Graduate')
                     {
                     ?>
                       <table class="table">

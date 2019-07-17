@@ -33,7 +33,7 @@ $this->load->view('common/sidebar_second');
 
                <div class="tab-content clearfix">
                  <div class="tab-pane active" id="1a">
-                     <form action="#">
+                     <form method="post" action="<?php echo base_url();?>Dashboard/Useradd/">
                      <div class="ptd-box " id="Div1">
                        
                         <div class="row">
@@ -117,7 +117,7 @@ $this->load->view('common/sidebar_second');
                                  <div class="col-md-6">
                                     <div class="form-group">
                                     <?php 
-                                       if($StreamTypeId=='3')
+                                       if($StreamStatus=='Graduate')
                                        {
                                           ?>
                                           <label>School</label>
@@ -135,7 +135,7 @@ $this->load->view('common/sidebar_second');
                                     </div>
 
                                      <?php
-                                      if($StreamTypeId=='3')
+                                      if($StreamStatus=='Graduate')
                                       { 
                                      ?>
                                        <div class="form-group">
@@ -163,7 +163,7 @@ $this->load->view('common/sidebar_second');
                                  </div>
                                  <div class="col-md-6">
                                      <?php 
-                                      if($StreamTypeId=='3')
+                                      if($StreamStatus=='Graduate')
                                       { 
                                      ?>
                                      <div class="form-group">
@@ -248,7 +248,7 @@ $this->load->view('common/sidebar_second');
                               <div id="option3" style="display: block;">
                               <!--1st-->
                               <?php
-                              if($StreamTypeId=='3')
+                              if($StreamStatus=='Graduate')
                               { 
                               ?>
                                 <div class="row">
