@@ -117,6 +117,7 @@ class Home extends CI_Controller {
 		$this->load->view('common/login');
 	}
 
+
 	public function getstandard()
 	{
 		$id=$this->input->post('id');
@@ -124,6 +125,7 @@ class Home extends CI_Controller {
 		//echo "<pre>";print_r($data['standard']);die;
 	    echo json_encode($data['standard']);
 	}
+
 	
 	public function dashboard()
 	{
@@ -185,6 +187,11 @@ public function Forgotpassword($msg='')
 	{
 
 		if(check_admin_authentication())
+		$UserId=$this->Login_model->checkResetCode($code);
+		$data = array();
+		 if($UserId!='')
+		 {
+			if($_POST)
 			{
 				redirect('home/dashbord');
 			}
