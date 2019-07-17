@@ -41,69 +41,7 @@
 	 * @param	string	current theme folder name
 	 * @return	string
 	 */
-	/* function get_rights($rights_name)
-	{
-		return true;
-		$CI =& get_instance();
-		$right_detail = $CI->db->get_where("rights",array('rights_name'=>trim($rights_name)));
-		
-		if($right_detail->num_rows()>0)
-			{
-			
-				$right_result=$right_detail->row();
-				$rights_id=$right_result->rights_id;
 
-			$query=$CI->db->get_where("rights_assign",array('rights_id'=>$rights_id,'UserId'=>$CI->session->userdata('UserId')));
-			
-			if($query->num_rows()>0)
-			{
-				$result=$query->row();
-				
-				if($result->rights_set=='1' || $result->rights_set==1)
-				{
-					return 1;
-				}
-				else
-				{
-					return 0;
-				}					
-			}
-			else
-			{
-				return 0;
-			}	
-		}
-		else
-		{
-			return 0;		
-		}
-	
-	}*/
-	
-	// function getThemeName()
-	// {
-		
-	// 	$default_theme_name='default';
-		
-	// 	$CI =& get_instance();
-	// 	$query = $CI->db->get_where("template_manager",array('active_template'=>1 ,'is_admin_template'=>1));
-	// 	$row = $query->row();
-		
-	// 	$theme_name=trim($row->template_name);
-		
-	// 	if(is_dir(APPPATH.'views/'.$theme_name))
-	// 	{
-	// 		return $theme_name;
-	// 	}
-	// 	else
-	// 	{
-	// 		return $default_theme_name;	
-	// 	}
-		
-	// }
-
-	
-	// --------------------------------------------------------------------
 
 	/**
 	 * Check user login
