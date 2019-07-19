@@ -16,7 +16,6 @@ class Home extends CI_Controller {
 	
 	public function index() 
 	{	
-		// /echo "fdfds";die;
 		$this->load->view('Home/Home');
 	}
 
@@ -140,49 +139,46 @@ class Home extends CI_Controller {
 	 }
 	
 
-// public function Forgotpassword($msg='')
-// 	{
-// 			$this->form_validation->set_rules('EmailAddress', 'Email', 'required|valid_email');
-// 			if($this->form_validation->run() == FALSE){			
-// 				if(validation_errors())
-// 				{ echo validation_errors();die;
-// 					echo json_encode(array("status"=>"error","msg"=>validation_errors()));
-// 				}
-// 			}
-// 			else
-// 			{ 
-// 			 	//echo "jhjg";die;
-// 				$chk_mail=$this->Login_model->forgotpass_check();
-// 				//echo $chk_mail;die;
-// 				if($chk_mail==0)
-// 				{
-// 					$error=EMAIL_NOT_FOUND;
-// 					 $this->session->set_flashdata('error',EMAIL_NOT_FOUND);
-	              
-// 				}
-// 				elseif($chk_mail==2)
-// 				{
-// 				 	$error=EMAIL_NOT_FOUND;
-// 					$this->session->set_flashdata('error',EMAIL_NOT_FOUND);   
-// 				}elseif($chk_mail==3)
-// 				{
-// 					$error=ACCOUNT_INACTIVE;
-// 					 $this->session->set_flashdata('error',ACCOUNT_INACTIVE);
-					 
-// 				}
-// 				else
-// 				{				
-// 					$forget=FORGET_SUCCESS;
-// 					//email_send();
-// 					 $this->session->set_flashdata('success','Please check your email for reset the password!');
-// 					redirect('Home/login');
+public function Forgotpassword($msg='')
+	{
+			$this->form_validation->set_rules('EmailAddress', 'Email', 'required|valid_email');
+			if($this->form_validation->run() == FALSE)
+			{			
+				if(validation_errors())
+				{ 
+					echo json_encode(array("status"=>"error","msg"=>validation_errors()));
+				}
+			}
+			else
+			{ 
+				$chk_mail=$this->Login_model->forgotpass_check();
+				if($chk_mail==0)
+				{
+					$error=EMAIL_NOT_FOUND;
+					$this->session->set_flashdata('error',EMAIL_NOT_FOUND);  
+				}
+				elseif($chk_mail==2)
+				{
+				 	$error=EMAIL_NOT_FOUND;
+					$this->session->set_flashdata('error',EMAIL_NOT_FOUND);   
+				}elseif($chk_mail==3)
+				{
+					$error=ACCOUNT_INACTIVE;
+					$this->session->set_flashdata('error',ACCOUNT_INACTIVE);	 
+				}
+				else
+				{				
+					$forget=FORGET_SUCCESS;
+					//email_send();
+					 $this->session->set_flashdata('success','Please check your email for reset the password!');
+					redirect('Home/login');
 
-// 	                // $redirect=site_url('home/index/forget');
-// 	                // echo json_encode(array("status"=>"success","msg"=> $forget,"redirect"=>$redirect));
-// 				}
-// 			}
-// 		$this->load->view('common/ForgotPassword');
-// 	}
+	                // $redirect=site_url('home/index/forget');
+	                // echo json_encode(array("status"=>"success","msg"=> $forget,"redirect"=>$redirect));
+				}
+			}
+		$this->load->view('common/ForgotPassword');
+	}
 
 
 // 	function reset_password($code='')
@@ -259,19 +255,20 @@ class Home extends CI_Controller {
 // 					 redirect('home/login');
 // 		    }
 // 	}
-// 	public function Contact()
-// 	{	
-// 		$this->load->view('Contact/Contactus');
-// 	}
-// 	public function Page()
-// 	{	
-// 		$this->load->view('PrivacyPolicy');
-// 	}
-// 	public function logout()
-// 	{
-// 			$this->session->sess_destroy();
-// 			redirect('home');
-// 	}
+
+	public function Contact()
+	{	
+		$this->load->view('Contact/Contactus');
+	}
+	public function Page()
+	{	
+		$this->load->view('PrivacyPolicy');
+	}
+	public function logout()
+	{
+			$this->session->sess_destroy();
+			redirect('home');
+	}
  }
 
 

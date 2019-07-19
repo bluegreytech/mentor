@@ -1,7 +1,5 @@
 <?php
-//echo "jkhjkjh";die;
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Dashboard extends CI_Controller 
 {
 	public function __construct()
@@ -33,6 +31,7 @@ class Dashboard extends CI_Controller
 			$data['EmailAddress']=$result['EmailAddress'];
 			$data['DateofBirth']= $result['DateofBirth'];		
 			$data['PhoneNumber']=$result['PhoneNumber'];
+			$data['ProfileImage']=$result['ProfileImage'];
 			$data['Gender']= $result['Gender'];
 			$data['EducationId']= $result['EducationId'];
 			$data['EducationName']= $result['EducationName'];
@@ -54,12 +53,9 @@ class Dashboard extends CI_Controller
 			$data['ClassXII']= $result['ClassXII'];
 			$data['College']= $result['College'];	
 			$data['EducationSubjectId']= $result['EducationSubjectId'];
-			//echo "<pre>";print_r($data);die;
 		$this->load->view('Dashboard/Profileview',$data);	
 	
 }
-
-
 
 
 	function list()
@@ -69,7 +65,10 @@ class Dashboard extends CI_Controller
 	}
 
 	public function Useradd()
-	{      
+	{      	
+		if(!check_user_authentication()){ 
+				redirect(base_url());
+			}
 				$data=array();
 				$data['UserId']=$this->input->post('UserId');
 				$data['FirstName']=$this->input->post('FirstName');
@@ -80,39 +79,41 @@ class Dashboard extends CI_Controller
 				$data['Gender']=$this->input->post('Gender');
 				$data['DateofBirth']=$this->input->post('DateofBirth');
 				$data['PhoneNumber']=$this->input->post('PhoneNumber');
+				$data['ProfileImage']=$this->input->post('ProfileImage');
 				$data['Gender']=$this->input->post('Gender');
-				
 				if($_POST){
 					if($this->input->post('UserId')!=''){
 						$result=$this->Dashboard_model->updatedata();
 						if($result)
-						{   $UserId =$data['UserId'];
-							  
+						{   
+							$UserId =$data['UserId']; 
+							$session= array(
+								'FirstName'=> $data['FirstName'],
+								'LastName'=> $data['LastName'],
+							);
+							$this->session->set_userdata($session); 
 							$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
-							redirect('Dashboard/Profile/'.$UserId);
+							redirect('Dashboard/Profileedit/'.$UserId);
 						}
 					}
-					else
-					{
-						
-						
-							$this->session->set_flashdata('error', 'Record was not update Succesfully!');
-							redirect('Dashboard/Profileedit');
-					
-
-					}
-			}
-			$this->load->view('Dashboard/Editprofile',$data);
 				
+				}
+				$this->load->view('Dashboard/Editprofile',$data);			
 	}
+
+	
+
 	
 	function Profileedit($UserId){
+		if(!check_user_authentication()){ 
+			redirect(base_url());
+		}
 			$data=array();
 			$result=$this->Dashboard_model->getdata($UserId);
 			//echo "<pre>";print_r($result);die;	
 			$data['subject']=$this->Dashboard_model->getsubject($UserId);
-
 			//echo "<pre>";print_r($data['subject']);die;
+			
 			$data['UserId']=$result['UserId'];
 			$data['FirstName']=$result['FirstName'];
 			$data['LastName']=$result['LastName'];	

@@ -11,7 +11,7 @@
                            </p>
                         </div>
                               <?php 
-                                $UserId=$this->session->userdata('UserId');
+                                 $UserId=$this->session->userdata('UserId');
                                  $FirstName=$this->session->userdata('FirstName');
                                  $LastName=$this->session->userdata('LastName');
                                  $EmailAddress=$this->session->userdata('EmailAddress');

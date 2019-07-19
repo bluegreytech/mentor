@@ -81,76 +81,74 @@ class Login_model extends CI_Model
 
 	function forgotpass_check()
 	{
-		//echo "jhgj";die;
+		// echo "jhgj";die;
 		$email = trim($this->input->post('EmailAddress'));
-       $rnd=randomCode();
+        $rnd=randomCode();
     
-    $query = $this->db->get_where('tbluser',array('EmailAddress'=>$email));
-  // echo $this->db->last_query(); die;
-    if($query->num_rows()>0)
-    {
-    	//echo "jhgjg";die;
-      $row = $query->row();
-      $admin_status=$row->IsActive;
-     	
-       if($admin_status =='0')
-      {
-         return "3"; 
-      }elseif($admin_status =='1'){
-      	//echo "<pre>";print_r ($admin_status); die;
+		$query = $this->db->get_where('tbluser',array('EmailAddress'=>$email));
+	    //echo $this->db->last_query(); die;
+		if($query->num_rows()>0)
+		{
+			//echo "jhgjg";die;
+			$row = $query->row();
+			$admin_status=$row->IsActive;
+			
+		if($admin_status =='0')
+		{
+			return "3"; 
+		}elseif($admin_status =='1'){
+			//echo "<pre>";print_r ($admin_status); die;
 
-                  if(!empty($row) && $row->EmailAddress != "")
-                  {
-                    $rpass= randomCode();
-                    $ud=array('PasswordResetCode'=>$rnd,
-                      //s'password' => MD5($rpass)
-                    );
-                    $this->db->where('UserId',$row->UserId);
-                    $this->db->update('tbluser',$ud);
-                    
-                    $email_template=$this->db->query("select * from ".$this->db->dbprefix('tblemail_template')." where task='Forgot Password by admin'");
-                            $email_temp=$email_template->row();
-                            $email_address_from=$email_temp->from_address;
-                            $email_address_reply=$email_temp->reply_address;
-                            $email_subject=$email_temp->subject;        
-                            $email_message=$email_temp->message;
-                            $username =$row->UserName.'  '.$row->LastName;
-                            $password = $rpass;
-                            $email = $row->EmailAddress;
-                            $email_to=$email;
-                            $login_link=  '<a href="'.site_url('home/reset_password/'.$rnd).'">Click Here</a>';
-                    /* Common for All Email Template */
-                          //  $site_setting = site_setting();
-                           // $site_name=ucwords($site_setting->site_name);       
-                    // $theme_url = front_base_url().getThemeName();
-                    $base_url=front_base_url();
-                    $currentyear=date('Y');
-                    /* End of Common All Email Template */
-                    /* Common for All Email Template */
-                    $email_message=str_replace('{break}','<br/>',$email_message);
-                 
-                    $email_message=str_replace('{base_url}',$base_url,$email_message);
-                    $email_message=str_replace('{year}',$currentyear,$email_message);
+					if(!empty($row) && $row->EmailAddress != "")
+					{
+						$rpass= randomCode();
+						$ud=array('PasswordResetCode'=>$rnd,
+						//s'password' => MD5($rpass)
+						);
+						$this->db->where('UserId',$row->UserId);
+						$this->db->update('tbluser',$ud);
+						
+						$email_template=$this->db->query("select * from ".$this->db->dbprefix('tblemail_template')." where task='Forgot Password by admin'");
+								$email_temp=$email_template->row();
+								$email_address_from=$email_temp->from_address;
+								$email_address_reply=$email_temp->reply_address;
+								$email_subject=$email_temp->subject;        
+								$email_message=$email_temp->message;
+								$username =$row->UserName.'  '.$row->LastName;
+								$password = $rpass;
+								$email = $row->EmailAddress;
+								$email_to=$email;
+								$login_link=  '<a href="'.site_url('home/reset_password/'.$rnd).'">Click Here</a>';
+						/* Common for All Email Template */
+							//  $site_setting = site_setting();
+							// $site_name=ucwords($site_setting->site_name);       
+						// $theme_url = front_base_url().getThemeName();
+						$base_url=front_base_url();
+						$currentyear=date('Y');
+						$email_message=str_replace('{break}','<br/>',$email_message);
+					
+						$email_message=str_replace('{base_url}',$base_url,$email_message);
+						$email_message=str_replace('{year}',$currentyear,$email_message);
 
-                    $email_message=str_replace('{username}',$username,$email_message);
-                    // $email_message=str_replace('{password}',$password,$email_message);
-                    $email_message=str_replace('{email}',$email,$email_message);
-                    $email_message=str_replace('{reset_link}',$login_link,$email_message);
-                    $str=$email_message; //die;
-                    echo $str;die;
-                    /** custom_helper email function **/
-                    
-                    email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
-                    
-                      return '1';
-                  }
-                  else{
-                    return '0';
-                  }
-        }
-    }else{
-      return 2;
-    }
+						$email_message=str_replace('{username}',$username,$email_message);
+						// $email_message=str_replace('{password}',$password,$email_message);
+						$email_message=str_replace('{email}',$email,$email_message);
+						$email_message=str_replace('{reset_link}',$login_link,$email_message);
+						$str=$email_message; //die;
+						//echo $str;die;
+						/** custom_helper email function **/
+						
+						email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
+						
+						return '1';
+					}
+					else{
+						return '0';
+					}
+			}
+		}else{
+		return 2;
+		}
 
 	}
 	

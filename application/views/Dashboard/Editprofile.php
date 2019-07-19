@@ -42,12 +42,13 @@ $this->load->view('common/sidebar_second');
                      <div class="tab-name">Academic Details</div></a>
                   </li>
                </ul>
-
+ 
                <div class="tab-content clearfix">
                  <div class="tab-pane active" id="1a">
-                  <form method="post" action="<?php echo base_url();?>Dashboard/Useradd">
+                  <!-- <form method="post" id="form_assesment" action="<?php //echo base_url();?>Dashboard/Useradd"> -->
                      <div class="ptd-box " id="Div1">
-                       
+                     <form method="post" id="form_assesment" action="<?php echo base_url();?>Dashboard/Useradd" 
+    enctype="multipart/form-data">
                         <div class="row">
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -58,7 +59,7 @@ $this->load->view('common/sidebar_second');
                                  <input type="hidden"  value="<?php echo $UserId; ?>" name="UserId">
                                     <span class="btn btn-white btn-file btn-xs">
                                     <span class="fileupload-exists show-important">Select image</span>
-                                    <input id="register-photo"  type="file" name="userfile"  class="default" />
+                                    <input type="file" name="ProfileImage"  class="default" />
                                     </span>
                                  </div>
 
@@ -74,14 +75,7 @@ $this->load->view('common/sidebar_second');
                                  <input type="hidden"   value="<?php echo $EducationId; ?>" name="EducationId">
                                  <input type="hidden"   value="<?php echo $UserFamilyId; ?>" name="UserFamilyId">
                                  <input type="hidden"   value="<?php echo $GraduateScoreId; ?>" name="GraduateScoreId">
-                                 <?php
-                                 // foreach($subject as $subjectper)
-                                 // {
-                                  ?>
-                                     <!-- <input type="text"  value="<?php// echo $subjectper->$EducationSubjectId; ?>" name="EducationSubjectId"> -->
-                                  <?php
-                                 // }
-                                  ?>
+                              
                                
                                  <input name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text">
                               </div>
@@ -346,8 +340,8 @@ $this->load->view('common/sidebar_second');
                                                    <input type="text" <?php if($subjectper->YearStatus=='Current')
                                                 {
                                                 ?>
-                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName"  class="form-control">
-                                                   <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId">
+                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
+                                                   <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
                                                    <?php
                                                 } 
                                                 ?>
@@ -366,7 +360,7 @@ $this->load->view('common/sidebar_second');
                                                     <input type="text" <?php if($subjectper->YearStatus=='Current')
                                                 {
                                                 ?>
-                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa"  class="form-control">
+                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
                                                    <?php
                                                 } 
                                                
@@ -408,18 +402,16 @@ $this->load->view('common/sidebar_second');
                                                 <label>Subject</label>
                                                 <?php
                                                 foreach($subject as $subjectper)
-                                                { //echo "<pre>";print_r($subjectper); 
+                                                {  
                                                 ?>
-                                                
-                                                <input type="text" <?php if($subjectper->YearStatus=='Last')
-                                                {
-                                                ?>
-                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName"  class="form-control">
-                                                   <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId">
-                                                   <?php
-                                                } 
-                                                ?>
-                                                
+                                                   <input type="text" <?php if($subjectper->YearStatus=='Last')
+                                                   {
+                                                   ?>
+                                                      value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
+                                                      <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
+                                                      <?php
+                                                   } 
+                                                   ?>
                                                 <?php
                                                 }
                                                 ?>
@@ -435,7 +427,7 @@ $this->load->view('common/sidebar_second');
                                                 <input type="text" <?php if($subjectper->YearStatus=='Last')
                                                 {
                                                 ?>
-                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="EducationSubjectName"  class="form-control">
+                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
                                                    <?php
                                                 } 
                                                 ?>
@@ -504,7 +496,7 @@ $this->load->view('common/sidebar_second');
  $this->load->view('common/footer_second');
 ?>
 
-<script>
+<!-- <script>
 $(function() { 
     setTimeout(function() {
   $('#errorMessage').fadeOut('fast');
@@ -518,4 +510,29 @@ $(function() {
    
 });
 
+</script> -->
+<script>
+
+$(document).ready(function()
+{
+		$("#form_assesment").validate(
+		{
+			rules: {
+
+               FirstName: {
+								required: true,
+													},
+						},
+
+         messages: {
+
+               FirstName: {
+               required: "Please enter assesment name",
+               pattern : "Enter only characters and numbers and \"space , \" -",
+               minlength: "Please enter at least 5 and maximum to 200 letters!",
+                     },
+                  
+               }
+		});
+});
 </script>
