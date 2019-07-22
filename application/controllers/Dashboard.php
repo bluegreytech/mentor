@@ -146,6 +146,42 @@ class Dashboard extends CI_Controller
 		
 	}
 
+	public function Userpass($UserId)
+	{ 
+			$data=array();
+			$data['UserId']=$this->input->post('UserId');
+			if($_POST){
+				$UserId=$this->input->post('UserId');
+				if($this->input->post('UserId')!='')
+				{
+					$result=$this->Dashboard_model->changepass($UserId);
+					if($result)
+					{   
+						 $this->session->set_flashdata('success', 'Your password has been Updated Succesfully!');
+						 redirect('Home/logout');
+					}
+					else
+					{ 
+						$result=$this->Dashboard_model->changepass($UserId);
+						if($result=='2')
+						{
+							$UserId=$data['UserId']; 
+							// $session= array(
+							// 	'FirstName'=> $data['FirstName'],
+							// 	'LastName'=> $data['LastName'],
+							// );
+							// $this->session->set_userdata($session); 
+							//$UserId =$data['UserId']; 
+							$this->session->set_flashdata('error','Your old password was not match please try again!');  
+							redirect('Dashboard/Userpass/'.$UserId);
+						}
+				    }
+				}
+			
+			}
+		$this->load->view('common/Changepass');
+	}
+
 
 	function updatedata($UserId){
 		

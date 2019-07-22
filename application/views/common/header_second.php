@@ -87,7 +87,7 @@
             } 
          ?>
       </header>
-
+      
 <!-- chnage password -->
       <div class="modal" id="modal-change-password" tabindex="-1" role="dialog" aria-hidden="true" data-easein="zoomIn" data-easeout="zoomOut" >
          <div class="modal-dialog" style="max-width: 400px;">
@@ -97,19 +97,45 @@
                   <h4 class="modal-title">Change Password</h4>
                </div>
                <div class="modal-body">
-                  <form id="change-password">
+               <?php 
+                  // echo  $UserId=$this->session->userdata('UserId');
+                  
+                  ?>
+                  <form method="post" action="<?php echo base_url();?>Dashboard/Changepass">
                      <div class="form-group">
                         <label for="exampleInputPassword1">New Password</label>
-                        <input type="password" name="password" class="form-control" id="Password1" placeholder="Password">
+                        <input type="text" value="<?php echo  $UserId; ?>" name="UserId">
+                        <input type="password" name="Password" class="form-control" placeholder="Password">
                      </div>
-                     <div class="form-group">
+                     <!-- <div class="form-group">
                         <label for="exampleInputPassword1">Confirm Password</label>
-                        <input type="password" name="cpassword" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                     </div>
-                     <button type="button" onclick="ga('send', 'event', 'Top Navigation', 'Change Password', '');" class="btn btn-primary btn-flat btn-change-password">Submit</button>
+                        <input type="password" name="CPassword" class="form-control" placeholder="Password">
+                     </div> -->
+                     <!-- <button type="button" onclick="ga('send', 'event', 'Top Navigation', 'Change Password', '');" class="btn btn-primary btn-flat btn-change-password">Submit</button> -->
+                    
+                     <input value="Submit" class="btn btn-primary next-profile-btn" type="submit">
                   </form>
                </div>
             </div>
          </div>
       </div>
-     
+      <?php 
+         $this->load->view('common/footer_second');
+      ?>
+
+<?php
+  // $simple = 'demo text string';
+?>
+<script type="text/javascript">
+
+   //   var simple = '<?php echo $simple;?>';
+   //   alert(simple);
+   //    console.log(simple);
+
+
+//    //          $('#IntrestedTypeId').change(function(){ 
+//    //  var id = $(this).val();
+//    //  var intresttypetext = $('option:selected', this).text();
+//    //  $('#IntrestedType').val(intresttypetext);
+// //});
+</script>

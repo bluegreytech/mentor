@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-//echo $EducationId;die;
 $this->load->view('common/header_second');
 
 $this->load->view('common/sidebar_second');
@@ -59,7 +58,8 @@ $this->load->view('common/sidebar_second');
                                  <input type="hidden"  value="<?php echo $UserId; ?>" name="UserId">
                                     <span class="btn btn-white btn-file btn-xs">
                                     <span class="fileupload-exists show-important">Select image</span>
-                                    <input type="file" name="ProfileImage"  class="default" />
+                                  
+                                     <input type="file" name="ProfileImage" value="<?php echo $ProfileImage;?>"  class="default" /> 
                                     </span>
                                  </div>
 
@@ -132,7 +132,8 @@ $this->load->view('common/sidebar_second');
 
                            <input type="hidden" id="level" value="1" name="level">
                            <div class="col-md-12 margin-top-20" style="text-align: right">
-                              <input id="" value="Update" class="btn btn-primary next-profile-btn" type="submit"></div>
+                              <input id="" value="Update" class="btn btn-primary next-profile-btn" type="submit">
+                           </div>
                         </div>
                      </div>
                   <!-- </form> -->
@@ -375,12 +376,12 @@ $this->load->view('common/sidebar_second');
                                           <div><strong>-or-</strong></div>
                                           <div>Upload your marksheet</div>
                                        </div>
-                                       <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
+                                       <!-- <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
                                           <input type="file" class="filename display-none">
                                           <input type="file" name="current_year_file_name" class="form-control uploadlogo" readonly="readonly" style="border-radius:0!important;height: auto;">
                                           <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 2MB)</small>
                                           
-                                       </div>
+                                       </div> -->
                                                                                  
                                        <div>
                                        <?php if($subjectper->YearStatus=='Current' && $subjectper->MarksheetImage!=''){   ?>
@@ -443,12 +444,12 @@ $this->load->view('common/sidebar_second');
                                           <div><strong>-or-</strong></div>
                                           <div>Upload your marksheet</div>
                                        </div>
-                                       <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
+                                       <!-- <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
                                           <input type="file" class="filename display-none">
                                           <input type="file" name="last_year_file_name" class="uploadlogo form-control" readonly="readonly" style="border-radius:0!important;height: auto;">
                                           <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 2MB)</small>
                                           
-                                       </div>
+                                       </div> -->
                                        
                                        <div>
                                       

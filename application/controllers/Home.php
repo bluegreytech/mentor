@@ -130,7 +130,6 @@ class Home extends CI_Controller {
 	
 	public function dashboard()
 	{
-		
 		if(!check_user_authentication()){			
 			redirect(base_url());
 		}
@@ -169,12 +168,9 @@ public function Forgotpassword($msg='')
 				else
 				{				
 					$forget=FORGET_SUCCESS;
-					//email_send();
+					
 					 $this->session->set_flashdata('success','Please check your email for reset the password!');
 					redirect('Home/login');
-
-	                // $redirect=site_url('home/index/forget');
-	                // echo json_encode(array("status"=>"success","msg"=> $forget,"redirect"=>$redirect));
 				}
 			}
 		$this->load->view('common/ForgotPassword');
@@ -255,6 +251,8 @@ public function Forgotpassword($msg='')
 // 					 redirect('home/login');
 // 		    }
 // 	}
+
+
 
 	public function Contact()
 	{	

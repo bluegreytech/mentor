@@ -70,86 +70,19 @@ class Dashboard_model extends CI_Model
 			return '';
 		}
 	}
+
+
+
 	
 	function updatedata()
 	{	
-		///echo "<pre>";print_r($_FILES);die;	
-  		//echo base_path();die;
-		 $ProfileImage='';
-		 //$image_settings=image_setting();
-		 $this->load->library('upload');
-		  if(isset($_FILES['ProfileImage']) &&  $_FILES['ProfileImage']['name']!='')
-         { 
-           
-             $rand=rand(0,100000); 
-			  
-			$_FILES['userfile']['name']     =   $_FILES['ProfileImage']['name'];
-			$_FILES['userfile']['type']     =   $_FILES['ProfileImage']['type'];
-			$_FILES['userfile']['tmp_name'] =   $_FILES['ProfileImage']['tmp_name'];
-			$_FILES['userfile']['error']    =   $_FILES['ProfileImage']['error'];
-			$_FILES['userfile']['size']     =   $_FILES['ProfileImage']['size'];
-   
-			$config['file_name'] = $rand.'UserImage';			
-			$config['upload_path'] = base_path().'upload/UserImage_orig/';	
-			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
- 
-           $this->upload->initialize($config);
- 
-              if (!$this->upload->do_upload())
-			  {
-				$error =  $this->upload->display_errors();
-				//echo "<pre>";print_r($error);die;
-				
-			  } 
-				 $picture = $this->upload->data();	   
-				// echo "<pre>";print_r($picture);die;
-            //   $this->load->library('image_lib');		   
-            //   $this->image_lib->clear();
-			//   $gd_var='gd2';
+		$id=$this->input->post('UserId');
+		$EducationId=$this->input->post('EducationId');
+		$UserFamilyId=$this->input->post('UserFamilyId');
+		$GraduateScoreId=$this->input->post('GraduateScoreId');
+		$EducationSubjectId=$this->input->post('EducationSubjectId'); 
 
-            //   $this->image_lib->initialize(array(
-			// 	'image_library' => $gd_var,
-			// 	'source_image' => base_path().'Upload/UserImage_orig/'.$picture['file_name'],
-			// 	'new_image' => base_path().'Upload/UserImage/'.$picture['file_name'],
-			// 	'maintain_ratio' => FALSE,
-			// 	'quality' => '100%',
-			// 	'width' => 300,
-			// 	'height' => 300
-			//  ));
-			
-			
-			// if(!$this->image_lib->resize())
-			// {
-			// 	$error = $this->image_lib->display_errors();
-			// }
-			
-			$ProfileImage=$picture['file_name'];
-			if($this->input->post('Pre_ProfileImage')!='')
-				{
-					if(file_exists(base_path().'Upload/UserImage/'.$this->input->post('Pre_ProfileImage')))
-					{
-						$link=base_path().'Upload/UserImage/'.$this->input->post('ProfilPre_ProfileImageeImage');
-						unlink($link);
-					}
-					
-					if(file_exists(base_path().'Upload/UserImage_orig/'.$this->input->post('Pre_ProfileImage')))
-					{
-						$link2=base_path().'Upload/UserImage_orig/'.$this->input->post('Pre_ProfileImage');
-						unlink($link2);
-					}
-				}
-			} else {
-				if($this->input->post('Pre_ProfileImage')!='')
-				{
-					$ProfileImage=$this->input->post('Pre_ProfileImage');
-				}
-			}
-           
-			$id=$this->input->post('UserId');
-			$EducationId=$this->input->post('EducationId');
-			$UserFamilyId=$this->input->post('UserFamilyId');
-			$GraduateScoreId=$this->input->post('GraduateScoreId');
-			$EducationSubjectId=$this->input->post('EducationSubjectId'); 
+		
 	
 					 $data2=array(
 						'EducationId'=>$this->input->post('EducationId'),
@@ -174,7 +107,7 @@ class Dashboard_model extends CI_Model
 							'DateofBirth'=>$this->input->post('DateofBirth'),
 							'PhoneNumber'=>$this->input->post('PhoneNumber'),
 							//'ProfileImage'=>$this->input->post('ProfileImage'),
-							'ProfileImage'=>$ProfileImage,
+							//'ProfileImage'=>$user_image,
 							'Gender'=>$this->input->post('Gender')
 							  );
 							$this->db->where("UserId",$id);
@@ -235,11 +168,32 @@ class Dashboard_model extends CI_Model
 						}
 					}
 					
-		
-           
-            
+	       
 	}
 
+	public function changepass($UserId) 
+	{
+		$this->db->select('UserId,Password');				
+		$this->db->where('UserId',$UserId);
+		$this->db->where('Password',md5($this->input->post('Password')));
+		$this->db->from('tbluser');
+		$query = $this->db->get();
+		if ($query->num_rows() == 1) 
+		{
+			$pass_data = array(	
+				'Password'=>md5($this->input->post('CPassword')),	
+			);
+			$this->db->where('UserId',$UserId);
+			$res = $this->db->update('tbluser',$pass_data);
+			return 1;
+		}
+		else
+		{
+			return 2;
+		}
+ 	}
+
+	
 
 	// function updatedata()
 	// {

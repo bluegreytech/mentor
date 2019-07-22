@@ -28,6 +28,8 @@
                   </li>
                   <li id="tour2"><a href="<?php echo base_url();?>Dashboard/Profile/<?php echo $UserId ;?>"><span class="icon-home2 fa fa-user"></span><span class="nav-title">My Profile</span></a>
                   </li>
+                  <li id="tour2"><a href="<?php echo base_url();?>Dashboard/Userpass/<?php echo $UserId ;?>"><span class="icon-home2 fa fa-user"></span><span class="nav-title">Change Password</span></a>
+                  </li>
                   <!-- <li id="tour3"><a href="#" ><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Tests</span></a>
                   </li>
                   <li id="tour8"><a href="#" ><span class="icon-home2 fa  fa-briefcase"></span><span class="nav-title">My Action Plan</span></a></li>
