@@ -60,11 +60,14 @@ class Dashboard extends CI_Controller
 
 	function list()
 	{			
-			$data['adminData']=$this->Dashboard_model->getuser();
-			$this->load->view('Dashboard/Profilelist',$data);
+		$data['adminData']=$this->Dashboard_model->getuser();
+		$this->load->view('Dashboard/Profilelist',$data);
 	}
 
 	public function Useradd()
+
+	{      
+
 	{      	
 		if(!check_user_authentication()){ 
 				redirect(base_url());
@@ -99,6 +102,7 @@ class Dashboard extends CI_Controller
 				
 				}
 				$this->load->view('Dashboard/Editprofile',$data);			
+
 	}
 
 	

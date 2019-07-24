@@ -105,7 +105,7 @@ class Login_model extends CI_Model
 							$this->db->where('UserId',$row->UserId);
 							$this->db->update('tbluser',$ud);
 							$email_template=$this->db->query("select * from ".$this->db->dbprefix('tblemail_template')." where task='Forgot Password by admin'");
-							print_r($email_template); die;
+							//print_r($email_template); die;
 									$email_temp=$email_template->row();
 									$email_address_from=$email_temp->from_address;
 									$email_address_reply=$email_temp->reply_address;
@@ -130,7 +130,7 @@ class Login_model extends CI_Model
 									$email_message=str_replace('{reset_link}',$login_link,$email_message);
 									$str=$email_message;
 									
-									
+									//echo "<pre>"
 									email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
 							
 							        return '1';
