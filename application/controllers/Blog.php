@@ -6,14 +6,18 @@ class Blog extends CI_Controller {
 	public function __construct()
 	{
       	parent::__construct();
-		//$this->load->model('Login_model');
-      
+		$this->load->model('Blog_model'); 
 	}
 	
-	 public function index(){
-		$this->load->view('Blog/Blog');
+	 public function index()
+	 {
+
+		$data['programData']=$this->Blog_model->getblog();
+		//$data['proData']=$this->Blog_model->getblog_all();
+		$this->load->view('Blog/Blog',$data);
 	 }
 
+	
 	
 }
 

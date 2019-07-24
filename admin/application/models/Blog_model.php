@@ -71,6 +71,7 @@ class Blog_model extends CI_Model
 
 			// $random1 = substr(number_format(time() * rand(),0,'',''),0,10);
 			$BlogDescription=$this->input->post('BlogDescription');
+			$BlogStatusId=$this->input->post('BlogStatusId');
 			$IsActive=$this->input->post('IsActive');
 			$data=array( 
 			'FirstName'=>$FirstName,
@@ -87,16 +88,34 @@ class Blog_model extends CI_Model
 			return $res;
 	}
 	
-
-	
-	function getblog(){
+	function getblogStatus(){
 		$r=$this->db->select('*')
-					->from('tblblogs')
+					->from('tblblogstatus')
 					->get();
 		$res = $r->result();
 		return $res;
 
 	}
+
+	
+	function getblog(){
+		$r=$this->db->select('t1.*,t2.*')
+			->from('tblblogs as t1')
+			->join('tblblogstatus as t2', 't1.BlogStatusId = t2.BlogStatusId', 'LEFT')
+			->get();
+		$res = $r->result();
+		return $res;
+
+	}
+
+
+	// function getblog(){
+	// 	$r=$this->db->select('*')
+	// 				->from('tblblogs as t1')
+	// 				->join('tblblogstatus as t2', 't1.BlogId = t2.BlogId', 'LEFT')
+	// 				->get();
+	// 	$res = $r->result();
+	// 	return 
 	
 	function getdata($id){
 		$this->db->select("*");
@@ -114,6 +133,7 @@ class Blog_model extends CI_Model
 			'BlogTitle'=>$this->input->post('BlogTitle'),
 			'BlogImage'=>$this->input->post('BlogImage'),
 			'BlogDescription'=>$this->input->post('BlogDescription'),
+			'BlogStatusId'=>$this->input->post('BlogStatusId'),
 			'IsActive'=>$this->input->post('IsActive'),
 			  );
 	    $this->db->where("BlogId",$id);
