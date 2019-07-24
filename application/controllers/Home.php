@@ -177,81 +177,81 @@ class Home extends CI_Controller {
 	}
 
 
-	function reset_password($code='')
-	{
-		echo "cfcv";die;
+	// function reset_password($code='')
+	// {
+	// 	echo "cfcv";die;
 
-		if(check_user_authentication())
-		$UserId=$this->Login_model->checkResetCode($code);
-		$data = array();
-		 if($UserId!='')
-		 {
-			if($_POST)
-			{
-				redirect('home/dashbord');
-			}
+	// 	if(check_user_authentication())
+	// 	$UserId=$this->Login_model->checkResetCode($code);
+	// 	$data = array();
+	// 	 if($UserId!='')
+	// 	 {
+	// 		if($_POST)
+	// 		{
+	// 			redirect('home/dashbord');
+	// 		}
 			
-			$user_id=$this->Login_model->checkResetCode($code);
-			//print_r($admin_id);die;
+	// 		$user_id=$this->Login_model->checkResetCode($code);
+	// 		//print_r($admin_id);die;
 
-			$data = array();
-			$data['errorfail']=($code=='' || $user_id=='')?'fail':'';
-			$data['UserId']=$user_id;
-			$data['code']=$code;
+	// 		$data = array();
+	// 		$data['errorfail']=($code=='' || $user_id=='')?'fail':'';
+	// 		$data['UserId']=$user_id;
+	// 		$data['code']=$code;
 	        
-            if($user_id){
-            	if($_POST){
+ //            if($user_id){
+ //            	if($_POST){
 				
-					if($this->input->post('UserId') != ''){
-						$this->form_validation->set_rules('Password', 'Password', 'required');
-						$this->form_validation->set_rules('ConfirmPassword', 'Re-type Password', 'required|matches[Password]');
+	// 				if($this->input->post('UserId') != ''){
+	// 					$this->form_validation->set_rules('Password', 'Password', 'required');
+	// 					$this->form_validation->set_rules('ConfirmPassword', 'Re-type Password', 'required|matches[Password]');
 					
-						if($this->form_validation->run() == FALSE){			
-							if(validation_errors()){
-								//echo "<PRE>";print_r(validation_errors());die;
-								echo json_encode(array("status"=>"error","msg"=>validation_errors()));
-							}
-						}else{
+	// 					if($this->form_validation->run() == FALSE){			
+	// 						if(validation_errors()){
+	// 							//echo "<PRE>";print_r(validation_errors());die;
+	// 							echo json_encode(array("status"=>"error","msg"=>validation_errors()));
+	// 						}
+	// 					}else{
 							
-								$up=$this->Login_model->updatePassword();
-								//echo "<pre>";print_r($up);die;
-							if($up>0){
-								$this->session->set_flashdata('success',RESET_SUCCESS); 
-								redirect('home/login');
-							}elseif($up=='') {
-								// /echo "up";die;
-								$error = EXPIRED_RESET_LINK;
-						      $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
-							}
-							else{
-								//echo "gfgfdg";die;
-								$error = PASS_RESET_FAIL;
-			                    $this->session->set_flashdata('error',PASS_RESET_FAIL); die; 
-							}
+	// 							$up=$this->Login_model->updatePassword();
+	// 							//echo "<pre>";print_r($up);die;
+	// 						if($up>0){
+	// 							$this->session->set_flashdata('success',RESET_SUCCESS); 
+	// 							redirect('home/login');
+	// 						}elseif($up=='') {
+	// 							// /echo "up";die;
+	// 							$error = EXPIRED_RESET_LINK;
+	// 					      $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
+	// 						}
+	// 						else{
+	// 							//echo "gfgfdg";die;
+	// 							$error = PASS_RESET_FAIL;
+	// 		                    $this->session->set_flashdata('error',PASS_RESET_FAIL); die; 
+	// 						}
 							
-						}
-					}else{
-						//echo "hii";die;
-						$error = EXPIRED_RESET_LINK;
-						// $redirect=site_url('home/index');
-						//$redirect=site_url();
-		              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
-					}
-				 $this->load->view('common/ResestPassword',$data);
-		    }else{
-		    	//echo 'dfdfds';die;
-		    	$this->load->view('common/ResestPassword',$data);
-		    	//die;
-		    }
+	// 					}
+	// 				}else{
+	// 					//echo "hii";die;
+	// 					$error = EXPIRED_RESET_LINK;
+	// 					// $redirect=site_url('home/index');
+	// 					//$redirect=site_url();
+	// 	              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
+	// 				}
+	// 			 $this->load->view('common/ResestPassword',$data);
+	// 	    }else{
+	// 	    	//echo 'dfdfds';die;
+	// 	    	$this->load->view('common/ResestPassword',$data);
+	// 	    	//die;
+	// 	    }
 
-            }else{
+ //            }else{
 
-            		  //echo "hii";die;
-					$error = EXPIRED_RESET_LINK;
-					 $this->session->set_flashdata('error',EXPIRED_RESET_LINK);
-					 redirect('home/login');
-		    }
-	}
+ //            		  //echo "hii";die;
+	// 				$error = EXPIRED_RESET_LINK;
+	// 				 $this->session->set_flashdata('error',EXPIRED_RESET_LINK);
+	// 				 redirect('home/login');
+	// 	    }
+	// }
 
 
 
