@@ -61,3 +61,21 @@ ERROR - 2019-07-24 12:16:23 --> Severity: Warning --> include(): Failed opening 
 ERROR - 2019-07-24 12:16:30 --> Severity: error --> Exception: syntax error, unexpected 'public' (T_PUBLIC) C:\xampp\htdocs\mentor\application\controllers\Home.php 258
 ERROR - 2019-07-24 12:16:30 --> Severity: Warning --> include(application/views\errors\html\error_exception.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 219
 ERROR - 2019-07-24 12:16:30 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_exception.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 219
+ERROR - 2019-07-24 12:21:57 --> Severity: error --> Exception: syntax error, unexpected 'public' (T_PUBLIC) C:\xampp\htdocs\mentor\application\controllers\Home.php 258
+ERROR - 2019-07-24 12:21:57 --> Severity: Warning --> include(application/views\errors\html\error_exception.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 219
+ERROR - 2019-07-24 12:21:57 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_exception.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 219
+ERROR - 2019-07-24 12:22:00 --> Severity: error --> Exception: syntax error, unexpected 'public' (T_PUBLIC) C:\xampp\htdocs\mentor\application\controllers\Home.php 258
+ERROR - 2019-07-24 12:22:00 --> Severity: Warning --> include(application/views\errors\html\error_exception.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 219
+ERROR - 2019-07-24 12:22:00 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_exception.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 219
+ERROR - 2019-07-24 12:22:08 --> 404 Page Not Found: Home/assets
+ERROR - 2019-07-24 12:22:08 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:08 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:09 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-24 12:22:09 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:09 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:09 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-24 12:22:09 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:09 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:09 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-24 12:22:09 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-24 12:22:09 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
