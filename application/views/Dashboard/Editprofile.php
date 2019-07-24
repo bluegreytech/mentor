@@ -1,11 +1,22 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header_second');
+
 $this->load->view('common/sidebar_second');
 ?>
       
 <section id="main-content" class="my-profile-page">
    <section class="wrapper">
+   <?php if(($this->session->flashdata('error'))){ ?>
+                     <div class="alert alert-danger" id="errorMessage">
+                     <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
+                     </div>
+               <?php } ?>
+                   <?php if(($this->session->flashdata('success'))){ ?>
+                     <div class="alert alert-success" id="successMessage">
+                     <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
+                     </div>
+               <?php } ?>
       <div class="c_title">
          <h2>My Profile</h2>
          <div class="clearfix"></div>
@@ -30,12 +41,13 @@ $this->load->view('common/sidebar_second');
                      <div class="tab-name">Academic Details</div></a>
                   </li>
                </ul>
-
+ 
                <div class="tab-content clearfix">
                  <div class="tab-pane active" id="1a">
-                     <form method="post" action="<?php echo base_url();?>Dashboard/Useradd/">
+                  <!-- <form method="post" id="form_assesment" action="<?php //echo base_url();?>Dashboard/Useradd"> -->
                      <div class="ptd-box " id="Div1">
-                       
+                     <form method="post" id="form_assesment" action="<?php echo base_url();?>Dashboard/Useradd" 
+    enctype="multipart/form-data">
                         <div class="row">
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -46,37 +58,46 @@ $this->load->view('common/sidebar_second');
                                  <input type="hidden"  value="<?php echo $UserId; ?>" name="UserId">
                                     <span class="btn btn-white btn-file btn-xs">
                                     <span class="fileupload-exists show-important">Select image</span>
-                                    <input id="register-photo"  type="file" name="userfile"  class="default" />
+                                  
+                                     <input type="file" name="ProfileImage" value="<?php echo $ProfileImage;?>"  class="default" /> 
                                     </span>
                                  </div>
 
                                 <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 500kb)</small>
                               </div>
                            </div>
+
                            <div class="col-md-3">
                               <div class="form-group height-min">
-                                 <label>Full Name</label>
+                                 <label>First Name</label>
                                  <br>
-                                 <!-- <span class="text-cap">Mit Patel</span> -->
-                                 <input required="" name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text">
+                                 <input type="hidden"   value="<?php echo $UserId; ?>" name="UserId">
+                                 <input type="hidden"   value="<?php echo $EducationId; ?>" name="EducationId">
+                                 <input type="hidden"   value="<?php echo $UserFamilyId; ?>" name="UserFamilyId">
+                                 <input type="hidden"   value="<?php echo $GraduateScoreId; ?>" name="GraduateScoreId">
+                              
+                               
+                                 <input name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text">
                               </div>
                               <div class="form-group height-min">
                                  <label class="">Email Address</label>
                                  <br>
-                                 <span class="text-low"><?php echo $EmailAddress;?></span>
-                                  
-                                   </div>
-                              <a href="#" class="add-another-email" style="text-decoration: underline; display: block">Add another email</a>
+                                 <input name="EmailAddress" value="<?php echo $EmailAddress;?>" class="form-control" type="text">
+                                    
+                              </div>
+
+                              <!-- <a href="#" class="add-another-email" style="text-decoration: underline; display: block">Add another email</a>
                               <div class="form-group height-min" id="for-additional-email" style="display: none">
                                  <div><label>Add Email </label><a href="#" class="delete-another-email" >Cancel</a></div>
                                 <span class="additional-email"><input id="anotherEmail" name="Email1" class="form-control text-low" style="text-transform: none;" type="text" value=""></span>
-                              </div>
+                              </div> -->
                            </div>
+
                            <div class="col-md-3">
                               <div class="form-group">
-                                 <label>Phone Number</label>
+                                 <label>Last Name</label>
                                  <br>
-                                 <input name="PhoneNumber" class="form-control" type="text" maxlength="13" value="<?php echo $PhoneNumber;?>">
+                                 <input name="LastName" class="form-control" type="text" maxlength="50" value="<?php echo $LastName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Gender</label><br>
@@ -91,6 +112,7 @@ $this->load->view('common/sidebar_second');
                                  </div>
                               </div>
                            </div>
+
                            <div class="col-md-3">
                               <div class="form-group">
                                  <label>Date of Birth</label>
@@ -100,22 +122,31 @@ $this->load->view('common/sidebar_second');
                                     <input value="<?php echo $DateofBirth ?>" class="form-control" name="DateofBirth" placeholder="MM/DD/YYYY" type="date" id="datepicker">
                                  </div>
                               </div>
+                              <div class="form-group">
+                                 <label>Phone Number</label>
+                                 <br>
+                                 <input name="PhoneNumber" class="form-control" type="text" maxlength="13" value="<?php echo $PhoneNumber;?>">
+                              </div>
                            </div>
+
+
                            <input type="hidden" id="level" value="1" name="level">
                            <div class="col-md-12 margin-top-20" style="text-align: right">
-                              <input id="" value="Update" class="btn btn-primary next-profile-btn" type="submit"></div>
+                              <input id="" value="Update" class="btn btn-primary next-profile-btn" type="submit">
+                           </div>
                         </div>
                      </div>
-                  </form>
+                  <!-- </form> -->
                  </div>
 
                   <div class="tab-pane" id="2a">
-                         <form action="#">
+                     <!-- <form action="#"> -->
                         <div class="ptd-box" id="education-tab-details">
                            <div class="row">
                               <div class="for-school-student" style="display: block;">
                                  <div class="col-md-6">
                                     <div class="form-group">
+                                   
                                     <?php 
                                        if($StreamStatus=='Graduate')
                                        {
@@ -200,35 +231,39 @@ $this->load->view('common/sidebar_second');
                               </div>
                            </div>
                         </div>
-                     </form>
+                     <!-- </form> -->
                   </div>
 
                   <div class="tab-pane" id="3a">
-                     <form action="#">
+                   <!-- <form action="#"> -->
                      <div class="ptd-box" id="family-tab-details">
                         <div class="row">
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label>Father's (or Guardian's) Name</label>
                                  <br>
-                                 <input name="FatherName" class="form-control" type="text"  value="<?php echo $FatherName;?>">
+                                 <input name="FatherName" class="form-control" type="text" 
+                                  value="<?php echo $FatherName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Father's (or Guardian's) Profession</label>
                                  <br>
-                                 <input  name="FatherProfession" class="form-control" type="text"  value="<?php echo $FatherProfession;?>">
+                                 <input  name="FatherProfession" class="form-control" type="text"  
+                                 value="<?php echo $FatherProfession;?>">
                               </div>
                            </div>
                            <div class="col-md-6">
                               <div class="form-group">
                                  <label>Mother's (or Guardian's) Name</label>
                                  <br>
-                                 <input  name="MotherName" class="form-control" type="text"  value="<?php echo $MotherName;?>">
+                                 <input  name="MotherName" class="form-control" type="text"  
+                                 value="<?php echo $MotherName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Mother's (or Guardian's) Profession</label>
                                  <br>
-                                 <input name="MotherProfession" class="form-control" type="text"  value="<?php echo $MotherProfession;?>">
+                                 <input name="MotherProfession" class="form-control" type="text" 
+                                  value="<?php echo $MotherProfession;?>">
                               </div>
                            </div>
                            <div class="col-md-12 margin-top-20" >
@@ -236,11 +271,11 @@ $this->load->view('common/sidebar_second');
                            </div>
                         </div>
                      </div>
-                  </form>
+                  <!-- </form> -->
                   </div>
 
                   <div class="tab-pane" id="4a">
-                     <form enctype="multipart/form-data" action="#" >
+                  <!-- <form enctype="multipart/form-data" action="#" > -->
                      <div class="ptd-box" style="text-align: left" id="Div2">
                         <div class="academic-student">
 
@@ -302,10 +337,12 @@ $this->load->view('common/sidebar_second');
                                                 foreach($subject as $subjectper)
                                                 {
                                                 ?>
+                                                 
                                                    <input type="text" <?php if($subjectper->YearStatus=='Current')
                                                 {
                                                 ?>
-                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName"  class="form-control">
+                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
+                                                   <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
                                                    <?php
                                                 } 
                                                 ?>
@@ -324,7 +361,7 @@ $this->load->view('common/sidebar_second');
                                                     <input type="text" <?php if($subjectper->YearStatus=='Current')
                                                 {
                                                 ?>
-                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa"  class="form-control">
+                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
                                                    <?php
                                                 } 
                                                
@@ -339,12 +376,12 @@ $this->load->view('common/sidebar_second');
                                           <div><strong>-or-</strong></div>
                                           <div>Upload your marksheet</div>
                                        </div>
-                                       <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
+                                       <!-- <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
                                           <input type="file" class="filename display-none">
                                           <input type="file" name="current_year_file_name" class="form-control uploadlogo" readonly="readonly" style="border-radius:0!important;height: auto;">
                                           <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 2MB)</small>
                                           
-                                       </div>
+                                       </div> -->
                                                                                  
                                        <div>
                                        <?php if($subjectper->YearStatus=='Current' && $subjectper->MarksheetImage!=''){   ?>
@@ -366,16 +403,16 @@ $this->load->view('common/sidebar_second');
                                                 <label>Subject</label>
                                                 <?php
                                                 foreach($subject as $subjectper)
-                                                {
+                                                {  
                                                 ?>
-                                                <input type="text" <?php if($subjectper->YearStatus=='Last')
-                                                {
-                                                ?>
-                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName"  class="form-control">
-                                                   <?php
-                                                } 
-                                                ?>
-                                                
+                                                   <input type="text" <?php if($subjectper->YearStatus=='Last')
+                                                   {
+                                                   ?>
+                                                      value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
+                                                      <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
+                                                      <?php
+                                                   } 
+                                                   ?>
                                                 <?php
                                                 }
                                                 ?>
@@ -391,7 +428,7 @@ $this->load->view('common/sidebar_second');
                                                 <input type="text" <?php if($subjectper->YearStatus=='Last')
                                                 {
                                                 ?>
-                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="EducationSubjectName"  class="form-control">
+                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
                                                    <?php
                                                 } 
                                                 ?>
@@ -407,12 +444,12 @@ $this->load->view('common/sidebar_second');
                                           <div><strong>-or-</strong></div>
                                           <div>Upload your marksheet</div>
                                        </div>
-                                       <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
+                                       <!-- <div class="input-group controls col-md-12  margin-bottom-10" id="event-none-file">
                                           <input type="file" class="filename display-none">
                                           <input type="file" name="last_year_file_name" class="uploadlogo form-control" readonly="readonly" style="border-radius:0!important;height: auto;">
                                           <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 2MB)</small>
                                           
-                                       </div>
+                                       </div> -->
                                        
                                        <div>
                                       
@@ -459,3 +496,44 @@ $this->load->view('common/sidebar_second');
 <?php 
  $this->load->view('common/footer_second');
 ?>
+
+<!-- <script>
+$(function() { 
+    setTimeout(function() {
+  $('#errorMessage').fadeOut('fast');
+}, 3000);
+   
+});
+$(function() { 
+    setTimeout(function() {
+  $('#successMessage').fadeOut('fast');
+}, 3000);
+   
+});
+
+</script> -->
+<script>
+
+$(document).ready(function()
+{
+		$("#form_assesment").validate(
+		{
+			rules: {
+
+               FirstName: {
+								required: true,
+													},
+						},
+
+         messages: {
+
+               FirstName: {
+               required: "Please enter assesment name",
+               pattern : "Enter only characters and numbers and \"space , \" -",
+               minlength: "Please enter at least 5 and maximum to 200 letters!",
+                     },
+                  
+               }
+		});
+});
+</script>

@@ -354,7 +354,7 @@
                         </div>
                      </div>
                     </div>
-                     <a href="blog/index.html" target="_blank">Blog<span class="active-line"></span></a>
+                     <a href="<?php echo base_url()?>blog" target="_blank">Blog<span class="active-line"></span></a>
                      <a href="<?php echo base_url()?>About/Pricing">Pricing<span class="active-line"></span></a>
                      <a href="<?php echo base_url(); ?>Home/login" >Log In<span class="active-line"></span>
                     </a>
