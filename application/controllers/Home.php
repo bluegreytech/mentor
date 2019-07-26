@@ -1,45 +1,35 @@
 <?php
-//echo "kjkhj";die;
+//echo "hhhhhh";die;
 defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Home extends CI_Controller {
-	
+//echo APPPATH;die;
+require_once(APPPATH . 'libraries/facebook.php'); 
+class Home extends CI_Controller
+{
 	public function __construct()
 	{
-
       	parent::__construct();
-
 		$this->load->model('Login_model'); 
-		$this->load->model('stream_model'); 
-		
+		$this->load->model('stream_model'); 	
     }
 	
 	public function index() 
 	{	
 		$this->load->view('Home/Home');
 	}
-
-// 	 public function adduser(){
-	  	
-// 		$this->load->view('register/register',$data);
-// 	 }
+	
 
 	public function Register()
 	{
-		//echo "hello ";die;
 	 	$data =array();
 	 	$data['standardlist']=$this->Login_model->getstandard();
 	 	$data['streamlist']=$this->stream_model->getstream();
-       	// echo "<pre>";print_r($data['streamlist']);die;
 
-		
-			$this->load->library("form_validation");
-			$this->form_validation->set_rules('username', 'User Name', 'required');			
-			$this->form_validation->set_rules('phone', 'Phone','required');
-			$this->form_validation->set_rules('email', 'EmailAddress','required|valid_email');
-			$this->form_validation->set_rules('city', 'city', 'required');
+		$this->load->library("form_validation");
+		$this->form_validation->set_rules('username', 'User Name', 'required');			
+		$this->form_validation->set_rules('phone', 'Phone','required');
+		$this->form_validation->set_rules('email', 'EmailAddress','required|valid_email');
+		$this->form_validation->set_rules('city', 'city', 'required');
 			
-		
 		if($this->form_validation->run() == FALSE){			
 			if(validation_errors())
 			{
@@ -49,40 +39,23 @@ class Home extends CI_Controller {
 				$data["error"] = "";
 			}
           
-			
 			$data['username']=$this->input->post('username');
 			$data['password']=$this->input->post('password');
 			$data['email']=$this->input->post('email');
 		
-			
 			}
 			else
 			{
 				$this->Login_model->user_insert();
 				$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
-				redirect('home/login');
-
-				
-			// 	if($this->input->post("UserId")!="")
-			// {	
-			// 	$this->Login_model->user_update();
-			// 	$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
-			// 	redirect('home/login');
-				
-			// }
-			// else
-			// {  echo "dsfdf";die;
-				
-			
-			// }
-				
+				redirect('Home/login');
+	
 			}
 		$this->load->view('Register/Register',$data);
 	}
 
 	public function login()
-	{
-		
+	{	
 		if($this->input->post('logins'))
 			{   
 					$EmailAddress = $this->input->post('EmailAddress');
@@ -111,13 +84,56 @@ class Home extends CI_Controller {
 					{
 						$this->session->set_userdata($session);
 						$this->session->set_flashdata('error', 'Invalid Username Or Password');
-						redirect('home/login');	
+						redirect('Home/login');	
 					} 
 				}
 
 		$this->load->view('common/login');
 	}
 
+
+	public function Fblogin()
+	{
+		if($_POST)
+			{   		
+			 	$result = $this->Login_model->getfblogin();     
+				if($result!='0')
+				{
+					$cnt = count($result);	   
+					if($cnt>0)
+					{
+						$datasession= array(
+								'EmailAddress'=> $result->EmailAddress,
+								'UserId'=> $result->UserId,
+								'FirstName'=> $result->FirstName,
+								'LastName'=> $result->LastName,
+								'RoleId'=> $result->RoleId,
+							);		
+							$st=$this->session->set_userdata($datasession);						
+							$this->session->set_flashdata('success','User Login successfully');
+					 		redirect('index.php/Program/Programlist');
+					
+					}
+					else
+					{
+							
+						$this->session->set_userdata($session);
+						$this->session->set_flashdata('error', 'Invalid Username Or Password');
+						redirect('index.php/Login');	
+					} 
+				
+                    
+				  }else{
+					  
+						$result=$this->Login_model->insertdata();
+						if($result){
+
+							redirect('index.php/Program/Programlist');
+						}
+				  }
+					 
+		    }
+	}
 
 	public function getstandard()
 	{
@@ -171,8 +187,7 @@ class Home extends CI_Controller {
 				else
 				{				
 					$forget=FORGET_SUCCESS;
-					
-					 $this->session->set_flashdata('success','Please check your email for reset the password!');
+					$this->session->set_flashdata('success','Please check your email for reset the password!');
 					redirect('Home/login');
 				}
 			}
@@ -181,12 +196,7 @@ class Home extends CI_Controller {
 
 	function reset_password($code='')
 	{
-
-	
-			
 			$admin_id=$this->Login_model->checkResetCode($code);
-			//print_r($admin_id);die;
-
 			$data = array();
 			$data['errorfail']=($code=='' || $admin_id=='')?'fail':'';
 			$data['AdminId']=$admin_id;
@@ -204,7 +214,6 @@ class Home extends CI_Controller {
 							echo json_encode(array("status"=>"error","msg"=>validation_errors()));
 						}
 					}else{
-						
 							$up=$this->Login_model->updatePassword();
 						if($up>0){
 							$this->session->set_flashdata('success',RESET_SUCCESS); 
@@ -215,19 +224,13 @@ class Home extends CI_Controller {
 					      $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 						}
 						else{
-							//echo "gfgfdg";die;
+							
 							$error = PASS_RESET_FAIL;
 		                    $this->session->set_flashdata('error',PASS_RESET_FAIL); die; 
-						}
-
-					
-						
+						}	
 					}
 				}else{
-					//echo "hii";die;
-					$error = EXPIRED_RESET_LINK;
-					// $redirect=site_url('home/index');
-					//$redirect=site_url();
+					$error = EXPIRED_RESET_LINK;	
 	              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 				}
 				 $this->load->view('common/ResestPassword',$data);
@@ -237,8 +240,6 @@ class Home extends CI_Controller {
 		    }
 
             }else{
-
-            	  //echo "hii";die;
 					$error = EXPIRED_RESET_LINK;
 					 $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 					 redirect();

@@ -9,6 +9,73 @@ class Login_model extends CI_Model
 			return $res;
 		}
 
+		function getfblogin(){
+			$data = array(
+				'oauth_provider' =>"facebook",				
+				"oauth_uid"=>$this->input->post('id'),
+			
+			);
+			 $this->db->select("*");
+			 $this->db->from('tbluser');
+			 $this->db->where($data);
+			 $query=$this->db->get();
+			// echo "<pre>gfgf";print_r($query->num_rows());die;
+			 if($query->num_rows() > 0){ 
+				//echo "fgfd";die;
+				return $query->row();
+			 }else{
+				// echo "else";die;
+				 return 0;
+			 }
+			 
+		}
+
+
+		// public function insertdata()
+		// {
+		// 	//$id = $this->input->post('id');
+		// 	$FirstName = $this->input->post('first_name');
+		// 	$LastName = $this->input->post('last_name');
+		// 	$EmailAddress = $this->input->post('email');
+		// 	//	$Gender = $this->input->post('gender');
+		// 	$ProfileImage = $this->input->post('picture');
+		// 	$data=array(
+		// 			"EmailAddress"=>$EmailAddress,
+		// 			"FirstName"=>$FirstName,
+		// 			"LastName"=>$LastName,
+		// 			"RoleId"=>"2",
+		// 			'oauth_provider' =>"facebook",
+		// 			'oauth_uid' =>$this->input->post('id'),
+		// 			"ProfileImage"=>$ProfileImage
+		// 	);
+		// 	//echo "<pre>";print_r($data);die;
+		// 	$res=$this->db->insert('tbluser',$data);	
+		// 	if($res){
+		// 		$sdata = array(
+		// 			'oauth_provider' =>"facebook",				
+		// 			"oauth_uid"=>$this->input->post('id'),
+				
+		// 		);
+		// 		$this->db->select("*");
+		// 		$this->db->from('tbluser');
+		// 		$this->db->where($sdata);
+		// 		$query=$this->db->get();
+		// 		echo "<pre>";print_r($query->result());die;
+
+		// 		$sessiondata= array(
+		// 			'EmailAddress'=> $log->EmailAddress,
+		// 			'UserId'=> $log->UserId,
+		// 			'FirstName'=> $log->FirstName,
+		// 			'LastName'=> $log->LastName,
+		// 			'RoleId'=> $log->RoleId,
+		// 		);
+				
+		// 	return $this->session->set_userdata($sessiondata);
+		// 	}
+			
+
+		// }
+
 		function getuser(){
 			$r=$this->db->select('*')
 						->from('tbluser')
@@ -19,44 +86,39 @@ class Login_model extends CI_Model
 		}
 		function user_insert()
 		{  
-			
-		
-		$data=array(
-		'UserName'=>trim($this->input->post('username')),
-		'EmailAddress'=>trim($this->input->post('email')), 
-		'Password'=>md5($this->input->post('password')),
-		'PhoneNumber'=>$this->input->post('phone'),
-		'City'=>$this->input->post('city'),
-		'Desgination'=>$this->input->post('desgination'),
-		'IsActive'=>'1',
-		'StreamId'=>$this->input->post('StreamId'),
-		'StandardId'=>$this->input->post('StandardId'),
-		'CreatedOn'=>date('Y-m-d H:i:s'),
-		);
-		//echo "<pre>";print_r($data);die;
-		$res=$this->db->insert('tbluser',$data);	
-		return $res;
-			
+				$data=array(
+				'UserName'=>trim($this->input->post('username')),
+				'EmailAddress'=>trim($this->input->post('email')), 
+				'Password'=>md5($this->input->post('password')),
+				'PhoneNumber'=>$this->input->post('phone'),
+				'City'=>$this->input->post('city'),
+				'Desgination'=>$this->input->post('desgination'),
+				'IsActive'=>'1',
+				'StreamId'=>$this->input->post('StreamId'),
+				'StandardId'=>$this->input->post('StandardId'),
+				'CreatedOn'=>date('Y-m-d H:i:s'),
+				);
+				//echo "<pre>";print_r($data);die;
+				$res=$this->db->insert('tbluser',$data);	
+				return $res;		
 		}
-	    function getstandard(){
-		$this->db->select('*');
-		$this->db->from('tblstandard');
-		$r = $this->db->get();
-		$res = $r->result();
-		return $res;
 
-	}
+		function getstandard()
+		{
+				$this->db->select('*');
+				$this->db->from('tblstandard');
+				$r = $this->db->get();
+				$res = $r->result();
+				return $res;
+		}
 
 		function checkResetCode($code)
 		{
-			//echo "vvvbvc";die;
 			$query=$this->db->get_where('tbluser',array('PasswordResetCode'=>$code));
 			
 			if($query->num_rows()>0)
 			{
-				// echo print_r($query->row()->UserId);die;
 				return $query->row()->UserId; 
-			
 			}else{
 				return '';
 			}

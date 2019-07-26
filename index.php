@@ -248,7 +248,6 @@ switch (ENVIRONMENT)
 			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
 		}
 
-
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
 	
@@ -259,7 +258,7 @@ switch (ENVIRONMENT)
 	// The path to the "views" directory
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
 	{
-		$view_folder = APPPATH.'views';
+			$view_folder = APPPATH.'views';
 	
 	}
 	elseif (is_dir($view_folder))
@@ -275,15 +274,19 @@ switch (ENVIRONMENT)
 				'/\\',
 				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 			);
+
+			
 		}
 	}
 	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
 	{
+		
 		$view_folder = APPPATH.strtr(
 			trim($view_folder, '/\\'),
 			'/\\',
 			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 		);
+		
 	}
 	else
 	{

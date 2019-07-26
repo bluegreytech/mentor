@@ -46,8 +46,8 @@ $this->load->view('common/sidebar_second');
                  <div class="tab-pane active" id="1a">
                   <!-- <form method="post" id="form_assesment" action="<?php //echo base_url();?>Dashboard/Useradd"> -->
                      <div class="ptd-box " id="Div1">
-                     <form method="post" id="form_assesment" action="<?php echo base_url();?>Dashboard/Useradd" 
-    enctype="multipart/form-data">
+                     <form method="post" id="valid_forms" action="<?php echo base_url();?>Dashboard/Useradd" 
+                           enctype="multipart/form-data">
                         <div class="row">
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -77,7 +77,7 @@ $this->load->view('common/sidebar_second');
                                  <input type="hidden"   value="<?php echo $GraduateScoreId; ?>" name="GraduateScoreId">
                               
                                
-                                 <input name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text">
+                                 <input name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text" minlength="3" maxlength="50">
                               </div>
                               <div class="form-group height-min">
                                  <label class="">Email Address</label>
@@ -130,10 +130,10 @@ $this->load->view('common/sidebar_second');
                            </div>
 
 
-                           <input type="hidden" id="level" value="1" name="level">
+                           <!-- <input type="hidden" id="level" value="1" name="level">
                            <div class="col-md-12 margin-top-20" style="text-align: right">
-                              <input id="" value="Update" class="btn btn-primary next-profile-btn" type="submit">
-                           </div>
+                              <input value="Update" class="btn btn-primary next-profile-btn" type="submit">
+                           </div> -->
                         </div>
                      </div>
                   <!-- </form> -->
@@ -225,10 +225,10 @@ $this->load->view('common/sidebar_second');
                                     </div>
                                  </div>
                               </div>
-                                 <input type="hidden" id="level" value="2" name="level">
+                                 <!-- <input type="hidden" id="level" value="2" name="level">
                               <div class="col-md-12 next-button-row margin-top-20" style="">
                                   <input  style="display: inline-block;" value="Update" class="btn btn-primary next-profile-btn pull-right" type="submit">
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                      <!-- </form> -->
@@ -467,19 +467,10 @@ $this->load->view('common/sidebar_second');
                               </div>
 
                               </div>
-                                 <input type="hidden" id="Hidden3" value="4" name="level">
+                                 <!-- <input type="hidden" id="Hidden3" value="4" name="level"> -->
                         
-                        
-                       
-                       
-                       
-                       
-                       
-                       
-
                      </div>
-
-                           
+     
                         <div class="col-md-12 margin-top-20" style="padding-right:0;padding-left:0;">
                           <input value="Update" class="btn btn-primary next-profile-btn pull-right" type="submit">
                         </div>
@@ -516,24 +507,23 @@ $(function() {
 
 $(document).ready(function()
 {
-		$("#form_assesment").validate(
+		$("#valid_forms").validate(
 		{
-			rules: {
+			   rules:{
 
-               FirstName: {
-								required: true,
-													},
+                  FirstName:{
+								         required: true,
+										},	
 						},
 
-         messages: {
-
-               FirstName: {
-               required: "Please enter assesment name",
-               pattern : "Enter only characters and numbers and \"space , \" -",
-               minlength: "Please enter at least 5 and maximum to 200 letters!",
-                     },
-                  
-               }
+            messages: {
+                  FirstName: {
+						         required: "Please enter a name",
+										},
+						
+						}
+				
 		});
 });
+					                 					               
 </script>

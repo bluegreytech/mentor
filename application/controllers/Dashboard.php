@@ -5,8 +5,7 @@ class Dashboard extends CI_Controller
 	public function __construct()
 	{
       	parent::__construct();
-		$this->load->model('Dashboard_model');
-      
+		$this->load->model('Dashboard_model');  
 	}
 
 	
@@ -64,10 +63,7 @@ class Dashboard extends CI_Controller
 		$this->load->view('Dashboard/Profilelist',$data);
 	}
 
-	public function Useradd()
-
-	{      
-
+	public function Useradd()     
 	{      	
 		if(!check_user_authentication()){ 
 				redirect(base_url());
