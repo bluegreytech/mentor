@@ -38,7 +38,7 @@ class Login_model extends CI_Model
 		return $res;
 			
 		}
-			function getstandard(){
+	    function getstandard(){
 		$this->db->select('*');
 		$this->db->from('tblstandard');
 		$r = $this->db->get();
@@ -47,8 +47,9 @@ class Login_model extends CI_Model
 
 	}
 
-		function checkResetCode($code='')
+		function checkResetCode($code)
 		{
+			//echo "vvvbvc";die;
 			$query=$this->db->get_where('tbluser',array('PasswordResetCode'=>$code));
 			
 			if($query->num_rows()>0)
