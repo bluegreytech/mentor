@@ -43,16 +43,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 								<!-- <div class="form-group">
 									<label>Your Image</label>
-									<input type="text" class="form-control" placeholder="Your Image" name="UserImage" value="<?php echo $UserImage;?>" minlength="5" maxlength="200">
+									<input type="text" class="form-control" placeholder="Your Image" name="UserImage" value="<?php //echo $UserImage;?>" minlength="5" maxlength="200">
 								</div> -->
 
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label>Choose Image</label>
 									<label id="projectinput6" class="file center-block">
 										<input type="file"  name="UserImage" id="file" required>
 										<span class="file-custom"></span>
 									</label>
-								</div>
+								</div> -->
 							
 								<div class="form-group">
 									<label>Blog Title</label>
@@ -71,12 +71,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<input type="text" class="form-control" placeholder="Blog Image" value="<?php //echo $BlogImage;?>" name="BlogImage">
 								</div> -->
 
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<label>Choose Image</label>
 									<label id="projectinput7" class="file center-block">
 										<input type="file" name="BlogImage" id="file" required>
 										<span class="file-custom"></span>
 									</label>
+								</div> -->
+
+								<div class="form-group">
+									<label for="issueinput5">Blog Status</label>
+									<select id="issueinput5" name="BlogStatusId" class="form-control" >
+										<option value=""  selected="" disabled="">Select blog status</option>					
+											<?php
+											foreach($statusBlog as $blogstatus)
+											{
+											?>
+												<option value="<?php echo $blogstatus->BlogStatusId;?>" <?php if($BlogStatusId==$blogstatus->BlogStatusId){ echo "selected";}?>><?php echo $blogstatus->BlogStatus;?></option>
+											<?php
+											}
+											?>
+									</select>
 								</div>
 
 								<?php  if($IsActive!=''){ ?>

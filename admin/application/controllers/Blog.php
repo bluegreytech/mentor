@@ -22,13 +22,14 @@ class Blog extends CI_Controller
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
 		}else{  
-				$data='';
+				$data=array();
 				$data['BlogId']=$this->input->post('BlogId');
 				$data['FirstName']=$this->input->post('FirstName');
 				$data['UserImage']=$this->input->post('UserImage');
 				$data['BlogTitle']=$this->input->post('BlogTitle');
 				$data['BlogImage']=$this->input->post('BlogImage');
 				$data['BlogDescription']=$this->input->post('BlogDescription');
+				$data['BlogStatusId']=$this->input->post('BlogStatusId');
 				$data['IsActive']=$this->input->post('IsActive');
 				if($_POST){
 					if($this->input->post('BlogId')==''){
@@ -51,6 +52,7 @@ class Blog extends CI_Controller
 
 					}
 			}
+			$data['statusBlog']=$this->Blog_model->getblogStatus();
 			$this->load->view('Blog/BlogAdd',$data);	
 		}	
 	}
@@ -60,7 +62,8 @@ class Blog extends CI_Controller
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
 		}else{
-			$data='';
+			$data=array();
+			$data['statusBlog']=$this->Blog_model->getblogStatus();
 			$result=$this->Blog_model->getdata($BlogId);	
 			$data['BlogId']=$result['BlogId'];
 			$data['FirstName']=$result['FirstName'];	
@@ -68,6 +71,7 @@ class Blog extends CI_Controller
 			$data['BlogTitle']=$result['BlogTitle'];
 			$data['BlogImage']=$result['BlogImage'];
 			$data['BlogDescription']=$result['BlogDescription'];
+			$data['BlogStatusId']=$result['BlogStatusId'];
 			$data['IsActive']=$result['IsActive'];			
 			$this->load->view('Blog/BlogAdd' ,$data);	
 		}

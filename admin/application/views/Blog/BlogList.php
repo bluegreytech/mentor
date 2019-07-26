@@ -13,7 +13,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Table head options start -->
 <div class="row">
     <div class="col-xs-12">
-   <?php //echo $this->session->flashdata('success');?>
     <?php if(($this->session->flashdata('success'))){ ?>
         <div class="alert alert-success" id="successMessage">
         <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
@@ -38,6 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <th>Blog Title</th>
                                 <th>Blog Image</th>
                                 <th>Blog Description</th>
+                                <th>Blog Status</th>
 								<th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -56,7 +56,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <td><?php echo $program->UserImage; ?></td>
                                     <td><?php echo $program->BlogTitle; ?></td>
                                     <td><?php echo $program->BlogImage; ?></td>
-                                    <td><?php echo $program->BlogDescription; ?></td>
+                                    <td><?php $rr=$program->BlogDescription;
+                                        echo substr("$rr",0,10);?></td>
+                                    <!-- <td><?php// echo $program->BlogDescription; ?></td> -->
+                                    <td><?php echo $program->BlogStatus; ?></td>
                                     <td>
                                         <?php if($program->IsActive==1)
                                             {
