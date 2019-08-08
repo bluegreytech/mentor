@@ -845,3 +845,12 @@ ERROR - 2019-07-26 11:50:59 --> Severity: Warning --> include(): Failed opening 
 ERROR - 2019-07-26 11:50:59 --> 404 Page Not Found: Default/asset
 ERROR - 2019-07-26 11:50:59 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
 ERROR - 2019-07-26 11:50:59 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-26 12:43:11 --> 404 Page Not Found: Default/images
+ERROR - 2019-07-26 12:43:11 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-26 12:43:11 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-26 12:43:11 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-26 12:43:11 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-26 12:43:11 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-26 12:43:12 --> 404 Page Not Found: Default/asset
+ERROR - 2019-07-26 12:43:12 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-07-26 12:43:12 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampps\php\PEAR') C:\xampps\htdocs\mentor\system\core\Exceptions.php 182
