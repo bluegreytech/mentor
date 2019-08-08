@@ -61,24 +61,7 @@
             <ul class="nav navbar-nav navbar-right">
              
                <li class="dropdown for-admin" >
-                  <a href="javascript:void(0);" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                  <span class="small-profile-icon">
-                  <img id="header-image" src="<?php echo base_url(); ?>default/images/a6.png" />        
-                  </span>
-                  <?php 
-                     $UserId=$this->session->userdata('UserId');
-                     $FirstName=$this->session->userdata('FirstName');
-                     $LastName=$this->session->userdata('LastName');
-                     $EmailAddress=$this->session->userdata('EmailAddress');
-                     $RoleId=$this->session->userdata('RoleId');
-                  ?>
-                  <span class="small-profile-title"><?php echo $FirstName.' '.$LastName; ?> <span class=" fa fa-angle-down" ></span></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu ">
-                     <li> <a href="javascript:void(0);" class="font-size-11 color-grey pointer-none">User ID: <?php echo $UserId;?></a></li>
-                     <li><a href="javascript:void(0);"  data-toggle="modal" data-target="#modal-change-password" class="change-password-2"><i class="fa fa-lock" style=" width: 12px; float: left; margin-top: 3px; margin-right: 2px;"></i> Change Password</a></li>
-                     <li><a href="<?php echo base_url();?>Home/logout" class=""><i class="fa fa-sign-out" style=" width: 12px; float: left; margin-top: 3px; margin-right: 2px;"></i> Log Out</a></li>
-                  </ul>
+                  <a href="<?php echo base_url();?>Home/logout" class=""><i class="fa fa-power-off" style=" width: 12px; float: left;font-size: 22px;color:#bb342f;"></i></a>
                </li>
            
             </ul>

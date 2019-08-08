@@ -23,6 +23,7 @@ $this->load->view('common/sidebar_second');
       </div>
       <div class="c_panel panel-blank">
             <div id="exTab1"> 
+              <div class="col-md-3 nopadd">
                <ul  class="nav nav-pills">
                   <li class="active text-center"><a  href="#1a" data-toggle="tab"> 
                      <div><i class="fa fa-user fa-2x"></i></div>
@@ -41,7 +42,8 @@ $this->load->view('common/sidebar_second');
                      <div class="tab-name">Academic Details</div></a>
                   </li>
                </ul>
- 
+              </div>
+              <div class="col-md-9 nopadd">
                <div class="tab-content clearfix">
                  <div class="tab-pane active" id="1a">
                   <!-- <form method="post" id="form_assesment" action="<?php //echo base_url();?>Dashboard/Useradd"> -->
@@ -52,7 +54,7 @@ $this->load->view('common/sidebar_second');
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
                                  <div class="fileupload-preview fileupload-exists thumbnail">
-                                    <img src="http://mindlerdashboard.imgix.net/a6.png?w=120" /> 
+                                    <img src="<?php echo base_url(); ?>default/images/a6.png" /> 
                                  </div>
                                  <div>
                                  <input type="hidden"  value="<?php echo $UserId; ?>" name="UserId">
@@ -477,6 +479,7 @@ $this->load->view('common/sidebar_second');
                      </div>
                   </form>
                   </div>
+                </div>
             </div>
          </div>
       </div>
