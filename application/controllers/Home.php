@@ -9,7 +9,7 @@ class Home extends CI_Controller
 	{
       	parent::__construct();
 		$this->load->model('Login_model'); 
-		$this->load->model('stream_model'); 	
+		$this->load->model('Stream_model'); 	
     }
 	
 	public function index() 
@@ -22,7 +22,7 @@ class Home extends CI_Controller
 	{
 	 	$data =array();
 	 	$data['standardlist']=$this->Login_model->getstandard();
-	 	$data['streamlist']=$this->stream_model->getstream();
+	 	$data['streamlist']=$this->Stream_model->getstream();
 
 		$this->load->library("form_validation");
 		$this->form_validation->set_rules('username', 'User Name', 'required');			
