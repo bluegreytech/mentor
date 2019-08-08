@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header_second');
 $this->load->view('common/sidebar_second');
+$UserId=$this->session->userdata('UserId');
 ?>
    
 <section id="main-content"  class="dashboard-page dashboard-mobile">
@@ -28,7 +29,7 @@ $this->load->view('common/sidebar_second');
                         <div class="right-fixed-box">
                            <p class="dashboard-squre-title">Update your profile.</p>
                            <div class="btn-row">
-                           <a href="<?php echo base_url();?>Dashboard/Profileedit" class="btn-status">Update</a>
+                           <a href="<?php echo base_url();?>Dashboard/Profileedit/<?php echo $UserId ;?>" class="btn-status">Update</a>
                         </div>
                         </div>
                      </div>

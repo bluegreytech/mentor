@@ -45,25 +45,25 @@ $UserId=$this->session->userdata('UserId');
                        </h4>
 
                        <div class="col-md-3" style="padding: 0;">
-                         <div class="view-profile-user" style="padding: 0;text-align: center;margin-top: 15px;">
-                           <span style="border: 1px #e9e9e9 solid;border-radius: 50%;padding: 2px;display: inline-block;">
-                           <img src="http://mindlerdashboard.imgix.net/a6.png?w=110&h=110&fit=crop&crop=faces" />                           </span>
+                         <div class="view-profile-user">
+                           <span style="padding: 2px;display: inline-block;">
+                           <img src="<?php echo base_url();?>default/images/a6.png" style="height:70px;border-radius: 50px;" />                 
+                           </span>
+                           <h3 style="font-weight: 600;"><?php echo $FirstName.' '.$LastName?></h3>
                          </div>
                        </div>
                         <div class="col-md-9" style="padding: 0;">
                          <div class="table-responsive about-table" style="padding-left: 15px;">
                            <table class="table">
                              <tbody>
-                               <tr><th style="font-size: 13px;text-transform: capitalize;">
-                               <?php echo $FirstName.' '.$LastName?></th></tr>
                                <tr>
                                  <td  style="padding-left: 0;text-transform: lowercase;"><i class="fa fa-envelope margin-right-5" aria-hidden="true"  style="width: 15px;    font-size: 11px;"></i> <?php echo $EmailAddress?></td>
                                </tr>
                                <tr>
-                                 <td  style="padding-left:0;"><i class="fa fa-phone margin-right-5" aria-hidden="true"  style="width: 15px;"> <?php echo $PhoneNumber?></td>
+                                 <td  style="padding-left:0;"><i class="fa fa-phone margin-right-5" aria-hidden="true" > <?php echo $PhoneNumber?></td>
                                </tr>
                                <tr>
-                                  <td  style="padding-left: 0;"> <i class="fa fa-calendar margin-right-5" aria-hidden="true"  style="width: 13px;float: left;font-size: 10px;margin-top: 3px;"></i><?php echo $DateofBirth?></td>
+                                  <td  style="padding-left: 0;"> <i class="fa fa-calendar margin-right-5" aria-hidden="true"  style="width: 13px;float: left;font-size: 11px;margin-top: 3px;"></i><?php echo $DateofBirth?></td>
                                </tr>
                                <tr>
                                  <td  style="padding-left: 0;"><i class="fa fa-user  margin-right-5" aria-hidden="true"  style="width: 15px;"></i><?php echo $Gender?></td>
@@ -316,20 +316,18 @@ $UserId=$this->session->userdata('UserId');
                          <i class="fa fa-user" aria-hidden="true"></i>Personal Details
                        </h4>
 
-                       <div class="col-md-3" style="padding: 0;">
+                       <div class="col-md-12" style="padding: 0;">
                          <div class="view-profile-user">
-                           <span style="border: 1px #e9e9e9 solid;border-radius: 50%;padding: 2px;display: inline-block;">
-                           <img src="<?php echo base_url();?>default/images/a6.png" />                 
+                           <span style="padding: 2px;display: inline-block;">
+                           <img src="<?php echo base_url();?>default/images/a6.png" style="height:70px;border-radius: 50px;" />                 
                            </span>
+                           <h3 style="font-weight: 600;"><?php echo $FirstName.' '.$LastName?></h3>
                          </div>
                        </div>
-                       <div class="col-md-9" style="padding: 0;">
+                       <div class="col-md-12" style="padding: 0;">
                          <div class="table-responsive about-table" style="padding-left: 15px;">
                            <table class="table">
                              <tbody>
-                               <tr>
-                                 <th style="font-size: 13px;text-transform: capitalize;"><?php echo $FirstName.' '.$LastName?></th>
-                               </tr>
                                <tr>
 
                                  <td  style="text-transform: lowercase;">
