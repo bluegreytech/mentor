@@ -6,8 +6,8 @@ $this->load->view('common/sidebar_second');
 echo $UserId=$this->session->userdata('UserId');
 ?>
 
-
- <br><br><br><br><br><br><br><br><br>
+<section id="main-content" class="my-profile-details-page">
+   <section class="wrapper">
  <?php if(($this->session->flashdata('error'))){ ?>
                      <div class="alert alert-danger" id="errorMessage">
                      <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
@@ -18,31 +18,44 @@ echo $UserId=$this->session->userdata('UserId');
                      <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
                      </div>
                <?php } ?>
-                  <form method="post" action="<?php echo base_url();?>Dashboard/Userpass/<?php echo $UserId;?>">
-                    <table align="center">
-                        <tr> 
-                            <td>Enter old password</td>
-                            <td> 
-                                <input type="text"   value="<?php echo $UserId; ?>" name="UserId">
-                                <input type="text" name="Password" placeholder="Enter new password">
-                            </td>
-                            <tr>
-                           
-                            <td>Enter new password</td>
-                          
-                            <td>
-                               <input type="text" name="CPassword" placeholder="Enter new password">
-                            </td>
-                       </tr>
-                        </tr>
-                        <tr>
-                            <td clospan="2"><input type="submit" name="Submit" balue="Submit"></td>
-                        </tr>
-                       
 
-                    </table>
-                    
+               <div class="c_title">
+                 <h2> Change Password</h2>
+                 <div class="clearfix"></div>
+               </div>
+
+               <div class="c_panel panel-blank">
+                  <div class="c_content">
+                    <div class="row">
+                     <div class="col-md-12 password-change">
+
+                        <form method="post" action="<?php echo base_url();?>Dashboard/Userpass/<?php echo $UserId;?>">
+                         <div class="col-md-12">
+                          <div style="border: 1px solid #e9e9e9;padding: 20px 10px;background: #fff;">
+                              <div class="form-group height-min">
+                                 <label>Enter Old Password</label>
+                                 <br>
+                                  <input type="hidden"   value="<?php echo $UserId; ?>" name="UserId" class="form-control">
+                                  <input type="password" name="Password" class="form-control" >
+                              </div>
+                              <div class="form-group height-min">
+                                 <label>Enter New Password</label>
+                                 <br>
+                                  <input type="password" name="CPassword" class="form-control">
+                              </div>
+                              <div class="form-group height-min">
+                              <input value="Submit" class="btn btn-primary next-profile-btn pull-right" type="submit" name="Submit">
+                              </div>
+                          </div>
+                        </div>
                   </form>
+                     </div>
+                    </div>
+                  </div>
+              </div>
+        </section>
+      </section>
+                  
               
 
 <?php 
