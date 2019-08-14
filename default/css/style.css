@@ -3839,13 +3839,7 @@ body{
      background: #f26838;
 }
 
-.head-2{
-     padding: 250px 0px 250px 0px;
-     background: url(../images/binn.jpg)no-repeat;
-     background-attachment: fixed;
-     background-position: top;
-     
-}
+
  
  .head-2-inn{
      position: relative;
@@ -3885,7 +3879,35 @@ body{
     font-size: 15px;
     height: 317px;
 }
+.head-2.std2{
+     padding: 250px 0px 250px 0px;
+     background: url(../images/bin.jpg)no-repeat;
+     background-size: cover;
+     background-position: 100% top;
+     background-attachment: fixed;
+}
+.head-2.std11{
+     padding: 250px 0px 250px 0px;
+     background: url(../images/class9.jpg)no-repeat;
+     background-size: cover;
+     background-position: 100% top;
+     background-attachment: fixed;
+}
 @media(max-width: 768px){
+
+.head-2.std2{
+     padding: 92px 0px 28px 0px;
+     background: url(../images/bin-mob.jpg)no-repeat;
+     background-position: 100% top;
+     background-attachment: fixed;
+     
+}
+.head-2.std11{
+     padding: 92px 0px 28px 0px;
+     background: url(../images/class9-mob.jpg)no-repeat;
+     background-position: 100% top;
+     background-attachment: fixed;
+}
      .pg-contact .content-box {
     height: auto;
 }
@@ -6257,12 +6279,7 @@ padding: 6px 25px;
          #custom_carousel .controls li a small{
           font-size: 12px;
         }
-        .head-2{
-         padding: 100px 0px 18px 0px;
-         background: url(../images/bin-mob.jpg)no-repeat;
-         background-attachment: fixed;
-         
-          }
+        
 
         .head-2-inn h1{
           font-size: 22px;
