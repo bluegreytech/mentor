@@ -169,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Class 2<sup>nd</sup> - 7<sup>th</sup></h6>
                                                                   <strong>Nurturing Minds</strong>
                                                                   <p>Find out your perfect intelligence amongst 8 Multiple Intelligences. <br>
-                                                                  <a href="<?php echo base_url()?>home/class_two_to_seven/">View More
+                                                                  <a href="<?php echo base_url()?>home/class_2_to_7/">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
@@ -178,7 +178,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Class 8<sup>th</h6>
                                                                   <strong>Budding Minds. Course Inclination</strong>
                                                                   <p>Unveil your inclination at an early age to start your preparation in a specific way.<br>
-                                                                  <a href="<?php echo base_url()?>home/class_eight">View More
+                                                                  <a href="<?php echo base_url()?>home/class_8">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
@@ -187,7 +187,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Class 9<sup>th</sup> - 10<sup>th</sup></h6>
                                                                   <strong>Stream Selection Assessment Plan</strong>
                                                                   <p>Discover your perfect stream by the five Career Dimensions.<br>
-                                                                  <a href="<?php echo base_url()?>home/class_nine_to_ten">View More
+                                                                  <a href="<?php echo base_url()?>home/class_9_to_10">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
@@ -196,7 +196,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Class 11<sup>th</sup> - 12<sup>th</sup></h6>
                                                                   <strong>Focal Point</strong>
                                                                   <p>Have a clear view of your vision through the lens of our assessment and experts.<br>
-                                                                  <a href="<?php echo base_url()?>home/class_eleven_to_tweleve">View More
+                                                                  <a href="<?php echo base_url()?>home/class_11_to_12">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
