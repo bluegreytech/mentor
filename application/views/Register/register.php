@@ -155,7 +155,7 @@ $(document).ready(function(){
                             option.attr('value', this.StandardId).text('Class '+this.Standard);           
                             $('#StandardId').append(option);
                         });
-                    }
+          }
         }
       });    
     });

@@ -129,30 +129,30 @@
                     </a>
                     <h4>Create an Account</h4>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <form class="s12">
+                    <form class="s12" id="registrationForm">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name1" class="validate" placeholder="Username">
+                                <input type="text" data-ng-model="name1" class="validate" placeholder="Username" name="username">
                             </div>
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input type="email" class="validate" placeholder="E-mail">
+                                <input type="email" class="validate" placeholder="E-mail" name="email">
                             </div>
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input type="password" class="validate" placeholder="Password"> 
+                                <input type="password" class="validate" placeholder="Password" name="password" id="password"> 
                             </div>
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input type="password" class="validate" placeholder="Re-Password">
+                                <input type="password" class="validate" placeholder="Re-Password" name="repassword">
                             </div>
                         </div>
                         <div>
                             <div class="input-field s4">
-                                <input type="submit" value="Register" class="waves-effect waves-light log-in-btn"> </div>
+                                <input type="submit" value="Register" class="waves-effect waves-light log-in-btn"></div>
                         </div>
                         <div>
                             <div class="input-field s12">Are you a already member ?  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal1">Login</a> </div>
@@ -199,4 +199,4 @@
             </div>
         </div>
     </section>
-<?php    $this->load->view('common/js'); ?>
+<?php  $this->load->view('common/js'); ?>
