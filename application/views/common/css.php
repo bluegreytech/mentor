@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="keyword" content="">
     <!-- FAV ICON(BROWSER TAB ICON) -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"-->
+    <link rel="shortcut icon" href="<?php echo base_url(); ?>default/images/favicon.png" type="image/x-icon"-->
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <!-- FONTAWESOME ICONS -->
