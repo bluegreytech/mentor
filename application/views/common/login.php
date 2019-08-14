@@ -71,7 +71,7 @@ $this->load->view('common/header');
                      <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
                      </div>
                <?php } ?>
-                   <?php if(($this->session->flashdata('success'))){ ?>
+                   <?php if($this->session->flashdata('success')){ ?>
                      <div class="alert alert-success" id="successMessage">
                      <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
                      </div>
@@ -96,10 +96,10 @@ $this->load->view('common/header');
                </form>
                <p class="bottom-link" style="margin-top: 20px">
                   <span style="float:left">
-                  <a href="<?php echo base_url();?>Home/Forgotpassword/">Forgot Password?</a>
+                  <a href="<?php echo base_url();?>home/forgotpassword/">Forgot Password?</a>
                   </span>
                   <span style="float:right">New to Mentor? 
-                  <a href="<?php echo base_url()?>Home/Register">Create Account</a>
+                  <a href="<?php echo base_url()?>home/register">Create Account</a>
                   </span>
                </p>
             </div>

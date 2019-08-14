@@ -114,7 +114,7 @@ class Login_model extends CI_Model
 
 		function checkResetCode($code)
 		{
-			$query=$this->db->get_where('tbluser',array('PasswordResetCode'=>$code));
+			$query=$this->db->get_where('tbluser',array('ResetPasswordCode'=>$code));
 			
 			if($query->num_rows()>0)
 			{
@@ -126,12 +126,13 @@ class Login_model extends CI_Model
 
 		function updatePassword()
 		{
+			//echo "kjkj";die;
 			$code=$this->input->post('code');
-			$query=$this->db->get_where('tbluser',array('PasswordResetCode'=>$code));
+			$query=$this->db->get_where('tbluser',array('ResetPasswordCode'=>$code));
 			if($query->num_rows()>0)
 			{
-			  $data=array('Password'=>md5(trim($this->input->post('Password'))),'PasswordResetCode'=>'');
-				$this->db->where(array('UserId'=>$this->input->post('UserId'),'PasswordResetCode'=>trim($this->input->post('code'))));
+			  $data=array('Password'=>md5(trim($this->input->post('Password'))),'ResetPasswordCode'=>'');
+			  $this->db->where(array('UserId'=>$this->input->post('UserId'),'ResetPasswordCode'=>trim($this->input->post('code'))));
 			   // print_r($data);die;
 				$d=$this->db->update('tbluser',$data);
 				return $d;
@@ -163,10 +164,11 @@ class Login_model extends CI_Model
 						{
 							$rpass= randomCode();
 							$ud=array(
-								'PasswordResetCode'=>$rnd,
+								'ResetPasswordCode'=>$rnd,
 							);	
 							$this->db->where('UserId',$row->UserId);
 							$this->db->update('tbluser',$ud);
+							//echo $this->db->last_query();die;
 							$email_template=$this->db->query("select * from ".$this->db->dbprefix('tblemail_template')." where task='Forgot Password by admin'");
 							//print_r($email_template); die;
 									$email_temp=$email_template->row();
@@ -174,7 +176,7 @@ class Login_model extends CI_Model
 									$email_address_reply=$email_temp->reply_address;
 									$email_subject=$email_temp->subject;        
 									$email_message=$email_temp->message;
-									$username =$row->UserName.'  '.$row->LastName;
+									$username =$row->FirstName.'  '.$row->LastName;
 									$password = $rpass;
 									$email = $row->EmailAddress;
 									$email_to=$email;
@@ -192,8 +194,33 @@ class Login_model extends CI_Model
 									$email_message=str_replace('{email}',$email,$email_message);
 									$email_message=str_replace('{reset_link}',$login_link,$email_message);
 									$str=$email_message;
+
+									$config = Array(
+									'protocol' => 'smtp',
+									'smtp_host' => 'ssl://smtp.googlemail.com',
+									'smtp_port' => 465,
+									'smtp_user' => 'xxx',
+									'smtp_pass' => 'xxx',
+									'mailtype'  => 'html', 
+									'charset'   => 'iso-8859-1'
+									);
+									$this->load->library('email', $config);
+									$this->email->set_newline("\r\n");
+								$this->email->from('bluegreyindia@gmail.com', 'admin');
+								$this->email->to('binny@yopmail.com,binny@bluegreyindia.co.in');
+								$this->email->subject('Registration Verification:');
+								$message = "Thanks for signing up! Your account has been created...!";
+									// Set to, from, message, etc.
+
+									//$result = $this->email->send();
+									if($this->email->send()){
+										//echo $CI->email->prin
+									   echo "send"; die;
+									}else{
+											echo$this->email->print_debugger();
+									}
 									
-									//echo "<pre>"
+									//echo "<pre>";print_r($str);die;
 									email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
 							
 							        return '1';

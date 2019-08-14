@@ -56,7 +56,7 @@
                 if($CI->session->userdata('UserId')!='')
                 {
                     //check user active
-					$a_data = get_one_admin($CI->session->userdata('UserId'));
+					$a_data = get_one_user($CI->session->userdata('UserId'));
 					//echo "<pre>";print_r($a_data);die;
                     if($a_data->IsActive == '1'){
                      return true;
@@ -71,7 +71,7 @@
                 }
 	}
     
-	function get_one_admin($id)
+	function get_one_user($id)
 	{
 		$CI =& get_instance();
 		$query = $CI->db->get_where('tbluser',array('UserId'=>$id));
@@ -128,7 +128,7 @@
 	 
 	function email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str)
 	{
-	// echo "jhjh";die;
+			// echo "jhjh";die;
 	   // echo $email_address_from; 
 	   // echo $email_address_reply;
 	   // echo	$email_to;	

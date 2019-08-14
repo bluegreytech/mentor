@@ -156,9 +156,8 @@ class Home extends CI_Controller
 
 	public function Forgotpassword($msg='')
 	{
-		if(!check_user_authentication()){			
-			redirect(base_url());
-		}
+ 
+
 			$this->form_validation->set_rules('EmailAddress', 'Email', 'required|valid_email');
 			if($this->form_validation->run() == FALSE)
 			{			
@@ -170,6 +169,7 @@ class Home extends CI_Controller
 			else
 			{ 
 				$chk_mail=$this->Login_model->forgotpass_check();
+				//echo "<pre>";print_r($chk_mail); die;
 				if($chk_mail==0)
 				{
 					$error=EMAIL_NOT_FOUND;
@@ -185,29 +185,32 @@ class Home extends CI_Controller
 					$this->session->set_flashdata('error',ACCOUNT_INACTIVE);	 
 				}
 				else
-				{				
+				{	
+				//echo "hjhgjh";die;			
 					$forget=FORGET_SUCCESS;
 					$this->session->set_flashdata('success','Please check your email for reset the password!');
 					redirect('Home/login');
 				}
 			}
-		$this->load->view('common/ForgotPassword');
+			$this->load->view('common/ForgotPassword');
 	}
 
 	function reset_password($code='')
 	{
-			$admin_id=$this->Login_model->checkResetCode($code);
+
+			$user_id=$this->Login_model->checkResetCode($code);
 			$data = array();
-			$data['errorfail']=($code=='' || $admin_id=='')?'fail':'';
-			$data['AdminId']=$admin_id;
+			$data['errorfail']=($code=='' || $user_id=='')?'fail':'';
+			$data['UserId']=$user_id;
 			$data['code']=$code;
 	        
-            if($admin_id){
+            if($user_id){
             	if($_POST){
-				
-				if($this->input->post('AdminId') != ''){
+                // echo "<pre>";print_r($_POST);die;
+				//echo "hjkj";die;
+				if($this->input->post('UserId') != ''){
 					$this->form_validation->set_rules('Password', 'Password', 'required');
-					$this->form_validation->set_rules('Confrim_password', 'Re-type Password', 'required|matches[Password]');
+					$this->form_validation->set_rules('ConfirmPassword', 'Re-type Password', 'required|matches[Password]');
 				
 					if($this->form_validation->run() == FALSE){			
 						if(validation_errors()){
@@ -215,9 +218,10 @@ class Home extends CI_Controller
 						}
 					}else{
 							$up=$this->Login_model->updatePassword();
+							// echo "<pre>";print_r($up);die;
 						if($up>0){
 							$this->session->set_flashdata('success',RESET_SUCCESS); 
-							redirect('login');
+							redirect('home/login');
 						}elseif($up=='') {
 							
 							$error = EXPIRED_RESET_LINK;
@@ -233,10 +237,11 @@ class Home extends CI_Controller
 					$error = EXPIRED_RESET_LINK;	
 	              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 				}
+				echo "jhjh";die;
 				 $this->load->view('common/ResestPassword',$data);
 		    }else{
-		    	echo 'dfdfds';die;
-		    	$this->load->view('home/ResestPassword',$data);
+		    	//echo "<pre>";print_r($data);die;
+		    	$this->load->view('common/ResestPassword',$data);
 		    }
 
             }else{
