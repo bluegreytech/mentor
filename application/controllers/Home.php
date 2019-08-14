@@ -264,7 +264,7 @@ class Home extends CI_Controller
 		$this->load->view('common/Aboutus');
 	}
 	function success(){
-		$this->load->view('Successstory/Successstories');
+		$this->load->view('common/success');
 	}
 	function career_library(){
 		echo "not yet";die;
