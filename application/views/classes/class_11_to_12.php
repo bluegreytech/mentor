@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
 ?>
-  <section>
-        <div class="head-2" style="background: url(<?php echo base_url()?>default/images/2.jpg)no-repeat;background-position: top;background-attachment: fixed;">
+    <section>
+        <div class="head-2 std11">
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                     <h1>Career Counselling Programs for Class 11<sup>th</sup> - 12<sup>th</sup></h1>
