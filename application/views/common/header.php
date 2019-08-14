@@ -130,7 +130,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wed-logo">
-                            <a href="index.php"><img src="images/logo.png" alt="" />
+                            <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>default/images/logo.png" alt="" />
                             </a>
                         </div>
                         <div class="main-menu">
