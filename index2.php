@@ -159,7 +159,7 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-2-to-7.php">
+                                                <a href="#">
                                                     <h3>Class 2nd - 7th</h3>
                                                 </a>
                                                 <h4>Nurturing Minds</h4>
@@ -167,7 +167,7 @@
                                                 <p>Children are born with unique and distinct intelligence profile that are shaped by different biological and environmental factors. After tracing the innate learning style and aptitude, the growing mind will discover his/her perfect Multiple Intelligence which sharpens the personality and helps him/her choose future endeavours.</p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-2-to-7.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -180,7 +180,7 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-8.php">
+                                                <a href="#">
                                                     <h3>Class 8th</h3>
                                                 </a>
                                                 <h4>Budding Minds. Course Inclination</h4>
@@ -188,7 +188,7 @@
                                                 <p>You might find out that you enjoy thinking about why the apple fell in the first place and what made Einstein develop the theory in comparison to studying history at class. This is the time when you are on the path of self discovery instead of intense competition. Your course selection strategy in 8th grade can change the future of your career.</p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-8.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -203,7 +203,7 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-9-to-10.php">
+                                                <a href="#">
                                                     <h3>Class 9th and 10th</h3>
                                                 </a>
                                                 <h4>Stream Selection Assessment Plan</h4>
@@ -212,7 +212,7 @@
                                                 <br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-9-to-10.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -225,7 +225,7 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-11-to-12.php">
+                                                <a href="#">
                                                     <h3>Class 11th and 12th </h3>
                                                 </a>
                                                 <h4>Focal Point</h4>
@@ -233,7 +233,7 @@
                                                 <p>Unveil your perfect career based on your individualised Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities by our Expert Career Mentor. Get acquainted with the various career options and build a Career Road Map in a scientific way.</p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-11-to-12.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -248,7 +248,7 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="graduates.php">
+                                                <a href="#">
                                                     <h3>Graduates </h3>
                                                 </a>
                                                 <h4>Age Edge Advancement Plan</h4>
@@ -256,7 +256,7 @@
                                                 <p>Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way. Find out the most suitable career path based on the five Career Dimensions: Individuals Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities.</p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="graduates.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -269,7 +269,7 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="professionals.php">
+                                                <a href="#">
                                                     <h3>Professionals </h3>
                                                 </a>
                                                 <h4>Professional Aptitude Assessment</h4>
@@ -277,7 +277,7 @@
                                                 <p>Midlife crisis cannot be treated by medicines, it requires the assistance of professional counseling. Experimenting and selecting a job is like gambling and dissatisfaction in professional life is alarming. It is time you get your career values and Interest in alignment. </p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="professionals.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -340,14 +340,14 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="mgccap-1-to-12.php">
+                                                <a href="#">
                                                     <h3>Class 1st - 12th</h3>
                                                 </a>
                                                 <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.</p>
                                                 <p>Get an overview of the role of a Career Counselor and learn about the education system and career pathways in India. Furthermore, understand the administration of MIT, analysis and comprehensive report depiction. </p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="mgccap-1-to-12.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -360,13 +360,13 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="mgccap-undergraduates.php">
+                                                <a href="#">
                                                     <h3>Undergraduate</h3>
                                                 </a>
                                                 <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts. </p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="mgccap-undergraduates.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -379,13 +379,13 @@
                                         <div class="home-top-cour">
                                             <!--POPULAR COURSES: CONTENT-->
                                             <div class="col-md-12 home-top-cour-desc">
-                                                <a href="mgccap-professionals.php">
+                                                <a href="#">
                                                     <h3>Professionals</h3>
                                                 </a>
                                                 <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.</p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="mgccap-professionals.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -437,7 +437,7 @@
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                         </div>
                         <div class="col-md-3 bb-link">
-                            <a href="#">Book This Course</a>
+                            <a href="course-details.html">Book This Course</a>
                         </div>
                     </div>
                 </div>
@@ -445,121 +445,115 @@
         </div>
     </section-->
     
-    <!--SECTION START-->
-    <section>
-        <div class="container com-sp pad-bot-70">
+    <section class="pop-cour"">
+        <div class="container com-sp">
             <div class="row">
-                <div class="cor about-sp">
+                <div class="con-title">
+                    <h2>Mentor's: 6 Steps Effective Assessment To Find Best Fit Carrer</h2>
+                </div>
+            </div>
+        </div>
+    
 
-                    <div class="ed-about-tit">
-                        <div class="con-title">
-                            <h2>Mentor's: 6 Steps Effective Assessment To Find Best Fit Carrer</h2>
+    <section id="about">
+        <div class="container com-sp">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-6 about-text mobile-device2">
+                            <h3>Understand your current career planning stage.</h3>
+                            <p class="program-title">Personal Profiling is the first milestone for a successful career assessment.</p>
+                            <p>The ultimate objective of planning is to take you from the current stage of career planning to the optimized stage of career planning. Personal profiling includes information about your current stage, risk involved and action plan for your career development. </p>
                         </div>
-                    </div>
-                    <div class="s18-age-event l-info-pack-days">
-                        <ul>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/understand.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 1</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Understand your current career planning stage.</h4>
-                                         <p class="program-title">Personal Profiling is the first milestone for a successful career assessment.</p>
-                                        <p>The ultimate objective of planning is to take you from the current stage of career planning to the optimized stage of career planning. Personal profiling includes information about your current stage, risk involved and action plan for your career development.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/acquainted.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 2</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Get acquainted with your Career Personality.</h4>
-                                        <p class="program-title">Personality assessment will help you understand yourself better as a person.</p>
-                                        <p>It will help you expand your career options in alignment with your personality. Self-understanding and awareness can lead you to more appropriate and rewarding career choices. </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/interest.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 3</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Scoop out your Career Interest.</h4>
-                                        <p class="program-title">Let the Career Interest Assessment help you find your occupational interest. </p>
-                                        <p>Understand your top career interest to identify a career focus and begin your career planning and career exploration process. The Career Interest Assessment will help you understand which careers might be the best fit for you.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/learning.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 4</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Identify your learning style.</h4>
-                                        <p class="program-title"> Benefit from the customized learning strategies for improvement by our experts. </p>
-                                        <p>Understand how you gather information and pick your preferred style to ace your examination. It is scientifically proven that with individualised learning style can lessen the cognitive load and make the process of learning more engaging and fun. </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/equivalents.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 5</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Career Cluster and best-fit equivalents.</h4>
-                                        <p class="program-title">Connect you education and Career planning.</p>
-                                        <p>Career Clusters are groups of similar occupations and industries that require similar skills. It provides a career road map for pursuing further education and career opportunities. Career Cluster help you narrow down your occupational choices based on your assessment responses. </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/benefit.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 6</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Benefit from your Career Path Analysis by our experts.</h4>
-                                        <p class="program-title">Know about the market value of your career. </p>
-                                        <p>The Career Path Analysis contains four important parameters to have a better insight into the most suitable career path.  </p>
-                                    </div>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                    <div class="ed-about-sec1">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--SECTION END-->
+
+    <section id="about1">
+        <div class="container com-sp">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-7"></div>
+                        <div class="col-lg-5 about-text mobile-device2">
+                            <h3>Get acquainted with your Career Personality.</h3>
+                            <p class="program-title">Personality assessment will help you understand yourself better as a person.</p>
+                            <p>It will help you expand your career options in alignment with your personality. Self-understanding and awareness can lead you to more appropriate and rewarding career choices. </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container com-sp">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-6 about-text mobile-device2">
+                            <h3>Scoop out your Career Interest.</h3>
+                            <p class="program-title">Let the Career Interest Assessment help you find your occupational interest. </p>
+                            <p>Understand your top career interest to identify a career focus and begin your career planning and career exploration process. The Career Interest Assessment will help you understand which careers might be the best fit for you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about1">
+        <div class="container com-sp">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-7"></div>
+                        <div class="col-lg-5 about-text mobile-device2">
+                            <h3>Identify your learning style.</h3>
+                            <p class="program-title"> Benefit from the customized learning strategies for improvement by our experts. </p>
+                            <p>Understand how you gather information and pick your preferred style to ace your examination. It is scientifically proven that with individualised learning style can lessen the cognitive load and make the process of learning more engaging and fun. </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container com-sp">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="col-lg-6 about-text mobile-device2">
+                            <h3>Career Cluster and best-fit equivalents.</h3>
+                            <p class="program-title">Connect you education and Career planning.</p>
+                            <p>Career Clusters are groups of similar occupations and industries that require similar skills. It provides a career road map for pursuing further education and career opportunities. Career Cluster help you narrow down your occupational choices based on your assessment responses. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about1">
+        <div class="container com-sp">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-7"></div>
+                        <div class="col-lg-5 about-text mobile-device2">
+                            <h3>Benefit from your Career Path Analysis by our experts.</h3>
+                            <p class="program-title">Know about the market value of your career. </p>
+                            <p>The Career Path Analysis contains four important parameters to have a better insight into the most suitable career path.  </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </section>
     
     <section style="background-color: #f5f5f5;">
         <div class="container com-sp">
