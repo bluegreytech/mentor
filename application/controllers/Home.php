@@ -273,17 +273,17 @@ class Home extends CI_Controller
 	function pricing_plan(){
 		$this->load->view('common/Packprice');
 	}
-	function class_two_to_seven(){
+	function class_2_to_7(){
 
 		$this->load->view('classes/class_2_to_7');
 	}
-	function class_eight(){
+	function class_8(){
 		$this->load->view('classes/class_8');
 	}
-	function class_nine_to_ten(){
+	function class_9_to_10(){
 		$this->load->view('classes/class_9_to_10');
 	}
-	function class_eleven_to_tweleve(){
+	function class_11_to_12(){
 		$this->load->view('classes/class_11_to_12');
 	}
 	function Graduates(){
