@@ -160,3 +160,108 @@ ERROR - 2019-08-14 13:31:45 --> Severity: Warning --> include(): Failed opening 
 ERROR - 2019-08-14 13:31:47 --> 404 Page Not Found: Default/images
 ERROR - 2019-08-14 13:31:47 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
 ERROR - 2019-08-14 13:31:47 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:32:13 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 13:32:13 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:32:13 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:33:03 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 13:33:03 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:33:03 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:57:55 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 13:57:55 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:57:55 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:57:59 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 13:57:59 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 13:57:59 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:38:57 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:38:57 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:38:57 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:27 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:39:28 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:28 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:35 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:39:35 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:35 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:41 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:39:41 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:41 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:49 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:39:49 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:49 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:52 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:39:52 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:52 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:55 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:39:55 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:39:55 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:40:13 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:40:13 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:40:13 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:40:17 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:40:17 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:40:17 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:41:49 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:41:49 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:41:49 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:42:05 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:42:05 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:42:05 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:42:09 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:42:09 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:42:09 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:49:48 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:49:48 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:49:48 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:50:42 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:50:42 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:50:42 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:50:42 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:50:42 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:50:42 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:50:42 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:50:42 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:50:43 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:52:14 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:52:14 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:52:14 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:52:14 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:52:14 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:52:14 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:52:14 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:52:14 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:52:14 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:15 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:53:15 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:15 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:25 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:53:25 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:25 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:31 --> 404 Page Not Found: Home/blog
+ERROR - 2019-08-14 14:53:31 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:31 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:37 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:53:37 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:53:37 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:37 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:37 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:37 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:53:37 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:37 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:37 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:44 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-14 14:53:44 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:53:44 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:32 --> 404 Page Not Found: Home/blog
+ERROR - 2019-08-14 14:54:32 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:32 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:35 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:54:35 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:54:35 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:35 --> 404 Page Not Found: Home/img
+ERROR - 2019-08-14 14:54:35 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:35 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:35 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:35 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:54:35 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:55:07 --> 404 Page Not Found: Mentor-partnership-programphp/index
+ERROR - 2019-08-14 14:55:07 --> Severity: Warning --> include(application/views\errors\html\error_404.php): failed to open stream: No such file or directory C:\xampp\htdocs\mentor\system\core\Exceptions.php 182
+ERROR - 2019-08-14 14:55:07 --> Severity: Warning --> include(): Failed opening 'application/views\errors\html\error_404.php' for inclusion (include_path='C:\xampp\php\PEAR') C:\xampp\htdocs\mentor\system\core\Exceptions.php 182

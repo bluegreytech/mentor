@@ -3891,8 +3891,18 @@ a:focus{
 .head-2.std2{
      background: url(../images/bin.jpg)no-repeat;
 }
+.head-2.std8{
+     background: url(../images/class8.jpg)no-repeat;
+}
+.head-2.std9{
+     background: url(../images/class10.jpg)no-repeat;
+}
 .head-2.std11{
      background: url(../images/class9.jpg)no-repeat;
+}
+
+.head-2.graduates{
+     background: url(../images/graduates.jpg)no-repeat;
 }
 
 @media(max-width: 768px){
@@ -3905,8 +3915,17 @@ a:focus{
 .head-2.std2{
      background: url(../images/bin-mob.jpg)no-repeat;
 }
+.head-2.std8{
+     background: url(../images/class8-mob.jpg)no-repeat;
+}
 .head-2.std11{
      background: url(../images/class9-mob.jpg)no-repeat;
+}
+.head-2.std9{
+     background: url(../images/class10-mob.jpg)no-repeat;
+}
+.head-2.graduates{
+     background: url(../images/graduates.jpg)no-repeat;
 }
      .pg-contact .content-box {
     height: auto;
