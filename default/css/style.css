@@ -3376,7 +3376,7 @@ a:focus{
      content: '';
      background: #ececec;
      position: absolute;
-     width: 1px;
+     width: 3px;
      top: 0;
      bottom: 0;
      height: 88%;
