@@ -4,10 +4,11 @@ $this->load->view('common/header');
 ?>
 
     <section>
-        <div class="head-2">
+        <div class="head-2 std8">
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                     <h1>Career Counselling Programs for Class 8<sup>th</sup></h1>
+                     <a href="#" class="bann-btn-1 asets-btn" data-events="auto" data-display="block">Start Assessment </a>
                     <!--p>Nurturing Minds</p-->
                 </div>
             </div>

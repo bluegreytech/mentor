@@ -5,7 +5,7 @@ $this->load->view('common/header');
  
 
     <section>
-        <div class="head-2">
+        <div class="head-2 graduates">
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                     <h1>Career Counselling Programs for Graduates</h1>
