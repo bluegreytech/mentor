@@ -2,8 +2,16 @@
 
 class Login_model extends CI_Model
  {
+
+ 	public function __construct()
+	{
+      	parent::__construct();
+      	$this->load->database()
+		//echo "<pre>";print_r($this->load->database())die;;	
+    }
 		function login_where($table,$where)
 		{
+
 			$r = $this->db->get_where($table,$where);
 			$res = $r->row();
 			return $res;
@@ -86,21 +94,24 @@ class Login_model extends CI_Model
 		}
 		function user_insert()
 		{  
-				$data=array(
-				'UserName'=>trim($this->input->post('username')),
-				'EmailAddress'=>trim($this->input->post('email')), 
-				'Password'=>md5($this->input->post('password')),
-				'PhoneNumber'=>$this->input->post('phone'),
-				'City'=>$this->input->post('city'),
-				'Desgination'=>$this->input->post('desgination'),
-				'IsActive'=>'1',
-				'StreamId'=>$this->input->post('StreamId'),
-				'StandardId'=>$this->input->post('StandardId'),
-				'CreatedOn'=>date('Y-m-d H:i:s'),
-				);
-				//echo "<pre>";print_r($data);die;
-				$res=$this->db->insert('tbluser',$data);	
-				return $res;		
+			
+			$data=array(
+			'username'=>trim($this->input->post('username')),
+			'email'=>trim($this->input->post('email')), 
+			'password'=>md5($this->input->post('password')),
+			'assessment'=>trim($this->input->post('assessment')),
+			'status'=>"Active",
+			'careerchoice'=>trim($this->input->post('careerchoice')),
+			'careerchoiceassess'=>implode(',',$this->input->post('careerchoiceassess')),
+			'created_date'=>date('Y-m-d H:i:s'),
+			);
+			//echo "<pre>";print_r($data);die;
+			//$res=insert_record('tblusers',$data);
+			
+			$res=$this->db->insert('tblusers',$data);
+			echo $this->db->last_query();die;	
+		   
+			return $res;		
 		}
 
 		function getstandard()

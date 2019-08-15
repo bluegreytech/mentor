@@ -735,7 +735,9 @@
 	function insert_record($table,$data)
 	{
 	    $CI =& get_instance();
-	    return $CI->db->insert($table, $data);
+	     $res=$CI->db->insert($table, $data);
+
+	   echo $CI->db->last_query(); die;
 	}
 	 function insert_record_api($table,$data)
 	{
@@ -1298,10 +1300,10 @@
 		}
 	}
 
-	function getstandard($id){
+	function getassessment($id){
       	$CI =& get_instance();		
 	
-		$query = $CI->db->get_where("tblstandard",array('StreamTypeId'=>$id));
+		$query = $CI->db->get_where("tblassessment",array('assessment_id'=>$id));
 		//echo $CI->db->last_query();die;
 		if($query->num_rows() > 0)
 		{
