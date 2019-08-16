@@ -159,7 +159,7 @@ class CI_Exceptions {
 		$templates_path = config_item('error_views_path');
 		if (empty($templates_path))
 		{
-			$templates_path = VIEWPATH.'errors'.DIRECTORY_SEPARATOR;
+			$templates_path = VIEWPATH.'errors'."/";
 		}
 
 		if (is_cli())
@@ -171,7 +171,7 @@ class CI_Exceptions {
 		{
 			set_status_header($status_code);
 			$message = '<p>'.(is_array($message) ? implode('</p><p>', $message) : $message).'</p>';
-			$template = 'html'.DIRECTORY_SEPARATOR.$template;
+			$template = 'html'."/".$template;
 		}
 
 		if (ob_get_level() > $this->ob_level + 1)

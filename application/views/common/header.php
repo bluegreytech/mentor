@@ -1,459 +1,433 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Mentor Together  | Leading  Career counselling platform</title>
-<meta name=description content="At the Center for Academic and Career Development at MENTOR FPG , we envision the education &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp; career development as a journey.">
-<meta name=keywords content="">
-<meta name=viewport content="width=device-width,initial-scale=1">
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+<?php 
+   $this->load->view('common/css');
+?>
+    <!-- MOBILE MENU -->
+    <section>
+        <div class="ed-mob-menu">
+            <div class="ed-mob-menu-con">
+                <div class="ed-mm-left">
+                    <div class="wed-logo">
+                        <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>default/images/logo.png" alt="" />
+            </a>
+                    </div>
+                </div>
+                <div class="ed-mm-right">
+                    <div class="ed-mm-menu">
+                        <a href="#!" class="ed-micon"><i class="fa fa-bars"></i></a>
+                        <div class="ed-mm-inn">
+                            <div style="padding: 6px;"> 
+                             <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>default/images/logo.png" alt="" />
+                            <a href="#!" class="ed-mi-close"><i class="fa fa-times"></i></a>
+                            </div><br>
 
-<!--favicon-->
-<link rel="shortcut icon" type=image/x-icon href="<?php echo base_url(); ?>default/asset/prelogin_new/img/favicon.ico">
-<link rel=icon type=image/png href="<?php echo base_url(); ?>default/asset/prelogin_new/img/favicon.ico">
-<link rel=apple-touch-icon href="<?php echo base_url(); ?>default/asset/prelogin_new/img/favicon.ico">
-
-<!--CSS-->
-<link rel="stylesheet" href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/all.css">
-<link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/global-plugins.css" rel=stylesheet>
-<link href="<?php echo base_url(); ?>default/asset/all-css/css/custom.css">
-<link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/my-styles6f92.css?20190422" rel=stylesheet>
-<link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/my-media6687.css?20190318" rel=stylesheet>
-<link href="<?php echo base_url(); ?>default/asset/all-css/my-sets/css/lightslider.css" rel=stylesheet>
-
-</head>
-<body>
-  <!--Start Preloader-->
-   <!--div class="overlay-box" style="display: none"><img src="asset/prelogin_new/img/load.gif" /></div>
-    <section id="preloader">
-      <div class="loader" id="loader">
-         <div class="loader-img"></div>
-      </div>
-    </section-->
-  <!--End Preloader-->
-
-  <!--Start Nav-->
-  <header>
-      <div class="new-top-header ">
-          <div class="new-header-1">
-            <div class="container" >
-                <div class="row" >
-                  <div class="col-md-12 right">
-                     <a href="tel:+91 8128738522" class="contact-link">
-                     <i class="fa fa-phone"></i>+91 8128738522
-                     </a>
-                     <a href="<?php echo base_url()?>About" style="">About Us</a>
-                     <a target="_blank" href="<?php echo base_url()?>home/contact">Mentoring at School</a>
-                     <a href="<?php echo base_url()?>home/contact" style="">Contact Us</a>
-                     <a href="<?php echo base_url();?>home/register">Sign Up </a>
-                  </div>
+                            <div class="col-md-12 text-center">
+                                <div class="call-link">
+                                   <a href="tel:+91 8128738522 " class="contact-link">
+                                   <i class="fa fa-phone"></i> Career Helpline: +91 8128738522 
+                                   </a>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-md-12" style="display: inline-flex;">
+                                <div style="width: 60%;">
+                                  <h4><a href="#">Programs</a></h4>
+                                <ul>
+                                    <h5>Career Counselling Programs for Students</h5>
+                                    <li><a href="class-2-to-7.php">Career Counselling for Class 2<sup>nd</sup> - 7<sup>th</sup></a></li>
+                                    <li><a href="class-8.php">Career Counselling for Class 8<sup>th</sup></a></li>
+                                    <li><a href="class-9-to-10.php">Career Counselling for Class 9<sup>th</sup> - 10<sup>th</sup></a></a></li>
+                                    <li><a href="class-11-to-12.php">Career Counselling for Class 11<sup>th</sup> - 12<sup>th</sup></a></a></li>
+                                </ul>
+                                <hr>
+                                <ul>
+                                    <h5>Career Counselling Programs for Graduates/Professionals</h5>
+                                    <li><a href="graduates.php">Career Counselling for Class Graduates</a></li>
+                                    <li><a href="professionals.php">Career Counselling for Class Professionals</a></li>
+                                </ul>
+                                <ul>
+                                    <h5>Overseas Appliation Programs</h5>
+                                    <li><a href="#">Overseas Appliation Programs</a></li>
+                                </ul>
+                                <ul>
+                                    <h5>Mentoring at School</h5>
+                                    <li><a href="#">Mentoring at School</a></li>
+                                </ul>
+                                <ul>
+                                    <h5>Budding Carrer Counsellors</h5>
+                                    <li><a href="mgccap-1-to-12.php">MGCCAP for Class 1<sup>st</sup> - 12<sup>th</sup> </a></li>
+                                    <li><a href="mgccap-undergraduates.php">MGCCAP for Undergraduate</a></li>
+                                    <li><a href="mgccap-professionals.php">MGCCAP for Professionals</a></li>
+                                </ul>
+                                <ul>
+                                    <h5>Mentor's Partnership Programs</h5>
+                                    <li><a href="mentor-partnership-program.php">Mentor's Partnership Programs</a></li>
+                                </ul>
+                                </div>
+                                <div class="col-md-6" style="width: 40%;">
+                                    <h4><a href="#">Resources</a></h4>
+                                    <h5><a href="<?php echo base_url()?>home/about_us">About Us</a></h5>
+                                    <h5><a href="<?php echo base_url()?>home/success">Success Stories</a></h5>
+                                    <h5><a href="<?php echo base_url()?>Success/">Career Library</a></h5>
+                                    <h5><a href="<?php echo base_url()?>Success/">Blog</a></h5>
+                                    <h5><a href="<?php echo base_url()?>Success/">Pricing</a></h5>
+                                    <h5><a href="<?php echo base_url()?>Success/">Contact Us</a></h5>
+                                    <h5><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></h5>
+                                    <h5><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-          </div>
-         <div class="new-header-2">
-            <div class="container" >
-               <div class="row" >
-                  <div class="col-md-2 left">
-                     <a href="<?php echo base_url()?>home">
-                     <img src="<?php echo base_url(); ?>default/images/home/mentor-big-bluec6eb.png?w=300" class="logo-blue logo-desktop"  >
+        </div>
+    </section>
+
+    <!--HEADER SECTION-->
+    <section>
+        <!-- TOP BAR -->
+        <div class="ed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--div class="ed-com-t1-left">
+                            <ul>
+                                <li><a href="#">Contact: Lake Road, Suite 180 Farmington Hills, U.S.A.</a>
+                                </li>
+                                <li><a href="#">Phone: +101-1231-1231</a>
+                                </li>
+                            </ul>
+                        </div-->
+                        <div class="ed-com-t1-right">
+                            <ul>
+                                <li><a href="<?php echo base_url(); ?>home/about_us">About Us</a></li>
+                                <li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a>
+                                </li>
+                                <li><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a>
+                                </li>
+                            </ul>
+                        </div>
                      
-                     </a>
-                     <i class="fa fa-bars"></i>
-                  </div>
-                  <div class="col-md-10 right">
-                    <span class="for-product" style="color: #484848;">
-                        Programs
-                        <i class="fa fa-angle-down"></i> 
-                      <div class="sub-products with-tabs ">
-                        <div class="col-md-2 col-left">
-                          <ul class="menu-dropdown-tabs">
-                            <li class="active">
-                              <span class="icons">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-1a.png" class="gray">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-1b.png" class="white">
-                              </span>
-                              Career Counselling 
-                              <br>Programs
-                              <i class="fa fa-caret-left"></i>
-                            </li>
-                            <li>
-                              <span class="icons">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-2a.png" class="gray" style="width:30px">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-2b.png" class="white" style="width:30px">
-                              </span>
-                            Overseas Application Programs
-                              <i class="fa fa-caret-left"></i>
-                            </li>
-                            <li>
-                              <span class="icons">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-3a.png" class="gray" style="width:31px">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-3b.png" class="white" style="width:31px">
-                              </span>
-                             Mentoring at School
-                              <i class="fa fa-caret-left"></i>
-                            </li>
-                            <li>
-                              <span class="icons">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-4a.png" class="gray" style="width:27px">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-4b.png" class="white" style="width:27px">
-                              </span>
-                              Budding Carrer
-                              <br>Counsellors
-                              <i class="fa fa-caret-left"></i>
-                            </li>
-                            <li>
-                              <span class="icons">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-4a.png" class="gray" style="width:27px">
-                                <img src="<?php echo base_url(); ?>default/asset/images/tabsicon-4b.png" class="white" style="width:27px">
-                              </span>
-                               Mentor's Partnership
-                              <br>Programs
-                              <i class="fa fa-caret-left"></i>
-                            </li>
-                          </ul>
-                        </div>
-                  <div class="col-md-10 col-right">
-                    <div class="menu-tabdetails">
-                      <div class="col-md-12">
-                        <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">Career Counselling Programs
-                          <span style="font-weight:600">for Students</span>
-                        </h6>
-                      </div>
-                      <div class="col-md-3">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;">Class 2<sup>nd</sup> - 7<sup>th</sup></h6>
-                        <strong>Nurturing Minds
-                        </strong>
-                        <span class="line" style="border-bottom:2px solid #ea6370;"></span>
-                        <p>A Find out your perfect intelligence amongst 8 Multiple Intelligences.</p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;"> Class 8<sup>th</sup></h6>
-                        <strong>Budding Minds</strong>
-                        <span class="line" style="border-bottom:2px solid #8964bf;"></span>
-                        <p>Unveil your inclination at an early age to start your preparation in a specific way.</p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;">Class 9<sup>th</sup> - 10<sup>th</sup></h6>
-                        <strong>Stream Selection Assessment Plan</strong>
-                        <span class="line" style="border-bottom:2px solid #00bcc6;"></span>
-                        <p>Discover your perfect stream by the five Career Dimensions.
-                        </p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                      <div class="col-md-3">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;">Class 11<sup>th</sup> - 12<sup>th</sup></h6>
-                        <strong>Focal Point</strong>
-                        <span class="line" style="border-bottom:2px solid #00bcc6;"></span>
-                        <p>Have a clear view of your vision through the lens of our assessment and experts.
-                        </p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-
-                      <div class="col-md-12" style="margin-top: 20px;">
-                        <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">Career Counselling Programs
-                          <span style="font-weight:600">for Gradutes and Professionals</span>
-                        </h6>
-                      </div>
-                      <div class="col-md-6">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;">Age Edge Advancement Plan</sup></h6>
-                        <strong>Career Development Assessment
-                        </strong>
-                        <span class="line" style="border-bottom:2px solid #ea6370;"></span>
-                        <p>Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way. Find out the most suitable career path based on the five Career Dimensions: Individuals Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities</p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                      <div class="col-md-6">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;"> Professional Aptitude Assessment</sup></h6>
-                        <strong>Benefit from our Career Assessment</strong>
-                        <span class="line" style="border-bottom:2px solid #8964bf;"></span>
-                        <p>Midlife crisis cannot be treated by medicines, it requires the assistance of professional counseling. Experimenting and selecting a job is like gambling and dissatisfaction in professional life is alarming. It is time you get your career values and Interest in alignment.</p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                     </div>
-                    <div class="menu-tabdetails">
-                      <div class="col-md-12">
-                        <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">Career  
-                            <span style="font-weight:600">Application Programs</span>
-                        </h6>
-                      </div>
-                      <div class="col-md-6">
-                        <strong style="color: #484848;font-size: 15px;font-weight: 600">Overseas Application
-                          <br> Program
-                        </strong>
-                        <span class="line" style="border-bottom:2px solid #007fb6;"></span>
-                        <p class="fixed-height ">End-to-end overseas admissions guidance to help you build the perfect applications
-                          for your target universities.</p>
-                        <a href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
                     </div>
-                    <div class="menu-tabdetails">
-                      <div class="col-md-6">
-                        <strong style="color: #484848;font-size: 15px;font-weight: 600">Mentoring at
-                            <br>Schools
-                        </strong>
-                        <span class="line" style="border-bottom:2px solid #007fb6;"></span>
-                        <p class="fixed-height ">MENTOR believes that the students who are in schools will be taking care of the reins of our nation in the next 10 to 15 years.</p>
-                        <a target="_blank" href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="menu-tabdetails">
-                      <div class="col-md-12">
-                        <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">MGCCAP
-                          <span style="font-weight:600"> (Mentor Certified Career Analyst Programme)</span>
-                        </h6>
-                      </div>
-                      <div class="col-md-4">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;    margin-bottom: 10px;">1<sup>st</sup> - 12<sup>th </sup>
-                        </h6>
-                        <span class="line" style="border-bottom:2px solid #007fb6;"></span>
-                        <p class="fixed-height"> Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.
-                        </p>
-                        <a target="_blank" href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                      <div class="col-md-4">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;    margin-bottom: 10px;">Undergraduate
-                        </h6>
-                        <span class="line" style="border-bottom:2px solid #007fb6;"></span>
-                        <p class="fixed-height">A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts.
-                        </p>
-                        <a target="_blank" href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                      <div class="col-md-4">
-                        <h6 style="margin-bottom: 0px;font-size: 15px;    margin-bottom: 10px;">Professionals
-                        </h6>
-                        <span class="line" style="border-bottom:2px solid #007fb6;"></span>
-                        <p class="fixed-height">A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.
-                        </p>
-                        <a target="_blank" href="#">View Program Details
-                          <span class="fa fa-angle-right"></span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOGO AND MENU SECTION -->
+        <div class="top-logo" data-spy="affix" data-offset-top="250">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wed-logo">
+                            <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>default/images/logo.png" alt="" />
+                            </a>
                         </div>
+                        <div class="main-menu">
+                            <ul>
+                              <li class="cour-menu">
+                                  <a href="#!" class="mm-arr">Programs <span class="fa fa-angle-down"></span></a>
+                                    <!-- MEGA MENU 1 -->
+                                    <div class="mm-pos">
+                                        <div class="cour-mm m-menu">
+                                            <div class="m-menu-inn">
+                                                <div id="exTab3" class="container">  
+                                                    <ul class="nav nav-tabs">
+                                                        <li class="active">
+                                                        <a  href="#m1" data-toggle="tab">
+                                                        Career Counselling Programs</a>
+                                                        </li>
+                                                        <li><a href="#m2" data-toggle="tab">Overseas Appliation Programs</a>
+                                                        </li>
+                                                        <li><a href="#m3" data-toggle="tab">Mentoring at School</a>
+                                                        </li>
+                                                        <li><a href="#m4" data-toggle="tab">MGCCAP</a>
+                                                        </li>
+                                                        <li><a href="#m5" data-toggle="tab">Mentor's Partnership Programs</a>
+                                                        </li>
+                                                    </ul>
 
-
-</span>
-
-
-
-                     <a href="<?php echo base_url()?>Success/">Success Stories<span class="active-line"></span></a>
-
-                     <div class="cl-dropdown">
-                     <a onclick="ga('send', 'event', 'Header', 'Career Library', 'Homepage');"  href="careerlibrary.html" >Career Library<span class="active-line"></span><i class="fa fa-angle-down"></i></a>
-                     <div class="sub-cl ">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <h5>Everything you need to know, from colleges to scope, for hundreds of careers.</h5>
-                              <span class="cl-blueline"></span>
-                              <div class="row">
-                              <div class="col-md-4">
-                                  <ul>
-                                     <li>
-                                              <a href="careerlibrary/Actuarial-Sciences.html">Actuarial Sciences</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Allied-Medicine.html">Allied Medicine</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Animation-Graphics.html">Animation & Graphics</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Applied-Arts.html">Applied Arts</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Architecture.html">Architecture</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Aviation.html">Aviation</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Cabin-Crew.html">Cabin Crew</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Civil-Services.html">Civil Services</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Commerce-Accounts.html">Commerce & Accounts</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Computer-Application-IT.html">Computer Application & IT</a>
-                                           </li><li>
-                                              <a href="careerlibrary/Defense.html">Defense</a>
-                                           </li>                                    
-                                  </ul>
-                               </div>
-                               <div class="col-md-4">
-                              <ul>
-                                 <li>
-                                          <a href="careerlibrary/Design.html">Design</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Economics.html">Economics</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Engineering.html">Engineering</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Entrepreneurship.html">Entrepreneurship</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Ethical-Hacking.html">Ethical Hacking</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Finance-Banking.html">Finance & Banking</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Food-Agriculture.html">Food & Agriculture</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Hotel-Management.html">Hotel Management</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Law.html">Law</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Life-Science-Environment.html">Life Science & Environment</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Management.html">Management</a>
-                                       </li>                                 
-                              </ul>
-                               </div>
-                               <div class="col-md-4">
-                              <ul>
-                                 <li>
-                                        <a href="careerlibrary/Marketing-Advertising.html">Marketing & Advertising</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Maths-Statistics.html">Maths & Statistics</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Media-Communication.html">Media & Communication</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Medicine.html">Medicine</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Merchant-Navy.html">Merchant Navy</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Nutrition-Fitness.html">Nutrition & Fitness</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Performing-Arts.html">Performing Arts</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Physical-Science.html">Physical Science</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Sales.html">Sales</a>
-                                       </li><li>
-                                          <a href="careerlibrary/Social-Sciences-Humanities.html">Social Sciences & Humanities</a>
-                                       </li>                                 <li class="cl-link">
-                                    <a href="careerlibrary.html">View All Careers<i class="fa fa-angle-right"></i></a>
-                                 </li>
-                              </ul>
-                               </div>
+                                                    <div class="tab-content ">
+                                                        <div class="tab-pane active" id="m1">
+                                                            <div class="col-md-12">
+                                                                <br>
+                                                                <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">    Career Counselling Programs
+                                                                  <span style="font-weight:600">for Students</span>
+                                                                </h6>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Class 2<sup>nd</sup> - 7<sup>th</sup></h6>
+                                                                  <strong>Nurturing Minds</strong>
+                                                                  <p>Find out your perfect intelligence amongst 8 Multiple Intelligences. <br>
+                                                                  <a href="<?php echo base_url()?>home/class_2_to_7/">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Class 8<sup>th</h6>
+                                                                  <strong>Budding Minds. Course Inclination</strong>
+                                                                  <p>Unveil your inclination at an early age to start your preparation in a specific way.<br>
+                                                                  <a href="<?php echo base_url()?>home/class_8">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Class 9<sup>th</sup> - 10<sup>th</sup></h6>
+                                                                  <strong>Stream Selection Assessment Plan</strong>
+                                                                  <p>Discover your perfect stream by the five Career Dimensions.<br>
+                                                                  <a href="<?php echo base_url()?>home/class_9_to_10">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Class 11<sup>th</sup> - 12<sup>th</sup></h6>
+                                                                  <strong>Focal Point</strong>
+                                                                  <p>Have a clear view of your vision through the lens of our assessment and experts.<br>
+                                                                  <a href="<?php echo base_url()?>home/class_11_to_12">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <br>
+                                                              <hr style="height: 2px;width: 100%">
+                                                               <div class="col-md-12"><h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">Career Counselling Programs
+                                                                  <span style="font-weight:600">for Graduates/Professionals</span>
+                                                                </h6>
+                                                              </div>
+                                                              <div class="col-md-6">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Graduates</h6>
+                                                                  <strong>Age Edge Advancement Plan</strong>
+                                                                  <p>Career Development Assessment.Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way.<br>
+                                                                  <a href="<?php echo base_url()?>home/Graduates">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <div class="col-md-6">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Professionals</h6>
+                                                                  <strong>Professional Aptitude Assessment</strong>
+                                                                  <p>Benefit from our Career Assessment at this stage to deal with setbacks by the means of resilience with an effective road map.<br>
+                                                                  <a href="<?php echo base_url()?>home/Professionals">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="m2">
+                                                            <div class="col-md-12 text-center">
+                                                                <br>
+                                                                <strong>Overseas Application Program </strong>
+                                                                 <p>End-to-end overseas admissions guidance to help you build the perfect applications for your target universities.<br>
+                                                                  <a href="#">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="m3">
+                                                            <div class="col-md-12 text-center">
+                                                                <br>
+                                                                <strong>Mentoring at Schools </strong>
+                                                                 <p>MENTOR believes that the students who are in schools will be taking care of the reins of our nation in the next 10 to 15 years.<br>
+                                                                  <a href="#">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="m4">
+                                                            <div class="col-md-12">
+                                                                <br>
+                                                                <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">   MGCCAP 
+                                                                  <span style="font-weight:600">(Mentor  Certified Career Analyst Programme)</span>
+                                                                </h6>
+                                                              </div>
+                                                              <div class="col-md-4">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Class 1<sup>st</sup> - 12<sup>th</sup></h6>
+                                                                  <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.<br>
+                                                                  <a href="mgccap-1-to-12.php">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <div class="col-md-4">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Undergraduate</h6>
+                                                                  <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts.<br>
+                                                                  <a href="mgccap-undergraduates.php">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                              <div class="col-md-4">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;">Professionals</h6>
+                                                                  <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.<br>
+                                                                  <a href="mgccap-professionals.php">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                        </div>
+                                                        <div class="tab-pane" id="m5">
+                                                            <div class="col-md-12 text-center">
+                                                                <br>
+                                                                <strong>Mentor's Partnership Programs </strong>
+                                                                 <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.<br>
+                                                                  <a href="mentor-partnership-program.php">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="<?php echo base_url()?>home/success">Success Stories</a>
+                                </li>
+                                 <li><a href="<?php echo base_url()?>home/career_library">Career Library</a>
+                                </li>
+                                <li><a href="<?php echo base_url()?>home/blog">Blog</a>
+                                </li>
+                                <li><a href="<?php echo base_url()?>home/pricing_plan">Pricing</a>
+                                </li>
+                                <li><a href="<?php echo base_url()?>home/contact_us">Contact us</a>
+                                </li>
+                            </ul>
                         </div>
-                           </div>
-                        </div>
-                     </div>
                     </div>
-                     <a href="<?php echo base_url()?>blog" target="_blank">Blog<span class="active-line"></span></a>
-                     <a href="<?php echo base_url()?>About/Pricing">Pricing<span class="active-line"></span></a>
-                     <a href="<?php echo base_url(); ?>Home/login" >Log In<span class="active-line"></span>
-                    </a>
-                    
-                     <span class="signup-field">
-                                          <span class="start-free">
-                                          <input type="email" data-source="Email Only" data-source-medium="Homepage" data-source-content="Homepage" data-source-description="Header" data-id="Homepage" id="h-email" name="email" placeholder="Enter your email"/>
-                     <a onclick="ga('send', 'event', 'Email Only Sign Up', 'Header', 'Homepage');" href="javascript:;">Start Now For Free</a>
-                     </span>
-                                          </span>
-                  </div>
-               </div>
+                    <div class="all-drop-down-menu">
+
+                    </div>
+
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="mobile-fixed-header-menu">
-         <i class="fa fa-close"></i>
-         <div class="col-md-12 ">
-            <a href="index.php">
-            <img src="<?php echo base_url(); ?>default/images/tinyimg/mentor-big-bluec6eb.png?w=300" class="logo-blue" style="max-width: 166px;margin-top: -4px;">
-            </a>
-         </div>
-         <div class="col-md-12 ">
-            <div class="call-link">
-               <a href="tel:+91 8128738522 " class="contact-link">
-               <i class="fa fa-phone"></i>Career Helpline: +91 8128738522 
-               </a>
-            </div>
-         </div>
-        
-        
-          
-          <div class="col-md-6 program-row new-set">
-            <h5>Programs</h5>
-            <div class="prg-box ">
-               <h6>Career Counselling Programs for Students</h6>              
-               <a onclick="ga('send', 'event', 'Homepage', 'StartNow', 'Class8-9');"  href="career-counselling-for-class-8-and-9.html">Career Counselling for Class 8-9<span class="fa fa-angle-right"></span></a>
-               <a onclick="ga('send', 'event', 'Homepage', 'StartNow', 'Class10-12');"  href="career-counselling-for-class-10-11-and-12.html">Career Counselling for Class 10-12<span class="fa fa-angle-right"></span></a>
-                 <a onclick="ga('send', 'event', 'Homepage', 'StartNow', 'Grad');"  href="career-counselling-for-graduates-and-college-students.html">Career Counselling for Graduates<span class="fa fa-angle-right"></span></a>
-            </div>
-            <div class="prg-box">
-               <h6>College Application Programs for Students</h6>              
-               <a onclick="ga('send', 'event', 'Program Details', 'college', 'Header:Homepage');"   href="overseas-admissions-counselling.html">Overseas Application Program<span class="fa fa-angle-right"></span></a>
-               <a href="liberal-arts-admissions-counselling.html">Liberal Arts Application Program</a>
+        </div>
+    </section>
+    <!--END HEADER SECTION-->
 
 
+<style type="text/css">
+.sbuttons {
+  bottom: 5%;
+  position: fixed;
+  margin: 1em;
+  left: 0;
+  z-index: 99999;
+}
+.sbutton {
+  display:none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin: 20px auto 0;
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+  position: relative;
+}
+.sbutton > i {
+  font-size: 24px;
+  line-height: 50px;
+  transition: all .2s ease-in-out;
+  transition-delay: 2s;
+}
+.sbutton:active,
+.sbutton:focus,
+.sbutton:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
 
+.sbuttons:hover .sbutton{
+  display: block;
+}
+.sbutton:not(:last-child) > i {
+  font-size: 25px;
+  line-height: 50px;
+  color: #fff!important;
+  transition: all .3s ease-in-out;
+}
 
-            </div>
-
-               <div class="prg-box">
-               <h6>Career Counselling Programs for Schools</h6>              
-               <a onclick="ga('send', 'event', 'Program Details', 'college', 'Header:Homepage');"   href="schools.html" target="_blank">Career Development & Planning Ecosystem<span class="fa fa-angle-right"></span></a>
-
-               <a href="mun-training-program.html">MUN Training Program</a>
-
-               <a href="#">Mindler Talks</a>               
-            </div>
-
-               <div class="prg-box">
-               <h6>Career Advancement Programs for Career Counsellors</h6>              
-               <a onclick="ga('send', 'event', 'Program Details', 'college', 'Header:Homepage');"   href="iccc.html" target="_blank">International Certified Career Coach (ICCC)<span class="fa fa-angle-right" style=""></span></a>
-                   <a onclick="ga('send', 'event', 'Program Details', 'college', 'Header:Homepage');"   href="partner.html" target="_blank">Mindler Partner Program<span class="fa fa-angle-right"></span></a>
-                                
-            </div>
-         </div>
-            
-            
-         <div class="col-md-6 resource-row">
-            <h5>Resources</h5>
-            <ul>
-               <li><a href="about-us.php">About us</a></li>
-               <li><a href="schools.php">Mentoring at Schools</a></li>
-               <li>
-               <a href="<?php echo base_url()?>Success">Success Stories</a>
-               </li>
-               <li> <a href="pricing.php">Pricing</a></li>
-               <li><a href="#">Career Library</a></li>
-               <li><a href="#">Blog</a></li>
-               <li><a href="contact-us.php">Contact us</a></li>
-                <li class="blue-link"> 
-                     <span>Existing user?</span>
-                     <a href="login.php">Log in</a>
-                </li>
-                <li  class="blue-link">
-                     <span>New user?</span>
-                     <a href="<?php echo base_url();?>home/register">Sign up</a>
-                </li>
-               
-            </ul>
-         </div>
-         <div class="col-md-12 ">
-              <div class="menu-sign-up">
-               <p>Try the world’s most advanced career assessment!</p>
-               <form>
-                  <input type="email" name="email" placeholder="Enter your email" />
-                <input id="startNow" type="submit" value="Join Now For Free">
-                </form>
-              </div>
-          </div>
-      </div>
-   </header>
+.sbutton:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+  transition-delay: 25ms;
+}
+.sbutton:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
+}
+.sbutton:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+.sbutton:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 60ms;
+  transition-delay: 60ms;
+}
+.sbutton:not(:last-child):nth-last-child(5) {
+  -webkit-transition-delay: 80ms;
+  transition-delay: 80ms;
+}
+.sbutton:not(:last-child):nth-last-child(6) {
+  -webkit-transition-delay: 100ms;
+  transition-delay: 100ms;
+}
+ 
+[tooltip]:before {
+   font-weight: 600;
+  border-radius: 2px;
+  background-color: #585858;
+  color: #fff;
+  content: attr(tooltip);
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px 7px;
+  margin-left: 10px;
+  position: absolute;
+  left: 100%;
+  bottom: 20%;
+  white-space: nowrap;
+}
+ 
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+.sbutton.mainsbutton {
+  background: linear-gradient(to right, #b31217, #e52d27);
+}
+.sbutton.gplus {
+  background: #F44336;
+}
+.sbutton.pinteres {
+  background: #e60023;
+}
+.sbutton.twitt {
+  background: #03A9F4;
+}
+.sbutton.fb {
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+.sbutton.whatsapp {
+  background: linear-gradient(to right, #369b40, #3abe4d);
+}
+</style>
+<div class="sbuttons">
+  
+  <a href="https://api.whatsapp.com/send?phone=918128738522&text=Hello,%0AMentor" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+    
+  <a href="tel:+91 8128738522" class="sbutton fb" tooltip="+91 8128738522"><i class="fa fa-phone"></i></a>
+  
+  <a class="sbutton mainsbutton" style="display: block;"><i class="fa fa-comments"></i></a>
+    
+</div> 

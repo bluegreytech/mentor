@@ -1,5 +1,4 @@
 <?php
-
 /**
  * CodeIgniter
  *
@@ -68,10 +67,11 @@ switch (ENVIRONMENT)
 {
 	case 'development':
 		error_reporting(-1);
-		ini_set('display_errors', 1);
+		ini_set('display_errors', E_ALL);
 	break;
 
 	case 'testing':
+
 	case 'production':
 		ini_set('display_errors', 0);
 		if (version_compare(PHP_VERSION, '5.3', '>='))
@@ -205,8 +205,8 @@ switch (ENVIRONMENT)
 	{
 		// Ensure there's a trailing slash
 		$system_path = strtr(
-			rtrim($system_path, '/\\'),
-			'/\\',
+			rtrim($system_path, '/'),
+			'/',
 			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 		).DIRECTORY_SEPARATOR;
 	}
@@ -236,8 +236,9 @@ switch (ENVIRONMENT)
 	// Name of the "system" directory
 	define('SYSDIR', basename(BASEPATH));
 
+//echo $application_folder;die;
 	// The path to the "application" directory
-	if (is_dir($application_folder))
+		if (is_dir($application_folder))
 	{
 		define('APPPATH', $application_folder.'/');
 	}
@@ -250,16 +251,12 @@ switch (ENVIRONMENT)
 
 		define('APPPATH', BASEPATH.$application_folder.'/');
 	}
-	
-	 //print_r(APPPATH);
-	
-
 
 	// The path to the "views" directory
 	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
-	{
-			$view_folder = APPPATH.'views';
-	
+	{ 
+		//echo "hhgf";die;
+		$view_folder = APPPATH.'views';
 	}
 	elseif (is_dir($view_folder))
 	{
@@ -270,23 +267,19 @@ switch (ENVIRONMENT)
 		else
 		{
 			$view_folder = strtr(
-				rtrim($view_folder, '/\\'),
-				'/\\',
+				rtrim($view_folder, '/'),
+				'/',
 				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 			);
-
-			
 		}
 	}
 	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
 	{
-		
 		$view_folder = APPPATH.strtr(
-			trim($view_folder, '/\\'),
-			'/\\',
+			trim($view_folder, '/'),
+			'/',
 			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
 		);
-		
 	}
 	else
 	{
@@ -295,8 +288,8 @@ switch (ENVIRONMENT)
 		exit(3); // EXIT_CONFIG
 	}
 
-	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
-	
+	define('VIEWPATH', $view_folder."/");
+ //echo VIEWPATH;die;	
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
