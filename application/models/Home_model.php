@@ -122,42 +122,10 @@ class Home_model extends CI_Model
                          echo $str;
                     /** custom_helper email function **/
 
-					$this->load->library('email');
-					
-					// 	$config = Array(
-					// 'protocol' => 'smtp',
-					// 'smtp_host' => 'ssl://smtp.googlemail.com',
-					// 'smtp_port' => '465',
-					// 'smtp_user' => 'bluegreyindia@gmail.com',
-					// 'smtp_pass' => 'Test@123',
-					// 'mailtype'  => 'html', 
-					// 'charset'   => 'iso-8859-1'
-					// );
-                        $config['protocol'] = 'smtp';
-						$config['smtp_host']='ssl://smtp.googlemail.com';
-						$config['smtp_port']='465';
-						$config['smtp_user']='bluegreyindia@gmail.com';
-						$config['smtp_pass']='Test@123';
-						$config['charset']='utf-8';
-						$config['newline']="\r\n";
-						$config['mailtype'] ='html';
-						$config['send_multipart'] = FALSE;
-					$this->email->initialize($config);
-					$this->email->from("bluegreyindia@gmail.com","Mentor");
-					//$this->email->reply_to($email_address_reply);
-					$this->email->to("binny@yopmail.com");
-					$this->email->subject("test subject ");
-					$this->email->message($str);
-					//$this->email->send();
-					if($this->email->send()){
-					//echo $this->email->prin
-					echo "send"; die;
-					}else{
-					echo $this->email->print_debugger(); die;
 					}
 
                     
-                    // email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
+                     email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
                     
                       return '1';
                   }
