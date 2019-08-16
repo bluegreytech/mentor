@@ -1,5 +1,5 @@
 <?php
-
+//echo phpinfo();die;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller
@@ -94,6 +94,7 @@ class Home extends CI_Controller
             echo json_encode(array("status"=>"error","msg"=> "Enter valid email and password."));           
 		}
         }
+          redirect('home');
 
 
     }
@@ -211,25 +212,27 @@ class Home extends CI_Controller
 	function reset_password($code='')
 	{
 
-		if(check_admin_authentication())
-			{
-				redirect('home/dashbord');
-			}
+		//echo "hghj";die;
+		// if(check_admin_authentication())
+		// 	{
+		// 		redirect('home/dashbord');
+		// 	}
 			
-			$admin_id=$this->Login_model->checkResetCode($code);
-			//print_r($admin_id);die;
+			$user_id=$this->home_model->checkResetCode($code);
+			//print_r($user_id);die;
 
 			$data = array();
-			$data['errorfail']=($code=='' || $admin_id=='')?'fail':'';
-			$data['AdminId']=$admin_id;
+			$data['errorfail']=($code=='' || $user_id=='')?'fail':'';
+			$data['user_id']=$user_id;
 			$data['code']=$code;
 	        
-            if($admin_id){
+            if($user_id){
+            	//echo "ghg";die;
             	if($_POST){
 				
-				if($this->input->post('AdminId') != ''){
+				if($this->input->post('user_id') != ''){
 					$this->form_validation->set_rules('Password', 'Password', 'required');
-					$this->form_validation->set_rules('Confrim_password', 'Re-type Password', 'required|matches[Password]');
+					$this->form_validation->set_rules('confrim_password', 'Re-type Password', 'required|matches[Password]');
 				
 					if($this->form_validation->run() == FALSE){			
 						if(validation_errors()){
@@ -237,10 +240,11 @@ class Home extends CI_Controller
 						}
 					}else{
 						
-							$up=$this->Login_model->updatePassword();
+							$up=$this->home_model->updatePassword();
+							//echo "<pre>";print_r($up);die;
 						if($up>0){
 							$this->session->set_flashdata('success',RESET_SUCCESS); 
-							redirect('login');
+							redirect('home/login');
 						}elseif($up=='') {
 							
 							$error = EXPIRED_RESET_LINK;
@@ -262,19 +266,19 @@ class Home extends CI_Controller
 					//$redirect=site_url();
 	              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 				}
-				 $this->load->view('common/ResestPassword',$data);
+				 $this->load->view('common/Resetpassword',$data);
 		    }else{
 		    	//echo 'dfdfds';die;
-		    	$this->load->view('common/ResestPassword',$data);
+		    	$this->load->view('common/Resetpassword',$data);
 		    }
 
             }else{
-
-            	  //echo "hii";die;
-					$error = EXPIRED_RESET_LINK;
-					 $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
-					 redirect('home');
+            	 
+				$error = EXPIRED_RESET_LINK;
+				$this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
+				redirect('home');
 		    }
+		  
 	}
 
 

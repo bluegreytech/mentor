@@ -69,12 +69,12 @@ class Home_model extends CI_Model
       $rnd=randomCode();
     
        $query = $this->db->get_where('tblusers',array('email'=>$email));
-    //  echo $this->db->last_query(); die;
+    	//  echo $this->db->last_query(); die;
     if($query->num_rows()>0)
     {
       $row = $query->row();
       $admin_status=$row->status;
-     // echo $admin_status;die;
+    	 // echo $admin_status;die;
        if($admin_status =='Inactive')
       {
          return "3"; 
@@ -118,11 +118,9 @@ class Home_model extends CI_Model
                     // $email_message=str_replace('{password}',$password,$email_message);
                     $email_message=str_replace('{email}',$email,$email_message);
                     $email_message=str_replace('{reset_link}',$login_link,$email_message);
-                    $str=$email_message; //die;
-                      //   echo $str;
+                    $str=$email_message; 
+                       echo $str;die;
                     /** custom_helper email function **/
-
-				
 
                     
                      email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
@@ -137,6 +135,40 @@ class Home_model extends CI_Model
       return 2;
     }
     }
+
+       //reset password
+    function checkResetCode($code='')
+  {
+    $query=$this->db->get_where('tblusers',array('ResetPasswordCode'=>$code));
+    if($query->num_rows()>0)
+    {
+      return $query->row()->user_id; 
+      
+    }else{
+      return '';
+    }
+  }
+        
+ 
+
+  function updatePassword()
+    {
+        $code=$this->input->post('code');
+        $query=$this->db->get_where('tblusers',array('ResetPasswordCode '=>$code));
+        if($query->num_rows()>0)
+        {
+          $data=array('Password'=>md5(trim($this->input->post('Password'))),'ResetPasswordCode'=>'');
+            $this->db->where(array('user_id'=>$this->input->post('user_id'),'ResetPasswordCode'=>trim($this->input->post('code'))));
+           // print_r($data);die;
+            $d=$this->db->update('tblusers',$data);
+            return $d;
+          
+        }else
+        {
+          return '';
+        }
+      }
+
 
 
  }

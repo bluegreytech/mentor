@@ -211,13 +211,13 @@
 		$CI->email->to($email_to);
 		$CI->email->subject($email_subject);
 		$CI->email->message($str);
-		$CI->email->send();
-		// if($CI->email->send()){
-		// 	//echo $CI->email->prin
-		//    echo "send"; die;
-		// }else{
-		// 	echo $CI->email->print_debugger(); 
-		// }
+		//$CI->email->send();
+		if($CI->email->send()){
+			//echo $CI->email->prin
+		   echo "send"; die;
+		}else{
+			echo $CI->email->print_debugger(); 
+		}
 	   //echo "<pre>"; print_r($CI->email->send()); die;
 
 	}
