@@ -23,6 +23,7 @@ class Standard extends CI_Controller
 	{ 
 			$data=array();
 			$data['streamData']=$this->Stream_model->getstream();
+			//echo  "<pre>";print_r($data['streamData']);die;
 			$data['StreamId']=$this->input->post('streamid');
 			$data['StandardId']=$this->input->post('StandardId');
 			$data['Standard']=$this->input->post('Standard');
@@ -34,16 +35,16 @@ class Standard extends CI_Controller
 					 {
 					  $this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
 						 redirect('Standard/Standardlist');
-					 }
+					 }die;
 				}else{
-					
+					//echo "else";die;
 					$result=$this->Standard_model->updatedata();
 					if($result)
 					{
 						$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
 						redirect('Standard/Standardlist');
 					} 
-					
+					//die;
 				
 				}
 			
