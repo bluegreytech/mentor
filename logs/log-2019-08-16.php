@@ -210,3 +210,12 @@ ERROR - 2019-08-16 08:58:21 --> fsockopen(): SSL operation failed with code 1. O
 error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed at line no 2069 in C:\xampp\htdocs\mentor\system\libraries\Email.php
 ERROR - 2019-08-16 08:58:22 --> fsockopen(): Failed to enable crypto at line no 2069 in C:\xampp\htdocs\mentor\system\libraries\Email.php
 ERROR - 2019-08-16 08:58:22 --> fsockopen(): unable to connect to ssl://smtp.googlemail.com:465 (Unknown error) at line no 2069 in C:\xampp\htdocs\mentor\system\libraries\Email.php
+ERROR - 2019-08-16 09:04:15 --> Severity: Warning --> mysqli::real_connect(): (HY000/1049): Unknown database 'mentordb' C:\xampps\htdocs\mentor\system\database\drivers\mysqli\mysqli_driver.php 203
+ERROR - 2019-08-16 09:04:15 --> Unable to connect to the database
+ERROR - 2019-08-16 09:06:51 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-16 09:06:59 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-16 09:09:08 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampps\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:11 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampps\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:13 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampps\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:19 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampps\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:27 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampps\htdocs\mentor\application\models\Home_model.php
