@@ -119,10 +119,10 @@ class Home_model extends CI_Model
                     $email_message=str_replace('{email}',$email,$email_message);
                     $email_message=str_replace('{reset_link}',$login_link,$email_message);
                     $str=$email_message; //die;
-                         echo $str;
+                      //   echo $str;
                     /** custom_helper email function **/
 
-					}
+				
 
                     
                      email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);

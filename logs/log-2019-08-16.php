@@ -210,3 +210,15 @@ ERROR - 2019-08-16 08:58:21 --> fsockopen(): SSL operation failed with code 1. O
 error:14090086:SSL routines:ssl3_get_server_certificate:certificate verify failed at line no 2069 in C:\xampp\htdocs\mentor\system\libraries\Email.php
 ERROR - 2019-08-16 08:58:22 --> fsockopen(): Failed to enable crypto at line no 2069 in C:\xampp\htdocs\mentor\system\libraries\Email.php
 ERROR - 2019-08-16 08:58:22 --> fsockopen(): unable to connect to ssl://smtp.googlemail.com:465 (Unknown error) at line no 2069 in C:\xampp\htdocs\mentor\system\libraries\Email.php
+ERROR - 2019-08-16 09:09:25 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:27 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:39 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:09:54 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:10:14 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:10:46 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:10:59 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:11:01 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:11:03 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:11:05 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
+ERROR - 2019-08-16 09:11:17 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-16 09:11:36 --> 404 Page Not Found: Default/images

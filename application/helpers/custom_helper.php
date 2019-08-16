@@ -128,7 +128,8 @@
 	 
 	function email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str)
 	{
-			// echo "jhjh";die;
+			
+			 echo "jhjh";die;
 	   // echo $email_address_from; 
 	   // echo $email_address_reply;
 	   // echo	$email_to;	
@@ -215,7 +216,7 @@
 			//echo $CI->email->prin
 		   echo "send"; die;
 		}else{
-				echo $CI->email->print_debugger(); die;
+			echo $CI->email->print_debugger(); 
 		}
 	   //echo "<pre>"; print_r($CI->email->send()); die;
 
