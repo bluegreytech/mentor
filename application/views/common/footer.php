@@ -80,21 +80,21 @@
                     </a>
                     <h4>Login</h4>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <form class="s12">
+                     <form class="s12" id="loginForm" method="POST" action="<?php echo base_url();?>home/login/">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name" class="validate" placeholder="Username">
+                                <input type="text" data-ng-model="name" class="validate" placeholder="Email" name="email" id="email">
                             </div>
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input type="password" class="validate" placeholder="Password">
+                                <input type="password" class="validate" placeholder="Password" name="password"  id="password">
                             </div>
                         </div>
                         <div>
                             <div class="s12 log-ch-bx">
                                 <p>
-                                    <input type="checkbox" id="test5" />
+                                    <input type="checkbox" id="test5" name="rememberme" />
                                     <label for="test5">Remember me</label>
                                 </p>
                             </div>
@@ -211,10 +211,10 @@
                     </a>
                     <h4>Forgot password</h4>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <form class="s12">
+                    <form class="s12" method="POST"  action="<?php echo base_url()?>home/Forgotpassword/" id="forgotpwdfrm">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name3" class="validate">
+                                <input type="text" class="validate" name="email" id='email'>
                                 <label>User name or email id</label>
                             </div>
                         </div>

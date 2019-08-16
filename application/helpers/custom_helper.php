@@ -53,12 +53,12 @@
 	{
 		//echo "jhjhg";die;;
 		$CI =& get_instance();   
-                if($CI->session->userdata('UserId')!='')
+                if($CI->session->userdata('user_id')!='')
                 {
                     //check user active
-					$a_data = get_one_user($CI->session->userdata('UserId'));
+					$a_data = get_one_user($CI->session->userdata('user_id'));
 					//echo "<pre>";print_r($a_data);die;
-                    if($a_data->IsActive == '1'){
+                    if($a_data->status == 'Active'){
                      return true;
                     }
                     else{
@@ -74,7 +74,7 @@
 	function get_one_user($id)
 	{
 		$CI =& get_instance();
-		$query = $CI->db->get_where('tbluser',array('UserId'=>$id));
+		$query = $CI->db->get_where('tblusers',array('user_id'=>$id));
 		return $query->row();
 	}	
 	// --------------------------------------------------------------------
@@ -87,7 +87,7 @@
 	function get_authenticateadminID()
 	{		
 		$CI =& get_instance();
-		return $CI->session->userdata('UserId');
+		return $CI->session->userdata('user_id');
 	}
 	
 
@@ -210,13 +210,13 @@
 		$CI->email->to($email_to);
 		$CI->email->subject($email_subject);
 		$CI->email->message($str);
-		$CI->email->send();
-		// if($CI->email->send()){
-		// 	//echo $CI->email->prin
-		//    echo "send"; die;
-		// }else{
-		// 		echo $CI->email->print_debugger();
-		// }
+		//$CI->email->send();
+		if($CI->email->send()){
+			//echo $CI->email->prin
+		   echo "send"; die;
+		}else{
+				echo $CI->email->print_debugger(); die;
+		}
 	   //echo "<pre>"; print_r($CI->email->send()); die;
 
 	}

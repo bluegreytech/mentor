@@ -128,6 +128,36 @@ $(careerchoice2).hide();
       }
     });
 });
+
+$("#loginForm").validate(
+    {
+    rules:{  
+         
+        email:{
+          required: true,
+          email: true
+        },
+        password:{
+           required: true,         
+        },
+       
+    },
+   
+    errorPlacement: function (error, element) {
+
+         console.log('dd', element.attr("name"))
+            if (element.attr("name") == "assessment") {
+                error.appendTo("#assessmenterror");
+            }else if(element.attr("name") == "careerchoice"){
+               error.appendTo("#careerchoiceerror");
+            }
+            else{
+                error.insertAfter(element)
+            }
+        }
+    
+});
+
 </script>
 </body>
 
