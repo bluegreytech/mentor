@@ -222,3 +222,4 @@ ERROR - 2019-08-16 09:11:03 --> syntax error, unexpected 'else' (T_ELSE), expect
 ERROR - 2019-08-16 09:11:05 --> syntax error, unexpected 'else' (T_ELSE), expecting function (T_FUNCTION) or const (T_CONST) at line no 136 in C:\xampp\htdocs\mentor\application\models\Home_model.php
 ERROR - 2019-08-16 09:11:17 --> 404 Page Not Found: Default/images
 ERROR - 2019-08-16 09:11:36 --> 404 Page Not Found: Default/images
+ERROR - 2019-08-16 09:14:05 --> 404 Page Not Found: Default/images
