@@ -27,7 +27,7 @@ $this->load->view('common/sidebar_second');
               <div class="tab-content clearfix">
                
 
-                  <form method="POST" action="<?php echo base_url();?>home/profile" id="frm_profile">
+                  <form method="POST" action="<?php echo base_url();?>home/profile" id="frm_profile"  enctype="multipart/form-data">
                      <div class="row">
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -39,7 +39,7 @@ $this->load->view('common/sidebar_second');
                                     <span class="">
                                     <span class="fileupload-exists show-important">Select image</span>
                                      <input type="hidden" class='form-control' name="pre_profile_image" id="pre_profile_image">
-                                     <input type="file" name="profile_image" value=""  class="default" /> 
+                                     <input type="file" name="profile_image"  class="default" /> 
                                     </span>
                                  </div>
 
@@ -176,7 +176,6 @@ $(document).ready(function()
                          digits:true,
                          maxlength:12,
                          minlength:8
-
                     },  
                     email:{
                          required: true,
