@@ -650,15 +650,12 @@ position: inherit;
   }
 
   .leftside-navigation ul.sidebar-menu li a {
-    padding: 9px 0 9px 20px;
-    font-size: 12px;
     color: #484848;
     background: #fff;
-    border-left: 3px #fff solid;
   }
 
   .sidebar-menu .mobile-menu-link, .sidebar-menu .mobile-user-id {
-    display: block;
+    display: none;
   }
 
   ul.sidebar-menu li.sidebar-profile .img-blue-box {
@@ -1092,9 +1089,12 @@ position: inherit;
   }
 
   #sidebar {
+    width: 100%;
+    background: #00000094;
+  }
+  .leftside-navigation{
     width: 230px;
   }
-
   .profile-main p.image {
     width: 60px;
     height: 60px;
