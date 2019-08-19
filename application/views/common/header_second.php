@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
+
 <html lang="en" >
    <head>
       <title>Mentor - Dashboard</title>
