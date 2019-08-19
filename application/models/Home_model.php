@@ -169,10 +169,10 @@ class Home_model extends CI_Model
         }
       }
 
- }
-  function updateProfile(){
 
+       function updateProfile(){
 
+        // echo "hjhg";die;
       echo "<pre>";print_r($_POST);die;
       $user_image='';
       //$image_settings=image_setting();
@@ -187,7 +187,7 @@ class Home_model extends CI_Model
         $_FILES['userfile']['error']    =   $_FILES['profile_image']['error'];
         $_FILES['userfile']['size']     =   $_FILES['profile_image']['size'];   
         $config['file_name'] = $rand.'Admin';      
-        $config['upload_path'] = base_path().'upload/admin_orig/';      
+        $config['upload_path'] = base_path().'upload/user_orig/';      
         $config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';
         $this->upload->initialize($config);
 
@@ -204,8 +204,8 @@ class Home_model extends CI_Model
         $gd_var='gd2';
         $this->image_lib->initialize(array(
           'image_library' => $gd_var,
-          'source_image' => base_path().'upload/admin_orig/'.$picture['file_name'],
-          'new_image' => base_path().'upload/admin/'.$picture['file_name'],
+          'source_image' => base_path().'upload/user_orig/'.$picture['file_name'],
+          'new_image' => base_path().'upload/user/'.$picture['file_name'],
           'maintain_ratio' => FALSE,
           'quality' => '100%',
           'width' => 300,
@@ -222,15 +222,15 @@ class Home_model extends CI_Model
         $this->input->post('prev_user_image');
         if($this->input->post('pre_profile_image')!='')
         {
-        if(file_exists(base_path().'upload/admin/'.$this->input->post('pre_profile_image')))
+        if(file_exists(base_path().'upload/user/'.$this->input->post('pre_profile_image')))
         {
-        $link=base_path().'upload/admin/'.$this->input->post('pre_profile_image');
+        $link=base_path().'upload/user/'.$this->input->post('pre_profile_image');
         unlink($link);
         }
 
-        if(file_exists(base_path().'upload/admin_orig/'.$this->input->post('pre_profile_image')))
+        if(file_exists(base_path().'upload/user_orig/'.$this->input->post('pre_profile_image')))
         {
-        $link2=base_path().'upload/admin_orig/'.$this->input->post('pre_profile_image');
+        $link2=base_path().'upload/user_orig/'.$this->input->post('pre_profile_image');
         unlink($link2);
         }
         }
@@ -242,13 +242,20 @@ class Home_model extends CI_Model
       }
         //$full_name=trim($this->input->post('full_name'));
         $data = array(
-        'EmailAddress' =>trim($this->input->post('EmailAddress')),
-        'FullName' =>trim($this->input->post('full_name')),     
-        'AdminContact' => trim($this->input->post('AdminContact')),
-        'Isactive' => trim($this->input->post('IsActive')),       
+        'email' =>trim($this->input->post('email')),
+        'Username' =>trim($this->input->post('Username')),     
+        'PhoneNumber' => trim($this->input->post('PhoneNumber')),
+        'location' => trim($this->input->post('location')), 
+        'age' => trim($this->input->post('age')), 
+        'choicecareerassess' => trim($this->input->post('choicecareerassess')),
+        'current_stage' => trim($this->input->post('current_stage')), 
+
         'ProfileImage'=>$user_image,
         );  
           $this->db->where('AdminId',$this->session->userdata('AdminId'));
           $this->db->update('tbladmin',$data);
        
     }
+
+ }
+ 
