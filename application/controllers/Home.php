@@ -371,8 +371,9 @@ class Home extends CI_Controller
 		$this->load->view('common/success');
 	}
 	function career_library(){
-		echo "not yet";die;
-		$this->load->view('common/career_library');
+		//echo "not yet";die;
+		//$this->load->view('common/career_library');
+		$this->load->view('common/success');
 	}
 	function pricing_plan(){
 		$this->load->view('common/Packprice');
@@ -390,11 +391,29 @@ class Home extends CI_Controller
 	function class_11_to_12(){
 		$this->load->view('classes/class_11_to_12');
 	}
+
 	function Graduates(){
 		$this->load->view('classes/graduates');
 	}
 	function Professionals(){
 		$this->load->view('classes/Professionals');
+	}
+	function class_1_to_12(){
+		$this->load->view('classes/mgccap_1_to_12');
+	}
+	function mgccap_undergraduates(){
+		$this->load->view('classes/mgccap_undergraduates');
+	}
+	function mgccap_professionals(){
+		$this->load->view('classes/mgccap_professionals');
+	}
+	function mentor_partnership_program(){
+	$this->load->view('classes/mentor_partnership_program');
+	}
+	
+	
+	function blog(){
+		$this->load->view('common/blog');
 	}
 
 	
