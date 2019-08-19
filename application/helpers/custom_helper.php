@@ -158,7 +158,7 @@
 			// 'charset'   => 'iso-8859-1'
 			// );
 			$config['protocol']='smtp';  
-			$config['smtp_host'] = trim("ssl://smtp.googlemail.com");
+			$config['smtp_host'] = trim("ssl://smtp.gmail.com");
             $config['smtp_port']='465';  
             $config['smtp_user'] = trim("bluegreyindia@gmail.com");
             $config['smtp_pass'] = trim("Test@123");
@@ -216,7 +216,7 @@
 			//echo $CI->email->prin
 		   echo "send"; die;
 		}else{
-			echo $CI->email->print_debugger(); 
+			echo $CI->email->print_debugger(); die;
 		}
 	   //echo "<pre>"; print_r($CI->email->send()); die;
 

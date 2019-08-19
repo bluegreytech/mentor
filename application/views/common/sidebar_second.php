@@ -23,7 +23,7 @@
 
                   <li id="tour1"><a href="<?php echo base_url();?>home/dashboard" class="active"><span class="icon-home2 fa fa-home"></span><span class="nav-title">Dashboard</span></a>
                   </li>
-                  <li id="tour2"><a href="<?php echo base_url();?>home/Profile/<?php echo $UserId ;?>"><span class="icon-home2 fa fa-user"></span><span class="nav-title">My Profile</span></a>
+                  <li id="tour2"><a href="<?php echo base_url();?>home/Profile/"><span class="icon-home2 fa fa-user"></span><span class="nav-title">My Profile</span></a>
                   </li>
                   <li id="tour2"><a href="<?php echo base_url().'home/change_password';?>"><span class="icon-home2 fa fa-user"></span><span class="nav-title">Change Password</span></a>
                   </li>
