@@ -15,8 +15,8 @@ class Mytest extends CI_Controller {
 			redirect(base_url());
 		}
          $data=array();
-         $data['title']="Mytest";
-		
+        $data['title']="Mytest";
+		$data['activeTab'] = "Mytest";
 		$this->load->view('mytest/mytestlist',$data);
 	 }
 	 function addtest(){
@@ -25,11 +25,16 @@ class Mytest extends CI_Controller {
 			redirect(base_url());
 		}
 		$id =$this->session->userdata('user_id');
-		$data=get_one_user($id);
-		echo "<pre>";print_r($data);die;
-		die;
+		$userdata=get_one_user($id);
+		 // echo 'http://assess.careeracer.com/access-login-api.php?category=&channel_id=647&cd='.urlencode($userdata->choicecareerassess).'&age=647&access_code=mentordemo8978';
+		 //$checkmsg = file_get_contents('http://assess.careeracer.com/access-login-api.php?category=&channel_id=647&cd='.urlencode($userdata->choicecareerassess).'&age=647&access_code=mentordemo8978');
+
+	 	$checkmsg = file_get_contents('https://opentdb.com/api.php?amount=10');
+   			 echo "<pre>";print_r($checkmsg);die;
       
-        $checkmsg = file_get_contents('http://msg.desireinfotech.in/rest/services/sendSMS/sendGroupSms?AUTH_KEY=204644373ece9946d7c65769e75c65ac&message='.urlencode($message).'&senderId=NKGRUP&routeId=1&mobileNos='.urlencode($mobileno).'&smsContentType=english"');
+  				//     	 $json = json_decode($checkmsg, true);
+  				//     	 	echo "<pre>";print_r($json);die;
+		// die;
 
 
 

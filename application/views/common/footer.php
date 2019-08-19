@@ -83,7 +83,7 @@
                      <form class="s12" id="loginForm" method="POST" action="<?php echo base_url();?>home/login/">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name" class="validate" placeholder="Email" name="email" id="email">
+                                <input type="text"  class="validate" placeholder="Email" name="email" id="loginemail">
                             </div>
                         </div>
                         <div>
@@ -173,7 +173,7 @@
                             </div>
                               <div id="assessmenterror"></div>
                             <div class="input-field s12" id="careerchoice2">
-                                <select name="careerchoice" id="careerchoice"  style="width:100%;">
+                                <select name="careerchoice" id="careerchoice2"  style="width:100%;">
                                     <option value="" disabled="" selected="">Please select</option>
                                     <option value="graduates">Career Assessment for Graduates</option>
                                     <option value="professionals">Career Assessment for Professionals</option>
@@ -220,7 +220,7 @@
                         </div>
                         <div>
                             <div class="input-field s4">
-                                <input type="submit" value="Submit" class="waves-effect waves-light log-in-btn"> </div>
+                                <input type="submit" value="Submit" class="waves-effect waves-light log-in-btn"></div>
                         </div>
                         <div>
                             <div class="input-field s12">Are you a already member ?  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal1">Login</a> | <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#modal2">Create a new account</a> </div>

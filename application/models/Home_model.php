@@ -173,7 +173,7 @@ class Home_model extends CI_Model
        function updateProfile(){
 
         // echo "hjhg";die;
-      echo "<pre>";print_r($_POST);die;
+    //  echo "<pre>";print_r($_POST);die;
       $user_image='';
       //$image_settings=image_setting();
       if(isset($_FILES['profile_image']) &&  $_FILES['profile_image']['name']!='')
@@ -186,7 +186,7 @@ class Home_model extends CI_Model
         $_FILES['userfile']['tmp_name'] =   $_FILES['profile_image']['tmp_name'];
         $_FILES['userfile']['error']    =   $_FILES['profile_image']['error'];
         $_FILES['userfile']['size']     =   $_FILES['profile_image']['size'];   
-        $config['file_name'] = $rand.'Admin';      
+        $config['file_name'] = $rand.'user';      
         $config['upload_path'] = base_path().'upload/user_orig/';      
         $config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';
         $this->upload->initialize($config);
@@ -218,8 +218,8 @@ class Home_model extends CI_Model
         $error = $this->image_lib->display_errors();
         }
 
-        $user_image=$picture['file_name'];
-        $this->input->post('prev_user_image');
+       echo  $user_image=$picture['file_name'];
+       
         if($this->input->post('pre_profile_image')!='')
         {
         if(file_exists(base_path().'upload/user/'.$this->input->post('pre_profile_image')))
@@ -243,19 +243,37 @@ class Home_model extends CI_Model
         //$full_name=trim($this->input->post('full_name'));
         $data = array(
         'email' =>trim($this->input->post('email')),
-        'Username' =>trim($this->input->post('Username')),     
-        'PhoneNumber' => trim($this->input->post('PhoneNumber')),
+        'username' =>trim($this->input->post('Username')),     
+        'phone' => trim($this->input->post('PhoneNumber')),
         'location' => trim($this->input->post('location')), 
         'age' => trim($this->input->post('age')), 
         'choicecareerassess' => trim($this->input->post('choicecareerassess')),
-        'current_stage' => trim($this->input->post('current_stage')), 
-
-        'ProfileImage'=>$user_image,
+        'current_stage' => trim($this->input->post('current_stage')),       
+        'profile_image'=>$user_image,
         );  
-          $this->db->where('AdminId',$this->session->userdata('AdminId'));
-          $this->db->update('tbladmin',$data);
-       
+        //echo "<pre>";print_r($data);die;
+          $this->db->where('user_id',$this->session->userdata('user_id'));
+          $this->db->update('tblusers',$data);
+          
     }
+
+
+  function updateUserPassword(){
+    //echo "gfgfd";die;
+    $id=$this->session->userdata('user_id'); 
+
+    $data = array('password' => md5($this->input->post('password')));
+    $query=$this->db->where(array('user_id'=>$id))->get_where('tblusers');
+    if($query->num_rows()>0){
+      $this->db->where(array('user_id'=>$id));
+      $this->db->update('tblusers',$data);
+      $query2 = $this->db->get_where('tblusers',array('user_id'=>$id));
+      $row = $query2->row();
+      return true;
+    }else{
+      return false;
+    }
+  } 
 
  }
  

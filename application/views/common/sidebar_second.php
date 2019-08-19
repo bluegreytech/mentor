@@ -1,3 +1,4 @@
+
 <aside>
          <div id="sidebar" class="nav-collapse md-box-shadowed">
             <!-- sidebar menu start-->
@@ -12,8 +13,12 @@
                                  // $LastName=$this->session->userdata('LastName');
                                  // $EmailAddress=$this->session->userdata('EmailAddress');
                                  // $RoleId=$this->session->userdata('RoleId');
+
+                                 $user_profile= get_one_user($this->session->userdata('user_id')); 
+                                           // echo "<pre>";print_r($admin_profile);die;
+                                          
                               ?>
-                        <img src="<?php echo base_url(); ?>default/images/a6.png" style="margin-bottom: 10px;height: 75px;border-radius: 50px;">
+                        <img src="<?php echo base_url(); ?>upload/user/<?php echo $user_profile->profile_image; ?>" style="margin-bottom: 10px;height: 75px;border-radius: 50px;">
                         <p>
                            <span class="name"><?php echo $username; ?></span>
                         </p>
@@ -21,15 +26,15 @@
                      </div>
 
                   </li>
+               
+                  <li id="tour1"><a href="<?php echo base_url();?>home/dashboard" class="<?php echo ($activeTab == "dashboard") ? "active" : ""; ?>"><span class="icon-home2 fa fa-home"></span><span class="nav-title">Dashboard</span></a>
+                  </li>
+                  <li id="tour2"><a href="<?php echo base_url();?>home/profile/" class="<?php echo ($activeTab == "profile") ? "active" : ""; ?>"><span class="icon-home2 fa fa-user-circle"></span><span class="nav-title">My Profile</span></a>
+                  </li>
+                  <li id="tour2"><a href="<?php echo base_url().'home/change_password';?>" class="<?php echo ($activeTab == "change_password") ? "active" : ""; ?>"><span class="icon-home2 fa fa-key"></span><span class="nav-title">Change Password</span></a>
+                  </li>
 
-                  <li id="tour1"><a href="<?php echo base_url();?>home/dashboard" class="active"><span class="icon-home2 fa fa-home"></span><span class="nav-title">Dashboard</span></a>
-                  </li>
-                  <li id="tour2"><a href="<?php echo base_url();?>home/Profile/"><span class="icon-home2 fa fa-user"></span><span class="nav-title">My Profile</span></a>
-                  </li>
-                  <li id="tour2"><a href="<?php echo base_url().'home/change_password';?>"><span class="icon-home2 fa fa-user"></span><span class="nav-title">Change Password</span></a>
-                  </li>
-
-                  <li id="tour3"><a href="<?php echo base_url();?>Mytest" ><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Test</span></a>
+                  <li id="tour3"><a href="<?php echo base_url();?>Mytest" class="<?php echo ($activeTab == "Mytest") ? "active" : ""; ?>"><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Test</span></a>
                   </li>
                   <li id="tour8"><a href="<?php echo base_url();?>Matches" ><span class="icon-home2 fa  fa-briefcase"></span><span class="nav-title">My Matches</span></a></li>
                   <li><a href="<?php echo base_url();?>Report" ><span class="icon-home2 fa fa-headphones "></span><span class="nav-title">My Report </span></a>

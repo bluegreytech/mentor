@@ -88,13 +88,17 @@ class Home extends CI_Controller
 		}
         elseif($login == '3')
 		{
-             echo json_encode(array("status"=>"error","msg"=> "Your account is Inactive. Please contact Administrator!"));
+			 $this->session->set_flashdata('error', 'Your account is Inactive. Please contact Administrator!');
+             //echo json_encode(array("status"=>"error","msg"=> "Your account is Inactive. Please contact Administrator!"));
+              redirect('home');    
 		}
 		else{
-            echo json_encode(array("status"=>"error","msg"=> "Enter valid email and password."));           
+		 	$this->session->set_flashdata('error', 'Enter valid email and password.');
+         
+              redirect('home');           
 		}
         }
-          redirect('home');
+        redirect('home');
 
 
     }
@@ -110,7 +114,8 @@ class Home extends CI_Controller
 	function profile($msg=''){
 	 	if(!check_user_authentication())
 		{
-		redirect('login');
+
+			redirect('login');
 		}
                 
 		$data = array();
@@ -141,28 +146,27 @@ class Home extends CI_Controller
 			
 			}else{
 			$oneUser=get_one_user(get_authenticateadminID());
-			//print_r($oneUser);die;
+			//echo "<pre>";print_r($oneUser);die;
 			$data["user_id"] 	= $oneUser->user_id;
 			$data["email"] 	= $oneUser->email;
 			$data["username"] = $oneUser->username;
 			$data["phone"] = $oneUser->phone;
-			$data["location"] = $oneUser->location;
+		    $data["location"] = $oneUser->location;
 			$data["age"] = $oneUser->age;
+			$data["profile_image"] = $oneUser->profile_image;
            	$data['status']=$oneUser->status;
-           	$data['choicecareerassess']=$oneUser->choicecareerassess;
+           	$data['current_stage']=$oneUser->current_stage;
            	$data['choicecareer']=$oneUser->choicecareer;
            	
 			
 			}
 		}else{
-			//echo "else fdf";die;
-            //  echo "<pre>";print_r($_POST);die;			
-			$res=$this->home_model->updateProfile();
-			$this->session->set_flashdata('successmsg', 'Profile has been updated successfully');	
+			$this->session->set_flashdata('success', 'Profile has been updated successfully');
+			$this->home_model->updateProfile();
 			redirect('home/profile');
 		}
 		$data['msg'] = $msg; //login success message
-		
+		$data['activeTab'] = "profile";
 
         $this->load->view('dashboard/Editprofile',$data);  
 
@@ -310,10 +314,9 @@ class Home extends CI_Controller
 
 	 	if(!check_user_authentication()){
 			redirect();
-		}
-		
-            
+		}  
 		$data = array();
+		$data['activeTab'] = "change_password";
         $this->load->library('form_validation');	
 		$this->form_validation->set_rules('password', 'Password', 'required|matches[cpassword]|min_length[8]');
 		$this->form_validation->set_rules('cpassword', 'Password Confirm', 'required|min_length[8]');	
@@ -336,7 +339,7 @@ class Home extends CI_Controller
 			
 		}else{
 			//echo "fghg";die;
-            $res=$this->Login_model->updateAdminPassword();
+            $res=$this->home_model->updateUserPassword();
 			if($res){
          		$this->session->set_flashdata('success', 'Your password change successfully');
 				redirect('home/change_password');

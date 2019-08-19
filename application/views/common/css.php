@@ -18,11 +18,21 @@
     <link href="<?php echo base_url(); ?>default/css/materialize.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>default/css/bootstrap.css" rel="stylesheet" />
     <link href="<?php echo base_url(); ?>default/css/style.css" rel="stylesheet" />
-
+    
     <!-- RESPONSIVE.CSS ONLY FOR MOBILE AND TABLET VIEWS -->
     <link href="<?php echo base_url(); ?>default/css/style-mob.css" rel="stylesheet" />
     <link href="<?php echo base_url(); ?>default/css/slider.css" rel="stylesheet" />
     <script src="<?php echo base_url(); ?>default/js/jssor.slider-27.5.0.min.js"></script>
-    <script src="<?php echo base_url(); ?>default/js/slider.js"></script>    
-
+    <script src="<?php echo base_url(); ?>default/js/slider.js"></script>   
+   <!--  alertify css and js  start  -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/bootstrap.min.css"/>
+     <!--  alertify css and js  start  -->
 </head>

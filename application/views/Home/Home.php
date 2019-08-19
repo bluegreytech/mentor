@@ -1,9 +1,7 @@
 
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<?php 
-	 $this->load->view('common/header');
+$this->load->view('common/header');
 ?>
 
   <section class="mob-slider">
@@ -28,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="4">Career Assessment for Professionals</option>
                         </select>
                     </div>
-                    <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#" class="bann-btn-1">Start Assessment </a>
+                    <a href="#!" data-toggle="modal" data-target="#modal1" style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;"  class="bann-btn-1">Start Assessment </a>
 
 
                     <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
@@ -73,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="4">Career Assessment for Professionals</option>
                         </select> 
                     </div>
-                    <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#" class="bann-btn-1">Start Assessment </a>
+                    <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
 
                     <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                       <h3>Emerge into the best version of yourself. </h3>
@@ -666,8 +664,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </section>
 
-
-
 <?php 
  $this->load->view('common/footer');
 ?>
+<script>
+
+</script>
+
