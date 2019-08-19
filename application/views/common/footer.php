@@ -80,21 +80,21 @@
                     </a>
                     <h4>Login</h4>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <form class="s12">
+                     <form class="s12" id="loginForm" method="POST" action="<?php echo base_url();?>home/login/">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name" class="validate" placeholder="Username">
+                                <input type="text" data-ng-model="name" class="validate" placeholder="Email" name="email" id="email">
                             </div>
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input type="password" class="validate" placeholder="Password">
+                                <input type="password" class="validate" placeholder="Password" name="password"  id="password">
                             </div>
                         </div>
                         <div>
                             <div class="s12 log-ch-bx">
                                 <p>
-                                    <input type="checkbox" id="test5" />
+                                    <input type="checkbox" id="test5" name="rememberme" />
                                     <label for="test5">Remember me</label>
                                 </p>
                             </div>
@@ -129,10 +129,10 @@
                     </a>
                     <h4>Create an Account</h4>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <form class="s12" id="registrationForm">
+                    <form class="s12" id="registrationForm" method="POST" action="<?php echo base_url();?>home/register/">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name1" class="validate" placeholder="Username" name="username">
+                                <input type="text" class="validate" placeholder="Username" name="username">
                             </div>
                         </div>
                         <div>
@@ -149,6 +149,37 @@
                             <div class="input-field s12">
                                 <input type="password" class="validate" placeholder="Re-Password" name="repassword">
                             </div>
+                            <input type="hidden" name="careerchoiceassess[]" id="careerchoiceassess">
+                        </div>
+                          <div>
+                            <div class="input-field s12">
+                              <select style="width:100%;"  name="assessment" id="assessment">
+                                 <option value="" disabled="" selected="">Please Select Assessment</option>
+                                 <option value="student">Start Assessment for Students</option>
+                                  <option value="professionals">Start Assessment for Professionals</option>
+                              </select>
+
+
+                            </div>
+                            <div class="input-field s12" id="careerchoice1">
+                                <select name="careerchoice" id="careerchoice" style="width:100%;">
+                                    <option value="" disabled="" selected="">Please select</option>
+                                    <option value="two_to_seven">Career Assessment for 2nd - 7th class </option>
+                                    <option value="nine_to_tweleve">Career Assessment for 9th - 12th class</option>
+                                    <option value="subject_selector">Subject Stream Selector</option>
+                                    <option value="engineer_selector">Engineering Stream Selector</option>
+                                </select>
+                              
+                            </div>
+                              <div id="assessmenterror"></div>
+                            <div class="input-field s12" id="careerchoice2">
+                                <select name="careerchoice" id="careerchoice"  style="width:100%;">
+                                    <option value="" disabled="" selected="">Please select</option>
+                                    <option value="graduates">Career Assessment for Graduates</option>
+                                    <option value="professionals">Career Assessment for Professionals</option>
+                                </select>
+                            </div>
+                               <div id="careerchoiceerror"></div>
                         </div>
                         <div>
                             <div class="input-field s4">
@@ -180,10 +211,10 @@
                     </a>
                     <h4>Forgot password</h4>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <form class="s12">
+                    <form class="s12" method="POST"  action="<?php echo base_url()?>home/Forgotpassword/" id="forgotpwdfrm">
                         <div>
                             <div class="input-field s12">
-                                <input type="text" data-ng-model="name3" class="validate">
+                                <input type="text" class="validate" name="email" id='email'>
                                 <label>User name or email id</label>
                             </div>
                         </div>

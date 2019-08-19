@@ -57,11 +57,11 @@ $this->load->view('common/sidebar_second');
                                     <img src="<?php echo base_url(); ?>default/images/a6.png" /> 
                                  </div>
                                  <div>
-                                 <input type="hidden"  value="<?php echo $UserId; ?>" name="UserId">
+                                 <input type="hidden"  value="<?php //echo $UserId; ?>" name="UserId">
                                     <span class="btn btn-white btn-file btn-xs">
                                     <span class="fileupload-exists show-important">Select image</span>
                                   
-                                     <input type="file" name="ProfileImage" value="<?php echo $ProfileImage;?>"  class="default" /> 
+                                     <input type="file" name="ProfileImage" value="<?php //echo $ProfileImage;?>"  class="default" /> 
                                     </span>
                                  </div>
 
@@ -73,18 +73,18 @@ $this->load->view('common/sidebar_second');
                               <div class="form-group height-min">
                                  <label>First Name</label>
                                  <br>
-                                 <input type="hidden"   value="<?php echo $UserId; ?>" name="UserId">
-                                 <input type="hidden"   value="<?php echo $EducationId; ?>" name="EducationId">
-                                 <input type="hidden"   value="<?php echo $UserFamilyId; ?>" name="UserFamilyId">
-                                 <input type="hidden"   value="<?php echo $GraduateScoreId; ?>" name="GraduateScoreId">
+                                 <input type="hidden"   value="<?php //echo $UserId; ?>" name="UserId">
+                                 <input type="hidden"   value="<?php //echo $EducationId; ?>" name="EducationId">
+                                 <input type="hidden"   value="<?php //echo $UserFamilyId; ?>" name="UserFamilyId">
+                                 <input type="hidden"   value="<?php //echo $GraduateScoreId; ?>" name="GraduateScoreId">
                               
                                
-                                 <input name="FirstName" value="<?php echo $FirstName;?>" class="form-control" type="text" minlength="3" maxlength="50">
+                                 <input name="FirstName" value="<?php //echo $FirstName;?>" class="form-control" type="text" minlength="3" maxlength="50">
                               </div>
                               <div class="form-group height-min">
                                  <label class="">Email Address</label>
                                  <br>
-                                 <input name="EmailAddress" value="<?php echo $EmailAddress;?>" class="form-control" type="text">
+                                 <input name="EmailAddress" value="<?php //echo $EmailAddress;?>" class="form-control" type="text">
                                     
                               </div>
 
@@ -99,20 +99,9 @@ $this->load->view('common/sidebar_second');
                               <div class="form-group">
                                  <label>Last Name</label>
                                  <br>
-                                 <input name="LastName" class="form-control" type="text" maxlength="50" value="<?php echo $LastName;?>">
+                                 <input name="LastName" class="form-control" type="text" maxlength="50" value="<?php //echo $LastName;?>">
                               </div>
-                              <div class="form-group">
-                                 <label>Gender</label><br>
-                                 <div class="radio" style="margin-top:0">
-                                    <label style="padding-left:0">
-                                    <input type="radio" name="Gender" value="Male" <?php  if($Gender=='Male'){  echo 'checked'; } ?>
-                                       class="icheck-blue"> Male
-                                    </label>
-                                    <label>
-                                       <input type="radio" name="Gender"  <?php if($Gender=='Female') { echo "checked"; }?> value="Female" class="icheck-blue"> Female
-                                    </label>
-                                 </div>
-                              </div>
+                           
                            </div>
 
                            <div class="col-md-3">
@@ -121,13 +110,13 @@ $this->load->view('common/sidebar_second');
                                  <br>
                                  <div class="input-group" id="dateOfBirth">
                                    
-                                    <input value="<?php echo $DateofBirth ?>" class="form-control" name="DateofBirth" placeholder="MM/DD/YYYY" type="date" id="datepicker">
+                                    <input value="<?php //echo $DateofBirth ?>" class="form-control" name="DateofBirth" placeholder="MM/DD/YYYY" type="date" id="datepicker">
                                  </div>
                               </div>
                               <div class="form-group">
                                  <label>Phone Number</label>
                                  <br>
-                                 <input name="PhoneNumber" class="form-control" type="text" maxlength="13" value="<?php echo $PhoneNumber;?>">
+                                 <input name="PhoneNumber" class="form-control" type="text" maxlength="13" value="<?php //echo $PhoneNumber;?>">
                               </div>
                            </div>
 
@@ -150,80 +139,80 @@ $this->load->view('common/sidebar_second');
                                     <div class="form-group">
                                    
                                     <?php 
-                                       if($StreamStatus=='Graduate')
-                                       {
+                                      // if($StreamStatus=='Graduate')
+                                      // {
                                           ?>
                                           <label>School</label>
                                           <?php
-                                       }
-                                       else
-                                       {
+                                       // //}
+                                       // else
+                                       // {
                                           ?>
                                           <label>College</label>
                                           <?php
-                                       }
+                                      // }
                                     ?>
                                        <br>
-                                       <input value="<?php echo $EducationName;?>" name="EducationName" class="form-control" type="text" >
+                                       <input value="<?php //echo $EducationName;?>" name="EducationName" class="form-control" type="text" >
                                     </div>
 
                                      <?php
-                                      if($StreamStatus=='Graduate')
-                                      { 
+                                      // if($StreamStatus=='Graduate')
+                                      // { 
                                      ?>
                                        <div class="form-group">
                                           <label>Course</label>
                                           <br>
                                              <input name="Course" class="form-control" type="text"
-                                           value="<?php echo $Course;?>">
+                                           value="<?php ///echo $Course;?>">
                                        </div>
                                      
                                      <?php
-                                     }
-                                     else
-                                     { 
+                                     // }
+                                     // else
+                                     // { 
                                      ?>
                                           <div class="form-group">
                                              <label>Board</label>
                                              <br>
                                              <input name="BoardName" class="form-control" type="text" 
-                                             value="<?php echo $BoardName;?>">
+                                             value="<?php //echo $BoardName;?>">
                                           </div>
                                     <?php
-                                    }
+                                    //}
                                     ?>
 
                                  </div>
                                  <div class="col-md-6">
                                      <?php 
-                                      if($StreamStatus=='Graduate')
-                                      { 
+                                      // if($StreamStatus=='Graduate')
+                                      // { 
                                      ?>
                                      <div class="form-group">
                                        <label>University</label>
                                        <br>
-                                       <input name="UnivesityName" class="form-control" type="text" value="<?php echo $UnivesityName;?>">
+                                       <input name="UnivesityName" class="form-control" type="text" value="<?php //echo $UnivesityName;?>">
                                     </div>
                                     
                                     <?php
-                                     }
-                                     else
-                                     { 
+                                     // }
+                                     // else
+                                     // { 
                                      ?>
                                      <div class="form-group">
                                        <label>Class</label>
                                        <br>
-                                       <input  name="ClassStream" class="form-control" type="text" value="<?php echo $ClassStream;?>">
+                                       <input  name="ClassStream" class="form-control" type="text" value="<?php //echo $ClassStream;?>">
                                     </div>
                                     
                                       <?php
-                                    }
+                                    //}
                                     ?>
 
                                     <div class="form-group">
                                        <label>Year of Graduation</label>
                                        <br>
-                                       <input  name="YearofGraduation" class="form-control" type="text" maxlength="4"value="<?php echo $YearofGraduation;?>">
+                                       <input  name="YearofGraduation" class="form-control" type="text" maxlength="4"value="<?php //echo $YearofGraduation;?>">
                                     </div>
                                  </div>
                               </div>
@@ -245,13 +234,13 @@ $this->load->view('common/sidebar_second');
                                  <label>Father's (or Guardian's) Name</label>
                                  <br>
                                  <input name="FatherName" class="form-control" type="text" 
-                                  value="<?php echo $FatherName;?>">
+                                  value="<?php //echo $FatherName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Father's (or Guardian's) Profession</label>
                                  <br>
                                  <input  name="FatherProfession" class="form-control" type="text"  
-                                 value="<?php echo $FatherProfession;?>">
+                                 value="<?php //echo $FatherProfession;?>">
                               </div>
                            </div>
                            <div class="col-md-6">
@@ -259,13 +248,13 @@ $this->load->view('common/sidebar_second');
                                  <label>Mother's (or Guardian's) Name</label>
                                  <br>
                                  <input  name="MotherName" class="form-control" type="text"  
-                                 value="<?php echo $MotherName;?>">
+                                 value="<?php //echo $MotherName;?>">
                               </div>
                               <div class="form-group">
                                  <label>Mother's (or Guardian's) Profession</label>
                                  <br>
                                  <input name="MotherProfession" class="form-control" type="text" 
-                                  value="<?php echo $MotherProfession;?>">
+                                  value="<?php //echo $MotherProfession;?>">
                               </div>
                            </div>
                            <div class="col-md-12 margin-top-20" >
@@ -285,8 +274,8 @@ $this->load->view('common/sidebar_second');
                               <div id="option3" style="display: block;">
                               <!--1st-->
                               <?php
-                              if($StreamStatus=='Graduate')
-                              { 
+                              // if($StreamStatus=='Graduate')
+                              // { 
                               ?>
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -300,9 +289,9 @@ $this->load->view('common/sidebar_second');
                                           <div class="col-xs-7">
                                              <div class="form-group">
                                                 <label>Subject</label>
-                                                <input  name="ClassX" value="<?php echo $ClassX;?>" type="text" class="form-control">
-                                                <input  value="<?php echo $ClassXII;?>" name="ClassXII" type="text" class="form-control">
-                                                <input  value="<?php echo $College;?>" name="College" type="text" class="form-control">
+                                                <input  name="ClassX" value="<?php //echo $ClassX;?>" type="text" class="form-control">
+                                                <input  value="<?php //echo $ClassXII;?>" name="ClassXII" type="text" class="form-control">
+                                                <input  value="<?php //echo $College;?>" name="College" type="text" class="form-control">
                                                
                                                
                                              </div>
@@ -314,9 +303,9 @@ $this->load->view('common/sidebar_second');
                                      
                                  </div>
                                  <?php
-                                    }
-                                    else
-                                    {
+                                    // }
+                                    // else
+                                    // {
                                  ?>
 
                                  <!--2nd-->
@@ -336,20 +325,20 @@ $this->load->view('common/sidebar_second');
                                              <div class="form-group">
                                                 <label>Subject</label>
                                                 <?php 
-                                                foreach($subject as $subjectper)
-                                                {
+                                                // foreach($subject as $subjectper)
+                                                // {
                                                 ?>
                                                  
-                                                   <input type="text" <?php if($subjectper->YearStatus=='Current')
-                                                {
+                                                   <input type="text" <?php //if($subjectper->YearStatus=='Current')
+                                                //{
                                                 ?>
-                                                   value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
-                                                   <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
+                                                   value="<?php //echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
+                                                   <input type="hidden"  value="<?php //echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
                                                    <?php
-                                                } 
+                                                //} 
                                                 ?>
                                                 <?php 
-                                                }
+                                                //}
                                                 ?>
                                              </div>
                                           </div>
@@ -357,17 +346,17 @@ $this->load->view('common/sidebar_second');
                                              <div class="form-group">
                                                 <label>CGPA / %age</label>
                                                 <?php 
-                                                foreach($subject as $subjectper)
-                                                {
+                                                // foreach($subject as $subjectper)
+                                                // {
                                                 ?>
-                                                    <input type="text" <?php if($subjectper->YearStatus=='Current')
-                                                {
+                                                    <input type="text" <?php //if($subjectper->YearStatus=='Current')
+                                               // {
                                                 ?>
-                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
+                                                   value="<?php //echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
                                                    <?php
-                                                } 
+                                                // } 
                                                
-                                                }
+                                                // }
                                                 ?>
                                              </div>
                                              
@@ -386,10 +375,10 @@ $this->load->view('common/sidebar_second');
                                        </div> -->
                                                                                  
                                        <div>
-                                       <?php if($subjectper->YearStatus=='Current' && $subjectper->MarksheetImage!=''){   ?>
-                                          <a class="current_year_file_name" target="_blank"  href="<?php echo base_url(); ?>Upload/Marksheet/<?php echo $subjectper->MarksheetImage; ?>" style="font-size: 12px;text-decoration:underline;"><?php echo $subjectper->MarksheetImage?>
+                                       <?php //if($subjectper->YearStatus=='Current' && $subjectper->MarksheetImage!=''){   ?>
+                                          <a class="current_year_file_name" target="_blank"  href="<?php echo base_url(); ?>Upload/Marksheet/<?php //echo $subjectper->MarksheetImage; ?>" style="font-size: 12px;text-decoration:underline;"><?php //echo $subjectper->MarksheetImage?>
                                           </a>
-                                          <?php }
+                                          <?php //}
                                     ?>
                                        </div>
                                     </div>
@@ -404,19 +393,19 @@ $this->load->view('common/sidebar_second');
                                              <div class="form-group">
                                                 <label>Subject</label>
                                                 <?php
-                                                foreach($subject as $subjectper)
-                                                {  
+                                                // foreach($subject as $subjectper)
+                                                // {  
                                                 ?>
-                                                   <input type="text" <?php if($subjectper->YearStatus=='Last')
-                                                   {
+                                                   <input type="text" <?php //if($subjectper->YearStatus=='Last')
+                                                  // {
                                                    ?>
-                                                      value="<?php echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
-                                                      <input type="hidden"  value="<?php echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
+                                                      value="<?php //echo $subjectper->EducationSubjectName ?>"  name="EducationSubjectName[]"  class="form-control">
+                                                      <input type="hidden"  value="<?php //echo $subjectper->EducationSubjectId; ?>" name="EducationSubjectId[]">
                                                       <?php
-                                                   } 
+                                                  //} 
                                                    ?>
                                                 <?php
-                                                }
+                                                //}
                                                 ?>
                                              </div>
                                           </div>
@@ -424,19 +413,19 @@ $this->load->view('common/sidebar_second');
                                              <div class="form-group">
                                                 <label>CGPA / %age</label>
                                                 <?php
-                                                foreach($subject as $subjectper)
-                                                {
+                                                // foreach($subject as $subjectper)
+                                                // {
                                                 ?>
-                                                <input type="text" <?php if($subjectper->YearStatus=='Last')
-                                                {
+                                                <input type="text" <?php //if($subjectper->YearStatus=='Last')
+                                               // {
                                                 ?>
-                                                   value="<?php echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
+                                                   value="<?php //echo $subjectper->SubjectCgpa ?>"  name="SubjectCgpa[]"  class="form-control">
                                                    <?php
-                                                } 
+                                               // } 
                                                 ?>
                                                 
                                                 <?php
-                                                }
+                                               // }
                                                 ?>
                                              </div>
                                           </div>
@@ -456,14 +445,14 @@ $this->load->view('common/sidebar_second');
                                        <div>
                                       
                                        <a class="last_year_file_name" target="_blank" 
-                                       href="<?php echo base_url(); ?>Upload/Marksheet/<?php echo $subjectper->MarksheetImage?>" style="font-size: 12px;text-decoration:underline;"><?php echo $subjectper->MarksheetImage?></a>
+                                       href="<?php echo base_url(); ?>Upload/Marksheet/<?php //echo $subjectper->MarksheetImage?>" style="font-size: 12px;text-decoration:underline;"><?php //echo $subjectper->MarksheetImage?></a>
                                           
                                        </div>
                                        </div>
                                  </div>
 
                                 <?php
-                                    }
+                                   // }
                                 ?>
 
                               </div>

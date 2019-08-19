@@ -53,12 +53,12 @@
 	{
 		//echo "jhjhg";die;;
 		$CI =& get_instance();   
-                if($CI->session->userdata('UserId')!='')
+                if($CI->session->userdata('user_id')!='')
                 {
                     //check user active
-					$a_data = get_one_user($CI->session->userdata('UserId'));
+					$a_data = get_one_user($CI->session->userdata('user_id'));
 					//echo "<pre>";print_r($a_data);die;
-                    if($a_data->IsActive == '1'){
+                    if($a_data->status == 'Active'){
                      return true;
                     }
                     else{
@@ -74,7 +74,7 @@
 	function get_one_user($id)
 	{
 		$CI =& get_instance();
-		$query = $CI->db->get_where('tbluser',array('UserId'=>$id));
+		$query = $CI->db->get_where('tblusers',array('user_id'=>$id));
 		return $query->row();
 	}	
 	// --------------------------------------------------------------------
@@ -87,7 +87,7 @@
 	function get_authenticateadminID()
 	{		
 		$CI =& get_instance();
-		return $CI->session->userdata('UserId');
+		return $CI->session->userdata('user_id');
 	}
 	
 
@@ -128,6 +128,7 @@
 	 
 	function email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str)
 	{
+			
 			// echo "jhjh";die;
 	   // echo $email_address_from; 
 	   // echo $email_address_reply;
@@ -210,13 +211,13 @@
 		$CI->email->to($email_to);
 		$CI->email->subject($email_subject);
 		$CI->email->message($str);
-		$CI->email->send();
-		// if($CI->email->send()){
-		// 	//echo $CI->email->prin
-		//    echo "send"; die;
-		// }else{
-		// 		echo $CI->email->print_debugger();
-		// }
+		//$CI->email->send();
+		if($CI->email->send()){
+			//echo $CI->email->prin
+		   echo "send"; die;
+		}else{
+			echo $CI->email->print_debugger(); 
+		}
 	   //echo "<pre>"; print_r($CI->email->send()); die;
 
 	}
@@ -735,7 +736,9 @@
 	function insert_record($table,$data)
 	{
 	    $CI =& get_instance();
-	    return $CI->db->insert($table, $data);
+	     $res=$CI->db->insert($table, $data);
+
+	   echo $CI->db->last_query(); die;
 	}
 	 function insert_record_api($table,$data)
 	{
@@ -1298,10 +1301,10 @@
 		}
 	}
 
-	function getstandard($id){
+	function getassessment($id){
       	$CI =& get_instance();		
 	
-		$query = $CI->db->get_where("tblstandard",array('StreamTypeId'=>$id));
+		$query = $CI->db->get_where("tblassessment",array('assessment_id'=>$id));
 		//echo $CI->db->last_query();die;
 		if($query->num_rows() > 0)
 		{

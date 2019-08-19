@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$this->load->view('common/header');
+$this->load->view('common/css');
 ?>
 
 <link href="assets/prelogin_new/css/returning.css" type="text/css" rel="stylesheet">
@@ -74,7 +74,7 @@ $this->load->view('common/header');
                   echo form_open('home/reset_password/'.$code,$attributes); ?>
                   <div class="">
                      <span class="relative-span">
-                           <input type="hidden" value="<?php echo $UserId; ?>" name="UserId">
+                           <input type="hidden" value="<?php echo $user_id; ?>" name="user_id">
                            <input type="hidden" value="<?php echo $code; ?>" name="code">
                            <input name="Password" type='password' class="form-control" placeholder="Enter new password" id="password"/>
                            <p id="pwderror" class="pull-left"></p>
@@ -82,7 +82,7 @@ $this->load->view('common/header');
                   </div>
                   <div class="">
                      <span class="relative-span type-password">
-                           <input autocomplete="new-password"  name="ConfirmPassword"  type="password"  class="form-control" placeholder="Re-type password" />
+                           <input autocomplete="new-password"  name="confrim_password"  type="password"  class="form-control" placeholder="Re-type password" />
                            <p id="cpwderror" class="pull-left"></p>
                      </span>
                   </div>
@@ -107,7 +107,7 @@ $this->load->view('common/header');
 
 
 <?php 
- $this->load->view('common/footer');
+ $this->load->view('common/js');
 ?>
 <script>
 $(function() { 
@@ -130,7 +130,7 @@ $(function() {
         Password:{
             required: true,            
         },  
-        ConfirmPassword:{
+        confrim_password:{
             required: true,
             equalTo:"#password",
         },      

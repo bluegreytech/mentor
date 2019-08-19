@@ -66,7 +66,8 @@ $UserId=$this->session->userdata('UserId');
                                   <td  style="padding-left: 0;"> <i class="fa fa-calendar margin-right-5" aria-hidden="true"  style="width: 13px;float: left;font-size: 11px;margin-top: 3px;"></i><?php echo $DateofBirth?></td>
                                </tr>
                                <tr>
-                                 <td  style="padding-left: 0;"><i class="fa fa-user  margin-right-5" aria-hidden="true"  style="width: 15px;"></i><?php echo $Gender?></td>
+                                 <td  style="padding-left: 0;"><i class="fa fa-user  margin-right-5" aria-hidden="true"  style="width: 15px;">
+                                 </i><?php echo $Gender?></td>
                                </tr>
                              </tbody>
                            </table>
