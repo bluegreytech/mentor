@@ -39,3 +39,18 @@ ERROR - 2019-08-19 08:13:19 --> Undefined variable: UserId at line no 54 in C:\x
 ERROR - 2019-08-19 08:13:20 --> 404 Page Not Found: Default_2/js
 ERROR - 2019-08-19 08:13:21 --> 404 Page Not Found: Default_2/js
 ERROR - 2019-08-19 08:14:02 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:15:41 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:15:41 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:16:14 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:16:14 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:18:26 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:18:27 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:20:14 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:20:15 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:20:42 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:20:43 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:22:01 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:22:02 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:22:31 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
+ERROR - 2019-08-19 08:22:32 --> 404 Page Not Found: Default_2/js
+ERROR - 2019-08-19 08:22:44 --> Undefined variable: UserId at line no 54 in C:\xampp\htdocs\mentor\application\views\Dashboard\Editprofile.php
