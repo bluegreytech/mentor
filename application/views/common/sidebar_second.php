@@ -19,6 +19,7 @@
                         </p>
                         <p class="mobile-user-id" style="color: #888;font-size: 10px;margin-top: 3px;">User ID: 110892</span></p>
                      </div>
+
                   </li>
 
                   <li id="tour1"><a href="<?php echo base_url();?>home/dashboard" class="active"><span class="icon-home2 fa fa-home"></span><span class="nav-title">Dashboard</span></a>
@@ -41,5 +42,6 @@
                                  </ul>
             </div>
             <!-- sidebar menu end-->
+
          </div>
       </aside>
