@@ -1375,11 +1375,12 @@ label {
   margin: 0 auto;
   margin-bottom: 15px;
   border-radius: 50%;
-  padding: 3px;
+  padding: 0;
 }
 
 .fileupload-preview.fileupload-exists img {
-  width: 100%;
+  width: 100px;
+  height: 100px;
   max-height: none;
   border-radius: 50%;
 }

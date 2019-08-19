@@ -1138,9 +1138,12 @@ position: inherit;
 
   .fileupload-preview.fileupload-exists {
     width: 80px;
-    max-height: 80px;
+    height: 80px;
   }
-
+  .fileupload-preview.fileupload-exists img{
+    height: 80px;
+    width:80px;
+  }
   .my-tab-function .profile-tab-details h4 {
     margin-top: 5px;
     font-size: 14px;
