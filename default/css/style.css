@@ -1,51 +1,3 @@
-/*-----------------------------------------
- [MASTER STYLE SHEET]
- * Project: Education Master HTML Template
- * Version: v1.0
- * Copyright 2017-2020 rn53themes
- * Last Changes: 10 jan 2018
- * Author: RN53 Themes
- * Email:      rn53themes@gmail.com
- * Website:    http://www.rn53themes.net 
- -----------------------------------------------*/
-/*-------------------------------------------------
- =  Table of Css
-	All Pages Common CSS Styles
-	1.COLLEGE
-	2.MAIN MENU
-	3.HOME PAGE: PART ONE
-	4.HOME PAGE: COURSE 
-	5.HOME PAGE: EVENT
-	6.HOME PAGE: TAB AND ENQUIRY
-	7.SEARCH BOX
-	8.SLIDER
-	9.HOME PAGE: QUICK LINK 
-	10.TOP COURSES 
-	11.BOTTOM BOOKING 
-	12.BREADCRUM
-	13.COURSE DETAILS
-	14.USER DASHBOARD
-	15.FOOTER GALLERY AND BLOG
-	16.REGISTER LOGIN POPUPS 
-	17.REGISTER LOGIN POPUPS
-	18.STUDENT DASHBOARD 
-	19.STUDENT DASHBOARD - COURSES 
-	20.STUDENT DASHBOARD - TIME LINE 
-	21.MEGA MENU
-	22.SOCIAL MEDIA SHARE 
-	23.SOCIAL MEDIA SHARE
-	24.ABOUT US
-	25.AWARDS
-	26.ADMISSIONN
-	27.SEMINAR
-	28.EVENTS
-	29.CONTACT US
-	30.MOBILE MANU
--------------------------------------------------*/
-/*-------------------------------------------------*/
-/* =  1.All Pages Common CSS Styles
-/*-------------------------------------------------*/
-
 body{
      font-family: 'Open Sans', sans-serif;
      padding-right: 0px !important;
@@ -2464,7 +2416,7 @@ a:focus{
      */
     /* bottom: 0px;
      */
-     background: #fff;
+     background-color: #002147;
      width: 60%;
      margin: 0 auto;
      margin-top: 5%;
@@ -2472,7 +2424,7 @@ a:focus{
  .log-in-pop-left {
      float: left;
      width: 40%;
-     background: url('../images/login.jpg') #002147 no-repeat center center;
+     background-color: #002147;
      padding: 12.5% 6%;
      color: #fff;
      height: 100%;
@@ -2535,6 +2487,8 @@ a:focus{
  .log-in-pop-right {
      float: left;
      width: 60%;
+     background-color: #fff;
+     min-height: 490px;
      padding: 50px;
 }
  .log-in-pop-right h4 {
