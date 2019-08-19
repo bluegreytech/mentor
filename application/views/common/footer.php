@@ -142,7 +142,7 @@
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input type="password" class="validate" placeholder="Password" name="password" id="password"> 
+                                <input type="password" class="validate" placeholder="Password" name="password" id="register_password"> 
                             </div>
                         </div>
                         <div>

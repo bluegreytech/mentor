@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </ul>
                                 <ul>
                                     <h5>Budding Carrer Counsellors</h5>
-                                    <li><a href="mgccap-1-to-12.php">MGCCAP for Class 1<sup>st</sup> - 12<sup>th</sup> </a></li>
+                                    <li><a href="mgccap-1-to-12">MGCCAP for Class 1<sup>st</sup> - 12<sup>th</sup> </a></li>
                                     <li><a href="mgccap-undergraduates.php">MGCCAP for Undergraduate</a></li>
                                     <li><a href="mgccap-professionals.php">MGCCAP for Professionals</a></li>
                                 </ul>
@@ -71,7 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <h5><a href="<?php echo base_url()?>home/about_us">About Us</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/success">Success Stories</a></h5>
                                     <h5><a href="<?php echo base_url()?>Success/">Career Library</a></h5>
-                                    <h5><a href="<?php echo base_url()?>Success/">Blog</a></h5>
+                                    <h5><a href="<?php echo base_url()?>blog/">Blog</a></h5>
                                     <h5><a href="<?php echo base_url()?>Success/">Pricing</a></h5>
                                     <h5><a href="<?php echo base_url()?>Success/">Contact Us</a></h5>
                                     <h5><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></h5>
@@ -249,7 +249,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                               <div class="col-md-4">
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Class 1<sup>st</sup> - 12<sup>th</sup></h6>
                                                                   <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.<br>
-                                                                  <a href="mgccap-1-to-12.php">View More
+                                                                  <a href="<?php echo base_url()?>home/class_1_to_12">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
@@ -257,7 +257,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                               <div class="col-md-4">
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Undergraduate</h6>
                                                                   <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts.<br>
-                                                                  <a href="mgccap-undergraduates.php">View More
+                                                                  <a href="<?php echo base_url()?>home/mgccap_undergraduates">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
@@ -265,7 +265,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                               <div class="col-md-4">
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Professionals</h6>
                                                                   <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.<br>
-                                                                  <a href="mgccap-professionals.php">View More
+                                                                  <a href="<?php echo base_url()?>home/mgccap_professionals">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
@@ -276,7 +276,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                 <br>
                                                                 <strong>Mentor's Partnership Programs </strong>
                                                                  <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.<br>
-                                                                  <a href="mentor-partnership-program.php">View More
+                                                                  <a href="<?php echo base_url()?>home/mentor_partnership_program">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                 </p>

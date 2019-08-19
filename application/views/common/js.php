@@ -7,6 +7,7 @@
 
 
 <script>
+
 function openwtsapp() {
     document.getElementById("msg").style.visibility = "visible";
     document.getElementById("msg").style.left = "25px";
@@ -35,7 +36,7 @@ $("#registrationForm").validate(
         },
          repassword:{
            required: true,  
-           equalTo:'#password'       
+           equalTo:'#register_password'       
         },
         assessment:{
            required: true,  
