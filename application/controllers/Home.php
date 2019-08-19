@@ -132,17 +132,17 @@ class Home extends CI_Controller
 			}
 			if($_POST){			
 				$data["email"]      = $this->input->post('email');
-				$data["username"]   = $this->input->post('username');			
-				$data["phone"]      = $this->input->post('phone');
+				$data["username"]   = $this->input->post('Username');			
+				$data["phone"]      = $this->input->post('PhoneNumber');
 				$data["age"]        = $this->input->post('age');
 				$data["location"]   = $this->input->post('location');
 				
-                //$data['pre_profile_image']=$this->input->post('pre_profile_image');
+                $data['pre_profile_image']=$this->input->post('pre_profile_image');
 			
 			}else{
 			$oneUser=get_one_user(get_authenticateadminID());
 			//print_r($oneUser);die;
-			$data["user_id"] 	= $oneUser->email;
+			$data["user_id"] 	= $oneUser->user_id;
 			$data["email"] 	= $oneUser->email;
 			$data["username"] = $oneUser->username;
 			$data["phone"] = $oneUser->phone;
@@ -156,7 +156,7 @@ class Home extends CI_Controller
 			}
 		}else{
 			//echo "else fdf";die;
-              echo "<pre>";print_r($_POST);die;			
+            //  echo "<pre>";print_r($_POST);die;			
 			$res=$this->home_model->updateProfile();
 			$this->session->set_flashdata('successmsg', 'Profile has been updated successfully');	
 			redirect('home/profile');

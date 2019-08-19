@@ -27,7 +27,7 @@ $this->load->view('common/sidebar_second');
               <div class="tab-content clearfix">
                
 
-                  <form method="POST" action="<?php echo base_url();?>home/profile">
+                  <form method="POST" action="<?php echo base_url();?>home/profile" id="frm_profile">
                      <div class="row">
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
@@ -35,15 +35,15 @@ $this->load->view('common/sidebar_second');
                                     <img src="<?php echo base_url(); ?>default/images/a6.png" /> 
                                  </div>
                                  <div>
-                                 <input type="hidden"  value="<?php //echo $UserId; ?>" name="UserId">
+                             
                                     <span class="">
                                     <span class="fileupload-exists show-important">Select image</span>
-                                  
-                                     <input type="file" name="profile_image" value="<?php //echo $ProfileImage;?>"  class="default" /> 
+                                     <input type="hidden" class='form-control' name="pre_profile_image" id="pre_profile_image">
+                                     <input type="file" name="profile_image" value=""  class="default" /> 
                                     </span>
                                  </div>
 
-                                <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 500kb)</small>
+                                <small style="font-size:10px;display: block;color: #888;margin-top: 5px;">(upload png/jpeg, max 2 mb)</small>
                               </div>
                            </div>
 
@@ -51,7 +51,7 @@ $this->load->view('common/sidebar_second');
                               <div class="form-group height-min">
                                  <label>User Name</label>
                                  <br>
-                                 <input type="hidden"   value="<?php echo $UserId; ?>" name="UserId">
+                                 <input type="hidden"   value="<?php echo $user_id; ?>" name="user_id">
                                  <input name="Username" value="<?php echo $username;?>" class="form-control" type="text" minlength="3" maxlength="50" >
                               </div>
                              
@@ -161,21 +161,54 @@ $(function() {
 
 $(document).ready(function()
 {
-		$("#valid_forms").validate(
+  $.validator.addMethod('filesize', function (value, element, param) {
+  return this.optional(element) || (element.files[0].size <= param)
+  } ,'File size must be equal to or less then 2MB');
+		$("#frm_profile").validate(
 		{
+        ignore:[],
 			   rules:{
-
-                  FirstName:{
+                  Username:{
 								         required: true,
 										},	
-						},
+                    PhoneNumber:{
+                         required: true,
+                         digits:true,
+                         maxlength:12,
+                         minlength:8
 
-            messages: {
-                  FirstName: {
-						         required: "Please enter a name",
-										},
-						
-						}
+                    },  
+                    email:{
+                         required: true,
+                         email:true
+                    },  
+                    location:{
+                         required: true,
+                    },  
+                    choicecareerassess:{
+                         required: true,
+                    }, 
+                    current_stage:{
+                       required: true,
+                    },
+                    age:{
+                       required: true,
+                     },
+                    GalleryImages:
+                    {
+                        required:function(){
+                        galleryimage='<?php echo $GalleryImage; ?>';
+                        if(galleryimage){
+                          return false;
+                        }else{
+                          return true;
+                        }
+                      },
+                      extension: "JPG|jpeg|png|bmp",
+                      filesize: 2097152,  
+                      
+                    }, 
+						},
 				
 		});
 });
