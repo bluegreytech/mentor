@@ -55,8 +55,7 @@ class Login extends CI_Controller {
 		$this->load->view('common/login');
 			
     }
-	
-	public function logout()
+    public function logout()
 	{
 		
 			$this->session->sess_destroy();
@@ -64,6 +63,8 @@ class Login extends CI_Controller {
 	
 
 	}
+	
+	
 
 	
 }

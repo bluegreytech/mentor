@@ -115,11 +115,12 @@
 		$CI =& get_instance();
 		
                 
-                if($CI->session->userdata('UserId')!='')
+                if($CI->session->userdata('AdminId')!='')
                 {
                     //check user active
-                    $a_data = get_one_admin($CI->session->userdata('UserId'));
-                    if($a_data->IsActive == '1'){
+                    $a_data = get_one_admin($CI->session->userdata('AdminId'));
+                    //echo "<pre>";print_r($a_data);die;
+                    if($a_data->IsActive == 'Active'){
                      return true;
                     }
                     else{
@@ -136,7 +137,7 @@
 	function get_one_admin($id)
 	{
 		$CI =& get_instance();
-		$query = $CI->db->get_where('tbluser',array('UserId'=>$id));
+		$query = $CI->db->get_where('tbladmin',array('AdminId'=>$id));
 		return $query->row();
 	}	
 	// --------------------------------------------------------------------
@@ -149,7 +150,7 @@
 	function get_authenticateadminID()
 	{		
 		$CI =& get_instance();
-		return $CI->session->userdata('admin_id');
+		return $CI->session->userdata('AdminId');
 	}
 	
 	
@@ -199,7 +200,7 @@
 	  // echo $str;
 
 		$CI =& get_instance();
-		$query = $CI->db->get_where("email_setting",array('email_setting_id'=>1));
+		$query = $CI->db->get_where("tblemail_setting",array('email_setting_id'=>1));
 		$email_set=$query->row();
 		 			
 									
