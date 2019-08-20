@@ -3860,7 +3860,9 @@ a:focus{
 .head-2.partnership{
      background: url(../images/mentor-partnership.jpg)no-repeat;
 }
-
+.head-2.default{
+     background: #f26838;
+}
 
 @media(max-width: 768px){
 

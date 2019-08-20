@@ -21,7 +21,7 @@ $this->load->view('common/header');
                             <h3>PREVIEW</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup>$</sup>25</span>
+                                <span><sup><i class="fa fa-inr"></i></sup>25</span>
                             </div>
                             <div class="price-tag2">
                                 <span class="sty-span">Per</span>
@@ -45,7 +45,7 @@ $this->load->view('common/header');
                             <h3>LEARN</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup>$</sup>25</span>
+                                <span><sup><i class="fa fa-inr"></i></sup>25</span>
                             </div>
                             <div class="price-tag2">
                                 <span class="sty-span">Per</span>
@@ -69,7 +69,7 @@ $this->load->view('common/header');
                             <h3>EXPLORE</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup><i class="fa fa-rupee-sign"></i></sup>25</span>
+                                <span><sup><i class="fa fa-inr"></i></sup>25</span>
                             </div>
                             <div class="price-tag2">
                                 <span class="sty-span">Per</span>
