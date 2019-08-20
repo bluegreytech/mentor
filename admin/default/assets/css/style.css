@@ -828,6 +828,23 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
 	color: #ff0000ba;
 	
 }
+.label-info {
+    
+    background-color: #17a2b8;
+}
+.label-dark {
+    color: #fff;
+    background-color: #343a40;
+}
+.label-secondary {
+    
+    background-color: #6c757d;
+}
+.label-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
+  
 .label-danger {
     background-color: #d9534f;
 }

@@ -24,9 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = 'http://localhost/mentor/admin/';
-$config['base_url_site'] = 'http://localhost/mentor/admin/';
+$config['base_url_site'] = 'http://localhost/mentor/';
 $config['base_path']="C:/xampp/htdocs/mentor/admin";
-//echo base_url();
+//echo base_url_site(); die;
 
 
 /*
