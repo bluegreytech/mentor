@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Assessment</th>
-							
+							<th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -55,7 +55,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                       <td><?php echo $row->email; ?></td>
                                     <td><?php echo $row->phone; ?></td>
                                   
-                                    <td><?php echo $row->assessment; ?></td>
+                                    <td>
+                                        <?php if($row->assessment=="student"){ ?>
+                                        <?php echo  "<span class='label label-primary'> $row->assessment</span>"?>
+                                        <?php }else{ ?>
+                                        <span class="label label-warning"><?php echo $row->assessment; ?></span>
+                                        <?php 
+                                        } ?>
+
+                                        </td>
+                                    <td>
+                                        <?php if($row->status=="Active"){ ?>
+                                        <?php echo  "<span class='label label-success'> $row->status</span>"?>
+                                        <?php }else{?>
+                                        <span class="label label-danger"><?php echo $row->status; ?></span>
+                                        <?php 
+                                        } ?>
+                                    </td>
                                   
                                     <td>
                                         <?php echo anchor('student/edit_student/'.$row->user_id,'<i class="ficon icon-pencil2"></i>'); ?>

@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="card-body collapse in">
 					<div class="card-block">
 				
-						<form class="form" method="post" enctype="multipart/form-data" id="add_user" action="<?php echo base_url();?>student/edit_student">
+						<form class="form" method="post" enctype="multipart/form-data" id="add_user" action="<?php echo base_url();?>student/edit_student/<?php echo $user_id;?>">
 					
 							<div class="form-body">
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
@@ -74,18 +74,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 
 								<div class="form-group">
 									<label>Status</label>
-										<div class="input-group">								<label class="display-inline-block custom-control custom-radio ml-1">										<?php //echo $IsActive; ?>							<input type="radio" name="IsActive" value="Active"
+										<div class="input-group">								<label class="display-inline-block custom-control custom-radio ml-1">										<?php //echo $IsActive; ?>							<input type="radio" name="status" value="Active"
 											<?php if($status=="Active") { echo "checked"; } ?>
 											 class="custom-control-input">					
 											 <span class="custom-control-indicator"></span>
-											 <span class="custom-control-description ml-0">Active</span>										</label>										<label class="display-inline-block custom-control custom-radio">					<input type="radio" name="IsActive" value="Inactive"  <?php if($status=="Inactive") { echo "checked"; } ?> 
+											 <span class="custom-control-description ml-0">Active</span>										</label>										<label class="display-inline-block custom-control custom-radio">					<input type="radio" name="status" value="Inactive"  <?php if($status=="Inactive") { echo "checked"; } ?> 
 												class="custom-control-input">					<span class="custom-control-indicator"></span>										
 												<span class="custom-control-description ml-0">Inactive</span>								</label></div>
 											</div>
 									<?php } else { ?>
 									<div class="form-group">
-										<label>Status</label>									<div class="input-group">								<label class="display-inline-block custom-control custom-radio ml-1">							<input type="radio" name="IsActive" value="Active" checked="" class="custom-control-input">		
-										<span class="custom-control-indicator"></span>		<span class="custom-control-description ml-0">Active</span>	</label>										<label class="display-inline-block custom-control custom-radio">										<input type="radio" name="IsActive" value="Inactive"
+										<label>Status</label>									<div class="input-group">								<label class="display-inline-block custom-control custom-radio ml-1">							<input type="radio" name="status" value="Active" checked="" class="custom-control-input">		
+										<span class="custom-control-indicator"></span>		<span class="custom-control-description ml-0">Active</span>	</label>										<label class="display-inline-block custom-control custom-radio">										<input type="radio" name="status" value="Inactive"
 										class="custom-control-input">						
 										<span class="custom-control-indicator"></span>		<span class="custom-control-description ml-0">Inactive</span></label>
 										</div>
@@ -148,10 +148,10 @@ $(document).ready(function()
 						required:true,
 				}				
 				
-				// ProfileImage:{
-				// 	accept: "jpg|jpeg|png|bmp",
-				// 	filesize: 2097152  
-				// },
+				profile_image:{
+					accept: "jpg|jpeg|png|bmp",
+					filesize: 2097152  
+				},
 			 }, 
     });
 });

@@ -15,6 +15,7 @@ class Home extends CI_Controller {
 		if(!check_admin_authentication()){ 
 				redirect(base_url());
 			}
+			$data=array();
 		$this->load->view('common/dashboard');
 	}
 	public function profile()
