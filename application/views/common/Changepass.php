@@ -28,7 +28,7 @@ echo $UserId=$this->session->userdata('UserId');
                     <div class="row">
                      <div class="col-md-12 password-change">
 
-                        <form method="post" action="<?php echo base_url();?>home/change_password/<?php echo $UserId;?>" id="form_changepassword">
+                        <form method="post" action="<?php echo base_url();?>home/change_password" id="form_changepassword">
                          <div class="col-md-12">
                           <div style="border: 1px solid #e9e9e9;padding: 20px 10px;background: #fff;">
                               <div class="form-group height-min">
@@ -66,13 +66,20 @@ echo $UserId=$this->session->userdata('UserId');
 <script>
 $(document).ready(function()
 {
+
+  $(function() { 
+    setTimeout(function() {
+  $('#success').fadeOut('fast');
+}, 3000);
+   
+});
  
   $("#form_changepassword").validate(
   {
   rules: {
   old_password:{
     required: true,
-    //password_check:true,
+    password_check:true,
   },
   password:{
     required: true,
@@ -100,7 +107,7 @@ $.validator.addMethod("password_check", function(value, element) {
       }
     });
     if(response == 0) {
-      alert();
+     
       return false;
     } else if(response == 1) {
       return true;

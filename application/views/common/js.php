@@ -4,10 +4,27 @@
 <script src="<?php echo base_url(); ?>default/js/custom.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>default/js/jquery.validate.min.js"></script>
 <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
-
-
+ <!--  alertify css and js  start  -->
+ <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/alertify.rtl.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/default.rtl.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/semantic.rtl.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/bootstrap.rtl.min.css"/>
 <script>
-
+   alertify.set('notifier','position', 'top-left');
+ 
+  error='<?php echo $this->session->flashdata('error'); ?>';
+ 
+ if(error!=''){
+   alertify.error('<?php echo $this->session->flashdata('error'); ?>');
+ }
+ success='<?php echo $this->session->flashdata('success'); ?>';
+ 
+ if(success!=''){
+   alertify.success('<?php echo $this->session->flashdata('success'); ?>');
+ }
 function openwtsapp() {
     document.getElementById("msg").style.visibility = "visible";
     document.getElementById("msg").style.left = "25px";

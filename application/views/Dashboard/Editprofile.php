@@ -32,13 +32,13 @@ $this->load->view('common/sidebar_second');
                            <div class="col-md-3 text-center">
                               <div class="fileupload fileupload-new" data-provides="fileupload">
                                  <div class="fileupload-preview fileupload-exists thumbnail">
-                                    <img src="<?php echo base_url(); ?>default/images/a6.png" /> 
+                                    <img src="<?php echo base_url()?>upload/user/<?php echo  $profile_image;?>" /> 
                                  </div>
                                  <div>
                              
                                     <span class="">
                                     <span class="fileupload-exists show-important">Select image</span>
-                                     <input type="hidden" class='form-control' name="pre_profile_image" id="pre_profile_image">
+                                     <input type="hidden" class='form-control' name="pre_profile_image" id="pre_profile_image" value="<?php echo $profile_image; ?>">
                                      <input type="file" name="profile_image"  class="default" /> 
                                     </span>
                                  </div>
@@ -69,7 +69,7 @@ $this->load->view('common/sidebar_second');
                                <div class="form-group height-min">
                                  <label class="">Location</label>
                                  <br>
-                                 <input name="location" value="" class="form-control" type="text" value="<?php echo $location;?>">
+                                 <input  name="location"  class="form-control"  value="<?php echo $location ;?>">
                                     
                               </div>
                               <div class="form-group height-min">
@@ -81,7 +81,7 @@ $this->load->view('common/sidebar_second');
                                     <?php
                                     for($i = 5; $i<=75; $i++) {
                                    ?>
-                                    <option value="<?php echo $i ;?>" <?php if($age){ echo "selected";}?> ><?php echo $i ;?></option>
+                                    <option value="<?php echo $i ;?>" <?php if($age==$i){ echo "selected";}?> ><?php echo $i ;?></option>
                                    <?php  } ?>
                                 </select>
                               </div>
@@ -110,17 +110,18 @@ $this->load->view('common/sidebar_second');
                                <div class="form-group height-min">
                                 <div class="form-group">
                                  <label>My Current Stage</label>
-                                 <br>
+                                
                                 <select class="form-control" name="current_stage">
-                                  <option value="" disabled="" selected="">Please Select</option>
-                                  <option value="1" >I have no idea about my career </option>
-                                 <option value="2">I am confused  among various career options</option>
-                                 <option value="3">I am in search of  more information  about my career choice.</option>
-                                 <option value="4">I have Information but don't have a execution  plan</option>
-                                 <option value="5">I have a proper execution  plan for my career</option>
+                                    <option value="" disabled="" selected="">Please Select</option>
+                                    <option value="1" <?php if($current_stage=="1"){ echo "selected";}?>>I have no idea about my career </option>
+                                    <option value="2"  <?php if($current_stage=="2"){ echo "selected";}?>>I am confused  among various career options</option>
+                                    <option value="3"  <?php if($current_stage=="3"){ echo "selected";}?>>I am in search of  more information  about my career choice.</option>
+                                    <option value="4"  <?php if($current_stage=="4"){ echo "selected";}?>>I have Information but don't have a execution  plan</option>
+                                    <option value="5"  <?php if($current_stage=="5"){ echo "selected";}?>>I have a proper execution  plan for my career</option>
                                 </select>
                               </div>
                               </div>
+                              
                            </div>
                            
                            <input type="hidden" id="level" value="1" name="level">
@@ -193,11 +194,11 @@ $(document).ready(function()
                     age:{
                        required: true,
                      },
-                    GalleryImages:
+                    profile_image:
                     {
                         required:function(){
-                        galleryimage='<?php echo $GalleryImage; ?>';
-                        if(galleryimage){
+                        profile_image='<?php echo $profile_image; ?>';
+                        if(profile_image){
                           return false;
                         }else{
                           return true;
