@@ -20,7 +20,7 @@
                               ?>
                         <img src="<?php echo base_url(); ?>upload/user/<?php echo $user_profile->profile_image; ?>" style="margin-bottom: 10px;height: 75px;border-radius: 50px;">
                         <p>
-                           <span class="name"><?php echo $username; ?></span>
+                           <span class="name"><?php echo $user_profile->username; ?></span>
                         </p>
                         <p class="mobile-user-id" style="color: #888;font-size: 10px;margin-top: 3px;">User ID: 110892</span></p>
                      </div>
