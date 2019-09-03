@@ -57,7 +57,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <td><?php echo $row->subject; ?></td>
                                   
                                     <td>
-                                        <?php echo anchor('home/viewinquery/'.$row->inquery_id,'<i class="ficon icon-pencil2"></i>'); ?>
+                                        <?php echo anchor('home/viewinquery/'.$row->inquery_id,'<i class="ficon icon-eye"></i>'); ?>
                                         <a href="javascript:void(0)"  onclick="deletedata('<?php echo $row->inquery_id; ?>')" ><i class="ficon icon-bin"></i></a>    
                                     </td>  
                                 </tr>      
