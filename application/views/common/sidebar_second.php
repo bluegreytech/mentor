@@ -36,6 +36,8 @@
 
                   <li id="tour3"><a href="<?php echo base_url();?>Mytest" class="<?php echo ($activeTab == "Mytest") ? "active" : ""; ?>"><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Test</span></a>
                   </li>
+                    <li id="tour3"><a href="<?php echo base_url();?>" class=""><span class="icon-left fa fa-arrow-left"></span><span class="nav-title">Go to home</span></a>
+                  </li>
                 <!--   <li id="tour8"><a href="<?php //echo base_url();?>Matches" ><span class="icon-home2 fa  fa-briefcase"></span><span class="nav-title">My Matches</span></a></li>
                   <li><a href="<?php //echo base_url();?>Report" ><span class="icon-home2 fa fa-headphones "></span><span class="nav-title">My Report </span></a>
                   </li> -->
