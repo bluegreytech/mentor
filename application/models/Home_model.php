@@ -153,8 +153,8 @@ class Home_model extends CI_Model
                         
                      $this->load->library('email', $email_config);
                    
-                     $this->email->from("siya@yopmail.com", "siya");
-                     $this->email->to('binny@bluegreytech.co.in');
+                     $this->email->from("binny@bluegreytech.co.in", "Mentor Admin");
+                     $this->email->to( $email_to);
                      $this->email->subject($email_subject);
                      $this->email->message($str);
 
