@@ -468,12 +468,12 @@ input:focus ~ .bg-primary {
     background-color: transparent; }
 
 .btn-primary {
-  border-color: #3376AE;
-  background-color: #3376AE;
+  border-color: #bb342f;
+  background-color: #bb342f;
   color: #FFFFFF; }
   .btn-primary:hover {
-    border-color: #3B89CB;
-    background-color: #3B89CB;
+    border-color: #e42d27;
+    background-color: #e42d27;
     color: #FFF !important; }
 
 .btn-outline-primary {
@@ -481,7 +481,7 @@ input:focus ~ .bg-primary {
   background-color: transparent;
   color: #3376AE; }
   .btn-outline-primary:hover {
-    background-color: #3376AE;
+    background-color: #e42d27;
     color: #FFF !important; }
 
 .progress-primary[value]::-webkit-progress-value {

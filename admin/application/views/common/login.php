@@ -10,7 +10,7 @@
         <div class="card border-grey border-lighten-3 m-0">
             <div class="card-header no-border">
                 <div class="card-title text-xs-center">
-                    <div class="p-1"><img src="<?php echo base_url(); ?>default/images/logo/logo.png" alt="branding logo" width="70%"></div>
+                    <div class="p-1"><img src="<?php echo base_url(); ?>default/images/logo/logo.png" alt="branding logo"></div>
                 </div>
                 <h6 class="card-subtitle line-on-side text-muted text-xs-center font-small-3 pt-2"><span>Login with Mentor</span></h6>
             </div>
@@ -28,21 +28,23 @@
         <?php } ?>
                     <form class="form-horizontal form-simple" method="post"  href="<?php echo base_url()?>home/login" id="frm_login">
                         <fieldset class="form-group position-relative has-icon-left">
-                            <input type="text" name="EmailAddress" class="form-control " placeholder="Type your Email address">
+                            <input type="text" name="EmailAddress" class="form-control form-control-lg input-lg" placeholder="Type your Email address">
                             <div class="form-control-position">
                                 <i class="icon-head"></i>
                                <!--  <p id="emailerror"></p> -->
                             </div>
                         </fieldset>
                         <fieldset class="form-group position-relative has-icon-left">
-                            <input type="password"  name="Password" class="form-control "  placeholder="Type your password">
+                            <input type="password"  name="Password" class="form-control form-control-lg input-lg"  placeholder="Type your password">
                             <div class="form-control-position">
                                 <i class="icon-key3"></i>
                                  <!--  <p id="pwderror"></p> -->
                             </div>
                         </fieldset>
                        
-                        <input type="submit" name="logins" class="btn btnlogin btn-lg btn-block" value="LOGIN">
+
+                        <input type="submit" name="logins" class="btn btnlogin btn-primary btn-lg btn-block" value="Login">
+                        
                     </form>
                 </div>
             </div>
