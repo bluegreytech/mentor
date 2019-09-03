@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             
                                     <td><?php echo $i; ?></td>
                                     <td><?php echo $row->name; ?></td>
-                                    <td><?php echo $row->phhone; ?></td>
+                                    <td><?php echo $row->phone; ?></td>
                                     <td><?php echo $row->email; ?></td>
                                     <td><?php echo $row->subject; ?></td>
                                   
@@ -116,11 +116,14 @@ function deletedata(id){
            
                 url="<?php echo base_url();?>"
                 $.ajax({
-                url: url+"/Program/deletedata/",
+                url: url+"/home/deleteinquery/",
                 type: "post",
                 data: {id:id} ,
-                success: function (response) {             
-                document.location.href = url+'Program/Programlist/';                  
+                success: function (response) {  
+                    alert(response);
+                console.log(response);    
+                return false;       
+              //  document.location.href = url+'home/inquerylist';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {

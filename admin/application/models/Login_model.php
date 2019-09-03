@@ -342,6 +342,7 @@ class Login_model extends CI_Model
     //echo"ghgh";die;
     $this->db->select("*");
     $this->db->from(" tblinquery");
+    $this->db->where('Is_deleted','0');
     //$this->db->where("Admin_Type!=",'1');
     $r=$this->db->get();
     
@@ -349,6 +350,14 @@ class Login_model extends CI_Model
     $res = $r->result();
     return $res;
 
+  }
+ function getinquerydata($id){
+    $this->db->select("*");
+    $this->db->from("tblinquery");
+      $this->db->order_by("inquery_id",'Desc');
+    $this->db->where("inquery_id",$id);
+    $query=$this->db->get();
+    return $query->row_array();
   }
 
 
