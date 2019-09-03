@@ -8,6 +8,7 @@ class Home extends CI_Controller {
       	parent::__construct();
 		$this->load->model('login_model');
 		$this->load->model('admin_model');
+		$this->load->model('student_model');
       
     }
     public function dashboard()
@@ -17,7 +18,10 @@ class Home extends CI_Controller {
 				redirect(base_url());
 			}
 			$data=array();
-			$data['result']='';
+			$data['inquiry']=$this->login_model->getinquery();
+
+			$data['student']=$this->student_model->getstudent();
+			//echo "<pre>";print_r(count($data['student']));die;
 		$this->load->view('common/dashboard',$data);
 	}
 	public function profile()

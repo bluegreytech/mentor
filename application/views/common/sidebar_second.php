@@ -36,9 +36,9 @@
 
                   <li id="tour3"><a href="<?php echo base_url();?>Mytest" class="<?php echo ($activeTab == "Mytest") ? "active" : ""; ?>"><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Test</span></a>
                   </li>
-                  <li id="tour8"><a href="<?php echo base_url();?>Matches" ><span class="icon-home2 fa  fa-briefcase"></span><span class="nav-title">My Matches</span></a></li>
-                  <li><a href="<?php echo base_url();?>Report" ><span class="icon-home2 fa fa-headphones "></span><span class="nav-title">My Report </span></a>
-                  </li>
+                <!--   <li id="tour8"><a href="<?php //echo base_url();?>Matches" ><span class="icon-home2 fa  fa-briefcase"></span><span class="nav-title">My Matches</span></a></li>
+                  <li><a href="<?php //echo base_url();?>Report" ><span class="icon-home2 fa fa-headphones "></span><span class="nav-title">My Report </span></a>
+                  </li> -->
           
 
                   <li class="mobile-menu-link change-password" style="border-top:1px #e9e9e9 solid"><a href="javascript:void(0);"  data-toggle="modal" data-target="#modal-change-password" style="padding: 7px 20px;color: #888;">
