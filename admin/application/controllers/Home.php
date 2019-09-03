@@ -402,6 +402,38 @@ class Home extends CI_Controller {
 			echo 0;die;
 		}
 	}
+
+	function deleteinquery(){
+
+		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}else{
+
+			$data= array('Is_deleted'=>'1');
+			$id=$this->input->post('id');
+			$this->db->where("inquery_id",$id);
+			$res=$this->db->update('tblinquery',$data);
+			//echo $this->db->last_query(); die;
+			echo json_encode($res);
+			die;
+		}
+	}
+	function viewinquery($inqueryid){
+			if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}else{
+			$data=array();
+			$result=$this->login_model->getinquerydata($inqueryid);	
+			$data['redirect_page']='inquerylist';
+			$data['name']=$result['name'];
+			$data['phone']=$result['phone'];	
+			$data['email']=$result['email'];	
+			$data['subject']=$result['subject'];
+			$data['create_date']=$result['create_date'];
+					
+			$this->load->view('Inquery/viewinquery',$data);	
+		}
+	}
    
 	
 }
