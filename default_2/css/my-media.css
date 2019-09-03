@@ -895,6 +895,9 @@ position: inherit;
     right: 0;
     width: 60px;
   }
+  .top-nav .navbar-nav li.dropdown {
+    padding:8px;
+  }
 
   #blue-scheme .sidebar-toggle-box {
     display: block!important;
