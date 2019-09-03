@@ -39,16 +39,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   <h4><a href="#">Programs</a></h4>
                                 <ul>
                                     <h5>Career Counselling Programs for Students</h5>
-                                    <li><a href="class-2-to-7.php">Career Counselling for Class 2<sup>nd</sup> - 7<sup>th</sup></a></li>
-                                    <li><a href="class-8.php">Career Counselling for Class 8<sup>th</sup></a></li>
-                                    <li><a href="class-9-to-10.php">Career Counselling for Class 9<sup>th</sup> - 10<sup>th</sup></a></a></li>
-                                    <li><a href="class-11-to-12.php">Career Counselling for Class 11<sup>th</sup> - 12<sup>th</sup></a></a></li>
+                                    <li><a href="<?php echo base_url()?>home/class_2_to_7">Career Counselling for Class 2<sup>nd</sup> - 7<sup>th</sup></a></li>
+                                    <li><a href="<?php echo base_url()?>home/class_8">Career Counselling for Class 8<sup>th</sup></a></li>
+                                    <li><a href="<?php echo base_url()?>home/class_9_to_10">Career Counselling for Class 9<sup>th</sup> - 10<sup>th</sup></a></a></li>
+                                    <li><a href="<?php echo base_url()?>home/class_11_to_12">Career Counselling for Class 11<sup>th</sup> - 12<sup>th</sup></a></a></li>
                                 </ul>
                                 <hr>
                                 <ul>
                                     <h5>Career Counselling Programs for Graduates/Professionals</h5>
-                                    <li><a href="graduates.php">Career Counselling for Class Graduates</a></li>
-                                    <li><a href="professionals.php">Career Counselling for Class Professionals</a></li>
+                                    <li><a href="<?php echo base_url()?>home/Graduates">Career Counselling for Class Graduates</a></li>
+                                    <li><a href="<?php echo base_url()?>home/Professionals">Career Counselling for Class Professionals</a></li>
                                 </ul>
                                 <ul>
                                     <h5>Overseas Appliation Programs</h5>
@@ -60,23 +60,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </ul>
                                 <ul>
                                     <h5>Budding Carrer Counsellors</h5>
-                                    <li><a href="mgccap-1-to-12">MGCCAP for Class 1<sup>st</sup> - 12<sup>th</sup> </a></li>
-                                    <li><a href="mgccap-undergraduates.php">MGCCAP for Undergraduate</a></li>
-                                    <li><a href="mgccap-professionals.php">MGCCAP for Professionals</a></li>
+                                    <li><a href="<?php echo base_url();?>home/class_1_to_12">MGCCAP for Class 1<sup>st</sup> - 12<sup>th</sup> </a></li>
+                                    <li><a href="<?php echo base_url();?>home/mgccap_undergraduates">MGCCAP for Undergraduate</a></li>
+                                    <li><a href="<?php echo base_url();?>home/mgccap_professionals">MGCCAP for Professionals</a></li>
                                 </ul>
                                 <ul>
                                     <h5>Mentor's Partnership Programs</h5>
-                                    <li><a href="mentor-partnership-program.php">Mentor's Partnership Programs</a></li>
+                                    <li><a href="<?php echo base_url();?>home/mentor_partnership_program">Mentor's Partnership Programs</a></li>
                                 </ul>
                                 </div>
                                 <div class="col-md-6" style="width: 40%;">
                                     <h4><a href="#">Resources</a></h4>
                                     <h5><a href="<?php echo base_url()?>home/about_us">About Us</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/success">Success Stories</a></h5>
-                                    <h5><a href="<?php echo base_url()?>Success/">Career Library</a></h5>
-                                    <h5><a href="<?php echo base_url()?>blog/">Blog</a></h5>
-                                    <h5><a href="<?php echo base_url()?>Success/">Pricing</a></h5>
-                                    <h5><a href="<?php echo base_url()?>Success/">Contact Us</a></h5>
+                                    <h5><a href="#">Career Library</a></h5>
+                                    <h5><a href="<?php echo base_url()?>home/blog/">Blog</a></h5>
+                                    <h5><a href="<?php echo base_url()?>home/pricing_plan/">Pricing</a></h5>
+                                    <h5><a href="<?php echo base_url()?>home/contact_us/">Contact Us</a></h5>
                                       
                                     <?php if(check_user_authentication()){   ?>
                                       <h5><a href="<?php echo base_url()?>/home/profile" >My Profile</a></h5>

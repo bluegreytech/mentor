@@ -134,7 +134,7 @@ class Home_model extends CI_Model
                     $email_message=str_replace('{email}',$email,$email_message);
                     $email_message=str_replace('{reset_link}',$login_link,$email_message);
                     $str=$email_message; 
-                 //   echo "<pre>";print_r($str);die;
+                    echo "<pre>";print_r($str);die;
                      $email_config = Array(
                     'protocol'  => 'smtp',
                     'smtp_host' => 'ssl://smtp.gmail.com',
