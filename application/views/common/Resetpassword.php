@@ -63,12 +63,12 @@ $this->load->view('common/css');
                             <div class="input-field s12">
                                 <input type="hidden" value="<?php echo $user_id; ?>" name="user_id">
                            <input type="hidden" value="<?php echo $code; ?>" name="code">
-                           <input name="Password" type='password' class="custom" placeholder="Enter new password" id="password"/>
+                           <input name="Password" type='password' class="custom " placeholder="Enter new password" id="password"/>
                            <p id="pwderror" class="pull-left"></p>
                             </div>
                         </div>
                         <div>
-                            <div class="input-field s12">
+                            <div class="input-field s12 pull-left">
                                 <input autocomplete="new-password"  name="confrim_password"  type="password"  class="custom" placeholder="Re-type password" />
                            <p id="cpwderror" class="pull-left"></p>
                             </div>
