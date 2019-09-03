@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en" data-textdirection="ltr" class="loading">
   
@@ -11,7 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <title>Mentor</title>
+    <title>Mentor Admin</title>
     <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url(); ?>default/images/ico/apple-icon-60.png">
     <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(); ?>default/images/ico/apple-icon-76.png">
     <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(); ?>default/images/ico/apple-icon-120.png">
@@ -64,7 +62,7 @@
                                       <div class="navbar-header">
                                         <ul class="nav navbar-nav">
                                           <li class="nav-item mobile-menu hidden-md-up float-xs-left"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5 font-large-1"></i></a></li>
-                                          <li class="nav-item"><a class="navbar-brand nav-link"><img alt="branding logo" src="<?php echo base_url(); ?>default/images/logo/logo-blue.png" data-expand="<?php echo base_url(); ?>default/images/logo/logo-blue.png" data-collapse="<?php echo base_url(); ?>default/images/logo/logo-blue.png" class="brand-logo" style="width: 200px; "></a></li>
+                                          <li class="nav-item"><a class="navbar-brand nav-link"><img alt="branding logo" src="<?php echo base_url(); ?>default/images/logo/logo.png" data-expand="<?php echo base_url(); ?>default/images/logo/logo.png" data-collapse="<?php echo base_url(); ?>default/images/logo/logo.png" class="brand-logo" style="width: 200px; "></a></li>
                                           <li class="nav-item hidden-md-up float-xs-right"><a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container"><i class="icon-ellipsis pe-2x icon-icon-rotate-right-right"></i></a></li>
                                         </ul>
                                       </div>
