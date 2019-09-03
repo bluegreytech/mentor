@@ -24,15 +24,18 @@
     <link href="<?php echo base_url(); ?>default/css/slider.css" rel="stylesheet" />
     <script src="<?php echo base_url(); ?>default/js/jssor.slider-27.5.0.min.js"></script>
     <script src="<?php echo base_url(); ?>default/js/slider.js"></script>   
-   <!--  alertify css and js  start  -->
-    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/alertify.min.css"/>
+   <!-- CSS -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/alertify.min.css"/>
     <!-- Default theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/default.min.css"/>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/default.min.css"/>
     <!-- Semantic UI theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/semantic.min.css"/>
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/bootstrap.min.css"/>
-     <!--  alertify css and js  start  -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/semantic.min.css"/>
+    <!--  alertify css and js  start  -->
+    <!--  alertify css and js  start  -->
+     <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/alertify.rtl.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/default.rtl.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/semantic.rtl.min.css"/>
+
 </head>

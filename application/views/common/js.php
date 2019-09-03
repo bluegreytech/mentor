@@ -3,17 +3,12 @@
 <script src="<?php echo base_url(); ?>default/js/materialize.min.js"></script>
 <script src="<?php echo base_url(); ?>default/js/custom.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>default/js/jquery.validate.min.js"></script>
-<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+<script src="<?php echo base_url(); ?>default/js/additional-methods.min.js"></script>
  <!--  alertify css and js  start  -->
- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/alertify.rtl.min.css"/>
-<!-- Default theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/default.rtl.min.css"/>
-<!-- Semantic UI theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/semantic.rtl.min.css"/>
-<!-- Bootstrap theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/themes/bootstrap.rtl.min.css"/>
+<script src="<?php echo base_url(); ?>default/js/alertify.min.js"></script>
+    
 <script>
-   alertify.set('notifier','position', 'top-left');
+   alertify.set('notifier','position', 'top-center');
  
   error='<?php echo $this->session->flashdata('error'); ?>';
  
