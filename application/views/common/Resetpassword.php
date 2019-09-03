@@ -64,15 +64,16 @@ $this->load->view('common/css');
                                 <input type="hidden" value="<?php echo $user_id; ?>" name="user_id">
                            <input type="hidden" value="<?php echo $code; ?>" name="code">
                            <input name="Password" type='password' class="custom " placeholder="Enter new password" id="password"/>
-                           <p id="pwderror" class="pull-left"></p>
+                           <p id="pwderror"></p>
                             </div>
                         </div>
                         <div>
-                            <div class="input-field s12 pull-left">
-                                <input autocomplete="new-password"  name="confrim_password"  type="password"  class="custom" placeholder="Re-type password" />
-                           <p id="cpwderror" class="pull-left"></p>
+                            <div class="input-field s12 ">
+                                <input autocomplete="new-password"  name="confrim_password"  type="password"  class="custom" placeholder="Re-type password" >
+                                <p id="cpwderror"></p>
                             </div>
                         </div>
+                        <br>
                         <div>
                             <div class="input-field s4">
                                 <i class="waves-effect waves-light log-in-btn waves-input-wrapper" style=""><input type="submit" value="Submit" class="waves-button-input" name="logins" id="login-btn"></i> </div>
