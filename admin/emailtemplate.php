@@ -36,7 +36,7 @@
             </tr>
             <tr>
                <td><p><span>Regard,</span></p>
-               <p><span>TogehterMentor</span></p></td>
+               <p><span>Together Mentor</span></p></td>
             </tr>
            <tr>
                 <td style="background: linear-gradient(to right, #b31217, #e52d27);"><p style="color: #fff; text-align: center;">Copyright © <span>{year}</span> Together Mentor . All Rights Reserved</p></td>
