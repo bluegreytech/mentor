@@ -6083,8 +6083,12 @@ padding: 6px 25px;
      padding: 0px 22px;
 }
 @-moz-document url-prefix() {
+    
     #exTab3 ul.nav.nav-tabs li a{
      padding: 0px 18px;
+     }
+   #exTab2 ul.nav.nav-tabs li a{
+     padding: 20px 32px;
      }
 }
 #exTab3 ul.nav.nav-tabs li.active a{
