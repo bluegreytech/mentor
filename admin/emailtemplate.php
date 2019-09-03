@@ -30,7 +30,7 @@
             <tr >
                <td><p>We were told that you forgot your password on {username}.</p>
                 
-                <p>To reeset your password,please click this link: <a>{reset_link}</a></p>
+                <p>To reset your password,please click this link: <a>{reset_link}</a></p>
                 
                </td>
             </tr>
@@ -39,7 +39,7 @@
                <p><span>TogehterMentor</span></p></td>
             </tr>
            <tr>
-                <td style="background: linear-gradient(to right, #b31217, #e52d27);"><p style="color: #fff; text-align: center;">Copyright © <span>{year}</span> Mentor . All Rights Reserved</p></td>
+                <td style="background: linear-gradient(to right, #b31217, #e52d27);"><p style="color: #fff; text-align: center;">Copyright © <span>{year}</span> Together Mentor . All Rights Reserved</p></td>
               
             </tr>
            
