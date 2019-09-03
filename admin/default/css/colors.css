@@ -113,11 +113,13 @@ input:focus ~ .bg-white {
     background-color: transparent; }
 
 .btn-black {
-  border-color: #000000;
-  background-color: #000000;
+  border-color: #bb342f;
+  background-color: #bb342f;
   color: #FFFFFF; }
   .btn-black:hover {
-    color: #FFF !important; }
+    color: #FFF !important;
+    background-color: #e42d27!important;
+    border-color: #e42d27; }
 
 .btn-outline-black {
   border-color: #000000;
@@ -468,12 +470,12 @@ input:focus ~ .bg-primary {
     background-color: transparent; }
 
 .btn-primary {
-  border-color: #3376AE;
-  background-color: #3376AE;
+  border-color: #bb342f;
+  background-color: #bb342f;
   color: #FFFFFF; }
   .btn-primary:hover {
-    border-color: #3B89CB;
-    background-color: #3B89CB;
+    border-color: #e42d27;
+    background-color: #e42d27;
     color: #FFF !important; }
 
 .btn-outline-primary {
@@ -481,7 +483,7 @@ input:focus ~ .bg-primary {
   background-color: transparent;
   color: #3376AE; }
   .btn-outline-primary:hover {
-    background-color: #3376AE;
+    background-color: #e42d27;
     color: #FFF !important; }
 
 .progress-primary[value]::-webkit-progress-value {
@@ -4941,10 +4943,10 @@ input:focus ~ .bg-red {
   background: rgba(213, 0, 0, 0.8); }
 
 .pink.lighten-5 {
-  color: #FCE4EC !important; }
+  color: #bb342f !important }
 
 .bg-pink.bg-lighten-5 {
-  background-color: #FCE4EC !important; }
+  background-color: #bb342f !important }
 
 .btn-pink.btn-lighten-5 {
   border-color: #FCE4EC !important;
@@ -4996,10 +4998,10 @@ input:focus ~ .bg-pink {
   background: rgba(252, 228, 236, 0.8); }
 
 .pink.lighten-4 {
-  color: #F8BBD0 !important; }
+  color: #bb342f !important }
 
 .bg-pink.bg-lighten-4 {
-  background-color: #F8BBD0 !important; }
+  background-color: #bb342f !important }
 
 .btn-pink.btn-lighten-4 {
   border-color: #F8BBD0 !important;
@@ -5051,10 +5053,10 @@ input:focus ~ .bg-pink {
   background: rgba(248, 187, 208, 0.8); }
 
 .pink.lighten-3 {
-  color: #F48FB1 !important; }
+  color: #bb342f !important }
 
 .bg-pink.bg-lighten-3 {
-  background-color: #F48FB1 !important; }
+  background-color: #bb342f !important }
 
 .btn-pink.btn-lighten-3 {
   border-color: #F48FB1 !important;
@@ -5216,10 +5218,10 @@ input:focus ~ .bg-pink {
   background: rgba(236, 64, 122, 0.8); }
 
 .pink {
-  color: #E91E63 !important; }
+  color: #bb342f !important }
 
 .bg-pink {
-  background-color: #E91E63 !important; }
+  background-color: #bb342f !important }
   .bg-pink .card-header, .bg-pink .card-footer {
     background-color: transparent; }
 
