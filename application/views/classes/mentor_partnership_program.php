@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
 ?>
   <section>
-        <div class="head-2">
+        <div class="head-2 partnership">
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                 	<div class="col-md-12">
-                    <h1 class="mgccap">Mentor's Partnership Program</h1>
+                    <h1>Mentor's Partnership Program</h1>
                     <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.</div>
                 </div>
             </div>

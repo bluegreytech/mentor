@@ -9,6 +9,7 @@ $this->load->view('common/header');
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                     <h1>Career Counselling Programs for Graduates</h1>
+                    <a  href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1 asets-btn" data-events="auto" data-display="block">Start Assessment </a>
                     <!--p>Nurturing Minds</p-->
                 </div>
             </div>
@@ -58,7 +59,7 @@ $this->load->view('common/header');
                                               <li>Bringing your passions and hobbies on the table.</li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/2.jpg" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/programs/pre-counseling.png" class="img-responsive"></div>
                                         
                                     </div>
                                 </div>
@@ -66,7 +67,7 @@ $this->load->view('common/header');
                             <div class="item">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/2.jpg" class="img-responsive"></div>
+                                        <<div class="col-md-6"><img src="<?php echo base_url()?>default/images/programs/career-assesment-test.png" class="img-responsive"></div>
                                         <div class="col-md-6">
                                             <h4>Scientific Career Assessment and Evaluation. </h4>
                                             <ul>
@@ -89,7 +90,7 @@ $this->load->view('common/header');
                                               <li>Hand-holding until the successful establishment of Career. </li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/2.jpg" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/programs/post-counseling.png" class="img-responsive"></div>
                                         
                                     </div>
                                 </div>
@@ -133,7 +134,7 @@ $this->load->view('common/header');
                             <h3>PREVIEW</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup>$</sup>25</span>
+                                <span><sup><i class="fa fa-inr"></i> </sup>25</span>
                             </div>
                             <div class="price-tag2">
                                 <span class="sty-span">Per</span>
@@ -157,7 +158,7 @@ $this->load->view('common/header');
                             <h3>LEARN</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup>$</sup>25</span>
+                                <span><sup><i class="fa fa-inr"></i> </sup>25</span>
                             </div>
                             <div class="price-tag2">
                                 <span class="sty-span">Per</span>
@@ -181,7 +182,7 @@ $this->load->view('common/header');
                             <h3>EXPLORE</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup>$</sup>25</span>
+                                <span><sup><i class="fa fa-inr"></i> </sup>25</span>
                             </div>
                             <div class="price-tag2">
                                 <span class="sty-span">Per</span>

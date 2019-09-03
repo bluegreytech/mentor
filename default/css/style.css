@@ -3810,7 +3810,7 @@ a:focus{
 }
  .head-2-inn p{
      color: #ffffff;
-    font-size: 14px;
+    font-size: 18px;
 }
  .event-head-sub{
      display: inline-block;
@@ -3854,9 +3854,14 @@ a:focus{
 .head-2.std11{
      background: url(../images/class9.jpg)no-repeat;
 }
-
 .head-2.graduates{
      background: url(../images/graduates.jpg)no-repeat;
+}
+.head-2.partnership{
+     background: url(../images/mentor-partnership.jpg)no-repeat;
+}
+.head-2.default{
+     background: #f26838;
 }
 
 @media(max-width: 768px){
@@ -3865,6 +3870,10 @@ a:focus{
      padding: 64px 0px 28px 0px;
      background-position: 100% top;
      background-attachment: fixed;
+}
+.head-2-inn p{
+     color: #ffffff;
+    font-size: 13px;
 }
 .head-2.std2{
      background: url(../images/bin-mob.jpg)no-repeat;

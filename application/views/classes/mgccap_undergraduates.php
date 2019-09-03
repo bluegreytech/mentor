@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
 ?>
   <section>
-        <div class="head-2">
+        <div class="head-2 default">
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                 	<div class="col-md-12">
