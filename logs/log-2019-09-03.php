@@ -139,3 +139,17 @@ $(function() {
 
 </script>
 ERROR - 2019-09-03 12:35:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-03 12:38:41 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:38:42 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-03 12:38:48 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:39:40 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:50:38 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-03 12:50:38 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:50:48 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:50:59 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() at line no 1902 in C:\xampp\htdocs\mentor\system\libraries\Email.php
+ERROR - 2019-09-03 12:51:02 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-03 12:51:02 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:52:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-03 12:52:00 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-03 12:53:14 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() at line no 1902 in C:\xampp\htdocs\mentor\system\libraries\Email.php
+ERROR - 2019-09-03 12:53:58 --> mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set() at line no 1902 in C:\xampp\htdocs\mentor\system\libraries\Email.php

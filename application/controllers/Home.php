@@ -54,7 +54,7 @@ class Home extends CI_Controller
 			//	echo "else bhi ";die; 
 				$this->home_model->user_insert();
 					
-				$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
+				$this->session->set_flashdata('success', 'Registration has been confrim Succesfully!');
 				redirect('home');
 	
 			}
@@ -402,7 +402,7 @@ class Home extends CI_Controller
 			}
 		}else{
 			//echo "fgfg";die;
-			$this->session->set_flashdata('success', 'Message has been updated successfully');
+			$this->session->set_flashdata('success', 'Message has been send successfully');
 			$this->home_model->insertcontact();
 			redirect('home/contact_us');
 		}
