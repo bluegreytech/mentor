@@ -5,12 +5,12 @@ $this->load->view('common/css');
 <link href="assets/prelogin_new/css/returning.css" type="text/css" rel="stylesheet">
 
 <section>
-    <div class="ad-log-main">
-      <div class="ad-log-in">
-        <div class="ad-log-in-logo">
-          <a href="#"><img src="images/logo.png" alt=""></a>
-        </div>
-                  <div id="emailError" style="
+		<div class="ad-log-main">
+			<div class="ad-log-in">
+				<div class="ad-log-in-logo">
+					<a href="index.html"><img src="images/logo.png" alt=""></a>
+				</div>
+                            <div id="emailError" style="
                   width: 100%;
                   padding: 15px;
                   position: absolute;
@@ -37,8 +37,8 @@ $this->load->view('common/css');
                      padding: 2px 10px;
                      margin-top: 10px;    display: inline-block;  font-size: 12px;">Create Account</a></p>
                </div>
-        <div class="ad-log-in-con">
-      <div>
+				<div class="ad-log-in-con">
+			<div class="log-in-pop-right">
                     <h4>Forgot Password</h4>
                     <?php if($this->session->flashdata('error')){ ?>
                      <div class="alert alert-danger" id="errorMessage">
@@ -63,13 +63,13 @@ $this->load->view('common/css');
                             <div class="input-field s12">
                                 <input type="hidden" value="<?php echo $user_id; ?>" name="user_id">
                            <input type="hidden" value="<?php echo $code; ?>" name="code">
-                           <input name="Password" type='password' class="custom" placeholder="Enter new password" id="password"/>
+                           <input name="Password" type='password' class="form-control" placeholder="Enter new password" id="password"/>
                            <p id="pwderror" class="pull-left"></p>
                             </div>
                         </div>
                         <div>
                             <div class="input-field s12">
-                                <input autocomplete="new-password"  name="confrim_password"  type="password"  class="custom" placeholder="Re-type password" />
+                                <input autocomplete="new-password"  name="confrim_password"  type="password"  class="form-control" placeholder="Re-type password" />
                            <p id="cpwderror" class="pull-left"></p>
                             </div>
                         </div>
@@ -78,13 +78,13 @@ $this->load->view('common/css');
                                 <i class="waves-effect waves-light log-in-btn waves-input-wrapper" style=""><input type="submit" value="Submit" class="waves-button-input" name="logins" id="login-btn"></i> </div>
                         </div>
                         <div>
-                            <div class="input-field s12"> <a href="<?php echo base_url()?>home">Back to Home</a></div>
+                            <div class="input-field s12"> <a href="href="<?php echo base_url()?>home/login"">Back to login</a> | <a href="<?php echo base_url()?>home/register">Create a new account</a> </div>
                         </div>
                     </form>
                 </div>
-        </div>
-      </div>
-    </div>
+				</div>
+			</div>
+		</div>
    </section>
 
 <?php 
