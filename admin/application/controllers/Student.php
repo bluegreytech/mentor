@@ -65,7 +65,7 @@ class Student extends CI_Controller {
 			$data['assessment']=$result["assessment"];
 			$data['status']=$result["status"];
 			$data['profile_image']=$result["profile_image"];
-			$data['redirect_page']="studentlist";
+			
 
 			}
 		}else{
@@ -74,8 +74,7 @@ class Student extends CI_Controller {
 			$res=$this->student_model->updateStudent();
 			redirect('student/studentlist/');
 		}
-	//	echo front_base_url();die;
-		//echo "<pre>";print_r($data);die;
+		$data['redirect_page']="studentlist";
         $this->load->view('student/studentadd',$data);    
             
     }

@@ -8,6 +8,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <div class="app-content content container-fluid">
     <div class="content-wrapper">
+           <?php if(($this->session->flashdata('success'))){ ?>
+        <div class="alert alert-success" id="successMessage">
+        <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
+        </div>
+      <?php } ?>
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
@@ -15,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="media">
                             <div class="media-body text-xs-left">
                                 <h3 class="pink"><?php //echo Count($result);?></h3>
-                                <span>Today B'day Date</span>
+                                <span>Total Payment</span>
                             </div>
                             <div class="media-right media-middle">
                                 <i class="icon-gift pink font-large-2 float-xs-right"></i>
@@ -68,73 +73,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="col-md-12">
      
        <?php //echo $this->session->flashdata('success');?>
-       <?php if(($this->session->flashdata('success'))){ ?>
-        <div class="alert alert-success" id="successMessage">
-        <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
-        </div>
-      <?php } ?>
+    
       
        
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">List of B'day User
-                <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-
-             
-                </h4>
-            </div>
-            <div class="card-body collapse in">
-                <div class="table-responsive">
-                    <table id="example" class="table">
-                        <thead class="thead-inverse">
-                            <tr>
-                                <th>Sr No</th>
-                                <th>Name</th>
-                                <th>Email Address</th>
-                                <th>Contact Number</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                         <tbody>
-                        <?php
-                                $i=1;
-                                if($result){                             
-                                foreach($result as $row)
-                                {
-                            ?>
-                            <tr>
-                            
-                                    <td><?php echo $i; ?></td>
-                                    <td><?php echo $row->FullName; ?></td>
-                                    <td><?php echo $row->EmailAddress; ?></td>
-                                    <td><?php echo $row->UserContact; ?></td>
-                                    <td>
-                                        <?php if($row->IsActive=="Active")
-                                            {
-                                                echo "<span class='label label-success'>Active</span>";
-                                            } 
-                                            else
-                                            {
-                                                echo "<span class='label label-danger'>Inactive</span>";
-                                            } 
-                                        ?>
-                                    </td>
-                                    <td>
-                                        <?php echo anchor('User/Edituser/'.$row->UsersId,'<i class="ficon icon-pencil2"></i>'); ?>
-                                        <a href="javascript:void(0)"  onclick="deletedata('<?php echo $row->UsersId; ?>')" ><i class="ficon icon-bin"></i></a>    
-                                    </td>  
-                                </tr>      
-                                <?php
-                                $i++;
-                                    } }
-                                ?>           
-                        </tbody>
-
-                    </table>
-                </div>
-            </div>
-        </div>
+   
             
     </div>
 </div>
