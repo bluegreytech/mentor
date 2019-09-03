@@ -1,3 +1,4 @@
+
 <?php
 
 class Home_model extends CI_Model
@@ -133,11 +134,43 @@ class Home_model extends CI_Model
                     $email_message=str_replace('{email}',$email,$email_message);
                     $email_message=str_replace('{reset_link}',$login_link,$email_message);
                     $str=$email_message; 
+                    echo "<pre>";print_r($str);die;
+                     $email_config = Array(
+                    'protocol'  => 'smtp',
+                    'smtp_host' => 'relay-hosting.secureserver.net',
+                    'smtp_port' => '465',
+                    'smtp_user' => 'binny@bluegreytech.co.in',
+                    'smtp_pass' => 'Binny@123',
+                    'mailtype'  => 'html',
+                    'starttls'  => true,
+                    'newline'   => "\r\n",
+                    'charset'=>'utf-8',
+                    'header'=> 'MIME-Version: 1.0',
+                    'header'=> 'Content-type:text/html;charset=UTF-8',
+                   
+                    );
+
+                        
+                     $this->load->library('email', $email_config);
+                   
+                     $this->email->from("siya@yopmail.com", "siya");
+                     $this->email->to('binny@bluegreytech.co.in');
+                     $this->email->subject($email_subject);
+                     $this->email->message($str);
+
+                    
+                    if($this->email->send()){ 
+                   
+                     echo "send"; die;
+                      // return '1';
+                    }else{
+                    echo $this->email->print_debugger();die;
+                    }
                      // echo $str;die;
                     /** custom_helper email function **/
 
                     
-                     email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
+                     //email_send($email_address_from,$email_address_reply,$email_to,$email_subject,$str);
                     
                       return '1';
                   }
