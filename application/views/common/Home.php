@@ -152,7 +152,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>Children are born with unique and distinct intelligence profile that are shaped by different biological and environmental factors. After tracing the innate learning style and aptitude, the growing mind will discover his/her perfect Multiple Intelligence which sharpens the personality and helps him/her choose future endeavours.</p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-2-to-7.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/class_2_to_7"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -173,7 +173,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>You might find out that you enjoy thinking about why the apple fell in the first place and what made Einstein develop the theory in comparison to studying history at class. This is the time when you are on the path of self discovery instead of intense competition. Your course selection strategy in 8th grade can change the future of your career.</p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-8.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/class_8"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -197,7 +197,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-9-to-10.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/class_9_to_10"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -218,7 +218,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>Unveil your perfect career based on your individualised Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities by our Expert Career Mentor. Get acquainted with the various career options and build a Career Road Map in a scientific way.</p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="class-11-to-12.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/class_11_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -241,7 +241,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way. Find out the most suitable career path based on the five Career Dimensions: Individuals Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities.</p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="graduates.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/Graduates"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -262,7 +262,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>Midlife crisis cannot be treated by medicines, it requires the assistance of professional counseling. Experimenting and selecting a job is like gambling and dissatisfaction in professional life is alarming. It is time you get your career values and Interest in alignment. </p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="professionals.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/Professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -332,7 +332,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>Get an overview of the role of a Career Counselor and learn about the education system and career pathways in India. Furthermore, understand the administration of MIT, analysis and comprehensive report depiction. </p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="mgccap-1-to-12.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/class_1_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -351,7 +351,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts. </p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="mgccap-undergraduates.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/mgccap_undergraduates"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -370,7 +370,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.</p>
                                                 <div class="hom-list-share">
                                                     <ul>
-                                                        <li><a href="mgccap-professionals.php"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                        <li><a href="<?php echo base_url()?>home/mgccap_professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                     </ul>
                                                 </div>
                                             </div>

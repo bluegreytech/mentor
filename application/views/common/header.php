@@ -290,7 +290,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </li>
                                 <li><a href="<?php echo base_url()?>home/success">Success Stories</a>
                                 </li>
-                                 <li><a href="<?php echo base_url()?>home/career_library">Career Library</a>
+                                 <li><a href="#">Career Library</a>
                                 </li>
                                 <li><a href="<?php echo base_url()?>home/blog">Blog</a>
                                 </li>
