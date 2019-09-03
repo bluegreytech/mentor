@@ -44,7 +44,7 @@
         </table>
         <table cellspacing="0" style="border: 2px; width: 500px; height: 50px;">
             <tr>
-                <td style="background: linear-gradient(to right, #b31217, #e52d27);"><p style="color: #fff; text-align: center;">Copyright © <span>{year}</span> Nyalkaran Group. All Rights Reserved</p></td>
+                <td style="background: linear-gradient(to right, #b31217, #e52d27);"><p style="color: #fff; text-align: center;">Copyright © <span>{year}</span>Mentor . All Rights Reserved</p></td>
               
             </tr>
            

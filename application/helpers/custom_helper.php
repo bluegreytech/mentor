@@ -148,20 +148,24 @@
 		if($email_set->mailer=='mail')
 		{
 			//echo "jhjhg";die;
-			// 	$config = Array(
-			// 'protocol' => 'smtp',
-			// 'smtp_host' => 'ssl://smtp.gmail.com',
-			// 'smtp_port' => 465,
-			// 'smtp_user' => 'jignesh.php.cbc@gmail.com',
-			// 'smtp_pass' => 'jignesh@123',
-			// 'mailtype'  => 'html', 
-			// 'charset'   => 'iso-8859-1'
-			// );
-			$config['protocol']='smtp';  
-			$config['smtp_host'] = trim("ssl://smtp.gmail.com");
-            $config['smtp_port']='465';  
-            $config['smtp_user'] = trim("bluegreyindia@gmail.com");
-            $config['smtp_pass'] = trim("Test@123");
+			 	$config = Array(
+					 'protocol'  => 'smtp',
+                    'smtp_host' => 'relay-hosting.secureserver.net',
+                    'smtp_port' => '465',
+                    'smtp_user' => 'binny@bluegreytech.co.in',
+                    'smtp_pass' => 'Binny@123',
+                    'mailtype'  => 'html',
+                    'starttls'  => true,
+                    'newline'   => "\r\n",
+                    'charset'=>'utf-8',
+                    'header'=> 'MIME-Version: 1.0',
+                    'header'=> 'Content-type:text/html;charset=UTF-8',
+			 );
+			// $config['protocol']='smtp';  
+			// $config['smtp_host'] = trim("ssl://smtp.gmail.com");
+   //          $config['smtp_port']='465';  
+   //          $config['smtp_user'] = trim("bluegreyindia@gmail.com");
+   //          $config['smtp_pass'] = trim("Test@123");
 		
 			// $config['protocol']='smtp';  
 			// $config['smtp_host'] = trim("smtp.sendgrid.net");
