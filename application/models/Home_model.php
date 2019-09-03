@@ -134,13 +134,13 @@ class Home_model extends CI_Model
                     $email_message=str_replace('{email}',$email,$email_message);
                     $email_message=str_replace('{reset_link}',$login_link,$email_message);
                     $str=$email_message; 
-                    echo "<pre>";print_r($str);die;
+                 //   echo "<pre>";print_r($str);die;
                      $email_config = Array(
                     'protocol'  => 'smtp',
-                    'smtp_host' => 'relay-hosting.secureserver.net',
+                    'smtp_host' => 'ssl://smtp.gmail.com',
                     'smtp_port' => '465',
-                    'smtp_user' => 'binny@bluegreytech.co.in',
-                    'smtp_pass' => 'Binny@123',
+                    'smtp_user' => 'bluegreyindia@gmail.com',
+                    'smtp_pass' => 'Test@123',
                     'mailtype'  => 'html',
                     'starttls'  => true,
                     'newline'   => "\r\n",
@@ -153,7 +153,7 @@ class Home_model extends CI_Model
                         
                      $this->load->library('email', $email_config);
                    
-                     $this->email->from("binny@bluegreytech.co.in", "Mentor Admin");
+                     $this->email->from("binny@bluegreytech.co.in", "Mentor");
                      $this->email->to( $email_to);
                      $this->email->subject($email_subject);
                      $this->email->message($str);
@@ -161,10 +161,10 @@ class Home_model extends CI_Model
                     
                     if($this->email->send()){ 
                    
-                     echo "send"; die;
-                      // return '1';
+                     //echo "send"; die;
+                       return '1';
                     }else{
-                    echo $this->email->print_debugger();die;
+                     echo $this->email->print_debugger();die;
                     }
                      // echo $str;die;
                     /** custom_helper email function **/
