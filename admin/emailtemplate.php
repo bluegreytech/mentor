@@ -7,9 +7,10 @@
        
     </head>
     <body>
+      <center>
          <table cellspacing="0" style="border: 2px; width: 500px; height: 70px;">
             <tr>
-                <td style="background: #eee; border-bottom: 1px solid #f88120;"><img src="http://nyalkaran.bluegreytech.co.in/admin/default/images/logo/logo.png" alt="Nyalkaran Group Logo" style="width: 121px;"></td>
+                <td style="background: #eee; border-bottom: 1px solid #bb342f;"><img src="http://nyalkaran.bluegreytech.co.in/admin/default/images/logo/logo.png" alt="Logo" style="width: 121px;"></td>
               
             </tr>
            
@@ -34,12 +35,12 @@
         </table>
         <table cellspacing="0" style="border: 2px; width: 500px; height: 50px;">
             <tr>
-                <td style="background: #283f82;"><p style="color: #fff; text-align: center;">Copyright © {year} Nyalkaran Group. All Rights Reserved</p></td>
+                <td style="background: linear-gradient(to right, #b31217, #e52d27);"><p style="color: #fff; text-align: center;">Copyright © {year} Nyalkaran Group. All Rights Reserved</p></td>
               
             </tr>
            
         </table>
-        
+      </center>
     </body>
 </html>
 
