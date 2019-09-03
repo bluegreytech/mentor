@@ -393,7 +393,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.</p><br>
                                         <div class="hom-list-share">
                                             <ul>
-                                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                <li><a href="<?php echo base_url()?>/home/mentor_partnership_program"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                             </ul>
                                         </div>
                                     </div>

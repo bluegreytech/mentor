@@ -115,7 +115,7 @@ class Home_model extends CI_Model
                             $password = $rpass;
                             $email = $row->email;
                             $email_to=$email;
-                            $login_link=  '<a href="'.site_url('home/reset_password/'.$rnd).'">Click Here</a>';
+                            $login_link=  '<a href="'.site_url('home/reset_password/'.$rnd).'" target="_blank">Click Here</a>';
                     /* Common for All Email Template */
                           //  $site_setting = site_setting();
                            // $site_name=ucwords($site_setting->site_name);       
