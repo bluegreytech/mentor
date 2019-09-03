@@ -1089,6 +1089,8 @@ position: inherit;
 
   ul.sidebar-menu {
     padding-top: 0;
+    height: 100%;
+    background-color: #fff;
   }
 
   #sidebar {
