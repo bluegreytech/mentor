@@ -199,7 +199,7 @@ class Home extends CI_Controller
 			{ 
 			//echo "jhjg";die;
 				$chk_mail=$this->home_model->forgot_email();
-				echo $chk_mail;die;
+				//echo $chk_mail;die;
 				if($chk_mail==0)
 				{
 					$error=EMAIL_NOT_FOUND;
@@ -221,13 +221,13 @@ class Home extends CI_Controller
 					$forget=FORGET_SUCCESS;
 					//email_send();
 					 $this->session->set_flashdata('success','Please check your email for reset the password!');
-					redirect('login');
+					redirect('home');
 
 	                // $redirect=site_url('home/index/forget');
 	                // echo json_encode(array("status"=>"success","msg"=> $forget,"redirect"=>$redirect));
 				}
 			}
-		$this->load->view('common/ForgotPassword');
+		redirect('home');
 	}
 
 
@@ -250,7 +250,7 @@ class Home extends CI_Controller
 	        
             if($user_id){
             	//echo "ghg";die;
-            	if($_POST){
+            	//if($_POST){
 				
 				if($this->input->post('user_id') != ''){
 					$this->form_validation->set_rules('Password', 'Password', 'required');
@@ -268,7 +268,7 @@ class Home extends CI_Controller
 							$this->session->set_flashdata('success',RESET_SUCCESS); 
 							redirect('home/login');
 						}elseif($up=='') {
-							
+							echo"jjhj 2";
 							$error = EXPIRED_RESET_LINK;
 					      $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 						}
@@ -282,6 +282,7 @@ class Home extends CI_Controller
 						
 					}
 				}else{
+					echo"jhjh 3";
 					//echo "hii";die;
 					$error = EXPIRED_RESET_LINK;
 					// $redirect=site_url('home/index');
@@ -289,13 +290,13 @@ class Home extends CI_Controller
 	              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 				}
 				 $this->load->view('common/Resetpassword',$data);
-		    }else{
-		    	//echo 'dfdfds';die;
-		    	$this->load->view('common/Resetpassword',$data);
-		    }
+		    // }else{
+		    // 	echo 'dfdfds';
+		    // 	$this->load->view('common/Resetpassword',$data);
+		    // }
 
             }else{
-            	 
+            	 echo "fdfd end";
 				$error = EXPIRED_RESET_LINK;
 				$this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 				redirect('home');
@@ -359,8 +360,8 @@ class Home extends CI_Controller
 	}
 
 	function oldpassword_check() {
-			$query = $this->db->query("select Password from " . $this->db->dbprefix('tblusers') . " where Password = '".md5($this->input->post('password'))."' and user_id!='" . $this->session->userdata('user_id') . "'");
-			//echo $this->db->last_query();die;
+			$query = $this->db->query("select Password from " . $this->db->dbprefix('tblusers') . " where Password = '".md5($this->input->post('password'))."' and user_id='" . $this->session->userdata('user_id') . "'");
+			echo $this->db->last_query();die;
 			if ($query->num_rows() > 0) {
 			echo 1;die;
 			} else {

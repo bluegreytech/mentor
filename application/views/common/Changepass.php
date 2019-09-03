@@ -43,7 +43,7 @@ echo $UserId=$this->session->userdata('UserId');
                                   <input type="password" name="password" class="form-control"  placeholder="New Password" id="password">
                               </div>
                                 <div class="form-group height-min">
-                                 <label>Enter New Password</label>
+                                 <label>Enter Confrim New Password</label>
                                  <br>
                                   <input type="password" name="cpassword" class="form-control" placeholder="Confirm Password">
                               </div>
