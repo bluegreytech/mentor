@@ -124,7 +124,7 @@ $(function() {
             console.log('dd', element.attr("name"))
             if (element.attr("name") == "Password") {
                 error.appendTo("#pwderror");
-            } else if (element.attr("name") == "ConfirmPassword") {
+            } else if (element.attr("name") == "confrim_password") {
                   error.appendTo("#cpwderror");
               
             }else{
