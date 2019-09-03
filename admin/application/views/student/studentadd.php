@@ -92,9 +92,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 							<?php } ?>
 							<div class="form-actions">
+
 							 <button class="btn btn-black " type="submit"><i class="icon-ok"></i> <?php echo($user_id!='')?'Update':'Submit' ?></button>
 							
-								<a type="button" name="cancel" class="btn btn-default" value="Cancel" href='<?php echo base_url(); ?>student/<?php echo $redirect_page; ?>'>Cancel</a>
+								<input type="button" name="cancel" class="btn btn-default" value="Cancel" onClick="location.href='<?php echo base_url(); ?>student/<?php echo $redirect_page?>'">
 							</div>
 						</form>
 					</div>

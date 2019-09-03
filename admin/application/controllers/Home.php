@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 	{
       	parent::__construct();
 		$this->load->model('login_model');
+		$this->load->model('admin_model');
       
     }
     public function dashboard()
@@ -16,7 +17,8 @@ class Home extends CI_Controller {
 				redirect(base_url());
 			}
 			$data=array();
-		$this->load->view('common/dashboard');
+			$data['result']='';
+		$this->load->view('common/dashboard',$data);
 	}
 	public function profile()
 	{
@@ -266,8 +268,8 @@ class Home extends CI_Controller {
 			$this->form_validation->set_rules('AdminContact', 'AdminContact', 'required');
 			if($this->input->post("AdminId")=="")
 			{	
-				$this->form_validation->set_rules('password', 'Password', 'required|matches[cpassword]|min_length[8]');
-				$this->form_validation->set_rules('cpassword', 'Password Confirm', 'required|min_length[8]');
+				$this->form_validation->set_rules('password', 'Password', 'required|matches[cpassword]|min_length[5]');
+				$this->form_validation->set_rules('cpassword', 'Password Confirm', 'required|min_length[5]');
 			}
 			$this->form_validation->set_rules('status', 'Status', '');
 			
@@ -298,19 +300,21 @@ class Home extends CI_Controller {
 				if($this->input->post("AdminId")!="")
 			{	
 				$this->admin_model->admin_update();
-				$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
-				redirect('admin/AdminList');
+				$this->session->set_flashdata('success','Record has been Updated Succesfully!');
+				redirect('home/Adminlist');
 				
 			}
 			else
-			{ // echo "dsfdf";die;
+			{  
+				//echo "dsfdf";die;
 				$this->admin_model->admin_insert();
 				$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
-				redirect('admin/AdminList');
+				redirect('home/Adminlist');
 			
 			}
 				
 			}
+			//echo "<pre>";print_r($data);die;
 			$this->load->view('Admin/AdminAdd',$data);
 				
 	}
@@ -339,6 +343,15 @@ class Home extends CI_Controller {
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
 		}else{
+
+			if($this->input->post('gallery_image')!='')
+			{
+					if(file_exists(base_path().'upload/galleryimage/'.$this->input->post('gallery_image')))
+					{
+						$link=base_path().'upload/galleryimage/'.$this->input->post('gallery_image');
+						unlink($link);
+					}
+			}
 			$id=$this->input->post('id');
 			$this->db->where("AdminId",$id);
 			$res=$this->db->delete('tbladmin');
@@ -374,6 +387,15 @@ class Home extends CI_Controller {
 		//echo "else dfdf";die;	
 			$data['result']=$this->login_model->getinquery();
 			$this->load->view('Inquery/inquerylist',$data);
+		}
+	}
+	 function email_check() {
+		$query = $this->db->query("select EmailAddress from " . $this->db->dbprefix('tbladmin') . " where EmailAddress= '".md5($this->input->post('email'))."' and AdminId!='" . $this->session->userdata('AdminId') . "'");
+		//echo $this->db->last_query();die;
+		if ($query->num_rows() > 0) {
+			echo 1;die;
+		} else {
+			echo 0;die;
 		}
 	}
    
