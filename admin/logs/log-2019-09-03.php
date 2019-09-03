@@ -75,3 +75,9 @@ ERROR - 2019-09-03 08:44:50 --> 404 Page Not Found: Favicon/favicon.ico
 ERROR - 2019-09-03 08:45:05 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-03 08:45:05 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-03 08:50:57 --> 404 Page Not Found: Home/%7Bimage_url%7D
+ERROR - 2019-09-03 09:31:58 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-03 09:31:58 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-03 09:32:06 --> 404 Page Not Found: Emailtempaltge/index
+ERROR - 2019-09-03 09:32:13 --> 404 Page Not Found: Emailtemplate/index
+ERROR - 2019-09-03 09:32:17 --> 404 Page Not Found: Emailtemplatephp/index
+ERROR - 2019-09-03 09:32:50 --> 404 Page Not Found: Emailtemplatephp/index
