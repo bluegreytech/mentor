@@ -19,11 +19,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
-                                <h3 class="pink"><?php //echo Count($result);?></h3>
+                                <h3 class="pink"><?php echo Count($student);?></h3>
                                 <span>Total Student</span>
                             </div>
                             <div class="media-right media-middle">
-                                <i class="icon-gift pink font-large-2 float-xs-right"></i>
+                                <i class="icon-users pink font-large-2 float-xs-right"></i>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="card-block">
                         <div class="media">
                             <div class="media-body text-xs-left">
-                                <h3 class="pink"><?php //echo Count($userrefer);?></h3>
+                                <h3 class="pink"><?php echo Count($inquiry);?></h3>
                                 <span>Today Inquires</span>
                             </div>
                             <div class="media-right media-middle">
