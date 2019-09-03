@@ -370,7 +370,44 @@ class Home extends CI_Controller
 
 	public function contact_us()
 	{	
-		$this->load->view('common/Contactus');
+
+
+		$data = array();
+		//echo "<pre>";print_r($_POST);die;
+        $this->load->library('form_validation');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('username', 'Full Name', 'required');
+		$this->form_validation->set_rules('phone', 'Contact', 'required');
+		
+		
+		if($this->form_validation->run() == FALSE){	
+		
+			if(validation_errors())
+			{
+				$data["error"] = validation_errors();
+					echo "<pre>";print_r($data);die;
+			}else{
+				$data["error"] = "";
+			}
+			if($_POST){			
+				$data["email"]      = $this->input->post('email');
+				$data["username"]   = $this->input->post('Username');			
+				$data["phone"]      = $this->input->post('PhoneNumber');
+				$data["subject"]        = $this->input->post('subject');
+				$data["message"]   = $this->input->post('message');
+			
+			}else{
+			
+			
+			}
+		}else{
+			//echo "fgfg";die;
+			$this->session->set_flashdata('success', 'Message has been updated successfully');
+			$this->home_model->insertcontact();
+			redirect('home/contact_us');
+		}
+		
+		$this->load->view('common/Contactus',$data);
 	}
 	public function Page()
 	{	

@@ -23,6 +23,20 @@ class Home_model extends CI_Model
     	return $res;
     }
 
+     function insertcontact(){
+      
+      $data=array('name' =>$this->input->post('username'),
+        'email' =>trim($this->input->post('email')),
+        'phone' =>trim($this->input->post('phone')),   
+        'subject' =>trim($this->input->post('subject')),   
+        'message' =>trim($this->input->post('message')),
+        'create_date'=>date("y-m-d H:i:s"),          
+             
+       );
+      $res=$this->db->insert('tblinquery',$data);
+      return $res;
+    }
+
 	function check_login()
 	{
 	
