@@ -123,7 +123,7 @@ $this->load->view('common/header');
                                               <li>Ethics and best practices.  </li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>/default/images/2.jpg" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/2.jpg" class="img-responsive"></div>
                                         
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@ $this->load->view('common/header');
                             <div class="item">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>/deafult/images/2.jpg" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/2.jpg" class="img-responsive"></div>
                                         <div class="col-md-6" style="padding:50px">
                                             <h4>Assistance for primary and secondary school years-</h4>
                                             <ul>
@@ -156,7 +156,7 @@ $this->load->view('common/header');
                                               <li>Learning style analysis.</li>
                                             </ul>
                                         </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>/deafult/images/2.jpg" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/2.jpg" class="img-responsive"></div>
                                         
                                     </div>
                                 </div>
