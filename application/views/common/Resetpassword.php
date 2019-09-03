@@ -40,7 +40,7 @@ $this->load->view('common/css');
         <div class="ad-log-in-con">
       <div>
                     <h4>Forgot Password</h4>
-                    <?php if($this->session->flashdata('error')){ ?>
+           <!--          <?php if($this->session->flashdata('error')){ ?>
                      <div class="alert alert-danger" id="errorMessage">
                      <strong> <?php echo $this->session->flashdata('error'); ?></strong> 
                      </div>
@@ -54,7 +54,7 @@ $this->load->view('common/css');
                      <div class="alert alert-success" id="successMessage">
                      <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
                      </div>
-               <?php } ?>
+               <?php } ?> -->
              <?php $attributes = array('name'=>'frm_reset','id'=>'frm_restpwd','class'=>'reset-form');
                   echo form_open('home/reset_password/'.$code,$attributes); ?>
 
@@ -63,7 +63,7 @@ $this->load->view('common/css');
                             <div class="input-field s12">
                                 <input type="hidden" value="<?php echo $user_id; ?>" name="user_id">
                            <input type="hidden" value="<?php echo $code; ?>" name="code">
-                           <input name="Password" type='password' class="custom" placeholder="Enter new password" id="password"/>
+                           <input name="Password" type='password' id="password" class="custom" placeholder="Enter new password" id="password"/>
                            <p id="pwderror" class="pull-left"></p>
                             </div>
                         </div>
@@ -74,7 +74,7 @@ $this->load->view('common/css');
                             </div>
                         </div>
                         <div>
-                         
+
                             <div class="input-field s4">
                                 <i class="waves-effect waves-light log-in-btn waves-input-wrapper" style=""><input type="submit" value="Submit" class="waves-button-input" name="logins" id="login-btn"></i> </div>
                         </div>
