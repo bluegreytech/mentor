@@ -1,2 +1,15 @@
 ERROR - 2019-09-03 11:13:38 --> 404 Page Not Found: Favicon/favicon-32.png
 ERROR - 2019-09-03 11:13:38 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-03 11:56:59 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:00:05 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:01:19 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:01:42 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:01:59 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:02:21 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:02:59 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:02:59 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:02:59 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:02:59 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:03:07 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:03:26 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 12:04:21 --> 404 Page Not Found: %7Bbase_url%7D/default

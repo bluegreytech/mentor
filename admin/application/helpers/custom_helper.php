@@ -211,19 +211,25 @@
 		if($email_set->mailer=='mail')
 		{
 			// 	$config = Array(
-			// 'protocol' => 'smtp',
-			// 'smtp_host' => 'ssl://smtp.gmail.com',
-			// 'smtp_port' => 465,
-			// 'smtp_user' => 'jignesh.php.cbc@gmail.com',
-			// 'smtp_pass' => 'jignesh@123',
-			// 'mailtype'  => 'html', 
-			// 'charset'   => 'iso-8859-1'
+			$config = Array(
+					 'protocol'  => 'smtp',
+                    'smtp_host' => 'relay-hosting.secureserver.net',
+                    'smtp_port' => '465',
+                    'smtp_user' => 'binny@bluegreytech.co.in',
+                    'smtp_pass' => 'Binny@123',
+                    'mailtype'  => 'html',
+                    'starttls'  => true,
+                    'newline'   => "\r\n",
+                    'charset'=>'utf-8',
+                    'header'=> 'MIME-Version: 1.0',
+                    'header'=> 'Content-type:text/html;charset=UTF-8',
+			 );
 			// );
-			$config['protocol']='smtp';  
-			$config['smtp_host'] = trim("smtp.sendgrid.net");
-            $config['smtp_port']=trim(465);  
-            $config['smtp_user'] = trim("php.sanket@spaculus.info");
-            $config['smtp_pass'] = trim("sanket@123");
+			// $config['protocol']='smtp';  
+			// $config['smtp_host'] = trim("smtp.sendgrid.net");
+   //          $config['smtp_port']=trim(465);  
+   //          $config['smtp_user'] = trim("php.sanket@spaculus.info");
+   //          $config['smtp_pass'] = trim("sanket@123");
 		
 			// $config['protocol']='smtp';  
 			// $config['smtp_host']=trim($email_set->smtp_host);  
@@ -262,7 +268,7 @@
 		
 		$CI->email->initialize($config);
 		 
-		$CI->email->from($email_address_from,"Project Stand Up");
+		$CI->email->from($email_address_from,"Mentor");
 		$CI->email->reply_to($email_address_reply);
 		$CI->email->to($email_to);
 		$CI->email->subject($email_subject);

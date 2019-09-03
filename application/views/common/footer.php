@@ -198,13 +198,13 @@
                 <div class="log-in-pop-left">
                     <h1>Hello... </h1>
                     <p>Don't have an account? Create your account. It's take less then a minutes</p>
-                    <h4>Login with social media</h4>
+                   <!--  <h4>Login with social media</h4>
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a>
                         </li>
                         <li><a href="#"><i class="fa fa-google"></i> Google</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="log-in-pop-right">
                     <a href="#" class="pop-close" data-dismiss="modal"><img src="<?php echo base_url(); ?>default/images/cancel.png" alt="" />

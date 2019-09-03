@@ -171,6 +171,21 @@ $("#loginForm").validate(
     
 });
 
+$("#forgotpwdfrm").validate(
+    {
+    rules:{  
+         
+        email:{
+          required: true,
+          email: true
+        },
+       
+       
+    },
+  
+    
+});
+
 </script>
 </body>
 
