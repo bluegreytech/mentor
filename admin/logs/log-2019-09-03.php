@@ -210,3 +210,4 @@ ERROR - 2019-09-03 09:27:20 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-03 09:27:20 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-03 09:27:20 --> 404 Page Not Found: Favicon/favicon-32.png
 ERROR - 2019-09-03 09:27:20 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-03 09:30:33 --> 404 Page Not Found: Emailtemplate/index

@@ -49,18 +49,18 @@ $this->load->view('common/header');
                         <p>Send Us Now</p>
                         <h2>GetIn Touch</h2> <span class="footer-ser-re">Service Request Form</span> </div>
                     <!-- ENQUIRY FORM -->
-                    <form id="contact_form" name="contact_form" action="#">
+                    <form id="contact_form" name="contact_form" action="<?php echo base_url()?>home/contact_us" method="POST">
                         <ul>
                             <li class="col-md-6 col-sm-6 col-xs-12 contact-input-spac">
-                                <input type="text" id="f1" value="" name="f1" placeholder="Name" required=""> </li>
+                                <input type="text" id="f1" value="" name="username" placeholder="Name" > </li>
                             <li class="col-md-6 col-sm-6 col-xs-12 contact-input-spac">
-                                <input type="text" id="f2" value="" name="f2" placeholder="Phone" required=""> </li>
+                                <input type="text" id="f2" value="" name="phone" placeholder="Phone" > </li>
                             <li class="col-md-6 col-sm-6 col-xs-12 contact-input-spac">
-                                <input type="text" id="f3" value="" name="f3" placeholder="City" required=""> </li>
+                                <input type="text" id="f3" value="" name="email" placeholder="Email" > </li>
                             <li class="col-md-6 col-sm-6 col-xs-12 contact-input-spac">
-                                <input type="text" id="f4" value="" name="f4" placeholder="Country" required=""> </li>
+                                <input type="text" id="f4" value="" name="subject" placeholder="Subject" > </li>
                             <li class="col-md-12 col-sm-12 col-xs-12 contact-input-spac">
-                                <textarea id="f5" name="f5" required=""></textarea>
+                                <textarea id="f5"  name="message"></textarea>
                             </li>
                             <li class="col-md-6">
                                 <input type="submit" value="SUBMIT"> </li>
@@ -75,3 +75,49 @@ $this->load->view('common/header');
 <?php 
  $this->load->view('common/footer');
 ?>
+
+<script type="text/javascript">
+    $("#contact_form").validate(
+    {
+    rules:{  
+        username:{
+          required: true,
+
+        },     
+        email:{
+          required: true,
+          email: true
+        },
+         phone:{
+          required: true,
+          digits: true
+        },
+        subject:{
+           required: true,         
+        },
+        message:{
+           required: true,  
+        },
+        
+
+
+      
+       
+    },
+    
+    errorPlacement: function (error, element) {
+
+         console.log('dd', element.attr("name"))
+            if (element.attr("name") == "assessment") {
+                error.appendTo("#assessmenterror");
+            }else if(element.attr("name") == "careerchoice"){
+               error.appendTo("#careerchoiceerror");
+            }
+            else{
+                error.insertAfter(element)
+            }
+        }
+    
+});
+
+</script>
