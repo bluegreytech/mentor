@@ -13,3 +13,7 @@ ERROR - 2019-09-03 12:02:59 --> 404 Page Not Found: %7Bbase_url%7D/default
 ERROR - 2019-09-03 12:03:07 --> 404 Page Not Found: %7Bbase_url%7D/default
 ERROR - 2019-09-03 12:03:26 --> 404 Page Not Found: %7Bbase_url%7D/default
 ERROR - 2019-09-03 12:04:21 --> 404 Page Not Found: %7Bbase_url%7D/default
+ERROR - 2019-09-03 13:36:45 --> 404 Page Not Found: %7Bbase_url%7Dadmin/default
+ERROR - 2019-09-03 13:36:52 --> 404 Page Not Found: %7Bbase_url%7Dadmin/default
+ERROR - 2019-09-03 13:37:04 --> 404 Page Not Found: %7Bbase_url%7Dadmin/default
+ERROR - 2019-09-03 13:37:04 --> 404 Page Not Found: %7Bbase_url%7Dadmin/default
