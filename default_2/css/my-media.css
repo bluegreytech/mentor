@@ -890,7 +890,13 @@ position: inherit;
   }
 
   .top-nav {
-    display: none;
+    display: block;
+    position: fixed;
+    right: 0;
+    width: 60px;
+  }
+  .top-nav .navbar-nav li.dropdown {
+    padding:8px;
   }
 
   #blue-scheme .sidebar-toggle-box {
@@ -927,6 +933,7 @@ position: inherit;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1)!important;
     text-align: center;
     padding: 12px 0;
+    z-index: -9
   }
 
   a.logo {
@@ -1082,6 +1089,8 @@ position: inherit;
 
   ul.sidebar-menu {
     padding-top: 0;
+    height: 100%;
+    background-color: #fff;
   }
 
   #sidebar {
