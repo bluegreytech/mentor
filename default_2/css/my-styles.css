@@ -604,7 +604,7 @@ body p {
 }
 
 .top-nav .navbar-right li {
-  border-left: 1px solid #f6f6f6;
+  border-left: none;
 }
 
 .top-nav .navbar-nav li a.info-number {

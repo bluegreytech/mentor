@@ -890,7 +890,10 @@ position: inherit;
   }
 
   .top-nav {
-    display: none;
+    display: block;
+    position: fixed;
+    right: 0;
+    width: 60px;
   }
 
   #blue-scheme .sidebar-toggle-box {
@@ -927,6 +930,7 @@ position: inherit;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1)!important;
     text-align: center;
     padding: 12px 0;
+    z-index: -9
   }
 
   a.logo {
