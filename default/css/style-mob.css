@@ -1,17 +1,4 @@
-/*-----------------------------------------
- [RESPONSIV(MOBILE)E STYLE SHEET]
- * Project: Education Master HTML Template
- * Version: v1.0
- * Copyright 2017-2020 rn53themes
- * Last Changes: 10 jan 2018
- * Author: RN53 Themes
- * Email:      rn53themes@gmail.com
- * Website:    http://www.rn53themes.net 
- -----------------------------------------------*/
- 
-/*-------------------------------------------------------*/
-/* When the browser is between 0px and 1300px wide,below css will be applied.
-/*-------------------------------------------------------*/
+
 @media screen and (max-width:1300px){
      .wed-hom-ser{
          display:none;
@@ -174,6 +161,7 @@
      .ed-advan ul li{
          width: 100%;
          background: #f5f5f5;
+         height: auto;
          border: 5px solid #fff !important;
          border-radius: 5px;
     }
