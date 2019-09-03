@@ -29,7 +29,7 @@ $UserId=$this->session->userdata('user_id');
                         <div class="right-fixed-box">
                            <p class="dashboard-squre-title">Update your profile.</p>
                            <div class="btn-row">
-                           <a href="<?php echo base_url();?>Dashboard/Profileedit/<?php echo $UserId ;?>" class="btn-status">Update</a>
+                           <a href="<?php echo base_url();?>home/profile/" class="btn-status">Update</a>
                         </div>
                         </div>
                      </div>
@@ -58,7 +58,7 @@ $UserId=$this->session->userdata('user_id');
                            <div class="progress progress-xs">
                               <div class="progress-bar" role="progressbar" data-transitiongoal="9.0909090909091" aria-valuenow="59" style="width: 9.0909090909091%;"></div>
                            </div>
-                          <div class="btn-row"><a href="#" >
+                          <div class="btn-row"><a href="<?php echo base_url();?>Mytest" >
                            View Result </a>
                            
                          

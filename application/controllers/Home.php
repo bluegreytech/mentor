@@ -12,6 +12,14 @@ class Home extends CI_Controller
     }
 
     function index(){
+
+  //   	if(!check_user_authentication()){	
+  //   		//echo "jhjgh";die;		
+		// 	redirect(base_url());
+		// 	//$this->load->view('common/Home');
+		// }
+
+
     	$this->load->view('common/Home');
     }
 
@@ -108,7 +116,9 @@ class Home extends CI_Controller
 		if(!check_user_authentication()){			
 			redirect(base_url());
 		}
-	    $this->load->view('Dashboard/Dashboard');
+		$data= array();
+		$data['activeTab'] = "dashboard";
+	    $this->load->view('Dashboard/Dashboard',$data);
 
 	 }
 	function profile($msg=''){

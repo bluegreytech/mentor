@@ -2,6 +2,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <?php 
+//echo "<pre>";print_r(check_user_authentication());;
+//$this->session->userdata('user_id');
+ // echo $UserId=$this->session->userdata('user_id');
    $this->load->view('common/css');
 ?>
     <!-- MOBILE MENU -->
@@ -74,8 +77,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <h5><a href="<?php echo base_url()?>blog/">Blog</a></h5>
                                     <h5><a href="<?php echo base_url()?>Success/">Pricing</a></h5>
                                     <h5><a href="<?php echo base_url()?>Success/">Contact Us</a></h5>
+                                      
+                                    <?php if(check_user_authentication()){   ?>
+                                      <h5><a href="<?php echo base_url()?>/home/profile" >My Profile</a></h5>
+                                       <h5><a href="<?php echo base_url()?>/home/logout" >Logout</a></h5>
+                                    <?php }else{ ?>
                                     <h5><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></h5>
                                     <h5><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a></h5>
+                                    <?php } ?>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -103,10 +113,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="ed-com-t1-right">
                             <ul>
                                 <li><a href="<?php echo base_url(); ?>home/about_us">About Us</a></li>
-                                <li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a>
-                                </li>
-                                <li><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a>
-                                </li>
+                                 <?php 
+                                 if(check_user_authentication()){  ?>
+                                      <li><a href="<?php echo base_url()?>/home/profile" >My Profile</a></li>
+                                       <li><a href="<?php echo base_url()?>/home/logout" >Logout</a></li>
+                                    <?php }else{ ?>
+                                    <li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></li>
+                                    <li><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a></li>
+                                    <?php } ?>
                             </ul>
                         </div>
                      
