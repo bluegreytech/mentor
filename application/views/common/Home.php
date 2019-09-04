@@ -28,8 +28,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="4">Career Assessment for Professionals</option>
                         </select>
                     </div>
+                       <?php if(!check_user_authentication()){ ?>
                     <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
-
+                    <?php } else{ ?>
+                           <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
+                    <?php } ?>
 
                     <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                       <h3>Give your exploration a direction.<br><br></h3>
@@ -51,7 +54,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="4">Career Assessment for Professionals</option>
                         </select>
                     </div>
+                     <?php if(!check_user_authentication()){ ?>
                     <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
+                    <?php } else{ ?>
+                           <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
+                    <?php } ?>
 
                     <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                       <h3>You can’t reach a destination without walking, let’s walk together / No dream can be achieved without action. </h3>
@@ -73,7 +80,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <option value="4">Career Assessment for Professionals</option>
                         </select> 
                     </div>
+                    <?php if(!check_user_authentication()){ ?>
                     <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
+                    <?php } else{ ?>
+                           <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
+                    <?php } ?>
 
                     <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                       <h3>Emerge into the best version of yourself. </h3>

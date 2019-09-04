@@ -9,7 +9,11 @@ $this->load->view('common/header');
             <div class="container">
                 <div class="head-2-inn head-2-inn-padd-top">
                     <h1>Career Counselling Programs for Graduates</h1>
+                     <?php if(!check_user_authentication()){ ?>
                     <a  href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1 asets-btn" data-events="auto" data-display="block">Start Assessment </a>
+                  <?php } else{ ?>
+                     <a  href="<?php echo base_url()?>Mytest" class="bann-btn-1 asets-btn" data-events="auto" data-display="block">Start Assessment </a>
+                  <?php } ?>
                     <!--p>Nurturing Minds</p-->
                 </div>
             </div>

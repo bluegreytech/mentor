@@ -233,25 +233,16 @@ class Home extends CI_Controller
 
 	function reset_password($code='')
 	{
-
-		//echo "hghj";die;
-		// if(check_admin_authentication())
-		// 	{
-		// 		redirect('home/dashbord');
-		// 	}
 			
 			$user_id=$this->home_model->checkResetCode($code);
-			//print_r($user_id);die;
-
+			
 			$data = array();
 			$data['errorfail']=($code=='' || $user_id=='')?'fail':'';
 			$data['user_id']=$user_id;
 			$data['code']=$code;
 	        
             if($user_id){
-            	//echo "ghg";die;
-            	//if($_POST){
-				
+            
 				if($this->input->post('user_id') != ''){
 					$this->form_validation->set_rules('Password', 'Password', 'required');
 					$this->form_validation->set_rules('confrim_password', 'Re-type Password', 'required|matches[Password]');
@@ -262,13 +253,13 @@ class Home extends CI_Controller
 						}
 					}else{
 						
-							$up=$this->home_model->updatePassword();
-							//echo "<pre>";print_r($up);die;
+						$up=$this->home_model->updatePassword();
+						//echo "<pre>";print_r($up);die;
 						if($up>0){
 							$this->session->set_flashdata('success',RESET_SUCCESS); 
 							redirect('home/login');
 						}elseif($up=='') {
-							echo"jjhj 2";
+						
 							$error = EXPIRED_RESET_LINK;
 					      $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
 						}
@@ -277,28 +268,15 @@ class Home extends CI_Controller
 							$error = PASS_RESET_FAIL;
 		                    $this->session->set_flashdata('error',PASS_RESET_FAIL); die; 
 						}
-
-					
-						
 					}
 				}else{
-					echo"jhjh 3";
-					//echo "hii";die;
-					$error = EXPIRED_RESET_LINK;
-					// $redirect=site_url('home/index');
-					//$redirect=site_url();
-	              $this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
+					 $this->load->view('common/Resetpassword',$data);
+				
 				}
-				 $this->load->view('common/Resetpassword',$data);
-		    // }else{
-		    // 	echo 'dfdfds';
-		    // 	$this->load->view('common/Resetpassword',$data);
-		    // }
-
             }else{
-            	 echo "fdfd end";
+            	
 				$error = EXPIRED_RESET_LINK;
-				$this->session->set_flashdata('error',EXPIRED_RESET_LINK); die; 
+				$this->session->set_flashdata('error',EXPIRED_RESET_LINK);
 				redirect('home');
 		    }
 		  
