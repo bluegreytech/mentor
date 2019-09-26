@@ -56,7 +56,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<img id="blahimg" src="" class="img-thumbnail border-0" style="display: none;  width: 100px; height: 100px;">
 									<?php } ?>
 								</div>
-
 								<?php if($IsActive!=''){ ?>
 											<div class="form-group">
 												<label>Status</label>
@@ -153,7 +152,7 @@ $(document).ready(function()
 });
 
 		CKEDITOR.replace('editor1');
-		function readURLimg(input) {
+function readURLimg(input) {
     if(input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {

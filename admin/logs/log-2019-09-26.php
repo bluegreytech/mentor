@@ -405,3 +405,162 @@ ERROR - 2019-09-26 14:51:45 --> Query error: Table 'mentordb.tblblogstatus' does
 FROM `tblblogstatus`
 ERROR - 2019-09-26 15:57:09 --> Query error: Table 'mentordb.tblblogstatus' doesn't exist - Invalid query: SELECT *
 FROM `tblblogstatus`
+ERROR - 2019-09-26 15:58:25 --> Query error: Table 'mentordb.tblblogstatus' doesn't exist - Invalid query: SELECT *
+FROM `tblblogstatus`
+ERROR - 2019-09-26 15:58:30 --> Query error: Table 'mentordb.tblblogstatus' doesn't exist - Invalid query: SELECT *
+FROM `tblblogstatus`
+ERROR - 2019-09-26 16:01:59 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:01:59 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:04:20 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:04:20 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:04:20 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:04:20 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:04:28 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:04:28 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:04:28 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:04:28 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:04:29 --> Query error: Table 'mentordb.tblblogstatus' doesn't exist - Invalid query: SELECT *
+FROM `tblblogstatus`
+ERROR - 2019-09-26 16:04:51 --> Severity: error --> Exception: syntax error, unexpected 'if' (T_IF), expecting '(' C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogList.php 62
+ERROR - 2019-09-26 16:05:04 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:05:04 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:05:04 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:05:04 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:05:07 --> 404 Page Not Found: Blog/Blogadd
+ERROR - 2019-09-26 16:05:22 --> 404 Page Not Found: Blog/Blogadd
+ERROR - 2019-09-26 16:05:23 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:05:23 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:05:25 --> 404 Page Not Found: Blog/blogadd
+ERROR - 2019-09-26 16:05:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:05:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:05:45 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:05:45 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: BlogId C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 18
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: BlogId C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 38
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: FirstName C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 41
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: BlogTitle C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 59
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: BlogDescription C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 66
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: statusBlog C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 87
+ERROR - 2019-09-26 16:05:46 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 87
+ERROR - 2019-09-26 16:05:46 --> Severity: Notice --> Undefined variable: BlogId C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 141
+ERROR - 2019-09-26 16:09:21 --> Severity: Notice --> Undefined variable: statusBlog C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 71
+ERROR - 2019-09-26 16:09:21 --> Severity: Warning --> Invalid argument supplied for foreach() C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 71
+ERROR - 2019-09-26 16:09:21 --> Severity: Notice --> Undefined variable: BlogId C:\xampp\htdocs\mentor\admin\application\views\Blog\BlogAdd.php 125
+ERROR - 2019-09-26 16:09:21 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:09:21 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:10:48 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:10:48 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:10:58 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:10:58 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:14:01 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:14:01 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:14:32 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:14:33 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:15:04 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:15:05 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:15:25 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:15:26 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:15:37 --> 404 Page Not Found: Blog/Blogadd
+ERROR - 2019-09-26 16:16:04 --> 404 Page Not Found: Blog/Blogadd
+ERROR - 2019-09-26 16:16:06 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:16:06 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:20:00 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:20:00 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:21:05 --> Query error: Unknown column 'IsActive' in 'field list' - Invalid query: INSERT INTO `tblblog` (`blog_title`, `blog_desc`, `blog_image`, `IsActive`, `created_date`) VALUES ('fdsfdsf', '<p>dfdsfds fdfd sfdfdsf fds fdsfdsf dsfdf dfds dsffd</p>', '7184blogimage.jpg', 'Active', '2019-09-26  16:21:05')
+ERROR - 2019-09-26 16:21:34 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:21:34 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:21:50 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:21:50 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:21:50 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:21:50 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:21:56 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:21:56 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:21:59 --> Severity: error --> Exception: Call to undefined method Blog_model::getblogdata() C:\xampp\htdocs\mentor\admin\application\controllers\Blog.php 77
+ERROR - 2019-09-26 16:22:49 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:22:49 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:26:44 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:26:44 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:26:45 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:26:45 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:26:52 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:26:52 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:27:19 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:27:19 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:28:22 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:28:22 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:28:22 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:28:22 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:30:08 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:08 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:11 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:11 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:17 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:17 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:17 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:30:17 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:30:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:37 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:30:37 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:30:43 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:43 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:53 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:53 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:30:53 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:30:53 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:31:02 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:31:02 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:31:56 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:31:56 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:31:56 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:31:56 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:32:10 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:32:10 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:32:10 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:32:10 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:32:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:32:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:32:45 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:32:45 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:33:49 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:33:49 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:30 --> 404 Page Not Found: Upload/blogimage
+ERROR - 2019-09-26 16:34:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:30 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:34:30 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:34:33 --> 404 Page Not Found: Upload/blogimage
+ERROR - 2019-09-26 16:34:33 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:33 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:40 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:40 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:47 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:47 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:34:47 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:34:47 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:36:02 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:36:02 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:36:04 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:36:04 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:36:09 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:36:09 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:08 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:08 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:12 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:12 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:16 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:16 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:33 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:33 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:33 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:37:33 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-26 16:37:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:37:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:38:01 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:38:01 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 16:38:02 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-26 16:38:02 --> 404 Page Not Found: Favicon/favicon.ico

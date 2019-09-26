@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="card-header">
                 <h4 class="card-title">List of Blog
                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                <a href="<?php echo base_url();?>Blog/Blogadd/" class="btn btn-primary" style="float:right">Add Blog</a>
+                <a href="<?php echo base_url();?>blog/addblog/" class="btn btn-primary" style="float:right">Add Blog</a>
                 </h4>
             </div>
             <div class="card-body collapse in">
@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <th>Blog Title</th>
                                 <th>Blog Image</th>
                                 <th>Blog Description</th>
-                                <th>Blog Status</th>
+                             
 								<th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -50,14 +50,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <tr>
                             
                                     <td><?php echo $i; ?></td>                                   
-                                    <td><?php echo $row->BlogTitle; ?></td>
-                                    <td><?php echo $row->BlogImage; ?></td>
-                                    <td><?php $rr=$row->BlogDescription;
+                                    <td><?php echo $row->blog_title; ?></td>
+                                   <td>
+                                        <img src="<?php echo base_url();?>upload/blogimage/<?php echo $row->blog_image;?>" class="img-thumbnail border-0" style="height: 50px;width:50px;">
+                                    </td>
+                                    <td><?php $rr=$row->blog_desc;
                                         echo substr("$rr",0,30); ?></td>
                                     <!-- <td><?php// echo $row->BlogDescription; ?></td> -->
                                   
                                     <td>
-                                        <?php if($row->IsActive==1)
+                                        <?php if($row->IsActive=='Active')
                                             {
                                                 echo "Active";
                                             } 
@@ -68,8 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         ?>
                                     </td>
                                     <td>
-                                        <?php echo anchor('Blog/Editblog/'.$row->BlogId,'<i class="ficon icon-pencil2"></i>'); ?>
-                                        <a href="javascript:void(0)"  onclick="deletedata('<?php echo $row->BlogId; ?>')" ><i class="ficon icon-bin"></i></a>    
+                                      <?php echo anchor('blog/editblog/'.$row->blog_id,'<i class="ficon icon-pencil2"></i>'); ?>
+                                        <a href="javascript:void(0)" onclick="deletedata('<?php echo $row->blog_id; ?>','<?php echo $row->blog_image; ?>')" ><i class="ficon icon-bin"></i></a>     
                                     </td>  
                                 </tr>      
                                 <?php
@@ -119,18 +121,19 @@ $(function() {
    
 });
 
-function deletedata(id){  
+function deletedata(id,image){  
     $('#myModal').modal('show')
    
         $('#yes_btn').click(function(){
            
                 url="<?php echo base_url();?>"
                 $.ajax({
-                url: url+"/Stream/deletedata/",
+                url: url+"blog/blog_delete/",
                 type: "post",
-                data: {id:id} ,
-                success: function (response) {             
-                document.location.href = url+'Stream/Streamlist/';                  
+                data: {id:id,blog_image:image} ,
+                success: function (response) {   
+                   
+                document.location.href = url+'blog/bloglist/';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {

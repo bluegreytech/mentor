@@ -104,13 +104,13 @@ class Testimonial extends CI_Controller {
 		}
 			if($this->input->post('testimonial_image')!='')
 			{
-					if(file_exists(base_path().'upload/testimonialimage/'.$this->input->post('testimonial_image')))
-					{
-						$link=base_path().'upload/testimonialimage/'.$this->input->post('testimonial_image');
-						unlink($link);
-					}
+				if(file_exists(base_path().'upload/testimonialimage/'.$this->input->post('testimonial_image')))
+				{
+					$link=base_path().'upload/testimonialimage/'.$this->input->post('testimonial_image');
+					unlink($link);
+				}
 			}
-			$data= array('Is_deleted' =>'1');
+			$data= array('Is_deleted' =>'1','testimonial_image'=>'');
 			$id=$this->input->post('id');
 			$this->db->where("testimonial_id",$id);			
 			$res=$this->db->update('tbltestimonial',$data);
