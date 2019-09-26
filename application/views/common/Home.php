@@ -664,14 +664,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="row">
         <div class="col-md-10 col-center m-auto">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div id="myCarousel" class="carousel slide" >
                 <!-- Carousel indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>   
-                <!-- Wrapper for carousel items -->
+               <!-- Wrapper for carousel items -->
                 <div class="carousel-inner">
                     <div class="item carousel-item active">
                         <div class="img-box"><img src="<?php echo base_url(); ?>default/images/a6.png" alt=""></div>
