@@ -34,7 +34,7 @@ $this->load->view('common/header');
                <div class="featurette">
                 <!------------------------code---------------start---------------->
                 <div>
-                    <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+                    <div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="5500">
                       <!-- End Carousel Inner -->
                         <div class="controls">
                             <ul class="nav">
