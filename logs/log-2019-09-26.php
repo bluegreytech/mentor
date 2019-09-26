@@ -1,5 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
+<<<<<<< HEAD
 ERROR - 2019-09-26 06:05:47 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-26 06:10:58 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-26 06:10:59 --> 404 Page Not Found: Default/images
@@ -214,3 +215,11 @@ ERROR - 2019-09-26 07:10:29 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:10:38 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:12:12 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-26 07:12:15 --> 404 Page Not Found: Default/css
+=======
+ERROR - 2019-09-26 10:09:53 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 10:10:40 --> 404 Page Not Found: Default/images
+>>>>>>> cfe702aa64d9fb04a7ca1419c341ee272d46c225
+ERROR - 2019-09-26 07:13:05 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 07:13:05 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-26 07:13:07 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-26 07:13:07 --> 404 Page Not Found: Default/images
