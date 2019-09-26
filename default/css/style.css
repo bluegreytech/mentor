@@ -3302,7 +3302,7 @@ textarea.custom  {
      margin-left: -69px;
      position: absolute;
      z-index: 99;
-     background: #f16534;
+     background: #bb342f;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -5618,12 +5618,12 @@ padding: 6px 25px;
 }
 .s17-eve-time-tim {
     float: left;
-    width: 14%;
+    width: 12%;
     box-sizing: border-box;
 }
 .s17-eve-time-msg {
     float: left;
-    width: 75%;
+    width: 100%;
     box-sizing: border-box;
 }
 .ed-pho-gal{}
@@ -6214,6 +6214,7 @@ padding: 6px 25px;
 .s17-eve-time-tim span{
      font-weight: 600;
     font-size: 20px;
+    display: none;
     color: #bb342f;
 }
 .who-choose-banner {
@@ -6300,8 +6301,12 @@ padding: 6px 25px;
          #custom_carousel .controls li:hover{
             background-color: none!important;
         }
-        .controls .nav > li > a:hover, .nav > li > a:focus{
+        .controls .nav > li > a:hover{
           background-color:#bb342f;
+        }
+        .controls .nav > li > a:focus{
+          background-color:transparent;
+          color: #151515;
         }
         #custom_carousel .controls li a{
           text-align: center;

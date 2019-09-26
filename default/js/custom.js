@@ -106,6 +106,22 @@ $(document).ready(function() {
         $(".time-hide-4, .time-hide-44-btn").slideUp();
         $(".time-hide-4-btn").fadeIn();
     });
+     $(".time-hide-5-btn").on('click', function() {
+        $(".time-hide-5, .time-hide-55-btn").slideDown();
+        $(".time-hide-5-btn").fadeOut();
+    });
+    $(".time-hide-55-btn").on('click', function() {
+        $(".time-hide-5, .time-hide-55-btn").slideUp();
+        $(".time-hide-5-btn").fadeIn();
+    });
+    $(".time-hide-6-btn").on('click', function() {
+        $(".time-hide-6, .time-hide-66-btn").slideDown();
+        $(".time-hide-6-btn").fadeOut();
+    });
+    $(".time-hide-66-btn").on('click', function() {
+        $(".time-hide-6, .time-hide-66-btn").slideUp();
+        $(".time-hide-6-btn").fadeIn();
+    });
 
     //MOBILE MENU OPEN
     $(".ed-micon").on('click', function() {
