@@ -434,7 +434,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <ul>
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/awa/2.png" alt="">
+                                    <img src="<?php echo base_url(); ?>default/images/icon/understand.png" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
@@ -457,7 +457,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/awa/3.png" alt="">
+                                    <img src="<?php echo base_url(); ?>default/images/icon/acquainted.png" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
@@ -480,7 +480,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/awa/4.png" alt="">
+                                    <img src="<?php echo base_url(); ?>default/images/icon/interest.png" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
@@ -503,7 +503,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/awa/5.png" alt="">
+                                    <img src="<?php echo base_url(); ?>default/images/icon/learning.png" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
@@ -526,7 +526,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/awa/5.png" alt="">
+                                    <img src="<?php echo base_url(); ?>default/images/icon/equivalents.png" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
@@ -549,7 +549,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="images/icon/awa/5.png" alt="">
+                                    <img src="<?php echo base_url(); ?>default/images/icon/benefit.png" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
