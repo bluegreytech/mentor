@@ -21,9 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">List of Blog
+                <h4 class="card-title">List of Testimonial
                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                <a href="<?php echo base_url();?>blog/addblog/" class="btn btn-primary" style="float:right">Add Blog</a>
+                <a href="<?php echo base_url();?>testimonial/addtestimonial/" class="btn btn-primary" style="float:right">Add Testimonial</a>
                 </h4>
             </div>
             <div class="card-body collapse in">
@@ -31,12 +31,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <table id="example" class="table">
                         <thead class="thead-inverse">
                             <tr>
-                                <th>Sr No</th>
-                                <th>Blog Title</th>
-                                <th>Blog Image</th>
-                                <th>Blog Description</th>
-                             
-								<th>Status</th>
+                                <th>Sr No</th>                               
+                                <th>Testimonial Title</th>
+                                <th>Testimonial Image</th> 
+                                 <th>Testimonial Desc</th>                              
+                                <th>Testimonial Status</th>								
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -48,16 +47,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 {
                             ?>
                             <tr>
-                            
-                                    <td><?php echo $i; ?></td>                                   
-                                    <td><?php echo $row->blog_title; ?></td>
-                                   <td>
-                                        <img src="<?php echo base_url();?>upload/blogimage/<?php echo $row->blog_image;?>" class="img-thumbnail border-0" style="height: 50px;width:50px;">
+                                    <td><?php echo $i; ?></td>                                  
+                                    <td><?php echo $row->testimonial_title; ?></td>
+                                    <td>
+                                    	<img src="<?php echo base_url();?>upload/testimonialimage/<?php echo $row->testimonial_image;?>" class="img-thumbnail border-0" style="height: 50px;width:50px;">
                                     </td>
-                                    <td><?php $rr=$row->blog_desc;
-                                        echo substr("$rr",0,30); ?></td>
+                                    <td><?php $rr=$row->testimonial_desc;
+                                                   echo substr("$rr",0,30).'...';?></td>
                                     <!-- <td><?php// echo $row->BlogDescription; ?></td> -->
-                                  
+                                   
                                     <td>
                                         <?php if($row->IsActive=='Active')
                                             {
@@ -70,8 +68,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         ?>
                                     </td>
                                     <td>
-                                      <?php echo anchor('blog/editblog/'.$row->blog_id,'<i class="ficon icon-pencil2"></i>'); ?>
-                                        <a href="javascript:void(0)" onclick="deletedata('<?php echo $row->blog_id; ?>','<?php echo $row->blog_image; ?>')" ><i class="ficon icon-bin"></i></a>     
+                                        <?php echo anchor('testimonial/edittestimonial/'.$row->testimonial_id,'<i class="ficon icon-pencil2"></i>'); ?>
+                                        <a href="javascript:void(0)"  onclick="deletedata('<?php echo $row->testimonial_id; ?>','<?php echo $row->testimonial_image; ?>')" ><i class="ficon icon-bin"></i></a>    
                                     </td>  
                                 </tr>      
                                 <?php
@@ -124,16 +122,14 @@ $(function() {
 function deletedata(id,image){  
     $('#myModal').modal('show')
    
-        $('#yes_btn').click(function(){
-           
+        $('#yes_btn').click(function(){           
                 url="<?php echo base_url();?>"
                 $.ajax({
-                url: url+"blog/blog_delete/",
+                url: url+"testimonial/testimonial_delete/",
                 type: "post",
-                data: {id:id,blog_image:image} ,
-                success: function (response) {   
-                   
-                document.location.href = url+'blog/bloglist/';                  
+                data: {id:id,testimonial_image:image} ,
+                success: function (response) {  
+                document.location.href = url+'testimonial/testimoniallist/';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {

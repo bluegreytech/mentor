@@ -716,13 +716,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <p>Mentor FPG is an initiative of Mentor Knowledge Management Pvt ltd and Sanskar Bharti Foundation, an education and research organization, founded in 2004 with a vision of becoming “First Choice of People”. </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="http://localhost/mentor/default/images/about-us.png" class="img-responsive">
+                    <img src="<?php base_url(); ?>default/images/about-us.png" class="img-responsive">
                 </div>
                 <!--Second Blog-->
             </div>
             <div class="text-center pad-top-20">  
                 <br>
-                    <a href="#" class="custom-btn">Read More <i class="fa fa-angle-double-right"></i></a>
+                    <a href="<?php base_url(); ?>home/about_us" class="custom-btn">Read More <i class="fa fa-angle-double-right"></i></a>
             </div>
         </div>
     </section>

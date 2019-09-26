@@ -2,145 +2,270 @@
 
 class Blog_model extends CI_Model
  {
-
-
-	// 	public function insertdata()
-	// 	{
-	// 		if($this->input->post('upload') != NULL )
-	// 		{ 
-	// 			$data = array(); 
-	// 			if(!empty($_FILES['UserImage']['name']))
-	// 			{ 
-	// 					// Set preference 
-	// 					$config['upload_path'] = 'uploads/'; 
-	// 					$config['allowed_types'] = 'jpg|jpeg|png|gif'; 
-	// 					$config['max_size'] = '100'; // max_size in kb 
-	// 					$config['file_name'] = $_FILES['UserImage']['name']; 
-					
-	// 					$this->load->library('upload',$config); 
-	// 					if($this->upload->do_upload('UserImage'))
-	// 					{ 
-	// 							$uploadData = $this->upload->data(); 
-	// 							$filename = $uploadData['file_name']; 
-	// 							$data['response'] = 'successfully uploaded '.$filename; 
-	// 					}
-	// 					else
-	// 					{ 
-	// 						echo "failed 1111"; 
-	// 					} 
-	// 			}
-	// 			else
-	// 			{ 
-	// 				echo "failed 2222"; 
-	// 			}  
-	// 	 }
-	// 	 else
-	// 	 {
-	// 	  		$this->load->view('user_view'); 
-	// 	 } 
-	// }
-	   
-	
-	function insertdata()
-	{	
-
-
-			$BlogId=$this->input->post('BlogId');
-			$FirstName=$this->input->post('FirstName');
-
-			$UserImage=$this->input->post('UserImage');
-			$config['upload_path']="./UserImage";
-			$config['allowed_types'] = 'jpg|png|jpeg|gif';
-			$config['max_size'] = '1000000'; 
-			$this->upload->initialize($config);  
-			$this->upload->do_upload('UserImage');
-			$ss = $this->upload->data();
-			$userImage =$ss['file_name'];
-
-
-			$BlogTitle=$this->input->post('BlogTitle');
-			$BlogImage=$this->input->post('BlogImage');	
-
-			$config['upload_path']="./BlogImage";
-			$config['allowed_types'] = 'jpg|png|jpeg|gif';
-			$config['max_size'] = '1000000'; 
-			$this->upload->initialize($config);  
-			$this->upload->do_upload('BlogImage');
-			$s = $this->upload->data();
-			$blogImage =$s['file_name'];
-
-			// $random1 = substr(number_format(time() * rand(),0,'',''),0,10);
-			$BlogDescription=$this->input->post('BlogDescription');
-			$BlogStatusId=$this->input->post('BlogStatusId');
-			$IsActive=$this->input->post('IsActive');
-			$data=array( 
-			'FirstName'=>$FirstName,
-			'UserImage'=>$userImage,
-			'BlogTitle'=>$BlogTitle,
-			'BlogImage'=>$blogImage, 
-			'BlogDescription'=>$BlogDescription,
-			'IsActive'=>$IsActive,
-			'CreatedBy'=>1
-			);
-			// print_r($data);
-			// die;
-			$res=$this->db->insert('tblblogs',$data);	
-			return $res;
-	}
-	
-	function getblogStatus(){
-		$r=$this->db->select('*')
-					->from('tblblogstatus')
-					->get();
-		$res = $r->result();
-		return $res;
-
-	}
-
 	
 	function getblog(){
-		$r=$this->db->select('t1.*,t2.*')
-			->from('tblblogs as t1')
-			->join('tblblogstatus as t2', 't1.BlogStatusId = t2.BlogStatusId', 'LEFT')
-			->get();
+		$this->db->select('*');
+		$this->db->from('tblblog');
+		$this->db->where('is_deleted','0');
+		$r=$this->db->get();
 		$res = $r->result();
 		return $res;
 
 	}
+	function blog_insert(){
+		//echo "<pre>";print_r($_FILES);die;
+		
+         	$blog_image='';
+         	//$image_settings=image_setting();
+		if(isset($_FILES['blogimage']) &&  $_FILES['blogimage']['name']!='')
+        {
+             $this->load->library('upload');
+             $rand=rand(0,100000); 
+			  
+			$_FILES['userfile']['name']     =   $_FILES['blogimage']['name'];
+			$_FILES['userfile']['type']     =   $_FILES['blogimage']['type'];
+			$_FILES['userfile']['tmp_name'] =   $_FILES['blogimage']['tmp_name'];
+			$_FILES['userfile']['error']    =   $_FILES['blogimage']['error'];
+			$_FILES['userfile']['size']     =   $_FILES['blogimage']['size'];
+   
+			$config['file_name'] = $rand.'blogimage';			
+			$config['upload_path'] = base_path().'upload/blogimage/';		
+			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
+ 
+             $this->upload->initialize($config);
+ 
+              if (!$this->upload->do_upload())
+			  {
+				$error =  $this->upload->display_errors();
+				echo "<pre>";print_r($error);
+			  } 
+			$picture = $this->upload->data();	
+			//echo "<pre>";print_r($picture);die;		
+			$blog_image=$picture['file_name'];
+			if($this->input->post('pre_blog_image')!='')
+				{
+					if(file_exists(base_path().'upload/blogimage/'.$this->input->post('pre_blog_image')))
+					{
+						$link=base_path().'upload/blogimage/'.$this->input->post('pre_blog_image');
+						unlink($link);
+					}
+				}
+			} else {
+				if($this->input->post('pre_blog_image')!='')
+				{
+					$blog_image=$this->input->post('pre_blog_image');
+				}
+	   		 }
+		
+			//project logo upload end //
 
+            $data = array(					
+			'blog_title' => trim($this->input->post('blogtitle')),
+			'blog_desc' => trim($this->input->post('blogdesc')),
+			'blog_image'=>$blog_image,		
+			'IsActive' => $this->input->post('IsActive'),			
+			'created_date'=>date('Y-m-d  H:i:s')		
+			);
+		  // echo "<pre>";print_r($data);die;	
+	    
+		$res=$this->db->insert('tblblog',$data);		
+		return $res;
+	}
+	function blog_update(){
+        $blog_image='';         	
+		if(isset($_FILES['blogimage']) &&  $_FILES['blogimage']['name']!='')
+        {
+            $this->load->library('upload');
+            $rand=rand(0,100000); 
+			  
+			$_FILES['userfile']['name']     =   $_FILES['blogimage']['name'];
+			$_FILES['userfile']['type']     =   $_FILES['blogimage']['type'];
+			$_FILES['userfile']['tmp_name'] =   $_FILES['blogimage']['tmp_name'];
+			$_FILES['userfile']['error']    =   $_FILES['blogimage']['error'];
+			$_FILES['userfile']['size']     =   $_FILES['blogimage']['size'];
+   
+			$config['file_name'] = $rand.'blogimage';			
+			$config['upload_path'] = base_path().'upload/blogimage/';		
+			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
+ 
+             $this->upload->initialize($config); 
+              if (!$this->upload->do_upload())
+			  {
+				$error =  $this->upload->display_errors();
+				echo "<pre>";print_r($error);
+			  } 
+			$picture = $this->upload->data();			
+			$blog_image=$picture['file_name'];
+			if($this->input->post('pre_blog_image')!='')
+				{
+					if(file_exists(base_path().'upload/blogimage/'.$this->input->post('pre_blog_image')))
+					{
+						$link=base_path().'upload/blogimage/'.$this->input->post('pre_blog_image');
+						unlink($link);
+					}
+				}
+			}else{
+				if($this->input->post('pre_blog_image')!='')
+				{
+					$blog_image=$this->input->post('pre_blog_image');
+				}
+	    	} 
+		
+			//project logo upload end //
+            $data = array(					
+			'blog_title' => trim($this->input->post('blogtitle')),
+			'blog_desc' => trim($this->input->post('blogdesc')),
+			'blog_image'=>$blog_image,		
+			'IsActive' => $this->input->post('IsActive'),			
+			'created_date'=>date('Y-m-d  H:i:s')		
+			);
+			// echo "<pre>";print_r($data);die;
+		    $this->db->where("blog_id",$this->input->post('blogid'));
+			$res=$this->db->update('tblblog',$data);		
+			return $res;
+	}
 
-	// function getblog(){
-	// 	$r=$this->db->select('*')
-	// 				->from('tblblogs as t1')
-	// 				->join('tblblogstatus as t2', 't1.BlogId = t2.BlogId', 'LEFT')
-	// 				->get();
-	// 	$res = $r->result();
-	// 	return 
-	
-	function getdata($id){
+	function getblogdata($id){
 		$this->db->select("*");
-		$this->db->from("tblblogs");
-		$this->db->where("BlogId",$id);
+		$this->db->from("tblblog");
+		$this->db->where("blog_id",$id);
+		$query=$this->db->get();
+		return $query->row_array();
+	}
+	function gettestimonial(){
+		$this->db->select('*');
+			$this->db->from('tbltestimonial');	
+			$this->db->where("is_deleted",'0');		
+			$r=$this->db->get();
+		$res = $r->result();
+		return $res;
+
+	}
+	function gettestimonialdata($id){
+		$this->db->select("*");
+		$this->db->from("tbltestimonial");
+		$this->db->where("testimonial_id",$id);
 		$query=$this->db->get();
 		return $query->row_array();
 	}
 	
-	function updatedata(){
-		$id=$this->input->post('BlogId');
-		$data=array(
-			'FirstName'=>$this->input->post('FirstName'),
-			'UserImage'=>$this->input->post('UserImage'),
-			'BlogTitle'=>$this->input->post('BlogTitle'),
-			'BlogImage'=>$this->input->post('BlogImage'),
-			'BlogDescription'=>$this->input->post('BlogDescription'),
-			'BlogStatusId'=>$this->input->post('BlogStatusId'),
-			'IsActive'=>$this->input->post('IsActive'),
-			  );
-	    $this->db->where("BlogId",$id);
-		$this->db->update('tblblogs',$data);		
-		return 1;
+	
+    function testimonial_insert(){
+		//echo "<pre>";print_r($_POST);die;
+		
+         	$testimonial_image='';
+         	//$image_settings=image_setting();
+		if(isset($_FILES['testimonialimage']) &&  $_FILES['testimonialimage']['name']!='')
+        {
+             $this->load->library('upload');
+             $rand=rand(0,100000); 
+			  
+			$_FILES['userfile']['name']     =   $_FILES['testimonialimage']['name'];
+			$_FILES['userfile']['type']     =   $_FILES['testimonialimage']['type'];
+			$_FILES['userfile']['tmp_name'] =   $_FILES['testimonialimage']['tmp_name'];
+			$_FILES['userfile']['error']    =   $_FILES['testimonialimage']['error'];
+			$_FILES['userfile']['size']     =   $_FILES['testimonialimage']['size'];
+   
+			$config['file_name'] = $rand.'testimonialimage';			
+			$config['upload_path'] = base_path().'upload/testimonialimage/';		
+			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
+ 
+             $this->upload->initialize($config);
+ 
+              if (!$this->upload->do_upload())
+			  {
+				$error =  $this->upload->display_errors();
+				echo "<pre>";print_r($error);
+			  } 
+			$picture = $this->upload->data();	
+			//echo "<pre>";print_r($picture);die;		
+			$testimonial_image=$picture['file_name'];
+			if($this->input->post('pre_testimonial_image')!='')
+				{
+					if(file_exists(base_path().'upload/testimonialimage/'.$this->input->post('pre_testimonial_image')))
+					{
+						$link=base_path().'upload/testimonialimage/'.$this->input->post('pre_testimonial_image');
+						unlink($link);
+					}
+				}
+			} else {
+				if($this->input->post('pre_testimonial_image')!='')
+				{
+					$testimonial_image=$this->input->post('pre_testimonial_image');
+				}
+	    }
+   
+		
+			//project logo upload end //
+
+            $data = array(					
+			'testimonial_title' => trim($this->input->post('testimonialtitle')),
+			'testimonial_desc' => trim($this->input->post('testimonialdesc')),
+			'testimonial_image'=>$testimonial_image,		
+			'IsActive' => $this->input->post('IsActive'),			
+			'created_date'=>date('Y-m-d  H:i:s')		
+			);
+		  // echo "<pre>";print_r($data);die;	
+          
+	    
+		$res=$this->db->insert('tbltestimonial',$data);		
+		return $res;
+	}
+	function testimonial_update(){
+        $testimonial_image='';         	
+		if(isset($_FILES['testimonialimage']) &&  $_FILES['testimonialimage']['name']!='')
+        {
+            $this->load->library('upload');
+            $rand=rand(0,100000); 
+			  
+			$_FILES['userfile']['name']     =   $_FILES['testimonialimage']['name'];
+			$_FILES['userfile']['type']     =   $_FILES['testimonialimage']['type'];
+			$_FILES['userfile']['tmp_name'] =   $_FILES['testimonialimage']['tmp_name'];
+			$_FILES['userfile']['error']    =   $_FILES['testimonialimage']['error'];
+			$_FILES['userfile']['size']     =   $_FILES['testimonialimage']['size'];
+   
+			$config['file_name'] = $rand.'testimonialimage';			
+			$config['upload_path'] = base_path().'upload/testimonialimage/';		
+			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
+ 
+             $this->upload->initialize($config); 
+              if (!$this->upload->do_upload())
+			  {
+				$error =  $this->upload->display_errors();
+				echo "<pre>";print_r($error);
+			  } 
+			$picture = $this->upload->data();			
+			$testimonial_image=$picture['file_name'];
+			if($this->input->post('pre_testimonial_image')!='')
+				{
+					if(file_exists(base_path().'upload/testimonialimage/'.$this->input->post('pre_testimonial_image')))
+					{
+						$link=base_path().'upload/testimonialimage/'.$this->input->post('pre_testimonial_image');
+						unlink($link);
+					}
+				}
+			}else{
+				if($this->input->post('pre_testimonial_image')!='')
+				{
+					$testimonial_image=$this->input->post('pre_testimonial_image');
+				}
+	    	} 
+		
+			//project logo upload end //
+            $data = array(					
+			'testimonial_title' => trim($this->input->post('testimonialtitle')),
+			'testimonial_desc' => trim($this->input->post('testimonialdesc')),
+			'testimonial_image'=>$testimonial_image,		
+			'IsActive' => $this->input->post('IsActive'),			
+			'created_date'=>date('Y-m-d  H:i:s')		
+			);
+			// echo "<pre>";print_r($data);die;
+		    $this->db->where("testimonial_id",$this->input->post('testimonialid'));
+			$res=$this->db->update('tbltestimonial',$data);		
+			return $res;
 	}
 
+	
 
 		
 

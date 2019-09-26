@@ -15,50 +15,48 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title" id="basic-layout-form">
-						<?php if($blogid==1)
+						<?php if($testimonialid==1)
 					{
-						echo	"Edit Blog";
+						echo	"Edit testimonial";
 					}
 					else{
-					echo	"Add Blog";
+					echo	"Add testimonial";
 					}
 						?>
 					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-					<a href="<?php echo base_url();?>Blog/Bloglist/" class="btn btn-primary" style="float:right">Back to Blog List</a>
+					<a href="<?php echo base_url();?>testimonial/testimoniallist/" class="btn btn-primary" style="float:right">Back to Testimonial List</a>
 				</div>
 				</h4>
 				<div class="card-body collapse in">
-					<div class="card-block">
-				
-						<form class="form" method="post" enctype="multipart/form-data" id="form_blog" action="<?php echo base_url();?>blog/addblog">
+					<div class="card-block">				
+						<form class="form" method="post" enctype="multipart/form-data" id="form_testimonial" action="<?php echo base_url();?>testimonial/addtestimonial">
 					
 							<div class="form-body">
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
 
-								<input type="hidden"   value="<?php echo $blogid; ?>" name="blogid">
+								<input type="hidden"   value="<?php echo $testimonialid; ?>" name="testimonialid">
 								
-							
 								<div class="form-group">
-									<label>Blog Title</label>
-									<input type="text" class="form-control" placeholder="Blog Title" name="blogtitle" value="<?php echo $blogtitle;?>"  minlength="5" maxlength="200">
+									<label>Testimonial Title</label>
+									<input type="text" class="form-control" placeholder="Testimonial Title" name="testimonialtitle" value="<?php echo $testimonialtitle; ?>" maxlength="200">
 								</div>
 								<div class="form-group">
-									<label>Blog Description</label>
-									<textarea id="editor1" rows="5" class="form-control"  required name="blogdesc"  placeholder="Blog Description"><?php echo $blogdesc; ?></textarea>          
+									<label>Testimonial Description</label>
+									<textarea id="editor1" rows="5" class="form-control"  required name="testimonialdesc"  placeholder="Testimonial Description"><?php echo $testimonialdesc ;?></textarea>          
 								</div>
 								<div class="form-group">
-									<label>Blog Image</label>
-									<input type="hidden" name="pre_blog_image" value="<?php echo $blogimage;?>">
-									<input type="file" class="form-control" placeholder="Testimonial Image" value="<?php echo $blogimage; ?>" name="blogimage" onchange="readURLimg(this);">
+									<label>Testimonial Image</label>
+									<input type="hidden" name="pre_testimonial_image" value="<?php echo $testimonialimage;?>">
+									<input type="file" class="form-control" placeholder="Testimonial Image" value="<?php echo $testimonialimage;?>" name="testimonialimage" onchange="readURLimg(this);">
 								</div>
 								<div class="preview">									
-									<?php if($blogimage){ ?>
-									<img id="blahimg" src="<?php echo base_url()?>upload/blogimage/<?php echo $blogimage;?>" class="img-thumbnail border-0" style="display: block;  width: 100px; height: 100px;">
+									<?php if($testimonialimage){ ?>
+									<img id="blahimg" src="<?php echo base_url()?>upload/testimonialimage/<?php echo $testimonialimage;?>" class="img-thumbnail border-0" style="display: block;  width: 100px; height: 100px;">
 									<?php } else{?>
 									<img id="blahimg" src="" class="img-thumbnail border-0" style="display: none;  width: 100px; height: 100px;">
 									<?php } ?>
 								</div>
-										<?php if($IsActive!=''){ ?>
+								<?php if($IsActive!=''){ ?>
 											<div class="form-group">
 												<label>Status</label>
 													<div class="input-group">
@@ -88,10 +86,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 												</div> 	
 											</div>
 										 <?php } ?>
-
-
 							<div class="form-actions">
-							<?php if($blogid!=''){ ?>
+							<?php if($testimonialid!=''){?>
 								<button type="submit" name="updateBlog" class="btn btn-primary">
 									<i class="icon-check2"></i> Update
 								</button>
@@ -100,7 +96,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<i class="icon-check2"></i> Add
 								</button>
 							<?php } ?>
-								<a href="<?php echo base_url(); ?>blog/bloglist" name="CancelBlog" class="btn btn-danger">
+								<a href="<?php echo base_url(); ?>testimonial/testimoniallist" name="CancelBlog" class="btn btn-danger">
 								Cancel
 								</a>
 							</div>
@@ -126,32 +122,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $(document).ready(function()
 {
-		$("#form_blog").validate(
+	$.validator.addMethod('filesize', function (value, element, param) {
+	return this.optional(element) || (element.files[0].size <= param)
+	} ,'File size must be equal to or less then 2MB');
+		$("#form_testimonial").validate(
 		{
-			rules:{	
-					blogtitle: {
-							required: true,
+					rules: {
+						testimonialtitle: {
+						required: true,
+						},
+						testimonialimage: {
+							required:function(){
+								testimonialimage='<?php echo $testimonialimage; ?>';
+								if(testimonialimage){
+								return false;
+								}else{
+								return true;
+								}
+
 							},
-					blogdesc: {
+							extension: "JPG|jpeg|png|bmp",
+							filesize: 2097152,
+						},
+						testimonialdesc: {
 							required: true,
-							},
-					blogimage: {
-					required:function(){
-						blogimage='<?php echo $blogimage; ?>';
-						if(blogimage){
-						return false;
-						}else{
-						return true;
-						}
+						},
 					},
-					extension: "JPG|jpeg|png|bmp",
-					filesize: 2097152,
-				},
-			},
 		});
 });
 
-CKEDITOR.replace('editor1');
+		CKEDITOR.replace('editor1');
 function readURLimg(input) {
     if(input.files && input.files[0]) {
         var reader = new FileReader();

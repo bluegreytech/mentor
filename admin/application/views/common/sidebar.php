@@ -30,9 +30,7 @@
               </li>
             </ul>
           </li> 
-          <?php } ?>       
-       
-
+          <?php } ?>
           <li class="nav-item">
             <a>
               <i class="icon-users"></i><span data-i18n="nav.dash.main" class="menu-title">Student</span>
@@ -47,17 +45,38 @@
             </ul>
           </li>
               <li class="nav-item">
-            <a href="<?php echo base_url();?>home/inquerylist">
-              <i class="icon-users"></i><span data-i18n="nav.dash.main" class="menu-title">Inquery List</span>
-            </a>
-        
-          </li>
-         
-         
-         <!--   <li>
-                <a href="<?php echo base_url(); ?>home/add_pages" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file"></i> Page Setting </a>
-                    
-              </li> -->
+                  <a href="<?php echo base_url();?>home/inquerylist">
+                         <i class="icon-users"></i><span data-i18n="nav.dash.main" class="menu-title">Inquery List</span>
+                  </a>
+              </li>
+              <li class="nav-item">
+                <a>
+                  <i class="icon-comments"></i><span data-i18n="nav.dash.main" class="menu-title">Testimonial</span>
+                </a>
+                <ul class="menu-content">
+                  <li>
+                    <a href="<?php echo base_url(); ?>testimonial/addtestimonial" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add Testimonial</a>
+                  </li>
+                 
+                  <li>
+                    <a href="<?php echo base_url(); ?>testimonial/testimoniallist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i>List of Testimonial</a>
+                  </li>
+                </ul>
+              </li> 
+              <li class="nav-item">
+                <a>
+                  <i class="icon-blog"></i><span data-i18n="nav.dash.main" class="menu-title">Blog</span>
+                </a>
+                <ul class="menu-content">
+                  <li>
+                    <a href="<?php echo base_url(); ?>blog/addblog" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i>Add Blog</a>
+                  </li>
+                 
+                  <li>
+                    <a href="<?php echo base_url(); ?>blog/bloglist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i>List of Blog</a>
+                  </li>
+                </ul>
+              </li> 
         </ul>
       </div>
       <!-- /main menu content-->

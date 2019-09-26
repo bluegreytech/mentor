@@ -4,103 +4,110 @@ class Blog extends CI_Controller
 {
 	public function __construct() {
         parent::__construct();
-				$this->load->model('Blog_model');
+				$this->load->model('blog_model');
 		}
 
-		function Bloglist()
-		{	
-			if(!check_admin_authentication()){ 
-				redirect(base_url());
-			}else{	
-				$data['programData']=$this->Blog_model->getblog();
-				$this->load->view('Blog/BlogList',$data);
-			}	
-		}
-
-	public function Blogadd()
+		
+	function bloglist()
+	{	
+	
+		if(!check_admin_authentication()){			
+			redirect(base_url());
+		}		
+		$data['result']=$this->blog_model->getblog();
+		$this->load->view('Blog/BlogList',$data);
+		
+	}
+	public function addblog()
 	{        
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
-		}else{  
-				$data=array();
-				$data['BlogId']=$this->input->post('BlogId');
-				$data['FirstName']=$this->input->post('FirstName');
-				$data['UserImage']=$this->input->post('UserImage');
-				$data['BlogTitle']=$this->input->post('BlogTitle');
-				$data['BlogImage']=$this->input->post('BlogImage');
-				$data['BlogDescription']=$this->input->post('BlogDescription');
-				$data['BlogStatusId']=$this->input->post('BlogStatusId');
-				$data['IsActive']=$this->input->post('IsActive');
-				if($_POST){
-					if($this->input->post('BlogId')==''){
-								
-						$result=$this->Blog_model->insertdata();	
-						if($result)
-						{
-							$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
-							redirect('Blog/Bloglist');
-						}
-					}
-					else
-					{
-						$result=$this->Blog_model->updatedata();
-						if($result)
-						{
-							$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
-							redirect('Blog/Bloglist');
-						} 
-
-					}
+		}   
+			
+			$data=array();	
+			$data['activeTab']="addblog";	
+			$this->load->library("form_validation");
+			$this->form_validation->set_rules('blogtitle', 'blog title', 'required');			
+			$this->form_validation->set_rules('blogdesc', 'blog Description', 'required');
+			$this->form_validation->set_rules('IsActive', 'IsActive', 'required');
+		
+		if($this->form_validation->run() == FALSE){			
+			if(validation_errors())
+			{
+				$data["error"] = validation_errors();				
+			}else{
+				$data["error"] = "";
 			}
-			$data['statusBlog']=$this->Blog_model->getblogStatus();
-			$this->load->view('Blog/BlogAdd',$data);	
-		}	
+         		$data['redirect_page']='bloglist';
+				$data['blogid']=$this->input->post('blogid');
+				$data['blogtitle']=$this->input->post('blogtitle');
+				$data['blogdesc']=$this->input->post('blogdesc');
+				$data['blogimage']=$this->input->post('blogimage');
+				$data['IsActive']=$this->input->post('IsActive');			
+			}
+			else
+			{
+				if($this->input->post("blogid")!="")
+				{ //echo "hjjhgj";die;
+					$this->blog_model->blog_update();
+					$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
+					redirect('blog/bloglist');					
+				}
+				else
+				{ 
+					$this->blog_model->blog_insert();
+					$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
+					redirect('blog/bloglist');				
+				}				
+			}
+			$this->load->view('blog/blogadd',$data);
+				
 	}
 
+
+	public function editblog($blog_id)
+    {  
+		if(!check_admin_authentication())
+		{
+		redirect('login');
+		}
+
+		$data = array();				
+		$result=$this->blog_model->getblogdata($blog_id);	
+		//echo "<pre>";print_r($result);die;
+	    $data["blogid"] 	= $result["blog_id"]; 
+		$data["blogtitle"] 	= $result["blog_title"];
+		$data["blogdesc"] 		= $result["blog_desc"];				
+		$data["blogimage"]      = $result["blog_image"];			
+       	$data['IsActive']=$result["IsActive"];          
+      	$this->load->view('blog/blogadd',$data);            
+    }
+
+  
+
+    function blog_delete(){
 	
-	function Editblog($BlogId){
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
-		}else{
-			$data=array();
-			$data['statusBlog']=$this->Blog_model->getblogStatus();
-			$result=$this->Blog_model->getdata($BlogId);	
-			$data['BlogId']=$result['BlogId'];
-			$data['FirstName']=$result['FirstName'];	
-			$data['UserImage']=$result['UserImage'];	
-			$data['BlogTitle']=$result['BlogTitle'];
-			$data['BlogImage']=$result['BlogImage'];
-			$data['BlogDescription']=$result['BlogDescription'];
-			$data['BlogStatusId']=$result['BlogStatusId'];
-			$data['IsActive']=$result['IsActive'];			
-			$this->load->view('Blog/BlogAdd' ,$data);	
 		}
-	}
-
-	function updatedata($BlogId){
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}else{
-		$result=$this->Blog_model->updatedata($BlogId);	
-    	if($result=='1'){
-		  $this->session->set_flashdata('success', 'Record has been updated Succesfully!');
-		 	redirect('Blog/Bloglist');	
+			if($this->input->post('blog_image')!='')
+			{
+					if(file_exists(base_path().'upload/blogimage/'.$this->input->post('blog_image')))
+					{
+						$link=base_path().'upload/blogimage/'.$this->input->post('blog_image');
+						unlink($link);
+					}
 			}
-			redirect('Blog/Bloglist');
-		}
-	}
-
-	function deletedata(){
-		if(!check_admin_authentication()){ 
-			redirect(base_url());
-		}else{
+			$data= array('is_deleted' =>'1','blog_image'=>'');
 			$id=$this->input->post('id');
-			$this->db->where("BlogId",$id);
-			$res=$this->db->delete('tblblogs');
+			$this->db->where("blog_id",$id);			
+			$res=$this->db->update('tblblog',$data);
+			//echo $this->db->last_query();die;
 			echo json_encode($res);
 			die;
-		}
+		
 	}
+    
 	
 
 }
