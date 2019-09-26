@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="col-md-12 text-center">
                                 <div class="call-link">
                                    <a href="tel:+91 8128738522 " class="contact-link">
-                                   <i class="fa fa-phone"></i> Career Helpline: +91 8128738522 
+                                   <i class="fa fa-phone"></i> Career Helpline: <b>+91 8128738522 </b>
                                    </a>
                                 </div>
                             </div>
@@ -73,9 +73,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <h4><a href="#">Resources</a></h4>
                                     <h5><a href="<?php echo base_url()?>home/about_us">About Us</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/success">Success Stories</a></h5>
-                                    <h5><a href="#">Knowledge Center </a></h5>
-                                    <h5><a href="<?php echo base_url()?>home/blog/">Blog</a></h5>
-                                    <h5><a href="<?php echo base_url()?>home/pricing_plan/">Pricing</a></h5>
+                                    <h5><a href="#">Career Library</a></h5>
+                                    <h5><a href="<?php echo base_url()?>home/blog/">Career News</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/contact_us/">Contact Us</a></h5>
                                       
                                     <?php if(check_user_authentication()){   ?>

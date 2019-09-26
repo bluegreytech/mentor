@@ -3863,7 +3863,7 @@ textarea.custom  {
      background: url(../images/mentor-partnership.jpg)no-repeat;
 }
 .head-2.default{
-     background: #f26838;
+     background: #bb342f;
 }
 
 @media(max-width: 768px){
@@ -4852,7 +4852,7 @@ textarea.custom  {
 }
 .top-menu-sty-custom {
     width: 250px !important;
-    top:60px!important;
+    top:58px!important;
 }
 .top-menu-sty-custom li a {
    font-family: 'Open Sans', sans-serif!important;
@@ -6151,20 +6151,8 @@ padding: 6px 25px;
 }
 .price-item:hover {
     border: 3px dashed #bb342f;
-    background: linear-gradient(to bottom, #bb342f, #e52d27);
 }
-.price-item:hover .cl{
-     color: #fff!important;
-}
-.price-item:hover.price-item h3{
-     color:#fff;
-} 
-.price-item:hover .price-tag span, .price-tag2 span{
-     color: #fff!important;
-}
-.price-item:hover .gap-p p {
-    color: #fff;
-}
+
 .price-item:hover .sty-span:after{
      background:#fff;
 }
@@ -6374,4 +6362,26 @@ padding: 6px 25px;
 
 .itempro{
      padding: 0px 10px;
+}
+.gap-p{
+     padding: 10px 30px;
+     text-align: left;
+}
+.gap-p input{
+     width: 100%;
+     padding: 0px 5px;
+}
+.gap-p input::placeholder{
+     text-align: center;
+}
+.gap-p .disabled{
+     color: #888;
+}
+.gap-p i.fa.fa-check {
+    color: #bb342f;
+    font-size: 20px;
+}
+.gap-p i.fa.fa-close {
+    color: #888;
+    font-size: 20px;
 }

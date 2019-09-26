@@ -177,7 +177,7 @@ $this->load->view('common/header');
       <p class="p-title">Compare all leading career counselling platforms in India, to see how Mentor tops the
          charts across all major elements of career guidance.
       </p>
-      <a class="custom-btn" href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+      <a class="custom-btn" href="<?php echo base_url(); ?>home/about_us">Read More <i class="fa fa-angle-double-right"></i></a>
    </div>
 
 <?php 
