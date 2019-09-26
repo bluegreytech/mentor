@@ -47,7 +47,7 @@ $this->load->view('common/header');
                 <div class="overlay-contact footer-part footer-part-form">
                     <div class="map-head">
                         <p>Send Us Now</p>
-                        <h2>GetIn Touch</h2> <span class="footer-ser-re">Service Request Form</span> </div>
+                        <h2>Get In Touch</h2> <span class="footer-ser-re">Service Request Form</span> </div>
                     <!-- ENQUIRY FORM -->
                     <form id="contact_form" name="contact_form" action="<?php echo base_url()?>home/contact_us" method="POST">
                         <ul>
