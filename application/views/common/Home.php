@@ -527,7 +527,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     </div>
                     <div class="col-md-5">
-                        <img src="http://localhost/mentor/default/images/pricing.jpg" class="img-responsive">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/24HqSC9antg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -668,7 +668,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <p>Mentor FPG is an initiative of Mentor Knowledge Management Pvt ltd and Sanskar Bharti Foundation, an education and research organization, founded in 2004 with a vision of becoming “First Choice of People”. </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="http://localhost/mentor/default/images/pricing.jpg" class="img-responsive">
+                    <img src="http://localhost/mentor/default/images/about-us.png" class="img-responsive">
                 </div>
                 <!--Second Blog-->
             </div>

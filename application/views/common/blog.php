@@ -11,7 +11,8 @@ $this->load->view('common/header');
                 <div class="cor">
                     <div class="ed-about-tit">
                         <div class="con-title">
-                            <h2>Mentor's <span> Blog</span></h2>
+                          <h2>News & Updates</h2>
+                           <!--  <h2>Mentor's <span> Blog</span></h2> -->
                         </div>
                     </div>
                     <div class="pg-contact">

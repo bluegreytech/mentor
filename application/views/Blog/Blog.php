@@ -8,7 +8,7 @@ $this->load->view('common/header');
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <h6>Mentor BLog</h6>
+               <h6>News & Update</h6>
             </div>
          </div>
       </div>

@@ -132,21 +132,34 @@ $this->load->view('common/header');
                       <!--Pricing 1-->
                       <div class="col-lg-4 col-sm-6">
                         <div class="price-item text-center">
-                            <img src="<?php echo base_url()?>default/images/icon/p1.png" alt="pricing-img">
                             <h3>PREVIEW</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup><i class="fa fa-inr"></i> </sup>25</span>
-                            </div>
-                            <div class="price-tag2">
-                                <span class="sty-span">Per</span>
-                                <span>Month</span>
+                                <span><i class="fa fa-inr"></i> 0</span>
                             </div>
                             <div class="gap-p">
-                                <p>Limited course</p>
-                                <p>Daily 150+ tutorials</p>
-                                <p>No life-time support</p>
-                                <p>Zero GB space</p>
+                                <p>
+                                  <i class="fa fa-check"></i>
+                                  <b>Stream Assessment</b><br>
+                                  Part 1 of 4-dimensional assessment to assess workstyle.
+                                </p>
+                                <p>
+                                  <i class="fa fa-check"></i>
+                                  <b>Career Content</b><br>
+                                  Well-researched information on hundreds of career options.
+                                </p>
+                                <p class="disabled">
+                                  <i class="fa fa-close"></i>
+                                  <b>25 Page Stream Report</b><br>
+                                  Detailed assessment report containing best-fit stream matches and personalized development plans.</p>
+                                <p class="disabled">
+                                  <i class="fa fa-close"></i>
+                                  <b>Career Counselling</b><br>
+                                  Face-to-face counselling sessions and guidance from career experts and online support.
+                                </p>
+                                <p>
+                                  <input type="email"  value="" name="mail" placeholder="Email Your Email">
+                                </p>
                             </div>
                             <div class="price-btn">
                                 <a href="#">Get Started</a>
@@ -156,21 +169,31 @@ $this->load->view('common/header');
                       <!--Pricing 2-->
                       <div class="col-lg-4 col-sm-6">
                         <div class="price-item text-center">
-                            <img src="<?php echo base_url()?>default/images/icon/p2.png" alt="pricing-img">
                             <h3>LEARN</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup><i class="fa fa-inr"></i> </sup>25</span>
-                            </div>
-                            <div class="price-tag2">
-                                <span class="sty-span">Per</span>
-                                <span>Month</span>
+                                <span><i class="fa fa-inr"></i> 2,400</span>
                             </div>
                             <div class="gap-p">
-                                <p>Limited course</p>
-                                <p>Daily 150+ tutorials</p>
-                                <p>No life-time support</p>
-                                <p>Zero GB space</p>
+                                <p>
+                                  <i class="fa fa-check"></i>
+                                  <b>Stream Assessment</b><br>
+                                  4-dimensional career assessment with top stream recommendations.
+                                </p>
+                                <p>
+                                  <i class="fa fa-check"></i>
+                                  <b>Career Content</b><br>
+                                  Well-researched information on hundreds of career options.
+                                </p>
+                                <p>
+                                  <i class="fa fa-check"></i>
+                                  <b>25 Page Stream Report</b><br>
+                                  Detailed assessment report containing best-fit stream matches and personalized development plans.</p>
+                                <p class="disabled">
+                                 <i class="fa fa-close"></i>
+                                  <b>Career Counselling</b><br>
+                                  Face-to-face counselling sessions and guidance from career experts and online support.
+                                </p><br><br>
                             </div>
                             <div class="price-btn">
                                 <a href="#">Get Started</a>
@@ -180,28 +203,46 @@ $this->load->view('common/header');
                       <!--Pricing 3-->
                       <div class="col-lg-4 col-sm-6">
                         <div class="price-item text-center">
-                            <img src="<?php echo base_url()?>default/images/icon/p3.png" alt="pricing-img">
                             <h3>EXPLORE</h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><sup><i class="fa fa-inr"></i> </sup>25</span>
-                            </div>
-                            <div class="price-tag2">
-                                <span class="sty-span">Per</span>
-                                <span>Month</span>
+                                <span><i class="fa fa-inr"></i> 9,400</span>
                             </div>
                             <div class="gap-p">
-                                <p>Limited course</p>
-                                <p>Daily 150+ tutorials</p>
-                                <p>No life-time support</p>
-                                <p>Zero GB space</p>
-                            </div>
-                            <div class="price-btn">
-                                <a href="#">Get Started</a>
-                            </div>
+                                 <p>
+                                 <i class="fa fa-check"></i>
+                                  <b>Stream Assessment</b><br>
+                                  Part 1 of 4-dimensional assessment to assess workstyle.
+                                </p>
+                                <p>
+                                 <i class="fa fa-check"></i>
+                                  <b>Career Content</b><br>
+                                  Well-researched information on hundreds of career options.
+                                </p>
+                                <p>
+                                 <i class="fa fa-check"></i>
+                                  <b>25 Page Stream Report</b><br>
+                                  Detailed assessment report containing best-fit stream matches and personalized development plans.</p>
+                                <p>
+                                 <i class="fa fa-check"></i>
+                                  <b>Career Counselling</b><br>
+                                  Face-to-face counselling sessions and guidance from career experts and online support.
+                                </p><br><br>
+                                <!-- <p class="text-center">
+                                  <b>Number of counselling sessions:</b><br>
+                                  <label class="radio-inline">
+                                  <input type="radio" name="optradio" checked>Option 1
+                                  </label>
+                                  <label class="radio-inline">
+                                  <input type="radio" name="optradio">Option 2
+                                  </label>
+                                </p> -->
+                              </div>
+                              <div class="price-btn">
+                                  <a href="#">Get Started</a>
+                              </div>
                         </div>
                       </div>
-                      
 
 
                     </div>
