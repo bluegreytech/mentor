@@ -212,3 +212,5 @@ ERROR - 2019-09-26 07:07:32 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:08:20 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:10:29 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:10:38 --> 404 Page Not Found: Default/css
+ERROR - 2019-09-26 07:12:12 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 07:12:15 --> 404 Page Not Found: Default/css
