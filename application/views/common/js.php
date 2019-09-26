@@ -6,7 +6,27 @@
 <script src="<?php echo base_url(); ?>default/js/additional-methods.min.js"></script>
  <!--  alertify css and js  start  -->
 <script src="<?php echo base_url(); ?>default/js/alertify.min.js"></script>
-    
+<script src="<?php echo base_url(); ?>default/js/owl.carousel.min.js"></script>
+<script type="text/javascript">
+      $(document).ready(function() {
+      var owl = $("#owl-demo");
+      owl.owlCarousel({
+      autoPlay: 5000,
+      items : 5, //10 items above 1000px browser width
+      itemsDesktop : [1000,4], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,3], // 3 items betweem 900px and 601px
+      itemsTablet: [600,2], //2 items between 600 and 0;
+      itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
+      pagination:false
+      });
+      $(".next").click(function(){
+          owl.trigger('owl.next');
+      })
+      $(".prev").click(function(){
+          owl.trigger('owl.prev');
+      })
+    });
+</script>    
 <script>
    alertify.set('notifier','position', 'top-center');
  

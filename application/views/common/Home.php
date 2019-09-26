@@ -6,6 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	 $this->load->view('common/header');
 ?>
 
+ <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>default/css/owl.carousel.min.css">
+
   <section class="mob-slider">
         <!-- SLIDER -->
         <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1349px;height:560px;overflow:hidden;visibility:hidden;">
@@ -16,9 +18,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1349px;height:560px;overflow:hidden;">
                 <div>
                     <img data-u="image" src="<?php echo base_url(); ?>default/images/slider/1.jpg" />
-                    <div style="position:absolute;top:150px;left:465px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
+                    <div style="position:absolute;top:150px;left:485px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
                         <h2>Explore</h2>
-                        <!--h3>Give your exploration a direction.</h3--> 
+                        <h3>Give your exploration a direction.</h3>
 
                         <select name="cars" style="width: 400px;">
                             <option value="1">Career Assessment for 2nd - 7th class</option>
@@ -29,23 +31,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </select>
                     </div>
                        <?php if(!check_user_authentication()){ ?>
-                    <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
+                    <a style="position:absolute;top:350px;left:585px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
                     <?php } else{ ?>
-                           <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
+                           <a style="position:absolute;top:350px;left:585px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
                     <?php } ?>
 
-                    <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <<!-- div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                       <h3>Give your exploration a direction.<br><br></h3>
                       <p>Connect With Us</p>
                       <a href="#!" data-toggle="modal" data-target="#modal2" class="link">Register here <i class="ti-angle-right"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div>
                     <img data-u="image" src="<?php echo base_url(); ?>default/images/slider/2.jpg" />
-                    <div style="position:absolute;top:150px;left:465px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
+                    <div style="position:absolute;top:150px;left:290px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
                         <h2>Execute</h2>
-                        <!--h3 style="line-height: 1.4">You can’t reach a destination without <br>walking,let’s walk together / No dream can be achieved without action. </h3--> 
-
+                        <h3 style="line-height: 1.4">You can’t reach a destination without <br>walking,let’s walk together / No dream can be achieved without action. </h3> 
                         <select name="cars" style="width: 400px;">
                             <option value="1">Career Assessment for 2nd - 7th class</option>
                             <option value="2">Career Assessment for 8th class</option>
@@ -55,43 +56,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </select>
                     </div>
                      <?php if(!check_user_authentication()){ ?>
-                    <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
+                    <a style="position:absolute;top:390px;left:586px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
                     <?php } else{ ?>
-                           <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
+                           <a style="position:absolute;top:370px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
                     <?php } ?>
 
-                    <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                      <h3>You can’t reach a destination without walking, let’s walk together / No dream can be achieved without action. </h3>
-                      <p>Connect With Us</p>
-                      <a href="#!" data-toggle="modal" data-target="#modal2" class="link">Register here <i class="ti-angle-right"></i></a>
-                    </div>
                 </div>
                 <div>
                     <img data-u="image" src="<?php echo base_url(); ?>default/images/slider/3.jpg" />
-                    <div style="position:absolute;top:150px;left:465px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
+                    <div style="position:absolute;top:150px;left:450px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
                         <h2>Emerge</h2>
-                        <!--h3>Emerge into the best version of yourself.</h3-->
-
+                        <h3>Emerge into the best version of yourself.</h3>
                         <select name="cars" style="width: 400px;">
                             <option value="1">Career Assessment for 2nd - 7th class</option>
                             <option value="2">Career Assessment for 8th class</option>
                             <option value="3">Career Assessment for 9th - 12th class</option>
                             <option value="4">Career Assessment for Graduates</option>
                             <option value="4">Career Assessment for Professionals</option>
-                        </select> 
+                        </select>
                     </div>
                     <?php if(!check_user_authentication()){ ?>
-                    <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
+                    <a style="position:absolute;top:350px;left:580px;width:170px;height:49px;max-width:170px;" href="#!" data-toggle="modal" data-target="#modal1" class="bann-btn-1">Start Assessment </a>
                     <?php } else{ ?>
-                           <a style="position:absolute;top:310px;left:560px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
+                           <a style="position:absolute;top:350px;left:580px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
                     <?php } ?>
 
-                    <div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-                      <h3>Emerge into the best version of yourself. </h3>
-                      <p>Connect With Us</p>
-                      <a href="#!" data-toggle="modal" data-target="#modal2"class="link">Register here <i class="ti-angle-right"></i></a>
-                    </div>
-                </div>
+                 </div>
             </div>
             <!-- Bullet Navigator -->
             <div data-u="navigator" class="jssorb110" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
@@ -133,154 +123,169 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div id="exTab2">  
                     <ul class="nav nav-tabs">
                         <li class="active">
-                        <a  href="#1" data-toggle="tab">Career Counselling Programs</a>
+                         <a  href="#1" data-toggle="tab">Career Counselling Programs</a>
                         </li>
                         <li><a href="#2" data-toggle="tab">Overseas Appliation Programs</a>
                         </li>
                         <li><a href="#3" data-toggle="tab">Mentoring at School</a>
                         </li>
-                        <li><a href="#4" data-toggle="tab">MGCCAP</a>
-                        </li>
-                        <li><a href="#5" data-toggle="tab">Mentor's Partnership Programs</a>
+                        <li><a href="#5" data-toggle="tab">Become A Career Counselor</a>
                         </li>
                     </ul>
 
                     <div class="tab-content ">
                         <div class="tab-pane active" id="1">
-                                    <br><Br>    
-                            <div class="row">    
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-2-to-7.php">
-                                                    <h3>Class 2nd - 7th</h3>
-                                                </a>
-                                                <h4>Nurturing Minds</h4>
-                                                <p>Find out your perfect intelligence amongst 8 Multiple Intelligences.</p>
-                                                <p>Children are born with unique and distinct intelligence profile that are shaped by different biological and environmental factors. After tracing the innate learning style and aptitude, the growing mind will discover his/her perfect Multiple Intelligence which sharpens the personality and helps him/her choose future endeavours.</p><br>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/class_2_to_7"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
+                             <div id="exTab2" class="sub-tab">  
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                    <a  href="#Students" data-toggle="tab">Start Assessment for Students</a>
+                                    </li>
+                                    <li><a href="#Professionals" data-toggle="tab">Start Assessment for Professionals</a>
+                                    </li>
+                                </ul>
+
+                        <div class="tab-content ">
+                            <div class="tab-pane active" id="Students">
+                                        <br><Br>    
+                                <div class="row">    
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <!--POPULAR COURSES-->
+                                                    <div class="home-top-cour">
+                                                        <!--POPULAR COURSES: CONTENT-->
+                                                        <div class="col-md-12 home-top-cour-desc">
+                                                            <a href="class-2-to-7.php">
+                                                                <h3>Class 2nd - 7th</h3>
+                                                            </a>
+                                                            <h4>Nurturing Minds</h4>
+                                                            <p>Find out your perfect intelligence amongst 8 Multiple Intelligences.</p>
+                                                            <p>Children are born with unique and distinct intelligence profile that are shaped by different biological and environmental factors. After tracing the innate learning style and aptitude, the growing mind will discover his/her perfect Multiple Intelligence which sharpens the personality and helps him/her choose future endeavours.</p><br>
+                                                            <div class="hom-list-share">
+                                                                <ul>
+                                                                    <li><a href="<?php echo base_url()?>home/class_2_to_7"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <!--POPULAR COURSES-->
+                                                    <div class="home-top-cour">
+                                                        <!--POPULAR COURSES: CONTENT-->
+                                                        <div class="col-md-12 home-top-cour-desc">
+                                                            <a href="class-8.php">
+                                                                <h3>Class 8th</h3>
+                                                            </a>
+                                                            <h4>Budding Minds. Course Inclination</h4>
+                                                            <p>Unveil your inclination at an early age to start your preparation in a specific way.</p>
+                                                            <p>You might find out that you enjoy thinking about why the apple fell in the first place and what made Einstein develop the theory in comparison to studying history at class. This is the time when you are on the path of self discovery instead of intense competition. Your course selection strategy in 8th grade can change the future of your career.</p>
+                                                            <div class="hom-list-share">
+                                                                <ul>
+                                                                    <li><a href="<?php echo base_url()?>home/class_8"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <!--POPULAR COURSES-->
+                                                    <div class="home-top-cour">
+                                                        <!--POPULAR COURSES: CONTENT-->
+                                                        <div class="col-md-12 home-top-cour-desc">
+                                                            <a href="class-9-to-10.php">
+                                                                <h3>Class 9th and 10th</h3>
+                                                            </a>
+                                                            <h4>Stream Selection Assessment Plan</h4>
+                                                            <p>Discover your perfect stream by the five Career Dimensions.</p>
+                                                            <p>Understand your Individual Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities through a comprehensive assessment of your learning style, strengths and personalised counselling from our leading Career Mentors. We expertise in exploring your career options with you in a scientifically proven method.</p>
+                                                            <br>
+                                                            <div class="hom-list-share">
+                                                                <ul>
+                                                                    <li><a href="<?php echo base_url()?>home/class_9_to_10"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <!--POPULAR COURSES-->
+                                                    <div class="home-top-cour">
+                                                        <!--POPULAR COURSES: CONTENT-->
+                                                        <div class="col-md-12 home-top-cour-desc">
+                                                            <a href="class-11-to-12.php">
+                                                                <h3>Class 11th and 12th </h3>
+                                                            </a>
+                                                            <h4>Focal Point</h4>
+                                                            <p>Have a clear view of your vision through the lens of our assessment and experts.</p>
+                                                            <p>Unveil your perfect career based on your individualised Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities by our Expert Career Mentor. Get acquainted with the various career options and build a Career Road Map in a scientific way.</p><br>
+                                                            <div class="hom-list-share">
+                                                                <ul>
+                                                                    <li><a href="<?php echo base_url()?>home/class_11_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="Professionals">
+                                        <bR><bR>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <!--POPULAR COURSES-->
+                                                    <div class="home-top-cour">
+                                                        <!--POPULAR COURSES: CONTENT-->
+                                                        <div class="col-md-12 home-top-cour-desc">
+                                                            <a href="graduates.php">
+                                                                <h3>Graduates </h3>
+                                                            </a>
+                                                            <h4>Age Edge Advancement Plan</h4>
+                                                            <p>Career Development Assessment</p><br>
+                                                            <p>Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way. Find out the most suitable career path based on the five Career Dimensions: Individuals Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities.</p>
+                                                            <div class="hom-list-share">
+                                                                <ul>
+                                                                    <li><a href="<?php echo base_url()?>home/Graduates"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div>
+                                                    <!--POPULAR COURSES-->
+                                                    <div class="home-top-cour">
+                                                        <!--POPULAR COURSES: CONTENT-->
+                                                        <div class="col-md-12 home-top-cour-desc">
+                                                            <a href="professionals.php">
+                                                                <h3>Professionals </h3>
+                                                            </a>
+                                                            <h4>Professional Aptitude Assessment</h4>
+                                                            <p>Benefit from our Career Assessment at this stage to deal with setbacks by the means of resilience with an effective road map.</p>
+                                                            <p>Midlife crisis cannot be treated by medicines, it requires the assistance of professional counseling. Experimenting and selecting a job is like gambling and dissatisfaction in professional life is alarming. It is time you get your career values and Interest in alignment. </p><br>
+                                                            <div class="hom-list-share">
+                                                                <ul>
+                                                                    <li><a href="<?php echo base_url()?>home/Professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-8.php">
-                                                    <h3>Class 8th</h3>
-                                                </a>
-                                                <h4>Budding Minds. Course Inclination</h4>
-                                                <p>Unveil your inclination at an early age to start your preparation in a specific way.</p>
-                                                <p>You might find out that you enjoy thinking about why the apple fell in the first place and what made Einstein develop the theory in comparison to studying history at class. This is the time when you are on the path of self discovery instead of intense competition. Your course selection strategy in 8th grade can change the future of your career.</p>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/class_8"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-9-to-10.php">
-                                                    <h3>Class 9th and 10th</h3>
-                                                </a>
-                                                <h4>Stream Selection Assessment Plan</h4>
-                                                <p>Discover your perfect stream by the five Career Dimensions.</p>
-                                                <p>Understand your Individual Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities through a comprehensive assessment of your learning style, strengths and personalised counselling from our leading Career Mentors. We expertise in exploring your career options with you in a scientifically proven method.</p>
-                                                <br>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/class_9_to_10"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="class-11-to-12.php">
-                                                    <h3>Class 11th and 12th </h3>
-                                                </a>
-                                                <h4>Focal Point</h4>
-                                                <p>Have a clear view of your vision through the lens of our assessment and experts.</p>
-                                                <p>Unveil your perfect career based on your individualised Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities by our Expert Career Mentor. Get acquainted with the various career options and build a Career Road Map in a scientific way.</p><br>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/class_11_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="graduates.php">
-                                                    <h3>Graduates </h3>
-                                                </a>
-                                                <h4>Age Edge Advancement Plan</h4>
-                                                <p>Career Development Assessment</p><br>
-                                                <p>Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way. Find out the most suitable career path based on the five Career Dimensions: Individuals Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities.</p>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/Graduates"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="professionals.php">
-                                                    <h3>Professionals </h3>
-                                                </a>
-                                                <h4>Professional Aptitude Assessment</h4>
-                                                <p>Benefit from our Career Assessment at this stage to deal with setbacks by the means of resilience with an effective road map.</p>
-                                                <p>Midlife crisis cannot be treated by medicines, it requires the assistance of professional counseling. Experimenting and selecting a job is like gambling and dissatisfaction in professional life is alarming. It is time you get your career values and Interest in alignment. </p><br>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/Professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>
                         </div>
                         <div class="tab-pane" id="2">
                             <bR><bR>
@@ -327,10 +332,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <br>
                         </div>
-                        <div class="tab-pane" id="4">
-                                    <br><Br>    
-                            <div class="row">    
-                                <div class="col-md-4">
+                        <div class="tab-pane" id="5">
+                            <bR><bR>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="home-top-cour">
+                                        <!--POPULAR COURSES: CONTENT-->
+                                        <div class="col-md-12 home-top-cour-desc">
+                                            <a href="#">
+                                                <h3>Mentor's Partnership Program</h3>
+                                            </a>
+                                            <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.</p><br>
+                                            <div class="hom-list-share">
+                                                <ul>
+                                                    <li><a href="<?php echo base_url()?>/home/mentor_partnership_program"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
                                     <div>
                                         <!--POPULAR COURSES-->
                                         <div class="home-top-cour">
@@ -340,7 +361,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                     <h3>Class 1st - 12th</h3>
                                                 </a>
                                                 <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.</p>
-                                                <p>Get an overview of the role of a Career Counselor and learn about the education system and career pathways in India. Furthermore, understand the administration of MIT, analysis and comprehensive report depiction. </p><br>
+                                               <!--  <p>Get an overview of the role of a Career Counselor and learn about the education system and career pathways in India. Furthermore, understand the administration of MIT, analysis and comprehensive report depiction. </p> -->   
                                                 <div class="hom-list-share">
                                                     <ul>
                                                         <li><a href="<?php echo base_url()?>home/class_1_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
@@ -350,7 +371,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div>
                                         <!--POPULAR COURSES-->
                                         <div class="home-top-cour">
@@ -369,7 +390,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div>
                                         <!--POPULAR COURSES-->
                                         <div class="home-top-cour">
@@ -378,7 +399,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <a href="mgccap-professionals.php">
                                                     <h3>Professionals</h3>
                                                 </a>
-                                                <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.</p>
+                                                <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.</p><br>
                                                 <div class="hom-list-share">
                                                     <ul>
                                                         <li><a href="<?php echo base_url()?>home/mgccap_professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
@@ -387,28 +408,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="tab-pane" id="5">
-                            <bR><bR>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="home-top-cour">
-                                    <!--POPULAR COURSES: CONTENT-->
-                                    <div class="col-md-12 home-top-cour-desc">
-                                        <a href="#">
-                                            <h3>Mentor's Partnership Program</h3>
-                                        </a>
-                                        <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.</p><br>
-                                        <div class="hom-list-share">
-                                            <ul>
-                                                <li><a href="<?php echo base_url()?>/home/mentor_partnership_program"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
                                 </div>
                             </div>
                             <br>
@@ -423,13 +422,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <section>
         <div class="container com-sp pad-bot-70">
             <div class="row">
-                <div class="cor about-sp">
+                <div class="cor">
 
                     <div class="ed-about-tit">
                         <div class="con-title">
                             <h2>Mentor's: 6 Steps Effective Assessment To Find Best Fit Carrer</h2>
                         </div>
                     </div>
+                    <div class="col-md-7">
                     <div class="s18-age-event l-info-pack-days">
                         <ul>
                             <li>
@@ -525,9 +525,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             
                         </ul>
                     </div>
-                    <div class="ed-about-sec1">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="http://localhost/mentor/default/images/pricing.jpg" class="img-responsive">
                     </div>
                 </div>
             </div>
@@ -539,7 +539,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="container com-sp">
             <div class="row">
                 <div class="con-title">
-                    <h2>Mentor's Blog</h2>
+                    <h2>News & Updates</h2>
                 </div>
             </div>
             <div class="row">
@@ -607,11 +607,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </section>
 
-    <section>
+    <section style="background: linear-gradient(to right, #b31217, #e52d27);">
         <div class="container com-sp">
             <div class="row">
                 <div class="con-title">
-                    <h2>Testimonial</h2>
+                    <h2 style="color: #fff">Testimonials</h2>
                 </div>
             </div>
             <div class="row">
@@ -663,19 +663,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="row">
                 <!--First Blog-->
-                <div class="col-md-12 text-justify">
+                <div class="col-md-6 text-justify">
                     <p>MENTOR Knowledge Management Pvt Ltd is creating wonders positively since 2004 by assisting parents and students to improve the way they are taking decisions and also the way they are implementing them in terms of education and career for a better tomorrow.  It is associating career life cycle with the fusion of technology and human intervene involving all three stages of career life cycle i.e Career Mentoring, Career Establishing and Career Habitatiating which ensures the better and brighter career of a student and contentment for parents. MENTOR FPG associates includes universities, colleges, schools and educators from various fields in education sector world wide.</p>
-                    <p>Mentor FPG is an initiative of Mentor Knowledge Management Pvt ltd and Sanskar Bharti Foundation, an education and research organization, founded in 2004 with a vision of becoming “First Choice of People”. Aiming to transform through delivering Employability, Entrepreneurship and Advanced Skill Enhancement Programs with right curriculum, right recognition and right assessment system through right trainers, faculties, and applying right methodology at right infrastructure to the eligible candidates to get them to the Right Place. Today we find ourselves with the thousands of successful students, worldwide technology and education leaders as partners and an effervescent team of people sharing and enhancing the same vision and values.</p>
-                    <p>We recognize that every individual has different aspirations and hence the different needs in education follows. Here we have students who want to make their career in management. Sometimes we have other students willing to <b>make career in artificial intelligence, block chain or have a start up</b>,  that’s the reason we offer our expertise in career management of individual in a complete way and put all the world resources work for them which is our commitment to democratising the career development opportunities.</p>
-                    <p>MENTOR FPG has been growing on the solid foundations of experience and expertise acquired by helping thousands of students year after year in making their career right. </p>
+                    <p>Mentor FPG is an initiative of Mentor Knowledge Management Pvt ltd and Sanskar Bharti Foundation, an education and research organization, founded in 2004 with a vision of becoming “First Choice of People”. </p>
+                </div>
+                <div class="col-md-6">
+                    <img src="http://localhost/mentor/default/images/pricing.jpg" class="img-responsive">
                 </div>
                 <!--Second Blog-->
             </div>
             <div class="text-center pad-top-20">  
+                <br>
                     <a href="#" class="custom-btn">Read More <i class="fa fa-angle-double-right"></i></a>
             </div>
         </div>
     </section>
+
+    <section>
+        <div class="container com-sp">
+            <div class="row">
+                <div class="con-title">
+                    <h2>Associated Partners</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div id="owl-demo" class="owl-carousel">
+                    <div class="itempro"> 
+                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
+                    </div>
+                     <div class="itempro"> 
+                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
+                    </div>
+                     <div class="itempro"> 
+                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
+                    </div>
+                     <div class="itempro"> 
+                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
+                    </div>
+                     <div class="itempro"> 
+                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
+                    </div>
+                     <div class="itempro"> 
+                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+
+
 
 
 

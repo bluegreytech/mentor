@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <h4><a href="#">Resources</a></h4>
                                     <h5><a href="<?php echo base_url()?>home/about_us">About Us</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/success">Success Stories</a></h5>
-                                    <h5><a href="#">Career Library</a></h5>
+                                    <h5><a href="#">Knowledge Center </a></h5>
                                     <h5><a href="<?php echo base_url()?>home/blog/">Blog</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/pricing_plan/">Pricing</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/contact_us/">Contact Us</a></h5>
@@ -156,9 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         </li>
                                                         <li><a href="#m3" data-toggle="tab">Mentoring at School</a>
                                                         </li>
-                                                        <li><a href="#m4" data-toggle="tab">MGCCAP</a>
-                                                        </li>
-                                                        <li><a href="#m5" data-toggle="tab">Mentor's Partnership Programs</a>
+                                                        <li><a href="#m4" data-toggle="tab">Become A Career Counselor</a>
                                                         </li>
                                                     </ul>
 
@@ -256,27 +254,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                         <div class="tab-pane" id="m4">
                                                             <div class="col-md-12">
                                                                 <br>
-                                                                <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">   MGCCAP 
-                                                                  <span style="font-weight:600">(Mentor  Certified Career Analyst Programme)</span>
+                                                                <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">   Become a 
+                                                                  <span style="font-weight:600">Career Counselor</span>
                                                                 </h6>
                                                               </div>
-                                                              <div class="col-md-4">
+                                                              <div class="col-md-3">
+                                                                <strong>Mentor's Partnership Programs </strong>
+                                                                 <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.<br>
+                                                                  <a href="<?php echo base_url()?>home/mentor_partnership_program">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                </p>
+                                                              </div>
+                                                              <div class="col-md-3">
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Class 1<sup>st</sup> - 12<sup>th</sup></h6>
-                                                                  <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.<br>
+                                                                  <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly.<br>
                                                                   <a href="<?php echo base_url()?>home/class_1_to_12">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
                                                               </div>
-                                                              <div class="col-md-4">
+                                                              <div class="col-md-3">
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Undergraduate</h6>
-                                                                  <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts.<br>
+                                                                  <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. <br><br>
                                                                   <a href="<?php echo base_url()?>home/mgccap_undergraduates">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>
                                                                   </p>
                                                               </div>
-                                                              <div class="col-md-4">
+                                                              <div class="col-md-3">
                                                                   <h6 style="margin-bottom: 0px;font-size: 15px;">Professionals</h6>
                                                                   <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.<br>
                                                                   <a href="<?php echo base_url()?>home/mgccap_professionals">View More
@@ -285,30 +291,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   </p>
                                                               </div>
                                                         </div>
-                                                        <div class="tab-pane" id="m5">
-                                                            <div class="col-md-12 text-center">
-                                                                <br>
-                                                                <strong>Mentor's Partnership Programs </strong>
-                                                                 <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.<br>
-                                                                  <a href="<?php echo base_url()?>home/mentor_partnership_program">View More
-                                                                      <span class="fa fa-angle-right"></span>
-                                                                    </a>
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                      </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li><a href="<?php echo base_url()?>home/success">Success Stories</a>
-                                </li>
-                                 <li><a href="#">Career Library</a>
-                                </li>
-                                <li><a href="<?php echo base_url()?>home/blog">Blog</a>
-                                </li>
-                                <li><a href="<?php echo base_url()?>home/pricing_plan">Pricing</a>
+                                <li class="about-menu">
+                                    <a href="#" class="waves-effect dropdown-button" href="#" data-activates="top-menu">Knowledge Center <span class="fa fa-angle-down"></span></a>
+                                    <!-- MEGA MENU 1 -->
+                                    <ul id="top-menu" class="dropdown-content top-menu-sty-custom">
+                                          <li><a href="#">Career Library</a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="<?php echo base_url()?>home/blog">Career News</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="<?php echo base_url()?>home/contact_us">Contact us</a>
                                 </li>
