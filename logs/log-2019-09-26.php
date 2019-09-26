@@ -223,3 +223,13 @@ ERROR - 2019-09-26 07:13:05 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-26 07:13:05 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:13:07 --> 404 Page Not Found: Default/css
 ERROR - 2019-09-26 07:13:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 10:14:34 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 10:16:11 --> 404 Page Not Found: Bolg/index
+ERROR - 2019-09-26 10:16:18 --> Query error: Table 'mentordb.tblblogs' doesn't exist - Invalid query: SELECT `t1`.*, `t2`.*
+FROM `tblblogs` as `t1`
+LEFT JOIN `tblblogstatus` as `t2` ON `t1`.`BlogStatusId` = `t2`.`BlogStatusId`
+WHERE `BlogStatus` = 'Most Popular'
+ORDER BY `t1`.`BlogId` DESC
+ LIMIT 3
+ERROR - 2019-09-26 10:26:41 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-26 14:17:32 --> 404 Page Not Found: Default/images
