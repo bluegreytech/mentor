@@ -388,7 +388,7 @@
 	{
 	 	$CI =& get_instance();
 		//$query = $CI->db->get($table);
-		$query = $CI->db->get_where($table,array('status'=>'Active'));
+		$query = $CI->db->get_where($table,array('IsActive'=>'Active','Is_deleted'=>'0'));
 		if($query->num_rows() > 0)
 		{
 			return $query->result();

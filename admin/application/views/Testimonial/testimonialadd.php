@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<h4 class="card-title" id="basic-layout-form">
 						<?php if($testimonialid==1)
 					{
-						echo	"Edit testimonial";
+						echo "Edit testimonial";
 					}
 					else{
 					echo	"Add testimonial";

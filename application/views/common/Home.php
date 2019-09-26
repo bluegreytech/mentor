@@ -543,8 +543,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <div class="row">
-                <!--First Blog-->
-                <div class="col-md-4 text-center">
+                <?php $blogresult= get_all_records('tblblog');
+                  foreach ($blogresult as $row) { ?>
+                   <div class="col-md-4 text-center">
                     <div class="blog-post">
                         <div class="post-media">
                           <a href="#">
@@ -562,44 +563,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
                 </div>
-                <!--Second Blog-->
-                <div class="col-md-4 text-center">
-                    <div class="blog-post">
-                        <div class="post-media">
-                          <a href="#">
-                            <img src="<?php echo base_url(); ?>default/images/pricing.jpg" class="img-responsive">
-                          </a>
-                        </div>
-                        <div class="post-header">
-                          <h5 style="margin-bottom: 0;">
-                            <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                          </h5>
-                        </div>
-                        <div class="post-header">
-                          <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                          <p><a href="#">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!--Third Blog-->
-                <div class="col-md-4 text-center">
-                    <div class="blog-post">
-                        <div class="post-media">
-                          <a href="#">
-                            <img src="<?php echo base_url(); ?>default/images/pricing.jpg" class="img-responsive">
-                          </a>
-                        </div>
-                        <div class="post-header">
-                          <h5 style="margin-bottom: 0;">
-                            <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                          </h5>
-                        </div>
-                        <div class="post-header">
-                          <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                          <p><a href="#">Read More</a></p>
-                        </div>
-                    </div>
-                </div>
+                 <?php  } ?>
+                
             </div>
             <div class="text-center pad-top-20">  
                     <a href="blog.php" class="custom-btn">View All  <i class="fa fa-angle-double-right"></i></a>
@@ -619,27 +584,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Carousel indicators -->
                 <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li> -->
                 </ol>   
                 <!-- Wrapper for carousel items -->
                 <div class="carousel-inner">
-                    <div class="item carousel-item active">
-                        <div class="img-box"><img src="<?php echo base_url(); ?>default/images/a6.png" alt=""></div>
-                        <p class="testimonial">First of all I thank to God that my father take me to mentor because it is a great consultancy and it help me to explore my passion by making it profession. Their main aim is the life of someone not their time and I really appreciate that. All should visit there for perfect guidance in life.</p>
-                        <p class="overview"><b>Manthan Dalvadi</b></p>
+                         
+                    <?php $testresult= get_all_records('tbltestimonial');
+                     $i=1;
+                    foreach ($testresult as $row) {  //echo $row->testimonial_image ;?>
+                        <?php $item_class = ($i == 1) ? 'active' : ''; ?>
+                         <div class="item carousel-item <?php echo  $item_class; ?>">
+                            <?php  
+                             if(($row->testimonial_image!='' && file_exists(base_path().'/admin/upload/testimonialimage/'.$row->testimonial_image))){ ?>
+                                 <div class="img-box"><img  src="<?php echo base_url(); ?>admin/upload/testimonialimage/<?php echo $row->testimonial_image; ?>" alt=""></div>
+                                
+                            <?php } else{ ?>
+                                <div class="img-box"><img src="<?php echo base_url(); ?>default/images/a6.png" alt=""></div>
+                            <?php }?>
+                      
+                        <p class="testimonial"><?php echo $row->testimonial_desc; ?></p>
+                        <p class="overview"><b><?php echo $row->testimonial_title;?></b></p>
                     </div>
-                    <div class="item carousel-item">
-                        <div class="img-box"><img src="<?php echo base_url(); ?>default/images/a6.png" alt=""></div>
-                        <p class="testimonial">It was a great experience. I was confused with the stream, but now it's clear. This session was really very helpful. Bhavna mam was so friendly and now my stream is clear. I feel lucky to have come here!!</p>
-                        <p class="overview"><b>Yesha Barot</b></p>
-                    </div>
-                    <div class="item carousel-item">
-                        <div class="img-box"><img src="<?php echo base_url(); ?>default/images/a6.png" alt=""></div>
-                        <p class="testimonial">I Khushi, am grateful that my parents took me to the Mentor and it’s really helpful session.It was a really life changing experience. I was first confused with the selection of stream but now it’s all resolved.  I recommend it to all of the students who are looking for advice.</p>
-                        <p class="overview"><b>Pankaj Patel</b></p>
-                    </div>
+                    
+                    <?php $i++;} ?>
+                  
+                 
                 </div>
                 <!-- Carousel controls -->
                 <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
@@ -710,11 +681,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
     </section>
-
-      
-
-
-
 
 
 <?php 
