@@ -12,22 +12,12 @@ class Home extends CI_Controller
     }
 
     function index(){
-
-  //   	if(!check_user_authentication()){	
-  //   		//echo "jhjgh";die;		
-		// 	redirect(base_url());
-		// 	//$this->load->view('common/Home');
-		// }
-
-
     	$this->load->view('common/Home');
     }
 
     function register(){
     	//echo "hghgf"; die;
     	$data =array();
-	
-	 		
 
 		$this->load->library("form_validation");
 		$this->form_validation->set_rules('username', 'User Name', 'required');			
@@ -50,13 +40,10 @@ class Home extends CI_Controller
 		
 			}
 			else
-			{
-			//	echo "else bhi ";die; 
-				$this->home_model->user_insert();
-					
+			{		
+				$this->home_model->user_insert();					
 				$this->session->set_flashdata('success', 'Registration has been confrim Succesfully!');
 				redirect('home');
-	
 			}
 		
 		$this->load->view('common/Home');
@@ -444,6 +431,21 @@ class Home extends CI_Controller
 	function blog(){
 		$this->load->view('common/blog');
 	}
+	function blog_detail($blog_id){
+      //echo $blog_id;die;
+		$data= array();
+		$result=get_one_record('tblblog','blog_id',$blog_id);
+		$data['blog_id']=$result->blog_id;
+		$data['blog_title']=$result->blog_title;
+		$data['blog_desc']=$result->blog_desc;		
+		$data['blog_image']=$result->blog_image;
+		$data['IsActive']=$result->IsActive;
+		//echo "<pre>";print_r($blog_detail);die;
+
+		$this->load->view('common/blog_detail',$data);
+	}
+
+	
 
 	
 	public function logout()

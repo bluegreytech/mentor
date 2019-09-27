@@ -16,7 +16,7 @@
           </li> 
           <?php if($this->session->userdata('AdminId')==1){ ?>
             
-        <li class="nav-item">
+         <li class="nav-item">
             <a>
               <i class="icon-user"></i><span data-i18n="nav.dash.main" class="menu-title">Admin</span>
             </a>
@@ -77,6 +77,32 @@
                   </li>
                 </ul>
               </li> 
+               <li class="nav-item">
+                <a>
+                  <i class="icon-rupee"></i><span data-i18n="nav.dash.main" class="menu-title">Price & Plan</span>
+                </a>
+                <ul class="menu-content">
+                  <li>
+                    <a href="<?php echo base_url(); ?>price/addprice" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add Price</a>
+                  </li>
+                  <li>
+                    <a href="<?php echo base_url(); ?>price/pricelist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Price </a>
+                  </li>
+                    <li class="nav-item">
+                      <a><i class="icon-pie-chart"></i><span data-i18n="nav.dash.main" class="menu-title">Plan</span>
+                      </a>
+                      <ul class="menu-content">
+                          <li>
+                          <a href="<?php echo base_url(); ?>price/addplan" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add Plan</a>
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>price/planlist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Plan </a>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+              
+          </li>
         </ul>
       </div>
       <!-- /main menu content-->
