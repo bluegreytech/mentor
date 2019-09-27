@@ -32,7 +32,7 @@ $this->load->view('common/header');
                             <ul>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Get access at your convenience.</h4>
@@ -41,7 +41,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Counselor Training from our experts.</h4>
@@ -50,7 +50,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Become a Friend, Philosopher and a Guide. </h4>
@@ -59,7 +59,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>AAA Assessment access.</h4>

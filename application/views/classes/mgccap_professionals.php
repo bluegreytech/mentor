@@ -34,7 +34,7 @@ $this->load->view('common/header');
                             <ul>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Assistance for working professionals and occupationists.</h4>
@@ -43,7 +43,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Assignments and Career Counseling practice using Assessment Technology platform.</h4>
@@ -52,7 +52,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Case Studies and Scenarios.</h4>
@@ -61,7 +61,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Webinars.</h4>
@@ -96,14 +96,14 @@ $this->load->view('common/header');
                <div class="featurette">
                 <!------------------------code---------------start---------------->
                 <div>
-                    <div id="custom_carousel" class="carousel slide mgccap" data-ride="carousel" data-interval="2500">
+                    <div id="custom_carousel" class="carousel slide mgccap" data-ride="carousel" data-interval="3500">
                       <!-- End Carousel Inner -->
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6" style="padding:50px">
+                                        <div class="col-md-6" style="padding:80px 30px">
                                             <h4>Career development strategies for professionals- </h4>
                                             <ul>
                                               <li>Understanding the concept of mid-life crisis. </li>
@@ -120,7 +120,7 @@ $this->load->view('common/header');
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6"><img src="<?php echo base_url()?>/default/images/2.jpg" class="img-responsive"></div>
-                                        <div class="col-md-6" style="padding:50px">
+                                        <div class="col-md-6" style="padding:80px 30px">
                                             <h4>Develop advanced skills from expert training-</h4>
                                             <ul>
                                               <li>Methods of effective counseling. </li>
@@ -134,7 +134,7 @@ $this->load->view('common/header');
                             <div class="item">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6" style="padding:50px">
+                                        <div class="col-md-6" style="padding:80px 30px">
                                             <h4> In-depth knowledge about the assessment technology platform-</h4>
                                             <ul>
                                               <li>Understanding the science behind the assessments. </li>
