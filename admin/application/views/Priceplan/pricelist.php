@@ -115,7 +115,7 @@ $(function() {
    
 });
 
-function deletedata(id,image){  
+function deletedata(id){  
     $('#myModal').modal('show')
    
         $('#yes_btn').click(function(){           
@@ -124,7 +124,8 @@ function deletedata(id,image){
                 url: url+"price/price_delete/",
                 type: "post",
                 data: {id:id} ,
-                success: function (response) {  
+                success: function (response) {
+
                 document.location.href = url+'price/pricelist/';                  
 
             },
