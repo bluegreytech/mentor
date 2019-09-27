@@ -3806,16 +3806,17 @@ textarea.custom  {
 }
  .head-2-inn h1{
      margin-top: 0px;
-     color:#fff;
+     color:#000;
      padding-bottom: 18px;
      line-height: 42px;
 }
  .head-2-inn .text-white{
-     color:#2c2e3b!important;
+     color:#fff!important;
  }
  .head-2-inn p{
-     color: #ffffff;
+     color: #000;
     font-size: 18px;
+    font-weight: 700;
 }
  .event-head-sub{
      display: inline-block;
@@ -3862,8 +3863,8 @@ textarea.custom  {
 .head-2.graduates{
      background: url(../images/graduates2.jpg)no-repeat;
 }
-.head-2.professinals{
-     background: url(../images/professinals.jpg)no-repeat;
+.head-2.professionals{
+     background: url(../images/professionals.jpg)no-repeat;
 }
 .head-2.partnership{
      background: url(../images/mentor-partnership.jpg)no-repeat;
@@ -3905,7 +3906,7 @@ textarea.custom  {
      margin-top: 50px;
 }
 .head-2.professionals{
-     background: url(../images/professinals-mob.jpg)no-repeat;
+     background: url(../images/professionals-mob.jpg)no-repeat;
      margin-top: 50px;
 }
 .head-2.partnership{

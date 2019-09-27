@@ -35,7 +35,7 @@ $this->load->view('common/header');
                             <ul>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Overview of Psychometric assessments and technology platforms.</h4>
@@ -44,7 +44,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Personality and AAA analysis of the student based on the psychometric theory.</h4>
@@ -53,7 +53,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Career Development Opportunities and Strategies.</h4>
@@ -62,7 +62,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Case Studies and Scenarios.</h4>
@@ -71,7 +71,7 @@ $this->load->view('common/header');
                                 </li>
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="http://rn53themes.net/themes/demo/education-master/images/adv/2.png" alt="">
+                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
                                         <h4>Assignments and Career Counseling practice using Assessment Technology platform.</h4>
