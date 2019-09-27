@@ -861,11 +861,11 @@
 		}
 	}
         
-	function get_category_name($id)
+	function get_price_name($id)
 	{
 		$CI =& get_instance();
-		$query = $CI->db->select('category_name')->from('category')->where('category_id',$id)->get();
-		return $query->row()->category_name;
+		$query = $CI->db->select('price_title')->from('tblprice')->where('price_id',$id)->get();
+		return $query->row()->price_title;
 	}
 	
 	function get_country_iso($country)

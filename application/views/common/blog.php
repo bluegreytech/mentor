@@ -17,118 +17,35 @@ $this->load->view('common/header');
                     </div>
                     <div class="pg-contact">
                         <!--First Blog-->
-                        <div class="col-md-4 text-center">
-                            <div class="blog-post">
-                                <div class="post-media">
-                                  <a href="#">
-                                    <img src="<?php echo base_url()?>/default/images/pricing.jpg" class="img-responsive">
+                        <?php $blogresult= get_all_records('tblblog');
+                  foreach ($blogresult as $row) { ?>
+                   <div class="col-md-4 text-center">
+                    <div class="blog-post">
+                        <div class="post-media">
+                             <?php  
+                             if(($row->blog_image!='' && file_exists(base_path().'/admin/upload/blogimage/'.$row->blog_image))){ ?>
+                                 <a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>">
+                                <img  src="<?php echo base_url(); ?>admin/upload/blogimage/<?php echo $row->blog_image; ?>" alt="" class="img-responsive" style="height: 226px;">
                                   </a>
-                                </div>
-                                <div class="post-header">
-                                  <h5 style="margin-bottom: 0;">
-                                    <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                                  </h5>
-                                </div>
-                                <div class="post-header">
-                                  <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                                  <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Second Blog-->
-                        <div class="col-md-4 text-center">
-                            <div class="blog-post">
-                                <div class="post-media">
-                                  <a href="#">
-                                    <img src="<?php echo base_url()?>/default/images/pricing.jpg" class="img-responsive">
+                            <?php } else{ ?>
+                                <a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>">
+                                 <img src="<?php echo base_url(); ?>default/images/pricing.jpg" class="img-responsive">
                                   </a>
-                                </div>
-                                <div class="post-header">
-                                  <h5 style="margin-bottom: 0;">
-                                    <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                                  </h5>
-                                </div>
-                                <div class="post-header">
-                                  <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                                  <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
+                            <?php } ?>
+                        
                         </div>
-                        <!--Third Blog-->
-                        <div class="col-md-4 text-center">
-                            <div class="blog-post">
-                                <div class="post-media">
-                                  <a href="#">
-                                    <img src="<?php echo base_url()?>/default/images/pricing.jpg" class="img-responsive">
-                                  </a>
-                                </div>
-                                <div class="post-header">
-                                  <h5 style="margin-bottom: 0;">
-                                    <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                                  </h5>
-                                </div>
-                                <div class="post-header">
-                                  <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                                  <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
+                        <div class="post-header">
+                          <h5 style="margin-bottom: 0;">
+                            <a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
+                          </h5>
                         </div>
-                        <div class="col-md-4 text-center">
-                            <div class="blog-post">
-                                <div class="post-media">
-                                  <a href="#">
-                                    <img src="<?php echo base_url()?>/default/images/pricing.jpg" class="img-responsive">
-                                  </a>
-                                </div>
-                                <div class="post-header">
-                                  <h5 style="margin-bottom: 0;">
-                                    <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                                  </h5>
-                                </div>
-                                <div class="post-header">
-                                  <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                                  <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
+                        <div class="post-header">
+                          <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
+                          <p><a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>">Read More</a></p>
                         </div>
-                        <!--Second Blog-->
-                        <div class="col-md-4 text-center">
-                            <div class="blog-post">
-                                <div class="post-media">
-                                  <a href="#">
-                                    <img src="<?php echo base_url()?>/default/images/pricing.jpg" class="img-responsive">
-                                  </a>
-                                </div>
-                                <div class="post-header">
-                                  <h5 style="margin-bottom: 0;">
-                                    <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                                  </h5>
-                                </div>
-                                <div class="post-header">
-                                  <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                                  <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Third Blog-->
-                        <div class="col-md-4 text-center">
-                            <div class="blog-post">
-                                <div class="post-media">
-                                  <a href="#">
-                                    <img src="<?php echo base_url()?>/default/images/pricing.jpg" class="img-responsive">
-                                  </a>
-                                </div>
-                                <div class="post-header">
-                                  <h5 style="margin-bottom: 0;">
-                                    <a href="#">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
-                                  </h5>
-                                </div>
-                                <div class="post-header">
-                                  <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
-                                  <p><a href="#">Read More</a></p>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                 <?php  } ?>
                     </div>
                 </div>
             </div>
