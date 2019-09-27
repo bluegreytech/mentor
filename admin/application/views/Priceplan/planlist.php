@@ -118,17 +118,19 @@ $(function() {
    
 });
 
-function deletedata(id,image){  
-    $('#myModal').modal('show')
+function deletedata(id){ 
+    $('#myModal').modal('show');
    
         $('#yes_btn').click(function(){           
                 url="<?php echo base_url();?>"
                 $.ajax({
-                url: url+"testimonial/testimonial_delete/",
+                url: url+"price/plan_delete/",
                 type: "post",
-                data: {id:id,testimonial_image:image} ,
+                data: {id:id} ,
                 success: function (response) {  
-                document.location.href = url+'testimonial/testimoniallist/';                  
+                        alert(response);   
+                        return false;
+               // document.location.href = url+'price/planlist/';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {
