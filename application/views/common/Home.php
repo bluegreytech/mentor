@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1349px;height:560px;overflow:hidden;">
                 <div>
                     <img data-u="image" src="<?php echo base_url(); ?>default/images/slider/1.jpg" />
-                    <div style="position:absolute;top:150px;left:485px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
+                    <div style="position:absolute;top:150px;left:485px;height:40px;font-size:32px;color:#000;line-height:1.2;text-align:center;">
                         <h2>Explore</h2>
                         <h3>Give your exploration a direction.</h3>
 
@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            <a style="position:absolute;top:350px;left:585px;width:170px;height:49px;max-width:170px;" href="<?php echo base_url()?>Mytest" class="bann-btn-1">Start Assessment </a>
                     <?php } ?>
 
-                    <<!-- div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <!-- div class="event-picker wow fadeInUp" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
                       <h3>Give your exploration a direction.<br><br></h3>
                       <p>Connect With Us</p>
                       <a href="#!" data-toggle="modal" data-target="#modal2" class="link">Register here <i class="ti-angle-right"></i></a>
@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <div>
                     <img data-u="image" src="<?php echo base_url(); ?>default/images/slider/3.jpg" />
-                    <div style="position:absolute;top:150px;left:450px;height:40px;font-size:32px;color:#fff;line-height:1.2;text-align:center;">
+                    <div style="position:absolute;top:150px;left:450px;height:40px;font-size:32px;color:#000;line-height:1.2;text-align:center;">
                         <h2>Emerge</h2>
                         <h3>Emerge into the best version of yourself.</h3>
                         <select name="cars" style="width: 400px;">
