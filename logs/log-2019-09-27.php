@@ -332,3 +332,20 @@ FROM `tblblog`
 WHERE `IsActive` = 'Active'
 AND `Is_deleted` = '0'
 ERROR - 2019-09-27 12:22:01 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 12:29:44 --> Query error: Table 'mentordb.tblblog' doesn't exist - Invalid query: SELECT *
+FROM `tblblog`
+WHERE `IsActive` = 'Active'
+AND `Is_deleted` = '0'
+ERROR - 2019-09-27 12:29:44 --> Query error: Table 'mentordb.tblblog' doesn't exist - Invalid query: SELECT *
+FROM `tblblog`
+WHERE `IsActive` = 'Active'
+AND `Is_deleted` = '0'
+ERROR - 2019-09-27 12:29:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 12:29:50 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 12:29:54 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 12:33:08 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 12:33:19 --> Query error: Table 'mentordb.tblblog' doesn't exist - Invalid query: SELECT *
+FROM `tblblog`
+WHERE `IsActive` = 'Active'
+AND `Is_deleted` = '0'
+ERROR - 2019-09-27 12:33:20 --> 404 Page Not Found: Default/images
