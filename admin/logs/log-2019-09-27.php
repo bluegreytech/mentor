@@ -698,3 +698,15 @@ ERROR - 2019-09-27 15:56:41 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-27 15:56:41 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-27 15:58:47 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-27 15:58:47 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:47:21 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:47:21 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:47:21 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 16:47:21 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 16:47:51 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:47:51 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:48:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:48:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:48:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:48:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:48:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 16:48:30 --> 404 Page Not Found: Default/images
