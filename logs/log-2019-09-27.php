@@ -1,9 +1,0 @@
-ERROR - 2019-09-27 15:35:54 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:35:56 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:36:07 --> 404 Page Not Found: Default/css
-ERROR - 2019-09-27 15:37:07 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:39:57 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:40:08 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:41:25 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:44:07 --> 404 Page Not Found: Default/images
-ERROR - 2019-09-27 15:55:11 --> 404 Page Not Found: Default/images

@@ -1555,7 +1555,7 @@ a:focus{
      font-size: 50px;
      text-transform: uppercase;
      line-height: 50px;
-     color: #fff;
+     color: #000;
 }
  #jssor_1 h2 span{
      font-size: 50px;
@@ -3862,6 +3862,9 @@ textarea.custom  {
 .head-2.graduates{
      background: url(../images/graduates2.jpg)no-repeat;
 }
+.head-2.professinals{
+     background: url(../images/professinals.jpg)no-repeat;
+}
 .head-2.partnership{
      background: url(../images/mentor-partnership.jpg)no-repeat;
 }
@@ -3877,7 +3880,8 @@ textarea.custom  {
      background-attachment: fixed;
 }
 .head-2-inn p{
-     color: #ffffff;
+     color: #000;
+     font-weight:700; 
     font-size: 13px;
 }
 .head-2.std2{
@@ -3897,8 +3901,15 @@ textarea.custom  {
      margin-top: 50px;
 }
 .head-2.graduates{
-     background: url(../images/graduates.jpg)no-repeat;
+     background: url(../images/graduates-mob.jpg)no-repeat;
      margin-top: 50px;
+}
+.head-2.professionals{
+     background: url(../images/professinals-mob.jpg)no-repeat;
+     margin-top: 50px;
+}
+.head-2.partnership{
+     background: url(../images/partner-mob.jpg)no-repeat;
 }
      .pg-contact .content-box {
     height: auto;
@@ -6340,6 +6351,7 @@ padding: 6px 25px;
 
         .head-2-inn h1{
           font-size: 20px;
+          color:#000;
         }
  
         }
