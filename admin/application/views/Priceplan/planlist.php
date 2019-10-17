@@ -118,19 +118,19 @@ $(function() {
    
 });
 
-function deletedata(id){ 
+function deletedata(priceplan_id){ 
     $('#myModal').modal('show');
-   
+  // alert(priceplan_id);
         $('#yes_btn').click(function(){           
                 url="<?php echo base_url();?>"
                 $.ajax({
                 url: url+"price/plan_delete/",
                 type: "post",
-                data: {id:id} ,
+                data: {id:priceplan_id} ,
                 success: function (response) {  
-                        alert(response);   
-                        return false;
-               // document.location.href = url+'price/planlist/';                  
+                       // alert(response);   
+                       
+                document.location.href = url+'price/planlist/';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {

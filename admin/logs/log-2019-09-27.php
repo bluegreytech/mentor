@@ -710,3 +710,105 @@ ERROR - 2019-09-27 16:48:07 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-27 16:48:07 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-27 16:48:30 --> 404 Page Not Found: Default/images
 ERROR - 2019-09-27 16:48:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:10:13 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:10:13 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:10:13 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:10:14 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:10:27 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:10:27 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:10:31 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:10:31 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:15:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:15:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:15:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:15:30 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:00 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:00 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:16:00 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:16:06 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:06 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:37 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:38 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:38 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:16:38 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:16:46 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` = '10'
+ERROR - 2019-09-27 17:16:46 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` = '12'
+ERROR - 2019-09-27 17:16:46 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:16:46 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:17:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:17:45 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:17:45 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:17:45 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:17:53 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` = '12'
+ERROR - 2019-09-27 17:17:53 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:17:54 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:18:51 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:18:51 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:18:51 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:18:51 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:18:58 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` = '12'
+ERROR - 2019-09-27 17:18:58 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:18:58 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:01 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:01 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:02 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:20:02 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:20:13 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` = '12'
+ERROR - 2019-09-27 17:20:14 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:14 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:46 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:46 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:46 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:20:46 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:20:56 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:20:56 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:23:14 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:23:14 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:23:15 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:23:15 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:23:15 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:23:15 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:23:54 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:23:54 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:24:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:24:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:24:26 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:24:26 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:24:26 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:24:26 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:24:33 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:24:33 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:25:47 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:25:47 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:25:47 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:25:47 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:26:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:07 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:07 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:26:07 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:26:15 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:15 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:34 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:34 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:34 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:26:35 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:26:41 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` = '12'
+ERROR - 2019-09-27 17:26:41 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:26:41 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:27:06 --> Query error: Table 'mentordb.priceplan_id' doesn't exist - Invalid query: UPDATE `priceplan_id` SET `Is_deleted` = '1'
+WHERE `tblpriceplaning` IS NULL
+ERROR - 2019-09-27 17:28:22 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:28:22 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:28:22 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-09-27 17:28:22 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-09-27 17:28:28 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:28:28 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:28:46 --> 404 Page Not Found: Default/images
+ERROR - 2019-09-27 17:28:46 --> 404 Page Not Found: Default/images

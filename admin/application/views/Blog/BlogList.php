@@ -133,7 +133,7 @@ function deletedata(id,image){
                 data: {id:id,blog_image:image} ,
                 success: function (response) {   
                    
-                document.location.href = url+'blog/bloglist/';                  
+               // document.location.href = url+'blog/bloglist/';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {

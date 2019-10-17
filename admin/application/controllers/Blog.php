@@ -60,7 +60,7 @@ class Blog extends CI_Controller
 					redirect('blog/bloglist');				
 				}				
 			}
-			$this->load->view('blog/blogadd',$data);
+			$this->load->view('Blog/BlogAdd',$data);
 				
 	}
 
@@ -80,7 +80,7 @@ class Blog extends CI_Controller
 		$data["blogdesc"] 		= $result["blog_desc"];				
 		$data["blogimage"]      = $result["blog_image"];			
        	$data['IsActive']=$result["IsActive"];          
-      	$this->load->view('blog/blogadd',$data);            
+      	$this->load->view('Blog/BlogAdd',$data);            
     }
 
   
