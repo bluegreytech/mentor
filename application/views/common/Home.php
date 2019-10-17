@@ -591,8 +591,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <div class="row">
-                <?php $blogresult= get_all_records('tblblog');
-                  foreach ($blogresult as $row) { ?>
+                <?php 
+                  foreach ($latest_blog as $row) { ?>
                    <div class="col-md-4 text-center">
                     <div class="blog-post">
                         <div class="post-media">

@@ -12,7 +12,8 @@ class Home extends CI_Controller
     }
 
     function index(){
-    	$this->load->view('common/Home');
+    	$data['latest_blog']=$this->home_model->latest_blog();
+    	$this->load->view('common/Home',$data);
     }
 
     function register(){
@@ -105,6 +106,7 @@ class Home extends CI_Controller
 		}
 		$data= array();
 		$data['activeTab'] = "dashboard";
+		$data['latest_blog']=$this->home_model->latest_blog();
 	    $this->load->view('Dashboard/Dashboard',$data);
 
 	 }
@@ -389,7 +391,8 @@ class Home extends CI_Controller
 	function career_library(){
 		//echo "not yet";die;
 		//$this->load->view('common/career_library');
-		$this->load->view('common/success');
+		$data['career']=$this->home_model->getcareerdata();
+		$this->load->view('common/career',$data);
 	}
 	function pricing_plan(){
 		$this->load->view('common/Packprice');
@@ -444,6 +447,7 @@ class Home extends CI_Controller
 
 		$this->load->view('common/blog_detail',$data);
 	}
+
 
 	
 

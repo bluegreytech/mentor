@@ -321,6 +321,23 @@ class Home_model extends CI_Model
       return false;
     }
   } 
+  function getcareerdata(){
+    $this->db->select('*');
+    $this->db->from('tblcareer_library');
+    $this->db->where('Is_deleted','0');
+    $query=$this->db->get();
+    return $query->result();
 
+  }
+  function latest_blog(){
+    $this->db->select('*');
+    $this->db->from('tblblog');
+    $this->db->where('is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->order_by('blog_id' ,'DESC');
+    $this->db->limit('3'); 
+    $query=$this->db->get();
+    return $query->result();
+  }
  }
  

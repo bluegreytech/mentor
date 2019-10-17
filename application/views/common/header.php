@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <h4><a href="#">Resources</a></h4>
                                     <h5><a href="<?php echo base_url()?>home/about_us">About Us</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/success">Success Stories</a></h5>
-                                    <h5><a href="#">Career Library</a></h5>
+                                    <h5><a href="<?php echo base_url()?>home/career_library">Career Library</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/blog/">Career News</a></h5>
                                     <h5><a href="<?php echo base_url()?>home/contact_us/">Contact Us</a></h5>
                                       
@@ -301,7 +301,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <a href="#" class="waves-effect dropdown-button" href="#" data-activates="top-menu">Knowledge Center <span class="fa fa-angle-down"></span></a>
                                     <!-- MEGA MENU 1 -->
                                     <ul id="top-menu" class="dropdown-content top-menu-sty-custom">
-                                          <li><a href="#">Career Library</a></li>
+                                          <li><a href="<?php echo base_url()?>home/career_library">Career Library</a></li>
                                           <li class="divider"></li>
                                           <li><a href="<?php echo base_url()?>home/blog">Career News</a></li>
                                     </ul>

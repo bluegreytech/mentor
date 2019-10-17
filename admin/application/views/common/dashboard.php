@@ -70,6 +70,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         </div>
       </div>
+
+      
     </div>
 <!---start Delete menu--->
 <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

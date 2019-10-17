@@ -100,9 +100,24 @@
                           </li>
                       </ul>
                     </li>
+
+                   
                 </ul>
               
           </li>
+
+            <li class="nav-item">
+                      <a><i class="icon-library"></i><span data-i18n="nav.dash.main" class="menu-title">Career Library</span>
+                      </a>
+                      <ul class="menu-content">
+                          <li>
+                          <a href="<?php echo base_url(); ?>Library/addcareer" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add Career Library</a>
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>Library" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Career Library </a>
+                          </li>
+                      </ul>
+                    </li>
         </ul>
       </div>
       <!-- /main menu content-->
