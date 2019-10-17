@@ -167,7 +167,7 @@ class Home extends CI_Controller
 		$data['msg'] = $msg; //login success message
 		$data['activeTab'] = "profile";
 
-        $this->load->view('dashboard/Editprofile',$data);  
+        $this->load->view('Dashboard/Editprofile',$data);  
 
 
 	}
