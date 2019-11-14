@@ -167,7 +167,7 @@ class Home extends CI_Controller
 		$data['msg'] = $msg; //login success message
 		$data['activeTab'] = "profile";
 
-        $this->load->view('dashboard/Editprofile',$data);  
+        $this->load->view('Dashboard/Editprofile',$data);  
 
 
 	}
@@ -514,7 +514,7 @@ class Home extends CI_Controller
 		$this->load->view('classes/graduates');
 	}
 	function Professionals(){
-		$this->load->view('classes/Professionals');
+		$this->load->view('classes/professionals');
 	}
 	function class_1_to_12(){
 		$this->load->view('classes/mgccap_1_to_12');

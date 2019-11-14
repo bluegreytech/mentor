@@ -184,23 +184,23 @@ class Price extends CI_Controller
       	$this->load->view('Priceplan/planadd',$data);            
     }
 
-  
-
-    function plan_delete(){
-	    echo "ghgfhg";die;
+    
+    function plandelete(){
+		// echo "hghgf"; die;
 		if(!check_admin_authentication()){ 
 			redirect(base_url());
 		}
 			
 			$data= array('Is_deleted' =>'1');
-		echo 	$id=$this->input->post('id');
-			$this->db->where("tblpriceplaning",$id);			
-			$res=$this->db->update('priceplan_id',$data);
-			echo $this->db->last_query();die;
-			//echo json_encode($res);
+		 	$id=$this->input->post('id');
+			$this->db->where("priceplan_id",$id);			
+			$res=$this->db->update('tblpriceplaning',$data);
+			//echo $this->db->last_query();die;
+			echo json_encode($res);
 			die;
 		
 	}
+
     
 	
 
