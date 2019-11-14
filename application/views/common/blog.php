@@ -17,7 +17,7 @@ $this->load->view('common/header');
                     </div>
                     <div class="pg-contact">
                         <!--First Blog-->
-                        <?php $blogresult= get_all_records('tblblog');
+                        <?php //$blogresult= get_all_records('tblblog');
                   foreach ($blogresult as $row) { ?>
                    <div class="col-md-4 text-center">
                     <div class="blog-post">
@@ -36,11 +36,11 @@ $this->load->view('common/header');
                         </div>
                         <div class="post-header">
                           <h5 style="margin-bottom: 0;">
-                            <a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>">Academic Vs. Professional Degree After Class 12th: Which One is Better?</a>
+                            <a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>"><?php echo $row->blog_title?></a>
                           </h5>
                         </div>
                         <div class="post-header">
-                          <p>When you completed Class 10, you had a relatively simple choice of 3 streams, but now when you pass out of Class 12, you...</p>
+                          <p><?php echo substr($row->blog_desc,0,100)?></p>
                           <p><a href="<?php echo base_url()?>home/blog_detail/<?php echo $row->blog_id;?>">Read More</a></p>
                         </div>
                     </div>
@@ -49,6 +49,12 @@ $this->load->view('common/header');
                     </div>
                 </div>
             </div>
+             <div class="row text-center">
+
+                   
+<?php echo $links; ?>
+
+</div>
         </div>
     </section>
     <!--SECTION END-->

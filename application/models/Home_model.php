@@ -321,10 +321,11 @@ class Home_model extends CI_Model
       return false;
     }
   } 
-  function getcareerdata(){
+  function getcareerdata($limit, $start){
     $this->db->select('*');
     $this->db->from('tblcareer_library');
     $this->db->where('Is_deleted','0');
+      $this->db->limit($limit, $start);
     $query=$this->db->get();
     return $query->result();
 
@@ -336,6 +337,56 @@ class Home_model extends CI_Model
     $this->db->where('IsActive','Active');
     $this->db->order_by('blog_id' ,'DESC');
     $this->db->limit('3'); 
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getsuccess($limit, $start){
+     $this->db->select('*');
+    $this->db->from('tblstory');
+    $this->db->where('is_deleted','0');
+    $this->db->where('IsActive','Active');
+     $this->db->limit($limit, $start);
+    $this->db->order_by('story_id' ,'DESC');
+   // $this->db->limit('3'); 
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function get_countsuccess(){
+
+     $this->db->where('IsActive','Active');
+     $this->db->where("Is_deleted",'0');
+$this->db->from("tblstory");
+return $this->db->count_all_results();
+  }
+  function get_countlib(){
+
+     $this->db->where("Is_deleted",'0');
+$this->db->from("tblcareer_library");
+return $this->db->count_all_results();
+  }
+  function get_countblog(){
+    $this->db->where('IsActive','Active');
+     $this->db->where("Is_deleted",'0');
+$this->db->from("tblblog");
+return $this->db->count_all_results();
+  }
+  function getsuccessdetail($id){
+    $this->db->select('*');
+    $this->db->from('tblstory');
+    $this->db->where('story_id',$id);
+    
+   // $this->db->limit('3'); 
+    $query=$this->db->get();
+    return $query->result(); 
+  }
+  function getblogs($limit, $start){
+         $this->db->select('*');
+    $this->db->from('tblblog');
+    $this->db->where('is_deleted','0');
+    $this->db->where('IsActive','Active');
+     $this->db->limit($limit, $start);
+    $this->db->order_by('blog_id' ,'DESC');
+   // $this->db->limit('3'); 
     $query=$this->db->get();
     return $query->result();
   }

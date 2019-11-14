@@ -32,6 +32,9 @@ a:focus{
      font-weight: 400;
      line-height: 24px;
 }
+.bold{
+    font-weight:600;
+}
  .com-sp{
      padding:50px 14px;
 }
@@ -1058,10 +1061,11 @@ a:focus{
 }
  .home-top-cour-desc h4 {
      font-size: 15px;
+     color:#bb342f;
      padding-bottom: 8px;
 }
  .home-top-cour-desc p {
-     margin-bottom: 0px;
+     margin-bottom: 8px;
      font-size: 13px;
 }
  .home-top-cour-rat {
@@ -1212,7 +1216,7 @@ a:focus{
      text-overflow: ellipsis;
      white-space: pre;
      overflow: hidden;
-	    letter-spacing: 0px; 
+         letter-spacing: 0px; 
 }
  .ho-ev-link p{
      color: #203245;
@@ -1555,7 +1559,9 @@ a:focus{
      font-size: 50px;
      text-transform: uppercase;
      line-height: 50px;
-     color: #000;
+     color: #fff;
+     text-shadow: 2px 3px 10px #000000ba;
+    font-weight: 600;
 }
  #jssor_1 h2 span{
      font-size: 50px;
@@ -2997,26 +3003,26 @@ textarea.custom  {
      border-right: 1px solid #eaeaea;
 }
 .mm1-com h4{
-	border-bottom: 1px solid #eaeaea;
-	padding-bottom:10px;
-	margin-bottom:10px;
-	text-transform:uppercase;
-	font-size:14px;
+     border-bottom: 1px solid #eaeaea;
+     padding-bottom:10px;
+     margin-bottom:10px;
+     text-transform:uppercase;
+     font-size:14px;
 }
  .mm1-com ul{
 }
  .mm1-com ul li{
      display: block;
      width: 100%;
-	 position: relative;
-     padding-left: 15px;		
+      position: relative;
+     padding-left: 15px;      
 }
  .mm1-com ul li a{
      font-size: 14px;
      color: #203245;
      line-height: 31px;
      padding: 5px;
-	text-transform: capitalize; 
+     text-transform: capitalize; 
 }
  .mm1-com ul li a:hover{
 }
@@ -3806,17 +3812,19 @@ textarea.custom  {
 }
  .head-2-inn h1{
      margin-top: 0px;
-     color:#000;
+     color:#fff;
      padding-bottom: 18px;
      line-height: 42px;
+    text-shadow: 2px 3px 10px #000000ba;
 }
  .head-2-inn .text-white{
      color:#fff!important;
  }
  .head-2-inn p{
-     color: #000;
+     color: #fff;
     font-size: 18px;
     font-weight: 700;
+    text-shadow: 2px 3px 10px #000000ba;
 }
  .event-head-sub{
      display: inline-block;
@@ -3840,7 +3848,24 @@ textarea.custom  {
 .pg-contact .content-box {
     padding: 25px;
     font-size: 15px;
-    height: 317px;
+    height: 280px;
+}
+.pg-contact .content-box h5,h4 {
+   margin-bottom:10px;
+   color:#bb342f;
+}
+.pg-contact .content-box .custom-btn {
+    position:absolute;
+    bottom:25px;
+}
+.pg-contact img {
+    height:280px;
+    width:100%;
+}
+.succes-details img {
+    height:300px;
+    width:100%;
+    margin-bottom:20px;
 }
 .head-2{
       padding: 250px 0px 250px 0px;
@@ -3971,10 +3996,8 @@ textarea.custom  {
  .overlay-contact {
      position: relative;
      background-color: white;
-     width: 40%;
      border-radius: 5px;
      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.29);
-     margin-top: -590px;
      border: 5px #1f4363;
      border-style: dashed;
      overflow: hidden;
@@ -4018,16 +4041,13 @@ textarea.custom  {
      margin-top: 0px;
      text-transform: uppercase;
      margin-bottom: 0px;
-     font-size: 48px;
      padding: 8px 0px;
      color: #bb342f;
      line-height: 42px;
 }
  .footer-part-form {
 }
- .footer-part-form ul {
-     padding: 25px 25px 5px 25px;
-}
+
  .footer-part-form ul li {
      list-style-type: none;
      margin-bottom: 8px;
@@ -4287,10 +4307,10 @@ textarea.custom  {
     display: block;
     font-size: 12px;
     color: #ffcfbe;
-	margin-top: -4px;	
+     margin-top: -4px;   
 }
 .sb2-13 {
-	background: #002147;
+     background: #002147;
 } 
 .sb2-13 ul {
     /* padding: 20px; */
@@ -4810,11 +4830,11 @@ textarea.custom  {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;	
+    transition: .3s ease-in-out;   
 } 
 .table-desi tbody tr:hover{
     -webkit-transform: scale(1.01);
-    transform: scale(1.01);	
+    transform: scale(1.01);   
 } 
 .table-desi tbody tr td {
     color: #929292;
@@ -5133,7 +5153,7 @@ textarea.custom  {
     border: 0px;
     display: block;
     pointer-events: none;
-    position: relative;	
+    position: relative;  
 }
 .ad-st-view{
     background: #e25e30;
@@ -5141,7 +5161,7 @@ textarea.custom  {
     font-size: 12px;
     font-weight: 700;
     padding: 1px 5px;
-    border-radius: 3px;	
+    border-radius: 3px;  
 }
 .admin-form{}
 .admin-form form{}
@@ -5162,23 +5182,23 @@ border: 1px solid #e2e2e2;
     padding-left: 16px;
     box-sizing: border-box;
     margin-bottom: 8px;
-    padding-top: 15px;	
+    padding-top: 15px;   
 }
 .admin-form form label{
     left: 20px;
     font-size: 14px;
-    top: 8px;	
+    top: 8px;  
 }
 .admin-form form i{
     text-align: center;
-    padding: 0px;	
+    padding: 0px;   
 }
 .admin-form form [type="submit"]{
 width: 100%;
     display: block;
     padding: 1px 30px;
     font-size: 14px;
-    font-weight: 700;	
+    font-weight: 700;    
 }
 .ad-cou-deta-h4 h4{margin-top:15px;padding-bottom:10px;}
 .admin-upload-btn{height: 40px !important;}
@@ -5213,7 +5233,7 @@ width: 100%;
 }
 .h2-hero-inn{
     position: relative;
-    overflow: hidden;	
+    overflow: hidden;    
 }
 .ed-ban{
     padding: 30px 0px 50px 0px;
@@ -5262,7 +5282,7 @@ width: 100%;
 .ed-bann-line1{width: 100%;height: 1px;background: #2659ab;display: inline-block;position: absolute;top: 22px;}
 .ed-ban-tit-3{}
 .ed-ban-tit-3-com{
-    margin-bottom: 30px;	
+    margin-bottom: 30px; 
 }
 .ed-ban-tit-31{
     width: 50%;
@@ -5345,10 +5365,10 @@ width: 100%;
     width: 49%;
 }
 .ed-ref-form-inn form ul li:last-child{
-	width:100%;
+     width:100%;
 }
 .ed-ref-form-inn form ul li label{
-	
+     
 font-size: 14px !important;
 }
 .ed-ref-form-inn form ul li input{
@@ -5435,7 +5455,7 @@ input:not(:focus):valid ~ .floating-label{
 }
 
 .ed-css{
-	padding: 70px 0px;
+     padding: 70px 0px;
 }
 .ed-high{}
 .ed-high-inn{
@@ -5489,16 +5509,17 @@ input:not(:focus):valid ~ .floating-label{
 /*-------------------------------------------------*/
 .pg-blog{
     width: 70%;
-    margin: 0 auto;	
+    margin: 0 auto; 
 }
 .pg-blog ul li{
     margin-bottom: 25px;
-    padding-bottom: 40px;	
+    padding-bottom: 40px;     
 }
 .pg-blog h4{
     margin-bottom: 20px;
 }
 .pg-blog img{
+    height:500px;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -5517,35 +5538,32 @@ input:not(:focus):valid ~ .floating-label{
     padding-bottom: 15px;
     border-bottom: 0px;
     padding-top: 0px;
-    line-height: 26px;	
+    line-height: 26px;   
 }
 /*-------------------------------------------------*/
 /* =  RESARCH PAGE CSS Styles
 /*-------------------------------------------------*/
 .ed-res-bg{
-	background: url(../images/map.png) no-repeat center center #f1f1f1;
+     background: url(../images/map.png) no-repeat center center #f1f1f1;
 }
 .ed-rese-grid{
     box-sizing: border-box;
     background: #fff;
-    border: 1px solid #ececec;
     position: relative;
     /* display: inline-block; */
     overflow: hidden;
-    margin: 0px 8px;
-    box-shadow: 0px 7px 12px -9px rgba(14, 14, 14, 0.8);
+    margin:10px 0;
+    border-radius:4px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
 }
 .ed-rsear{}
 .ed-rese-grid{
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;	
+    transition: .3s ease-in-out;   
 }
-.ed-rese-grid:hover{
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);	
-}
+
 .ed-rsear-in{
     margin: 0 auto;
     display: table;
@@ -5564,13 +5582,13 @@ input:not(:focus):valid ~ .floating-label{
     float: left;
 }
 .ed-rsear-img img{
-    width: 90px;
+    width: 100%;
 }
 .ed-rsear-dec{
-    float: left;
-    padding: 20px;
+    padding: 4px 0;
 }
 .ed-rsear-dec h4{
+    font-size: 14px;
 }
 .ed-rsear-dec h4 a{
     text-transform: uppercase;
@@ -5579,9 +5597,9 @@ input:not(:focus):valid ~ .floating-label{
     font-weight: 700;
 }
 .ed-rsear-dec a{
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 600;
-    color: #8f98a9;
+    color: #000;
 }
 .ed-rsear-dec a span{
     font-size: 14px;
@@ -5594,20 +5612,20 @@ input:not(:focus):valid ~ .floating-label{
     top: 20px;
 }
 .ed-flag img{
-    border-radius: 10px;	
+    border-radius: 10px; 
 }
 .ed-flag a{}
 .ed-faci-full-top{}
 .ed-faci-full-top img{
-	width:100%;
+     width:100%;
 }
 .ed-faci-full-bot{}
 .ed-faci-full-bot h4{
-	margin-bottom:15px;
+     margin-bottom:15px;
 }
 .ed-faci-full-bot h4 a{}
 .ed-faci-full-bot p{
-	font-size:12px;
+     font-size:13px;
 }
 .read-line-btn{
 padding: 6px 25px;
@@ -5625,7 +5643,7 @@ padding: 6px 25px;
     display: inline-block;
 }
 .ed-rese-grid-mar-bot-30{
-	margin-bottom:30px;
+     margin-bottom:30px;
 }
 .s17-eve-time {
     width: 100%;
@@ -5649,8 +5667,8 @@ padding: 6px 25px;
 .ed-pho-gal{}
 .ed-pho-gal ul{}
 .ed-pho-gal ul li{
-	float:left;
-	width:20%;
+     float:left;
+     width:20%;
 }
 .ad-log-main{
     position: fixed;
@@ -5666,7 +5684,7 @@ padding: 6px 25px;
     margin: 25px;
     margin: 0 auto;
     text-align: center;
-    background: #fff;	
+    background: #fff;    
     padding: 50px;
     margin-top: 50px;
     border-radius: 4px;
@@ -5685,7 +5703,7 @@ padding: 6px 25px;
     margin-top: 15px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #e66030;	
+    color: #e66030; 
 }
 .ad-log-in-con p{}
 .ad-log-in-con form{}
@@ -5723,6 +5741,15 @@ padding: 6px 25px;
 #exTab3 .nav li{
      width: 25%;
 }
+#careertab .nav li{
+     width: 20%;
+}
+.abouttab .nav li{
+     width: 33.33%!important;
+}
+#exTab3 strong{
+    color:#bb342f;
+} 
 #exTab2 .sub-tab .nav{
      background-color: transparent!important;
 }
@@ -5748,10 +5775,11 @@ padding: 6px 25px;
      border-left: 1px solid #e7ecea;
      border-bottom: solid 4px #bb342f;
 }
-
 #exTab2 .nav > li > a:hover{
      background-color: none;
 }
+
+
 @media(max-width: 767px){
      #exTab2 .nav > li > a{
           padding:  4px!important;
@@ -5784,12 +5812,46 @@ padding: 6px 25px;
      #about1::after{
           width: 100%!important;
      }
+     #careertab .nav > li > a{
+         font-size:11.5px;
+     }
+     #jssor_1 h2{
+     font-size: 50px;
+     text-transform: uppercase;
+     line-height: 50px;
+     color: #fff;
+     text-shadow: 2px 3px 10px #000000ba;
+    font-weight: 600;
+}
+ #jssor_1 h2 span{
+     font-size: 50px;
+     text-transform: uppercase;
+     font-weight: 700;
+     line-height: 28px;
+     color: #e66030;
+}
+ #jssor_1 p{
+     color: #f16635;
+     line-height: 30px;
+     font-weight: 300;
+}
+ #jssor_1 a{
+    line-height: 45px;
+     border-radius: 3px;
+     text-transform: uppercase;
+     font-weight: 600;
+     font-size: 14px;
+     letter-spacing: 1px;
+     height: 45px;
+     text-align: center;
+     margin:0px 10px;
+}
 }
 #exTab2 .nav-tabs > li.active > a, .nav-tabs > li > a:hover{
-     background-color: transparent;!important;
+     background-color: transparent!important;
 }
 #exTab2 .sub-tab .nav li.active a,#exTab2 .sub-tab .nav li.active a:focus{
-     background-color: transparent;
+     background-color: transparent!important;
     color: #bb342f;
     border: solid 1px;
     border-bottom: solid 4px;
@@ -5799,7 +5861,7 @@ padding: 6px 25px;
     color: #fff;
     cursor: default;
     border:none;
-    background-color:#bb342f; 
+    background-color:#bb342f!important; 
     border-bottom: solid 4px #bb342f;
 }
 
@@ -5923,6 +5985,7 @@ padding: 6px 25px;
 .blog-post {
     display: inline-block;
     width: 100%;
+    height:480px;
     background: #fff;
     border-radius: 4px;
     overflow: hidden;
@@ -6148,6 +6211,14 @@ padding: 6px 25px;
 }
 #exTab3 ul.nav.nav-tabs li a{
      padding: 0px 22px;
+     border:none;
+}
+#exTab2 .sub-tab .nav lia:hover{
+     background-color: transparent!important;
+    color: #bb342f;
+    border: solid 1px;
+    border-bottom: solid 4px;
+
 }
 #exTab3 ul.nav.nav-tabs li.active a{
      background-color:#bb342f; 
@@ -6352,7 +6423,6 @@ padding: 6px 25px;
 
         .head-2-inn h1{
           font-size: 20px;
-          color:#000;
         }
  
         }
@@ -6414,4 +6484,56 @@ padding: 6px 25px;
 .gap-p i.fa.fa-close {
     color: #888;
     font-size: 20px;
+}
+.title-des{
+    padding-bottom:20px;
+    text-align:center;
+}
+.title-des h4{
+    margin-bottom:10px;
+    color: #bb342f;
+}
+.career-post{
+    margin-bottom: 30px;
+    border-radius: 4px;
+    width:100%;
+}
+.career-contact h4{
+    margin:10px 0px;
+}
+#careertab .sub-tab .nav li a{
+     padding: 12px 0px;
+     color:#bb342f;
+     text-align: center;
+     border-radius: 0px;
+     border:0;
+}
+#careertab .nav > li > a{
+     padding: 20px 0px;
+     color:#bb342f;
+     text-align: center;
+     border:none;
+     border-bottom: solid 4px #e7ecea;
+}
+#careertab .nav > li > a:hover{
+     background-color: transparent!important;
+     border-bottom: solid 4px #e7ecea;
+}
+#careertab .nav-tabs > li.active > a, .nav-tabs > li > a:hover{
+     background-color: transparent!important;
+     border:none;
+     border-bottom: solid 4px #bb342f;
+}
+
+#careertab .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #bb342f;
+    cursor: default;
+    border:none;
+    border-bottom: solid 4px #bb342f;
+}
+.abouttab .nav > li > a{
+    height:66px;
+}
+.abouttab .tab-content p{
+    font-size:14px;
 }

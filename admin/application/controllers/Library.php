@@ -33,18 +33,45 @@ class Library extends CI_Controller
 				$data["error"] = "";
 			}
          		$data['redirect_page']='Library';
+
+				$data['id']=$this->input->post('id');
+				$data['video_title']=$this->input->post('video_title');
+				$data['video_desc']=$this->input->post('video_desc');
+				
 				$data['video_url']=$this->input->post('video_url');
 							
 			}
 			else
 			{
-				
+				if($this->input->post("id")!="")
+				{ //echo "hjjhgj";die;
+					$this->Library_model->data_update();
+					$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
+					redirect('Library');					
+				}
+				else
+				{ 
 					$this->Library_model->data_insert();
 					$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
 					redirect('Library');				
+				}		
+				
+									
 								
 			}
 			$this->load->view('Library/addlibrary',$data);
+		}
+		function editlibrary($id){
+      if(!check_admin_authentication())
+		{
+		redirect('login');
+		}
+
+		$data = array();				
+		$data['result']=$this->Library_model->getlibdata($id);	
+		//echo "<pre>";print_r($result);die;
+	   
+      	$this->load->view('Library/addlibrary',$data); 
 		}
 		function deletedata(){
 			if(!check_admin_authentication()){ 

@@ -8,7 +8,7 @@ class Home extends CI_Controller
 	{
       	parent::__construct();
       	$this->load->model('home_model');
-		
+		$this->load->library("pagination");
     }
 
     function index(){
@@ -386,12 +386,111 @@ class Home extends CI_Controller
 		$this->load->view('common/Aboutus');
 	}
 	function success(){
-		$this->load->view('common/success');
+		//$data['success']=$this->home_model->getsuccess();
+
+		  $config = array();
+
+        $config["base_url"] = base_url() . "home/Success";
+        $config["total_rows"] = $this->home_model->get_countsuccess();
+        $config["per_page"] = 4;
+        $config["uri_segment"] = 3;
+        //$config['use_page_numbers']  = TRUE;
+        $config['full_tag_open'] = "<ul class='pagination'>";
+    $config['full_tag_close'] = '</ul>';
+    $config['num_tag_open'] = '<li>';
+    $config['num_tag_close'] = '</li>';
+    $config['cur_tag_open'] = '<li class="active"><a href="#">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+    $config['first_tag_open'] = '<li>';
+    $config['first_tag_close'] = '</li>';
+    $config['last_tag_open'] = '<li>';
+    $config['last_tag_close'] = '</li>';
+
+
+
+    $config['prev_link'] = '<span aria-hidden="true">&#8249;</span>
+                                <span class="sr-only">Previous</span>
+                                ';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+
+
+    $config['next_link'] = '<span aria-hidden="true">&#8250;</span>
+                                <span class="sr-only">Next</span>
+                                ';
+    $config['next_tag_open'] = '<li>';
+    $config['next_tag_close'] = '</li>';
+
+
+    $this->pagination->initialize($config);
+       // $this->pagination->initialize($config);
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data["links"] = $this->pagination->create_links();
+
+       // $data['news'] = $this->News_model->getnews($config["per_page"], $page);
+        $data['success']=$this->home_model->getsuccess($config["per_page"], $page);
+		$this->load->view('common/success',$data);
+	}
+	function success_detail(){
+		$id=$this->uri->segment('3');
+		
+		$data['sucess_det']=$this->home_model->getsuccessdetail($id);
+		$this->load->view('common/success_detail',$data);
 	}
 	function career_library(){
 		//echo "not yet";die;
 		//$this->load->view('common/career_library');
-		$data['career']=$this->home_model->getcareerdata();
+
+		$config = array();
+
+        $config["base_url"] = base_url() . "home/career_library";
+        $config["total_rows"] = $this->home_model->get_countlib();
+        $config["per_page"] = 6;
+        $config["uri_segment"] = 3;
+        //$config['use_page_numbers']  = TRUE;
+        $config['full_tag_open'] = "<ul class='pagination'>";
+    $config['full_tag_close'] = '</ul>';
+    $config['num_tag_open'] = '<li>';
+    $config['num_tag_close'] = '</li>';
+    $config['cur_tag_open'] = '<li class="active"><a href="#">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+    $config['first_tag_open'] = '<li>';
+    $config['first_tag_close'] = '</li>';
+    $config['last_tag_open'] = '<li>';
+    $config['last_tag_close'] = '</li>';
+
+
+
+    $config['prev_link'] = '<span aria-hidden="true">&#8249;</span>
+                                <span class="sr-only">Previous</span>
+                                ';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+
+
+    $config['next_link'] = '<span aria-hidden="true">&#8250;</span>
+                                <span class="sr-only">Next</span>
+                                ';
+    $config['next_tag_open'] = '<li>';
+    $config['next_tag_close'] = '</li>';
+
+
+    $this->pagination->initialize($config);
+       // $this->pagination->initialize($config);
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data["links"] = $this->pagination->create_links();
+
+       // $data['news'] = $this->News_model->getnews($config["per_page"], $page);
+        $data['career']=$this->home_model->getcareerdata($config["per_page"], $page);
+		//$data['career']=$this->home_model->getcareerdata();
 		$this->load->view('common/career',$data);
 	}
 	function pricing_plan(){
@@ -432,7 +531,54 @@ class Home extends CI_Controller
 	
 	
 	function blog(){
-		$this->load->view('common/blog');
+			$config = array();
+
+        $config["base_url"] = base_url() . "home/blog";
+        $config["total_rows"] = $this->home_model->get_countblog();
+        $config["per_page"] = 3;
+        $config["uri_segment"] = 3;
+        //$config['use_page_numbers']  = TRUE;
+        $config['full_tag_open'] = "<ul class='pagination'>";
+    $config['full_tag_close'] = '</ul>';
+    $config['num_tag_open'] = '<li>';
+    $config['num_tag_close'] = '</li>';
+    $config['cur_tag_open'] = '<li class="active"><a href="#">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+    $config['first_tag_open'] = '<li>';
+    $config['first_tag_close'] = '</li>';
+    $config['last_tag_open'] = '<li>';
+    $config['last_tag_close'] = '</li>';
+
+
+
+    $config['prev_link'] = '<span aria-hidden="true">&#8249;</span>
+                                <span class="sr-only">Previous</span>
+                                ';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+
+
+    $config['next_link'] = '<span aria-hidden="true">&#8250;</span>
+                                <span class="sr-only">Next</span>
+                                ';
+    $config['next_tag_open'] = '<li>';
+    $config['next_tag_close'] = '</li>';
+
+
+    $this->pagination->initialize($config);
+       // $this->pagination->initialize($config);
+
+        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+
+        $data["links"] = $this->pagination->create_links();
+
+       // $data['news'] = $this->News_model->getnews($config["per_page"], $page);
+        $data['blogresult']=$this->home_model->getblogs($config["per_page"], $page);
+
+		//$data['blogresult']=$this->home_model->getblogs();
+		$this->load->view('common/blog',$data);
 	}
 	function blog_detail($blog_id){
       //echo $blog_id;die;
