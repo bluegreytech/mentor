@@ -394,8 +394,8 @@ class Home extends CI_Controller {
 		}
 	}
 	 function email_check() {
-		$query = $this->db->query("select EmailAddress from " . $this->db->dbprefix('tbladmin') . " where EmailAddress= '".md5($this->input->post('email'))."' and AdminId!='" . $this->session->userdata('AdminId') . "'");
-		//echo $this->db->last_query();die;
+		$query = $this->db->query("select EmailAddress from " . $this->db->dbprefix('tbladmin') . " where EmailAddress= '".$this->input->post('email')."' and AdminId!='" . $this->session->userdata('AdminId') . "'");
+		echo $this->db->last_query();die;
 		if ($query->num_rows() > 0) {
 			echo 1;die;
 		} else {
@@ -434,7 +434,44 @@ class Home extends CI_Controller {
 			$this->load->view('Inquery/viewinquery',$data);	
 		}
 	}
-   
-	
+
+	function importotp()
+	{
+		if(isset($_FILES["file"]["name"]))
+		{
+			$path = $_FILES["file"]["tmp_name"];
+			$object = PHPExcel_IOFactory::load($path);
+			foreach($object->getWorksheetIterator() as $worksheet)
+			{
+				$highestRow = $worksheet->getHighestRow();
+				$highestColumn = $worksheet->getHighestColumn();
+				for($row=2; $row<=$highestRow; $row++)
+				{
+					$otpcode = $worksheet->getCellByColumnAndRow(0, $row)->getValue();
+					
+					$data[] = array(
+					'otpcode'  => $otpcode,				
+					);
+				}
+			}
+			$data=insert_record('tblotpcode',$data);
+			$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
+			redirect('home/Adminlist');
+
+		} 
+	}
+
+	function importotpdata(){
+		if(!check_admin_authentication()){ 
+				redirect(base_url());
+			}
+			$data=array();
+			$data['inquiry']=$this->login_model->getinquery();
+
+			$data['student']=$this->student_model->getstudent();
+			//echo "<pre>";print_r(count($data['student']));die;
+		$this->load->view('common/addotpimport',$data);
+	}
+
 }
 ?>

@@ -1,32 +1,36 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-  
-class Payment extends CI_Controller {
-  
-    public function __construct()
-    {
+class Payment extends CI_Controller 
+{
+	public function __construct() {
         parent::__construct();
-        $this->load->database();
-        $this->load->library(array('form_validation','session'));
-        $this->load->helper(array('url','html','form'));
-             
-     }
-  
-    public function index()
-    {
-        $this->load->view('razorpay');
-    }   
-    public function razorPaySuccess()
+	    //$this->load->model('blog_model');
+		}
+
+		
+	function make_payment()
+	{	
+	  
+		if(!check_user_authentication()){			
+			redirect(base_url());
+		}	
+		$data=array();
+		$this->load->view('payment/make_payment',$data);
+		
+	}
+	
+	public function razorPaySuccess()
     { 
-     $data = [
-               'user_id' => '1',
+     $data = array('user_id' => '1',
                'payment_id' => $this->input->post('razorpay_payment_id'),
                'amount' => $this->input->post('totalAmount'),
-               'product_id' => $this->input->post('product_id'),
-            ];
+               'product_id' => $this->input->post('product_id')
+           );
+              
+           
      $insert = $this->db->insert('payments', $data);
      $arr = array('msg' => 'Payment successfully credited', 'status' => true);  
-     return $arr;
+
     }
     public function RazorThankYou()
     {
