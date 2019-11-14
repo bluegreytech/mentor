@@ -12,14 +12,14 @@ class Login_model extends CI_Model
 		 function check_login()
     {
         
-    $EmailAddress = trim($this->input->post('EmailAddress'));
-    $password = $this->input->post('Password');
+      $EmailAddress = trim($this->input->post('EmailAddress'));
+      $password = $this->input->post('Password');
             
-    $query = $this->db->get_where('tbladmin',array('EmailAddress'=>$EmailAddress,'Password'=>md5($password)));
-      // echo $this->db->last_query();
-      // die;
+      $query = $this->db->get_where('tbladmin',array('EmailAddress'=>$EmailAddress,'Password'=>md5($password)));
+     // echo $this->db->last_query(); die;
+     
                   //,'status'=>'Active'
-    $admin = $query->row_array();
+     $admin = $query->row_array();
     // echo "<pre>";print_r($admin);die;
     if($query->num_rows()>0)
     {

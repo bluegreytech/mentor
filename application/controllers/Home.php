@@ -394,6 +394,18 @@ class Home extends CI_Controller
 		$data['career']=$this->home_model->getcareerdata();
 		$this->load->view('common/career',$data);
 	}
+	function career_counsellor(){
+		//echo "not yet";die;
+		//$this->load->view('common/career_library');
+		//$data['career']=$this->home_model->getcareerdata();
+		$this->load->view('common/career_counsellor');
+	}
+	function corporate_mentor(){
+		//echo "not yet";die;
+		//$this->load->view('common/career_library');
+		//$data['career']=$this->home_model->getcareerdata();
+		$this->load->view('common/corporate_mentor');
+	}
 	function pricing_plan(){
 		$this->load->view('common/Packprice');
 	}

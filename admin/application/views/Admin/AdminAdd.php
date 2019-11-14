@@ -179,7 +179,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       data:{email:value},  
       async:false,
       success:function(data) {
-      	console.log()
+      	console.log(data);
           response = data;
       }
     });
@@ -209,7 +209,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				EmailAddress:{
 					required:true,
 					email:true,
-					email_check:true             
+					email_check:function(){
+						emailcheck='<?php echo $EmailAddress; ?>';
+							if(emailcheck){
+								return false;
+							}else{
+								return true;
+							}
+						},           
 				},				
 				password: {
 					noSpace: true,

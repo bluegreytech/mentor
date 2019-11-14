@@ -117,7 +117,12 @@
                           <a href="<?php echo base_url(); ?>Library" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Career Library </a>
                           </li>
                       </ul>
-                    </li>
+             </li>
+              <li class="nav-item">
+                      <a href="<?php echo base_url(); ?>home/importotpdata"><i class="icon-upload"></i><span data-i18n="nav.dash.main" class="menu-title">Import OTP Code</span>
+                      </a>
+                     
+             </li>
         </ul>
       </div>
       <!-- /main menu content-->

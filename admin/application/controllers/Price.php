@@ -201,8 +201,5 @@ class Price extends CI_Controller
 		
 	}
 
-    
-	
-
 }
 
