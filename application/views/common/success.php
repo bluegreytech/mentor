@@ -5,7 +5,7 @@ $this->load->view('common/header');
 
 
  
-   <!--SECTION START-->
+<!--SECTION START-->
     <section style="background:#f6f6f6;">
         <div class="container com-sp pad-bot-70">
             <div class="row">
@@ -17,42 +17,41 @@ $this->load->view('common/header');
                     </div>
                     <div class="pg-contact">
                         <!--First stories-->
+                          <?php
+                          if(!empty($success)){
+                            foreach($success as $val){
+                            ?>
+                         
                         <div class="row">
                           <div class="col-md-1"></div>
-                          <div class="col-md-10">
+                            <div class="col-md-10">
+                              <div class="col-md-5" style="padding: 0">
+                                <img src="<?php echo base_url()?>admin/upload/storyimage/<?php echo $val->story_img?>" class="img-responsive">
+                              </div>
                               <div class="col-md-7" style="padding: 0">
                                 <div class="content-box" style="background-color: #fff">
-                                <h5>How Overcame her Inhibitions and Biases to Choose the Stream Best Aligned to her Career Goals</h5>
-                                <p>He was unsure about her streams and subjects for class 11th. Mentor career experts found her perfect fit with humanities, and helped her deal with her misconceptions about the field. She is now acing her class 11 and looks forward to a career in Psychology.</p>
-                                
+                                <h5><?php echo $val->story_title?></h5>
+                                <p><?php echo $val->story_desc?></p>
+                                <a href="<?php echo base_url()?>Home/success_detail/<?php echo $val->story_id?>" class="custom-btn">Read More  <i class="fa fa-angle-double-right"></i></a>
                                 </div>
                               </div>
-                              <div class="col-md-5" style="padding: 0">
-                                <img src="<?php echo base_url(); ?>default/images/lg.png" class="img-responsive">
-                              </div>
-                          </div>
+                            </div>
                           <div class="col-md-1"></div>
                         </div>
                         <br><br>
-                         <div class="row">
-                          <div class="col-md-1"></div>
-                          <div class="col-md-10">
-                              <div class="col-md-7" style="padding: 0">
-                                <div class="content-box" style="background-color: #fff">
-                                <h5>How Overcame her Inhibitions and Biases to Choose the Stream Best Aligned to her Career Goals</h5>
-                                <p>He was unsure about her streams and subjects for class 11th. Mentor career experts found her perfect fit with humanities, and helped her deal with her misconceptions about the field. She is now acing her class 11 and looks forward to a career in Psychology.</p>
-                                
-                                </div>
-                              </div>
-                              <div class="col-md-5" style="padding: 0">
-                                <img src="<?php echo base_url(); ?>default/images/lg.png" class="img-responsive">
-                              </div>
-                          </div>
-                          <div class="col-md-1"></div>
-                        </div>
+                        <?php
+                      }
+                      }
+                        ?>
+                       
 
                     </div>
+                    <div class="row text-center">
 
+                   
+<?php echo $links; ?>
+
+</div>
                 </div>
             </div>
         </div>

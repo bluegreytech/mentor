@@ -17,14 +17,18 @@ $this->load->view('common/header');
                     	if(!empty($career)){
                     		foreach($career as $val){
                     			?>
-                    		
-                        <div class="col-md-4 text-center">
+                    		<div class="col-md-4 text-center">
                             <div class="career-post">
                                 <div class="post-media">
                                    <iframe width="100%" height="250" src="<?php echo $val->video_url?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                                 </div>
+                                <div class="ed-rsear-dec ed-faci-full-bot">
+                                    <h4><?php echo $val->video_title?></h4>
+                                    <p><?php echo $val->video_desc?> </p>
+                                </div>
                             </div>
                         </div>
+                      
                      <?php
                  }
              }
@@ -32,8 +36,15 @@ $this->load->view('common/header');
                         
                         
                     </div>
+
                 </div>
             </div>
+             <div class="row text-center">
+
+                   
+<?php echo $links; ?>
+
+</div>
         </div>
     </section>
     <!--SECTION END-->

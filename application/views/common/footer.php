@@ -7,28 +7,46 @@
             <div class="row wed-foot-link">
                 <div class="col-md-4 foot-tc-mar-t-o">
                     <h4>How We Help</h4>
-                    <p>At the Center for Academic and Career Development at MENTOR FPG , we envision the education & career development as a journey. Beginning with a student’s first step outside home , onto any campus and continuing through participation...<a href="about-us.php" style="color:#bb342f;">Read More</a></p>
+                    <p>At the Center for Academic and Career Development at MENTOR FPG , we envision the education & career development as a journey. Beginning with a student’s first step outside home , onto any campus and continuing through participation...<a href="<?php echo base_url()?>home/about_us" style="color:#bb342f;">Read More</a></p>
                 </div>
                 <div class="col-md-4">
                     <h4>Popular Careers</h4>
                     <ul>
-                      <li> <a href="#">Career in Design</a></li>
-                      <li><a href="#">Career in Engineering</a></li>
-                      <li><a href="#">Career in Media &amp; Communication</a> </li>
-                      <li><a href="#">Career in Social Sciences &amp; Humanities</a></li>
-                      <li><a href="#">Career in Ethical Hacking</a></li>
-                      <li><a href="#" style="color:#bb342f;">View All Popular Careers</a></li>
+                        <?php
+                             $sql = "SELECT * FROM tblcareer_library  ORDER BY id DESC limit 5";
+ $query = $this->db->query($sql);
+ $career=($query->result());
+ foreach($career as $val){
+
+
+
+ ?>
+                      <li> <a href="#"><?php echo $val->video_title?></a></li>
+                      
+                      <?php
+                  }
+                  ?>
+                      <li><a href="<?php echo base_url()?>home/career_library" style="color:#bb342f;">View All Popular Careers</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h4>Popular Blogs</h4>
                     <ul>
-                      <li> <a href="#">Career Options for Students</a></li>
-                      <li> <a href="#">Career Options for Gradutes</a></li>
-                      <li> <a href="#">Mentoring at School</a></li>
-                      <li> <a href="#">Overseas Programs</a></li>
-                      <li> <a href="#">Become a Psychologist</a></li>
-                      <li><a href="#" style="color:#bb342f;">View All Popular Blogs</a></li>
+                          <?php
+                             $sql1 = "SELECT * FROM tblblog  ORDER BY blog_id DESC limit 5";
+ $query1 = $this->db->query($sql1);
+ $blog=($query1->result());
+ foreach($blog as $val){
+
+
+
+ ?>
+                      <li> <a href="<?php echo base_url()?>home/blog_detail/<?php echo $val->blog_id?>"><?php echo $val->blog_title ?></a></li>
+                      <?php
+
+                  }
+                  ?>
+                      <li><a href="<?php echo base_url()?>home/blog" style="color:#bb342f;">View All Popular Blogs</a></li>
                     </ul>
                 </div>
             </div>

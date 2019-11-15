@@ -18,13 +18,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <strong> <?php echo $this->session->flashdata('success'); ?></strong> 
         </div>
     <?php } ?>
-    
+       
         <div class="card">
-   
             <div class="card-header">
-                <h4 class="card-title">List of Library
+                <h4 class="card-title">List of Success Stories
                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-               <a href="<?php echo base_url();?>Library/addlibrary/" class="btn btn-primary" style="float:right">Add Career Library</a>
+                <a href="<?php echo base_url();?>Stories/addstory/" class="btn btn-primary" style="float:right">Add Success Stories</a>
                 </h4>
             </div>
             <div class="card-body collapse in">
@@ -33,33 +32,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <thead class="thead-inverse">
                             <tr>
                                 <th>Sr No</th>
-                                <th>Title</th>
-                                <th>Embeded video url</th>
+                                <th>Story Title</th>
+                                <th>Story Image</th>
                                 
-							    
+                             
+								<th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
 						<tbody>
                         <?php
                                 $i=1;
-                                if($result){                             
+                                if(!empty($result)){                             
                                 foreach($result as $row)
                                 {
                             ?>
                             <tr>
                             
-                                    <td><?php echo $i; ?></td>
-                                    <td><?php echo $row->video_title; ?></td>
-                                    <td><?php echo $row->video_url; ?></td>
-                                     
-                                  
-                                 
-                                  
+                                    <td><?php echo $i; ?></td>                                   
+                                    <td><?php echo $row->story_title; ?></td>
+                                   <td>
+                                        <img src="<?php echo base_url();?>upload/storyimage/<?php echo $row->story_img;?>" class="img-thumbnail border-0" style="height: 50px;width:50px;">
+                                    </td>
+                                   
+                                    <!-- <td><?php// echo $row->BlogDescription; ?></td> -->
                                   
                                     <td>
-                                        <?php echo anchor('library/editlibrary/'.$row->id,'<i class="ficon icon-pencil2"></i>'); ?>
-                                        <a href="javascript:void(0)"  onclick="deletedata('<?php echo $row->id; ?>')" ><i class="ficon icon-bin"></i></a>    
+                                        <?php if($row->IsActive=='Active')
+                                            {
+                                                echo "Active";
+                                            } 
+                                            else
+                                            {
+                                                echo "Inactive";
+                                            } 
+                                        ?>
+                                    </td>
+                                    <td>
+                                      <?php echo anchor('Stories/editstory/'.$row->story_id,'<i class="ficon icon-pencil2"></i>'); ?>
+                                        <a href="javascript:void(0)" onclick="deletedata('<?php echo $row->story_id; ?>')" ><i class="ficon icon-bin"></i></a>     
                                     </td>  
                                 </tr>      
                                 <?php
@@ -109,19 +120,19 @@ $(function() {
    
 });
 
-
-function deletedata(id){  
+function deletedata(id,image){  
     $('#myModal').modal('show')
    
         $('#yes_btn').click(function(){
            
                 url="<?php echo base_url();?>"
                 $.ajax({
-                url: url+"/Library/deletedata/",
+                url: url+"stories/story_delete/",
                 type: "post",
                 data: {id:id} ,
-                success: function (response) {             
-                document.location.href = url+'Library/';                  
+                success: function (response) {   
+                   
+                document.location.href = url+'stories/';                  
 
             },
             error: function(jqXHR, textStatus, errorThrown) {

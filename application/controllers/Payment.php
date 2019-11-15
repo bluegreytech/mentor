@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Payment extends CI_Controller 
 {
@@ -31,13 +30,10 @@ class Payment extends CI_Controller
            
      $insert = $this->db->insert('payments', $data);
      $arr = array('msg' => 'Payment successfully credited', 'status' => true);  
+
     }
     public function RazorThankYou()
     {
      $this->load->view('razorthankyou');
     }
-    
-	
-
 }
-

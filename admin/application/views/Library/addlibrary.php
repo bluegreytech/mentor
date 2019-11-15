@@ -7,7 +7,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
  <div class="app-content content container-fluid">
     <div class="content-wrapper">
-        
+        <?php
+      $id=(isset($result[0]->id)!='')?$result[0]->id:"";
+      $video_url=(isset($result[0]->video_url)!='')?$result[0]->video_url:"";
+      $video_title=(isset($result[0]->video_title)!='')?$result[0]->video_title:"";
+      $video_desc=(isset($result[0]->video_desc)!='')?$result[0]->video_desc:"";
+     
+        ?>
       <div class="content-body"><!-- Basic form layout section start -->
 <section id="basic-form-layouts">
 	<div class="row match-height">
@@ -16,9 +22,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="card-header">
 					<h4 class="card-title" id="basic-layout-form">
 					
-					Add Library
 					
-						
+					
+				<?php if($id!='')
+					{
+						echo	"Edit Library";
+					}
+					else{
+					echo	"Add Library";
+					}
+						?>
 					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
 					<a href="<?php echo base_url();?>Library/" class="btn btn-primary" style="float:right">Back to Library List</a>
 				</div>
@@ -29,18 +42,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					
 							<div class="form-body">
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
-
-							
+<input type="hidden" class="form-control" name="id" value="<?php echo $id?>">
+							<div class="form-group">
+									<label> Video title</label>
+									<input type="text" class="form-control" placeholder="Video title" name="video_title" value="<?php echo $video_title?>" maxlength="200">
+								</div>
+								<div class="form-group">
+									<label> Video description</label>
+									
+									<textarea class="form-control" name="video_desc" rows="4" cols="4"><?php echo $video_desc?></textarea>
+								</div>
 								<div class="form-group">
 									<label> Embeded video url</label>
-									<input type="text" class="form-control" placeholder="Embeded video url" name="video_url" maxlength="200">
+									<input type="text" class="form-control" placeholder="Embeded video url" name="video_url" value="<?php echo $video_url?>" maxlength="200">
 								</div>
 							
 							<div class="form-actions">
-							
+							<?php if($id!=''){ ?>
+								<button type="submit" name="updateBlog" class="btn btn-primary">
+									<i class="icon-check2"></i> Update
+								</button>
+							<?php }else{ ?>
 								<button type="submit" name="addBlog" class="btn btn-primary">
 									<i class="icon-check2"></i> Add
 								</button>
+							<?php } ?>
+								
 							
 							</div>
 						</form>
@@ -70,6 +97,9 @@ $(document).ready(function()
 		{
 					rules: {
 						video_url: {
+						required: true,
+						},
+						video_title: {
 						required: true,
 						},
 						
