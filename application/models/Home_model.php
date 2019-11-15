@@ -390,5 +390,78 @@ return $this->db->count_all_results();
     $query=$this->db->get();
     return $query->result();
   }
+  function getcategory(){
+     $this->db->select('*');
+    $this->db->from('tblprocategory');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+   
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getsubcatid($cid){
+    $this->db->select('*');
+    $this->db->from('tblprosubcategory');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('cat_id',$cid);
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getprobyid($sid,$cid){
+$this->db->select('*');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('cat_id',$cid);
+    $this->db->where('subcat_id',$sid);
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getprobycatid($cid){
+    $this->db->select('*');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('cat_id',$cid);
+    //$this->db->where('subcat_id',$sid);
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getcatid($pid){
+$this->db->select('cat_id');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+    //$this->db->where('subcat_id',$sid);
+    //echo $this->db->last_query;
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getprodet($pid){
+    $this->db->select('*');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+    //$this->db->where('subcat_id',$sid);
+    //echo $this->db->last_query;
+    $query=$this->db->get();
+    return $query->result();
+  }
+  // function getprobyid(){
+  //  $this->db->select('p.*,c.cat_title,c.cat_id,s.subcat_title,s.subcat_id');
+  //   $this->db->from('tblprogram as p');
+  //    $this->db->join("tblprocategory as c",'p.cat_id=c.cat_id','left');
+  //     $this->db->join("tblprosubcategory as s",'s.subcat_id=p.subcat_id','left');
+  //   $this->db->where('p.Is_deleted','0');
+  //   $this->db->where('p.IsActive','Active');
+  //   $r=$this->db->get();
+  //   $res = $r->result();
+  //   return $res;
+  // }
  }
  

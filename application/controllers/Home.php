@@ -6,12 +6,15 @@ class Home extends CI_Controller
 {
 	public function __construct()
 	{
+		error_reporting(E_ALL);
       	parent::__construct();
       	$this->load->model('home_model');
 		$this->load->library("pagination");
     }
 
     function index(){
+    	 $data['category1']=$this->home_model->getcategory();
+    	 
     	$data['latest_blog']=$this->home_model->latest_blog();
     	$this->load->view('common/Home',$data);
     }
@@ -614,6 +617,23 @@ class Home extends CI_Controller
 	{
 		$this->session->sess_destroy();
 		redirect('home');
+	}
+	public function program_detail($pid){
+		
+        $data['pro_det']=$this->home_model->getprodet($pid);
+        
+        $cat_id=$this->home_model->getcatid($pid);
+
+          $cid=isset($cat_id[0]->cat_id)!=''?$cat_id[0]->cat_id:"";
+          //echo $cid;
+         if($cid==1){
+         	 $this->load->view('classes/program_det',$data);
+         }else if($cid==4){
+
+         }else if($cid==5){
+         	$this->load->view('classes/counseler',$data);
+         }
+      
 	}
  }
 

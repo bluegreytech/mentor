@@ -1,9 +1,12 @@
-
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <?php 
+ 
+     
 	 $this->load->view('common/header');
+
+
 ?>
 
  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>default/css/owl.carousel.min.css">
@@ -122,296 +125,197 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
               <div id="exTab2">  
                     <ul class="nav nav-tabs">
-                        <li class="active">
-                         <a  href="#1" data-toggle="tab">Career Counselling Programs</a>
+                        <?php
+                          $c=0;
+                          $c1=1;
+                         
+                        foreach($category1 as $val){
+                            $cls='';
+                            if($c==0){
+                              $cls='active';
+                              }
+                            ?>
+                        
+
+                        <li class="<?php echo $cls ?>">
+                         <a  href="#<?php echo $c1?>" data-toggle="tab"><?php echo $val->cat_title?></a>
                         </li>
-                        <li><a href="#2" data-toggle="tab">Overseas Appliation Programs</a>
-                        </li>
-                        <li><a href="#3" data-toggle="tab">Mentoring at School</a>
-                        </li>
-                        <li><a href="#5" data-toggle="tab">Become A Career Counselor</a>
-                        </li>
+                        <?php
+                         $c++;
+                          $c1++;
+                    }
+                    ?>
+                       
                     </ul>
 
-                    <div class="tab-content ">
-                        <div class="tab-pane active" id="1">
+                    <div class="tab-content">
+              <?php
+            
+                $x=0;
+                $y1=1;
+              foreach($category1 as $val){
+                 $cls='';
+                  if($x==0){
+                    $cls='active';
+                   }else{
+                  $cls='';
+                 }
+                $subcat=$this->home_model->getsubcatid($val->cat_id);
+                             
+                ?>
+               <div class="tab-pane <?php echo $cls ?>" id="<?php echo $y1 ?>">
+
+                             <?php
+                               if(!empty( $subcat)){
+                                                                
+                                                                   
+                                ?>
                              <div id="exTab2" class="sub-tab">  
                                 <ul class="nav nav-tabs">
-                                    <li class="active">
-                                    <a  href="#Students" data-toggle="tab">Start Assessment for Students</a>
+                                    <?php
+                                    $x=0;
+                                    foreach($subcat as $row){
+                                    $pro=$this->home_model->getprobyid($row->subcat_id,$val->cat_id);
+                                    $cls='';
+                               if($x==0){
+                                  $cls='active';
+                                }else{
+                                     $cls='';
+                                                           
+                                    }
+                                    ?>
+                                    <li class="<?php echo $cls ?>">
+                                    <a  href="#S<?PHP echo $x?>" data-toggle="tab"><?php echo $row->subcat_title?></a>
                                     </li>
-                                    <li><a href="#Professionals" data-toggle="tab">Start Assessment for Professionals</a>
-                                    </li>
+                                  <?php
+                                  $x++;
+                              }
+                                  ?>
                                 </ul>
 
-                        <div class="tab-content ">
-                            <div class="tab-pane active" id="Students">
-                                        <br><Br>    
-                                <div class="row">    
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <!--POPULAR COURSES-->
-                                                    <div class="home-top-cour">
-                                                        <!--POPULAR COURSES: CONTENT-->
-                                                        <div class="col-md-12 home-top-cour-desc">
-                                                            <a href="class-2-to-7.php">
-                                                                <h3>Class 2nd - 7th</h3>
-                                                            </a>
-                                                            <h4>Nurturing Minds</h4>
-                                                            <p>Find out your perfect intelligence amongst 8 Multiple Intelligences.</p>
-                                                            <p>Children are born with unique and distinct intelligence profile that are shaped by different biological and environmental factors. After tracing the innate learning style and aptitude, the growing mind will discover his/her perfect Multiple Intelligence which sharpens the personality and helps him/her choose future endeavours.</p><br>
-                                                            <div class="hom-list-share">
-                                                                <ul>
-                                                                    <li><a href="<?php echo base_url()?>home/class_2_to_7"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <!--POPULAR COURSES-->
-                                                    <div class="home-top-cour">
-                                                        <!--POPULAR COURSES: CONTENT-->
-                                                        <div class="col-md-12 home-top-cour-desc">
-                                                            <a href="class-8.php">
-                                                                <h3>Class 8th</h3>
-                                                            </a>
-                                                            <h4>Budding Minds. Course Inclination</h4>
-                                                            <p>Unveil your inclination at an early age to start your preparation in a specific way.</p>
-                                                            <p>You might find out that you enjoy thinking about why the apple fell in the first place and what made Einstein develop the theory in comparison to studying history at class. This is the time when you are on the path of self discovery instead of intense competition. Your course selection strategy in 8th grade can change the future of your career.</p>
-                                                            <div class="hom-list-share">
-                                                                <ul>
-                                                                    <li><a href="<?php echo base_url()?>home/class_8"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="tab-content">
+                            <?php
+                                     $x=0;
+                                    foreach($subcat as $row){
+                                    $pro=$this->home_model->getprobyid($row->subcat_id,$val->cat_id);
+                                    $cls='';
+                               if($x==0){
+                                  $cls='active';
+                                }else{
+                                     $cls='';
+                                                           
+                                    }
+                                    ?>
+                                 <div class="tab-pane <?php echo $cls ?>" id="S<?PHP echo $x?>">
+                                        <br><Br>
                                         <div class="row">
+                                   <?php
+                                       
+                                      
+                                          foreach($pro as $val1){ 
+
+                                         
+
+
+                                          ?> 
+                                
+                               
                                             <div class="col-md-6">
                                                 <div>
-                                                    <!--POPULAR COURSES-->
+                                                   
                                                     <div class="home-top-cour">
-                                                        <!--POPULAR COURSES: CONTENT-->
+                                                       
                                                         <div class="col-md-12 home-top-cour-desc">
-                                                            <a href="class-9-to-10.php">
-                                                                <h3>Class 9th and 10th</h3>
+                                                            <a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>">
+                                                                <h3><?php echo $val1->program_title?></h3>
                                                             </a>
-                                                            <h4>Stream Selection Assessment Plan</h4>
-                                                            <p>Discover your perfect stream by the five Career Dimensions.</p>
-                                                            <p>Understand your Individual Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities through a comprehensive assessment of your learning style, strengths and personalised counselling from our leading Career Mentors. We expertise in exploring your career options with you in a scientifically proven method.</p>
-                                                            <br>
+                                                            <h4><?php echo $val1->short_title?></h4>
+                                                          <?php
+                                                                  echo   $val1->short_desc;?>
+                                                                  <br>
                                                             <div class="hom-list-share">
                                                                 <ul>
-                                                                    <li><a href="<?php echo base_url()?>home/class_9_to_10"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                                    <li><a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <!--POPULAR COURSES-->
-                                                    <div class="home-top-cour">
-                                                        <!--POPULAR COURSES: CONTENT-->
-                                                        <div class="col-md-12 home-top-cour-desc">
-                                                            <a href="class-11-to-12.php">
-                                                                <h3>Class 11th and 12th </h3>
-                                                            </a>
-                                                            <h4>Focal Point</h4>
-                                                            <p>Have a clear view of your vision through the lens of our assessment and experts.</p>
-                                                            <p>Unveil your perfect career based on your individualised Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities by our Expert Career Mentor. Get acquainted with the various career options and build a Career Road Map in a scientific way.</p><br>
-                                                            <div class="hom-list-share">
-                                                                <ul>
-                                                                    <li><a href="<?php echo base_url()?>home/class_11_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                          
+                                        <?php
+
+                               }
+                                    ?>
                                         </div>
-                                    </div>
-                                    <div class="tab-pane" id="Professionals">
-                                        <bR><bR>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <!--POPULAR COURSES-->
-                                                    <div class="home-top-cour">
-                                                        <!--POPULAR COURSES: CONTENT-->
-                                                        <div class="col-md-12 home-top-cour-desc">
-                                                            <a href="graduates.php">
-                                                                <h3>Graduates </h3>
-                                                            </a>
-                                                            <h4>Age Edge Advancement Plan</h4>
-                                                            <p>Career Development Assessment</p><br>
-                                                            <p>Early Career Counseling before stepping into the professional world or into the world of advanced studies will help you plan your career in a more proactive and effective way. Find out the most suitable career path based on the five Career Dimensions: Individuals Interests, Career Values & Motivators, Personality, Learning Style, Skills & Abilities.</p>
-                                                            <div class="hom-list-share">
-                                                                <ul>
-                                                                    <li><a href="<?php echo base_url()?>home/Graduates"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div>
-                                                    <!--POPULAR COURSES-->
-                                                    <div class="home-top-cour">
-                                                        <!--POPULAR COURSES: CONTENT-->
-                                                        <div class="col-md-12 home-top-cour-desc">
-                                                            <a href="professionals.php">
-                                                                <h3>Professionals </h3>
-                                                            </a>
-                                                            <h4>Professional Aptitude Assessment</h4>
-                                                            <p>Benefit from our Career Assessment at this stage to deal with setbacks by the means of resilience with an effective road map.</p>
-                                                            <p>Midlife crisis cannot be treated by medicines, it requires the assistance of professional counseling. Experimenting and selecting a job is like gambling and dissatisfaction in professional life is alarming. It is time you get your career values and Interest in alignment. </p><br>
-                                                            <div class="hom-list-share">
-                                                                <ul>
-                                                                    <li><a href="<?php echo base_url()?>home/Professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                     
+                                      </div>
+                                    <?php
+                                  $x++;
+                                 }
+                                      ?>
+
                         </div>
-                        </div>
-                        <div class="tab-pane" id="2">
-                            <bR><bR>
-                            <div class="row">
-                                <div class="col-md-12">
+                      </div>
+                        <?php
+                    }else{
+                      ?>
+             <div class="row">
+  <?php
+                        $pro1=$this->home_model->getprobycatid($val->cat_id);
+
+                        $cnt='';
+                        $cnt=count($pro1);
+                        if($cnt=='1'){
+                              $cls2='col-md-12';
+                         }else if($cnt=='2'){
+                                      $cls2='col-md-6';
+                             }
+                            else if($cnt=='4'){
+                               $cls2='col-md-6';
+                              }
+                              else if($cnt=='3'){
+                                     $cls2='col-md-4';
+                               }
+                         foreach($pro1 as $val1){
+
+                      ?>
+                         
+                       
+                           
+                                <div class="<?php echo $cls2?>">
                                 <div class="home-top-cour">
-                                    <!--POPULAR COURSES: CONTENT-->
+                                    
                                     <div class="col-md-12 home-top-cour-desc">
-                                        <a href="#">
-                                            <h3>Overseas Appliation Programs</h3>
+                                        <a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>">
+                                            <h3><?php echo $val1->program_title?></h3>
                                         </a>
-                                         <p>Fulfil your overseas education dream through end-to-end admissions guidance from top overseas experts. Get help on everything from shortlisting colleges, selecting study destinations, to building your profile and crafting the perfect applications for your target universities.</p><br>
+                                         <p><?php echo $val1->short_desc;?></p><br>
                                         <div class="hom-list-share">
                                             <ul>
-                                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
+                                                <li><a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 </div>
                                 
-                            </div>
-                            <br>
+                            
+                            <?php
+                        }
+                        ?>
+                      </div>
+                      <?php
+                    }
+                        ?>
                         </div>
-                        <div class="tab-pane" id="3">
-                            <bR><bR>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <div class="home-top-cour">
-                                    <!--POPULAR COURSES: CONTENT-->
-                                    <div class="col-md-12 home-top-cour-desc">
-                                        <a href="#">
-                                            <h3>Mentoring at School</h3>
-                                        </a>
-                                        <p>MENTOR believes that the students who are in schools will be taking care of the reins of our nation in the next 10 to 15 years. They are the most important assets of our nation. Hence, we take the initiative to groom students’ career personality in a scientific and standardized manner by sharing our knowledge & experience with your students as their - Friend, Philosopher and Guide to help them choose their right career in the form of Workshops and Seminars by our Career experts.</p><br>
-                                        <div class="hom-list-share">
-                                            <ul>
-                                                <li><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="tab-pane" id="5">
-                            <bR><bR>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="home-top-cour">
-                                        <!--POPULAR COURSES: CONTENT-->
-                                        <div class="col-md-12 home-top-cour-desc">
-                                            <a href="#">
-                                                <h3>Mentor's Partnership Program</h3>
-                                            </a>
-                                            <p>Polish your career counseling practice by operating our advanced platform. Let’s partner up to multiply, amplify and grow together.</p><br>
-                                            <div class="hom-list-share">
-                                                <ul>
-                                                    <li><a href="<?php echo base_url()?>/home/mentor_partnership_program"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="mgccap-1-to-12.php">
-                                                    <h3>Class 1st - 12th</h3>
-                                                </a>
-                                                <p>Avail 7 day training program and learn from our career experts and understand the role of psychometric assessment thoroughly. Benefit from our tool and unlimited resources to gain expertise.</p>
-                                               <!--  <p>Get an overview of the role of a Career Counselor and learn about the education system and career pathways in India. Furthermore, understand the administration of MIT, analysis and comprehensive report depiction. </p> -->   
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/class_1_to_12"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="mgccap-undergraduates.php">
-                                                    <h3>Undergraduate</h3>
-                                                </a>
-                                                <p>A 12 day program to help you gain a comprehensive insight backed up with practical and theoretical knowledge. Along with it being a part of widespread network of Career Analysts. </p>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/mgccap_undergraduates"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div>
-                                        <!--POPULAR COURSES-->
-                                        <div class="home-top-cour">
-                                            <!--POPULAR COURSES: CONTENT-->
-                                            <div class="col-md-12 home-top-cour-desc">
-                                                <a href="mgccap-professionals.php">
-                                                    <h3>Professionals</h3>
-                                                </a>
-                                                <p>A 21 days program to make you an expert Career Analyst with in depth knowledge about the education system worldwide and effective counseling skills.</p><br>
-                                                <div class="hom-list-share">
-                                                    <ul>
-                                                        <li><a href="<?php echo base_url()?>home/mgccap_professionals"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
+                        <?php
+                         $x++;
+                          $y1++;
+                    }
+                    ?>
+                      
+                       
                     </div>
                 </div>
             </div>

@@ -5,6 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //echo "<pre>";print_r(check_user_authentication());;
 //$this->session->userdata('user_id');
  // echo $UserId=$this->session->userdata('user_id');
+//error_reporting(E_ALL);
+ 
+
    $this->load->view('common/css');
 ?>
     <!-- MOBILE MENU -->
@@ -37,37 +40,54 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="col-md-12" style="display: inline-flex;">
                                 <div style="width: 60%;">
                                   <h4><a href="#">Programs</a></h4>
-                                <ul>
-                                    <h5>Career Counselling Programs for Students</h5>
-                                    <li><a href="<?php echo base_url()?>home/class_2_to_7">Career Counselling for Class 2<sup>nd</sup> - 7<sup>th</sup></a></li>
-                                    <li><a href="<?php echo base_url()?>home/class_8">Career Counselling for Class 8<sup>th</sup></a></li>
-                                    <li><a href="<?php echo base_url()?>home/class_9_to_10">Career Counselling for Class 9<sup>th</sup> - 10<sup>th</sup></a></a></li>
-                                    <li><a href="<?php echo base_url()?>home/class_11_to_12">Career Counselling for Class 11<sup>th</sup> - 12<sup>th</sup></a></a></li>
-                                </ul>
+                                  <?php $category=$this->home_model->getcategory();
+
+                                   foreach($category as $val){
+                                    $subcat=$this->home_model->getsubcatid($val->cat_id);
+
+                                                                if(!empty( $subcat)){
+                                                                 
+                                  ?>
+                              
+                                  <?php
+                                   foreach($subcat as $row){
+                                    $pro=$this->home_model->getprobyid($row->subcat_id,$val->cat_id);
+                                      ?>
+                                    <h5><?php echo $row->subcat_title?></h5>
+                                    <?php
+                                    foreach($pro as $val1){
+                                      ?>
+                                        <ul>
+                                    <li><a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>"><?php echo $val->cat_title?> <?php echo $val1->program_title?></a></li>
+                                    </ul>
+                                   <?php
+                                 }
+                                 ?>
+                                
                                 <hr>
+                                <?php
+                              }
+                            }else{
+                                $pro1=$this->home_model->getprobycatid($val->cat_id);
+                              ?>
+                                
+                               
                                 <ul>
-                                    <h5>Career Counselling Programs for Graduates/Professionals</h5>
-                                    <li><a href="<?php echo base_url()?>home/Graduates">Career Counselling for Class Graduates</a></li>
-                                    <li><a href="<?php echo base_url()?>home/Professionals">Career Counselling for Class Professionals</a></li>
+                                    <?php
+                                    foreach($pro1 as $val1){
+                                      ?>
+                                    <h5><?php echo $val->cat_title?></h5>
+                                    <li><a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>"><?php echo $val1->program_title?></a></li>
+                                    <?php
+                                  }
+                                  ?>
                                 </ul>
-                                <ul>
-                                    <h5>Overseas Appliation Programs</h5>
-                                    <li><a href="#">Overseas Appliation Programs</a></li>
-                                </ul>
-                                <ul>
-                                    <h5>Mentoring at School</h5>
-                                    <li><a href="#">Mentoring at School</a></li>
-                                </ul>
-                                <ul>
-                                    <h5>Budding Carrer Counsellors</h5>
-                                    <li><a href="<?php echo base_url();?>home/class_1_to_12">MGCCAP for Class 1<sup>st</sup> - 12<sup>th</sup> </a></li>
-                                    <li><a href="<?php echo base_url();?>home/mgccap_undergraduates">MGCCAP for Undergraduate</a></li>
-                                    <li><a href="<?php echo base_url();?>home/mgccap_professionals">MGCCAP for Professionals</a></li>
-                                </ul>
-                                <ul>
-                                    <h5>Mentor's Partnership Programs</h5>
-                                    <li><a href="<?php echo base_url();?>home/mentor_partnership_program">Mentor's Partnership Programs</a></li>
-                                </ul>
+                                <?php
+                              }
+                            }
+                              ?>
+                               
+                              
                                 </div>
                                 <div class="col-md-6" style="width: 40%;">
                                     <h4><a href="#">Resources</a></h4>
@@ -137,11 +157,202 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>default/images/logo.png" alt="" />
                             </a>
                         </div>
+
                         <div class="main-menu">
+                            <ul>
+<?php $category=$this->home_model->getcategory();?>
+                              <li class="cour-menu">
+                                  <a href="#!" class="mm-arr">Programs <span class="fa fa-angle-down"></span></a>
+                                    
+                                    <div class="mm-pos">
+                                        <div class="cour-mm m-menu">
+                                            <div class="m-menu-inn">
+                                                <div id="exTab3" class="container">  
+                                                    <ul class="nav nav-tabs">
+                                                      <?php
+                                                      $c=0;
+                                                      $c1=1;
+                                                      foreach($category as $val){
+                                                        $cls='';
+                                                        if($c==0){
+                                                          $cls='active';
+                                                        }
+
+                                                        ?>
+                                                    
+                                                        <li class="<?php echo $cls ?>">
+                                                        <a  href="#m<?php echo $c1?>" data-toggle="tab">
+                                                       <?php echo $val->cat_title?></a>
+                                                        </li>
+                                                        
+                                                        <?php
+                                                        $c++;
+                                                        $c1++;
+                                                      }
+
+                                                      ?>
+                                                    </ul>
+
+                                                    <div class="tab-content ">
+                                                      <?php
+                                                      $x=0;
+                                                      $y1=1;
+                                                      foreach($category as $val){
+                                                        $cls='';
+                                                        if($x==0){
+                                                          $cls='active';
+                                                         
+                                                        }else{
+                                                          $cls='';
+                                                           
+                                                        }
+                                                        $subcat=$this->home_model->getsubcatid($val->cat_id);
+                                                       
+                                                        ?>
+                                                        <div class="tab-pane <?php echo $cls ?>" id="m<?php echo $y1 ?>">
+                                                            
+                                                                
+
+                                                                <?php
+                                                                if(!empty( $subcat)){
+                                                                  foreach($subcat as $row){
+                                                                    $pro=$this->home_model->getprobyid($row->subcat_id,$val->cat_id);
+                                                                   
+                                                               ?>
+                                                               <div class="col-md-12">
+                                                                <br>
+                                                                <h6 style="font-weight:400;font-size: 16px;    margin-bottom: 20px;">   <?php echo $val->cat_title?>
+                                                                  <span style="font-weight:600"><?php echo $row->subcat_title?></span>
+                                                                </h6>
+                                                              </div>
+                                                          <?php
+                                                               
+                                                              $cnt='';
+                                                                $cnt=count($pro);
+                                                                if($cnt=='1'){
+                                                                  $cls2='col-md-12';
+                                                                }else if($cnt=='2'){
+                                                                   $cls2='col-md-6';
+                                                                }
+                                                                else if($cnt=='4'){
+                                                                   $cls2='col-md-3';
+                                                                }
+                                                                else if($cnt=='3'){
+                                                                   $cls2='col-md-4';
+                                                                }
+                                                              foreach($pro as $val1){
+
+                                                                  
+                                                                ?>
+                                                              
+                                                              <div class="<?php echo $cls2;?>">
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;"><?php echo $val1->program_title?></h6>
+                                                                  <strong><?php echo $val1->short_title?></strong>
+                                                                  <p><?php
+                                                                   $short_desc= $val1->short_desc;
+
+                                                                echo substr( $short_desc,0,100);
+                                                                  ?> <br>
+                                                                  <a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                            <?php
+                                                          }
+                                                          ?>
+
+                                                              <?php
+                                                            }
+
+                                                            }else{
+
+                                                              $pro1=$this->home_model->getprobycatid($val->cat_id);
+                                                              ?>
+                                                             <?php
+                                                               
+                                                              $cnt='';
+                                                                $cnt=count($pro1);
+                                                                if($cnt=='1'){
+                                                                  $cls2='col-md-12 text-center';
+                                                                }else if($cnt=='2'){
+                                                                   $cls2='col-md-6';
+                                                                }
+                                                                else if($cnt=='4'){
+                                                                   $cls2='col-md-3';
+                                                                }
+                                                                else if($cnt=='3'){
+                                                                   $cls2='col-md-4';
+                                                                }
+                                                              foreach($pro1 as $val1){
+
+                                                                  
+                                                                ?>
+                                                             
+                                                              <div class="<?php echo $cls2;?>">
+                                                                 <br>
+                                                                  <h6 style="margin-bottom: 0px;font-size: 15px;"><?php echo $val1->program_title?></h6>
+                                                                  <strong><?php echo $val1->short_title?></strong>
+                                                                  <p><?php  $short_desc= $val1->short_desc;
+
+                                                                echo substr( $short_desc,0,100);?> <br>
+                                                                  <a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                  </p>
+                                                              </div>
+                                                            <?php
+                                                          }
+                                                          ?>
+                                                              <?php
+                                                            }
+                                                            ?>
+                                                            
+                                                        </div>
+                                                      <?php
+                                                        $x++;
+                                                        $y1++;
+                                                      }
+                                                      ?>
+
+                                                         <!-- <div class="tab-pane" id="m2">
+                                                            <div class="col-md-12 text-center">
+                                                                <br>
+                                                                <strong>Overseas Application Program </strong>
+                                                                 <p>End-to-end overseas admissions guidance to help you build the perfect applications for your target universities.<br>
+                                                                  <a href="#">View More
+                                                                      <span class="fa fa-angle-right"></span>
+                                                                    </a>
+                                                                </p>
+                                                            </div>
+                                                        </div>  -->
+                                                      
+                                                        
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="<?php echo base_url()?>home/success">Success Stories</a>
+                                <li class="about-menu">
+                                    <a href="#" class="waves-effect dropdown-button" href="#" data-activates="top-menu">Knowledge Center <span class="fa fa-angle-down"></span></a>
+                                   
+                                    <ul id="top-menu" class="dropdown-content top-menu-sty-custom">
+                                          <li><a href="<?php echo base_url()?>home/career_library">Career Library</a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="<?php echo base_url()?>home/blog">Career News</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="<?php echo base_url()?>home/contact_us">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                       <!-- <div class="main-menu">
                             <ul>
                               <li class="cour-menu">
                                   <a href="#!" class="mm-arr">Programs <span class="fa fa-angle-down"></span></a>
-                                    <!-- MEGA MENU 1 -->
+                                    
                                     <div class="mm-pos">
                                         <div class="cour-mm m-menu">
                                             <div class="m-menu-inn">
@@ -299,7 +510,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <li><a href="<?php echo base_url()?>home/success">Success Stories</a>
                                 <li class="about-menu">
                                     <a href="#" class="waves-effect dropdown-button" href="#" data-activates="top-menu">Knowledge Center <span class="fa fa-angle-down"></span></a>
-                                    <!-- MEGA MENU 1 -->
+                                   
                                     <ul id="top-menu" class="dropdown-content top-menu-sty-custom">
                                           <li><a href="<?php echo base_url()?>home/career_library">Career Library</a></li>
                                           <li class="divider"></li>
@@ -309,7 +520,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <li><a href="<?php echo base_url()?>home/contact_us">Contact us</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="all-drop-down-menu">
 
