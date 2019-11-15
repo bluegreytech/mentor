@@ -161,8 +161,13 @@
 
              </li>
               <li class="nav-item">
-                      <a href="<?php echo base_url(); ?>home/importotpdata"><i class="icon-upload"></i><span data-i18n="nav.dash.main" class="menu-title">Import OTP Code</span>
-                      </a>
+                  <a href="<?php echo base_url(); ?>home/importotpdata"><i class="icon-upload"></i><span data-i18n="nav.dash.main" class="menu-title">Import OTP Code</span>
+                  </a>
+                     
+             </li>
+             <li class="nav-item">
+                  <a href="<?php echo base_url(); ?>home/setting"><i class="icon-cog"></i><span data-i18n="nav.dash.main" class="menu-title">Settings</span>
+                  </a>
                      
              </li>
 

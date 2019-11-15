@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/default.min.css"/>
     <!-- Semantic UI theme -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/semantic.min.css"/>
+  
+    
     <!--  alertify css and js  start  -->
     <!--  alertify css and js  start  -->
      <link rel="stylesheet" href="<?php echo base_url(); ?>default/css/alertify.rtl.min.css"/>

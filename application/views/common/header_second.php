@@ -23,7 +23,7 @@
       <!-- <link href="<?php echo base_url(); ?>default_2/css/blue.css" rel="stylesheet"> -->
       <!-- <link href="<?php echo base_url(); ?>default_2/css/class-helpers.css" rel="stylesheet" /> -->
     <!--   <link href="<?php echo base_url(); ?>default_2/css/bootstrap-fileupload.css" rel="stylesheet" /> -->
-    <!--   <link href="<?php echo base_url(); ?>default_2/css/owl.carousel.css" rel="stylesheet" />
+    <!--   <link href="<?php //echo base_url(); ?>default_2/css/owl.carousel.css" rel="stylesheet" />
       <link href="<?php echo base_url(); ?>default_2/css/owl.transitions.css" rel="stylesheet" /> -->
       <link href="<?php echo base_url(); ?>default_2/css/bootstrap-datepicker.css" rel="stylesheet" />
       <link href="<?php echo base_url(); ?>default_2/css/alertify.core.css" rel="stylesheet" type="text/css" />
@@ -33,7 +33,7 @@
       <link href="<?php echo base_url(); ?>default_2/css/enjoyhint.css" rel="stylesheet" />
       <link href="<?php echo base_url(); ?>default_2/css/my-styles.css?20190326" rel="stylesheet" /> 
       <link href="<?php echo base_url(); ?>default_2/css/my-media.css?20190326" rel="stylesheet" /> 
-
+        <!--  <link rel="stylesheet" href="<?php echo base_url(); ?>default_2/css/put_in_style.css"/> -->
 </head>
 <body id="blue-scheme" >
       

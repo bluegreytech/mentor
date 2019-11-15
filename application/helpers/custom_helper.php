@@ -283,7 +283,7 @@
 	function site_setting()
 	{		
 		$CI =& get_instance();
-		$query = $CI->db->get("site_setting");
+		$query = $CI->db->get("tblsite_setting");
 		return $query->row();
 	
 	}

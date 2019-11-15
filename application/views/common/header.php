@@ -517,7 +517,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                           <li><a href="<?php echo base_url()?>home/blog">Career News</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="<?php echo base_url()?>home/contact_us">Contact us</a>
+                                   <li class="about-menu">
+                                    <a href="#" class="waves-effect dropdown-button" href="#" data-activates="top-menu2">Contact us <span class="fa fa-angle-down"></span></a>
+                                    <!-- MEGA MENU 1 -->
+                                    <ul id="top-menu2" class="dropdown-content top-menu-sty-custom">
+                                        <li><a href="<?php echo base_url()?>home/corporate_mentor/">Corporate Trainer</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="<?php echo base_url()?>home/career_counsellor">Career Counsellor </a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>-->

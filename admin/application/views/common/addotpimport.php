@@ -46,10 +46,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 </section>
 <!-- // Basic form layout section end -->
-        </div>
-      </div>
     </div>
-	<?php 
+  </div>
+</div>
+<?php 
 $this->load->view('common/footer');	
 ?>
 
