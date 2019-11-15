@@ -10,7 +10,7 @@ class Payment extends CI_Controller
 		
 	function make_payment()
 	{	
-	  
+	  echo $this->session->userdata('user_id');
 		if(!check_user_authentication()){			
 			redirect(base_url());
 		}	
@@ -21,10 +21,10 @@ class Payment extends CI_Controller
 	
 	public function razorPaySuccess()
     { 
-     $data = array('user_id' => '1',
+     $data = array('user_id' =>$this->session->userdata('user_id'),
                'payment_id' => $this->input->post('razorpay_payment_id'),
                'amount' => $this->input->post('totalAmount'),
-               'product_id' => $this->input->post('product_id')
+              
            );
               
            
