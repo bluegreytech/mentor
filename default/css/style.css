@@ -3970,11 +3970,9 @@ textarea.custom  {
 }
  .overlay-contact {
      position: relative;
-     background-color: white;
-     width: 40%;
+     background-color: white;    
      border-radius: 5px;
-     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.29);
-     margin-top: -590px;
+     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.29);   
      border: 5px #1f4363;
      border-style: dashed;
      overflow: hidden;

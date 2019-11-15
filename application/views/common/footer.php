@@ -1,4 +1,6 @@
- 
+ <?php $sitedata=site_setting();
+ //echo "<pre>";print_r($sitedata);die;
+ ?>
 <!-- FOOTER -->
     <section class="wed-hom-footer">
         <div class="container">
@@ -43,15 +45,13 @@
                 </div>
                 <div class="col-md-5 wed-foot-link-1">
                     <ul style="float: right;">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <li><a href="<?php echo $sitedata->facebook_link; ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <li><a href="<?php echo $sitedata->twitter_link; ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>                       
+                        <li><a href="<?php echo $sitedata->youtube_link; ?>" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        <li><a href="<?php echo $sitedata->whatsapp_link; ?>" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>

@@ -4,26 +4,94 @@ $this->load->view('common/header_second');
 
 $this->load->view('common/sidebar_second');
 ?>
-<div class="container">
-<br><br><br>
-<div class="row">
-<div class="col-md-4">
-<figure class="card card-product"> 
-  <div class="bottom-wrap">
-    <a href="javascript:void(0)" class="btn btn-sm btn-primary float-right buy_now" data-amount="1000" data-id="1">Pay Now</a> 
-    <!-- price-wrap.// -->
-  </div> <!-- bottom-wrap.// -->
-</figure>
-</div> <!-- col // -->
-
-
-</div> <!-- row.// -->
-</div> 
+<section id="main-content" class="my-profile-page">
+  <section class="wrapper">
+  <div class="congrats">
+      <div class="row">
+          <div class="col-md-12">
+              <div>
+                  <!--POPULAR COURSES-->
+                  <div class="col-md-4">
+                    <div class="home-top-cour">
+                        <!--POPULAR COURSES: CONTENT-->
+                        <div class="home-top-cour-desc">
+                          <div class="cong-heading">
+                            <img src="<?php echo base_url();?>default/images/test-icon.png">
+                            <h3>1.Career Planning Test</h3>
+                          </div>
+                          <div class="cong-subtitle">
+                            <h4>Congratulations!!! Your have successfully completed your test</h4>
+                          </div>
+                          <div class="cong-content">  
+                            <h3>Congratulations!!!</h3>
+                            <p>Now, you can make the payment</p>
+                          </div>
+                          <div class="cong-footer arrow-pad">
+                              <img src="<?php echo base_url();?>default/images/arrow.png" style="width: 110px!important;">
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!--POPULAR COURSES-->
+                  <div class="col-md-4">
+                    <div class="home-top-cour">
+                        <!--POPULAR COURSES: CONTENT-->
+                        <div class="home-top-cour-desc">
+                          <div class="cong-heading">
+                            <img src="<?php echo base_url();?>default/images/card-icon.png">
+                            <h3>2.Payment</h3>
+                          </div>
+                          <div class="cong-subtitle">
+                            <h4>Make a payment online to activate report instantly</h4>
+                          </div>
+                          <div class="cong-content">  
+                            <div class="row">
+                              <div class="col-md-4 col-xs-4">
+                                <img src="<?php echo base_url();?>default/images/elearning.png">
+                              </div>
+                              <div class="col-md-8 col-xs-8">                                 
+                                  <h3 style="padding-top: 20px;">Direct Online User</h3>
+                              </div>
+                            </div>
+                          </div>
+                           <div class="cong-footer report-pad">
+                            <a href="#" class="report">Make Payment</a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!--POPULAR COURSES-->
+                  <div class="col-md-4">
+                    <div class="home-top-cour">
+                        <!--POPULAR COURSES: CONTENT-->
+                        <div class="home-top-cour-desc">
+                          <div class="cong-heading">
+                            <img src="<?php echo base_url();?>default/images/report-icon.png">
+                            <h3>3.Career Planning Report</h3>
+                          </div>
+                          <div class="cong-subtitle">
+                            <h4>Your Career Planning Report is De-activated. Make a Payment to Activate your Report.</h4>
+                          </div>
+                          <div class="cong-content">  
+                            <h3>Carrer Planning</h3>
+                            <p>Report of <a href="#">Username</a>
+                          </div>
+                          <div class="cong-footer report-pad">
+                            <a href="#" class="report">Report with Analysis</a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+</section>
 <!--container.//-->
 <?php 
     $this->load->view('common/footer_second');
 ?>
-
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
   var SITEURL = "<?php echo base_url() ?>";

@@ -359,6 +359,35 @@ class Login_model extends CI_Model
     $query=$this->db->get();
     return $query->row_array();
   }
+    function getdatasite(){
+      $AdminId=$this->session->userdata('AdminId');
+      $this->db->select('site.*');
+      $this->db->from('tblsite_setting as site');
+      $this->db->where('site.sitesetting_id',$AdminId);
+      $query=$this->db->get();
+      return $query->row_array();
+    }
+
+
+    function update_setting()
+    { 
+      $AdminId=$this->session->userdata('AdminId');
+    // /  echo "<pre>";print_r($_POST);die;
+      $data=array(       
+        'site_address'=>$this->input->post('address'),
+        'student_payment'=>$this->input->post('student_payment'),
+        'tollfree_number'=>$this->input->post('tollfree_number'),          
+        'site_choosementor'=>$this->input->post('choosementor'),
+        'facebook_link'=>$this->input->post('fblink'),
+        'twitter_link'=>$this->input->post('twtlink'),
+        'whatsapp_link'=>$this->input->post('whatsapplink'),
+        'youtube_link'=>$this->input->post('youtubelink'),       
+      );
+         //echo "<pre>";print_r($data);die;
+        $this->db->where("sitesetting_id",$this->input->post('sitesetting_id'));
+        $this->db->update('tblsite_setting',$data);
+        return 1; 
+    }
 
 
 }
