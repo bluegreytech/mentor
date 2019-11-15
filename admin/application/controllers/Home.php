@@ -472,7 +472,7 @@ class Home extends CI_Controller {
 		$this->load->view('common/addotpimport',$data);
 	}
 
-	 function setting(){
+	function setting(){
     
     	if(!check_admin_authentication())
 		{
@@ -510,12 +510,50 @@ class Home extends CI_Controller {
 				{
 					$this->session->set_flashdata('error', 'Your data was not Update!');
 					redirect('home/setting');
-				}		
-
-	} 
-
-	
+				}	
+		}
         $this->load->view('common/site_setting',$data);    
+    }
+
+    function career_mentor(){
+    	if(!check_admin_authentication())
+		{
+			redirect('login');
+		}               
+		
+		$data=array();
+		$result=$this->login_model->getdatasite($this->session->userdata('AdminId'));
+		//echo "<pre>";print_r($result);die;
+		//$result=get_one_record('tblsitesetting',$this->session->userdata('AdminId'));
+		$data['sitesetting_id']	=$result['sitesetting_id'];
+		$data['student_payment']=$result['student_payment'];	
+		$data['tollfree_number']=$result['tollfree_number'];
+		$data["facebook_link"] 	= $result['facebook_link'];
+		$data["whatsapp_link"] 	= $result['whatsapp_link'];
+		$data["twitter_link"] 	= $result['twitter_link'];				
+		$data["youtube_link"]	= $result['youtube_link'];
+		$data["site_address"] 	= $result['site_address'];
+		$data["site_choosementor"] 	= $result['site_choosementor'];	
+		$data["status"] 		= $result['status'];
+		$data["Is_deleted"] 	= $result['Is_deleted'];				
+		$data["created_date"]   = $result['created_date'];			
+	
+		//$data['gstnumber']=$result->gstnumber;
+		if($_POST){
+			$result=$this->login_model->update_setting($this->session->userdata('AdminId'));
+			if($result==1)
+			{
+				$this->session->set_flashdata('success', 'Bank detail has been Updated Successfully!');
+				redirect('home/career_mentor');
+			}
+			
+			else if($result==2)
+			{
+				$this->session->set_flashdata('error', 'Your data was not Update!');
+				redirect('home/career_mentor');
+			}	
+		}
+        $this->load->view('career/career_mentor',$data);    
     }
 
 }

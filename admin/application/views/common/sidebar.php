@@ -119,6 +119,16 @@
                       </ul>
 
                     </li>
+                       <li class="nav-item">
+                      <a><i class="icon-library"></i><span data-i18n="nav.dash.main" class="menu-title">Career Mentor</span>
+                      </a>
+                      <ul class="menu-content">                          
+                          <li>
+                          <a href="<?php echo base_url(); ?>home/career_mentor" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Career Mentor</a>
+                          </li>
+                      </ul>
+
+                    </li>
 
                     <li class="nav-item">
                       <a><i class="icon-list"></i><span data-i18n="nav.dash.main" class="menu-title">Success story</span>

@@ -55,7 +55,7 @@ $this->load->view('common/sidebar_second');
                             </div>
                           </div>
                            <div class="cong-footer report-pad">
-                            <a href="#" class="report">Make Payment</a>
+                            <a href="javascript:void(0)" data-amount="<?php echo $student_payment;?>" data-id="1" data-title="Make payment" class="report" id="buy_now">Make Payment</a>
                           </div>
                         </div>
                     </div>
@@ -95,22 +95,23 @@ $this->load->view('common/sidebar_second');
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
   var SITEURL = "<?php echo base_url() ?>";
-  $('body').on('click', '.buy_now', function(e){
+  $('body').on('click', '#buy_now', function(e){
     var totalAmount = $(this).attr("data-amount");
-    var product_id =  $(this).attr("data-id");
+   // var product_id =  $(this).attr("data-id");
     var options = {
     "key": "rzp_test_C7fnEIVjsS6Bsd",
     "amount":(totalAmount*100), // 2000 paise = INR 20
     "name": "Mentor pay",
-    "description": "Payment",
-    "image": "https://www.tutsmake.com/wp-content/uploads/2018/12/cropped-favicon-1024-1-180x180.png",
+    "description": "Student Payment",
+   // "image": "https://www.tutsmake.com/wp-content/uploads/2018/12/cropped-favicon-1024-1-180x180.png",
     "handler": function (response){
+      console.log(response);
           $.ajax({
             url: SITEURL + 'payment/razorPaySuccess',
             type: 'post',
             dataType: 'json',
             data: {
-                razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount ,product_id : product_id,
+                razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount
             }, 
             success: function (msg) { 
                window.location.href = SITEURL + 'payment/RazorThankYou';

@@ -102,7 +102,7 @@ $this->load->view('common/header');
                                 <p>Send Us Now</p>
                                 <h2>Get In Touch</h2> <span class="footer-ser-re">Service Request Form</span> </div>
                             <!-- ENQUIRY FORM -->
-                            <form id="contact_form" name="contact_form" action="http://www.togethermentor.com/home/contact_us" method="POST" novalidate="novalidate">
+                            <form id="contact_form" name="contact_form" action="<?php echo base_url() ?>/home/corporate_mentor" method="POST" novalidate="novalidate">
                                 <ul>
                                     <li class="col-md-6 col-sm-6 col-xs-12 contact-input-spac">
                                         <input type="text" id="f1" value="" name="username" placeholder="Name"> </li>

@@ -22,7 +22,6 @@ class Mytest extends CI_Controller {
 		$this->load->view('mytest/mytestlist',$data);
 	 }
 	function addtest(){
-
 		if(!check_user_authentication()){			
 		redirect(base_url());
 		}
@@ -42,7 +41,16 @@ class Mytest extends CI_Controller {
 	}
     
     function Test_complete(){
-    	echo "hello";
+
+    	if(!check_user_authentication()){			
+			redirect(base_url());
+		}	
+		$data=array();
+		$sitedata=site_setting();
+		$data['student_payment']=$sitedata->student_payment;
+		//echo $sitedata->student_payment; die;
+		$this->load->view('payment/make_payment',$data);
+		
     }
 
     

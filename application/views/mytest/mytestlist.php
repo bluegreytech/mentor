@@ -33,7 +33,7 @@ $this->load->view('common/sidebar_second');
                 <p>( 2 ) THERE IS NO TIME LIMIT for Multiple intelligence and Learning style for completing the questions. Take your time.</p>
                 <p>( 3 ) Make your choice carefully and then move to the next page; you cannot return to the previous screen to change your answer.</p>
                 <div class="row text-center">   
-                  <a href="http://assess.careeracer.com/access-login-api1.php?category=&channel_id=647&cd='.<?php echo urlencode($userdata->choicecareerassess).'&age=647&access_code='.urlencode($userdata->access_code).'&name='.trim($userdata->username).'&location='.$userdata->location.'&person_age='.$userdata->age.'&amp;current_stage='.$userdata->current_stage?>"  class="btn btn-lg btn-success" target="_blank">Start Test</a>                
+                  <a href="http://assessment.togethermentor.com/access-login-api1.php?category=&channel_id=647&cd='.<?php echo urlencode($userdata->choicecareerassess).'&age=647&access_code='.urlencode($userdata->access_code).'&name='.trim($userdata->username).'&location='.$userdata->location.'&person_age='.$userdata->age.'&amp;current_stage='.$userdata->current_stage?>"  class="btn btn-lg btn-success" target="_blank">Start Test</a>                
                 </div>
                   </div>
                 </div>

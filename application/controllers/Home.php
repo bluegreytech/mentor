@@ -343,42 +343,9 @@ class Home extends CI_Controller
 	{	
 
 
-		$data = array();
-		//echo "<pre>";print_r($_POST);die;
-        $this->load->library('form_validation');
-		$this->form_validation->set_rules('email', 'Email', 'required');
-		$this->form_validation->set_rules('username', 'Full Name', 'required');
-		$this->form_validation->set_rules('phone', 'Contact', 'required');
 		
 		
-		if($this->form_validation->run() == FALSE){	
-		
-			if(validation_errors())
-			{
-				$data["error"] = validation_errors();
-					echo "<pre>";print_r($data);die;
-			}else{
-				$data["error"] = "";
-			}
-			if($_POST){			
-				$data["email"]      = $this->input->post('email');
-				$data["username"]   = $this->input->post('Username');			
-				$data["phone"]      = $this->input->post('PhoneNumber');
-				$data["subject"]        = $this->input->post('subject');
-				$data["message"]   = $this->input->post('message');
-			
-			}else{
-			
-			
-			}
-		}else{
-			//echo "fgfg";die;
-			$this->session->set_flashdata('success', 'Message has been send successfully');
-			$this->home_model->insertcontact();
-			redirect('home/contact_us');
-		}
-		
-		$this->load->view('common/Contactus',$data);
+		$this->load->view('common/corporate_mentor',$data);
 	}
 	public function Page()
 	{	
@@ -503,10 +470,42 @@ class Home extends CI_Controller
 		$this->load->view('common/career_counsellor');
 	}
 	function corporate_mentor(){
-		//echo "not yet";die;
-		//$this->load->view('common/career_library');
-		//$data['career']=$this->home_model->getcareerdata();
+		 $data = array();
+		//echo "<pre>";print_r($_POST);die;
+        $this->load->library('form_validation');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('username', 'Full Name', 'required');
+		$this->form_validation->set_rules('phone', 'Contact', 'required');
+		
+		
+		if($this->form_validation->run() == FALSE){	
+		
+			if(validation_errors())
+			{
+				$data["error"] = validation_errors();
+					echo "<pre>";print_r($data);die;
+			}else{
+				$data["error"] = "";
+			}
+			if($_POST){			
+				$data["email"]      = $this->input->post('email');
+				$data["username"]   = $this->input->post('Username');			
+				$data["phone"]      = $this->input->post('PhoneNumber');
+				$data["subject"]    = $this->input->post('subject');
+				$data["message"]    = $this->input->post('message');
+			
+			}else{
+			
+			
+			}
+		}else{
+			//echo "fgfg";die;
+			$this->session->set_flashdata('success', 'Message has been send successfully');
+			$this->home_model->insertcontact();
+			redirect('home/corporate_mentor');
+		}
 		$this->load->view('common/corporate_mentor');
+
 	}
 	function pricing_plan(){
 		$this->load->view('common/Packprice');
