@@ -143,6 +143,25 @@
                       </ul>
                     </li>
 
+                    <li class="nav-item">
+                      <a><i class="icon-list"></i><span data-i18n="nav.dash.main" class="menu-title">Program Page extra content</span>
+                      </a>
+                      <ul class="menu-content">
+                          <li>
+                           <a href="<?php echo base_url(); ?>Help/keylist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Key Highlights </a>
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>Help/helplist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of help </a>
+                          <li>
+                           <a href="<?php echo base_url(); ?>Help/learnlist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> What will you learn section </a>
+                          </li>
+                           <li>
+                           <a href="<?php echo base_url(); ?>Programs/faqlist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of faq </a>
+                          </li>
+                          </li>
+                      </ul>
+                    </li>
+
                        <li class="nav-item">
                       <a><i class="icon-list"></i><span data-i18n="nav.dash.main" class="menu-title">Programs</span>
                       </a>

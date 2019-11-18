@@ -622,14 +622,23 @@ class Home extends CI_Controller
         $data['pro_det']=$this->home_model->getprodet($pid);
         
         $cat_id=$this->home_model->getcatid($pid);
-
+         $data['setting']=$this->home_model->getsetting();
           $cid=isset($cat_id[0]->cat_id)!=''?$cat_id[0]->cat_id:"";
           //echo $cid;
          if($cid==1){
+         	$data['help']=$this->home_model->gethelpdata($pid);
+         	$data['discover_plan']=$this->home_model->getplan();
+         		$data['faq']=$this->home_model->getfaq();
          	 $this->load->view('classes/program_det',$data);
+         }else if($cid==3){
+         	$this->load->view('classes/coming_soon',$data);
+
          }else if($cid==4){
+         	$this->load->view('classes/coming_soon',$data);
 
          }else if($cid==5){
+         	$data['key']=$this->home_model->getkeydata($pid);
+         		$data['learn']=$this->home_model->getlearndata($pid);
          	$this->load->view('classes/counseler',$data);
          }
       

@@ -15,77 +15,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title" id="basic-layout-form">
-						<?php if($pid!='')
+						<?php if($lid!='')
 					{
-						echo	"Edit Program";
+						echo	"Edit ";
 					}
 					else{
-					echo	"Add Program";
+					echo	"Add";
 					}
 						?>
 					<a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-					<a href="<?php echo base_url();?>Programs" class="btn btn-primary" style="float:right">Back to Program List</a>
+					<a href="<?php echo base_url();?>Help/learnlist/" class="btn btn-primary" style="float:right">Back to  List</a>
 				</div>
 				</h4>
 				<div class="card-body collapse in">
 					<div class="card-block">
 				
-						<form class="form" method="post" enctype="multipart/form-data" id="form_program" action="<?php echo base_url();?>Programs/addprogram">
+						<form class="form" method="post" enctype="multipart/form-data" id="form_blog" action="<?php echo base_url();?>Help/addlearn">
 					
 							<div class="form-body">
 								<h4 class="form-section"><i class="icon-clipboard4"></i> Requirements</h4>
 
-								<input type="hidden"   value="<?php echo $pid; ?>" name="pid">
+								<input type="hidden"   value="<?php echo $lid; ?>" name="lid">
 								
 							
 								<div class="form-group">
-									<label>Program  Title</label>
-									<input type="text" class="form-control" placeholder="Program  Title" name="program_title" value="<?php echo $program_title;?>"  minlength="3" maxlength="200">
+									<label>Title</label>
+									<input type="text" class="form-control" placeholder=" Title" name="learn_title" value="<?php echo $learn_title;?>"  minlength="5" maxlength="200">
 								</div>
-
-								<div class="form-group">
-									<label>Short  Title</label>
-									<input type="text" class="form-control" placeholder="Short  Title" name="short_title" value="<?php echo $short_title;?>"  minlength="3" maxlength="200">
-								</div>
-
-
-								<div class="form-group">
-									<label>  Description</label>
-									
-									<textarea id="editor1" class="form-control" name="short_desc" ><?php echo $short_desc;?></textarea>
-								</div>
-
 								
 								<div class="form-group">
-									<label>Category </label>
-									<select class="form-control"  id="cat_id" name="cat_id">
-										<option value="">Select category</option>
+									<label>Program </label>
+									<select class="form-control" name="pid">
+										<option value="">Select program</option>
 										<?php
-										foreach($cat as $val){
+										foreach($pro as $val){
 											?>
-                                         <option value="<?php echo $val->cat_id?>" <?php echo   ($cat_id==
-                                         $val->cat_id)?'selected':"" ?>><?php echo $val->cat_title?></option>
+                                      <option value="<?php echo $val->pid?>"  <?php echo   ($pid==
+                                        $val->pid)?'selected':"" ?>><?php echo $val->program_title?></option>
 											<?php
 										}
 										?>
-										
 									</select>
 								</div>
-
 								<div class="form-group">
-									<label>Subcategory </label>
-									<select class="form-control"  id="subcat_id" name="subcat_id">
-										<option value="">Select Subcategory</option>
-										<?php
-										foreach($subcat as $val){
-											?>
-                                         <option value="<?php echo $val->subcat_id?>" <?php echo   ($subcat_id==
-                                         $val->subcat_id)?'selected':"" ?>><?php echo $val->subcat_title?></option>
-											<?php
-										}
-										?>
-										
-									</select>
+									<label> Description</label>
+									<textarea id="editor1" rows="5" class="form-control"  required name="learn_desc"  placeholder=" Description"><?php echo $learn_desc; ?></textarea>          
+								</div>
+								<div class="form-group">
+									<label>Image</label>
+									<input type="hidden" name="pre_learn_img" value="<?php echo $learn_img;?>">
+									<input type="file" class="form-control" placeholder=" Image" value="<?php echo $learn_img; ?>" name="learn_img" onchange="readURLimg(this);">
+								</div>
+								<div class="preview">									
+									<?php if($learn_img){ ?>
+									<img id="blahimg" src="<?php echo base_url()?>upload/helpimg/<?php echo $learn_img;?>" class="img-thumbnail border-0" style="display: block;  width: 100px; height: 100px;">
+									<?php } else{?>
+									<img id="blahimg" src="" class="img-thumbnail border-0" style="display: none;  width: 100px; height: 100px;">
+									<?php } ?>
 								</div>
 										<?php if($IsActive!=''){ ?>
 											<div class="form-group">
@@ -120,7 +106,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 							<div class="form-actions">
-							<?php if($pid!=''){ ?>
+							<?php if($lid!=''){ ?>
 								<button type="submit" name="updateBlog" class="btn btn-primary">
 									<i class="icon-check2"></i> Update
 								</button>
@@ -129,7 +115,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<i class="icon-check2"></i> Add
 								</button>
 							<?php } ?>
-								<a href="<?php echo base_url(); ?>Programs" name="CancelBlog" class="btn btn-danger">
+								<a href="<?php echo base_url(); ?>Help/learnlist" name="CancelBlog" class="btn btn-danger">
 								Cancel
 								</a>
 							</div>
@@ -155,42 +141,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $(document).ready(function()
 {
-		$("#form_program").validate(
+		$("#form_blog").validate(
 		{
 			rules:{	
-					program_title: {
+					learn_title: {
 							required: true,
 							},
-							
-							short_desc: {
-							required: true,
-							},
-							cat_id: {
-							required: true,
-							},
-					 IsActive: {
-					 	required: true,
-					 },
+					
+					learn_desc: {
+					required: true,
+				},
+				pid:{
+				required: true,	
+			},
+				learn_img: {
+					required:function(){
+						learn_img='<?php echo $learn_img; ?>';
+						if(learn_img){
+						return false;
+						}else{
+						return true;
+						}
+					},
+					extension: "JPG|jpeg|png|bmp",
+					filesize: 2097152,
+				},
 			},
 		});
 });
 
 CKEDITOR.replace('editor1');
- $('#cat_id').change(function(){
-
-      var cat_id =$(this).val();
-      
-      //alert(cat_id);
-       $.ajax({ 
-        type: "POST", 
-        url: "<?php echo base_url()?>Programs/getsubcatbycatid", 
-        data: {cat_id:cat_id}, 
-        success: function(response){
-            $('#subcat_id').html(response);
-        
-           //$(".tale_no_" +strae[i] +"").prop('checked',true) ;
-
-     }
- });
-   });
+function readURLimg(input) {
+    if(input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#blahimg').css('display', 'block');
+            $('#blahimg').attr('src', e.target.result);
+        };
+     reader.readAsDataURL(input.files[0]);
+    }
+}
 </script>

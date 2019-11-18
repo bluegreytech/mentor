@@ -19,6 +19,10 @@ $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
     </section>
 
     <!--SECTION START-->
+    <?php
+    if(!empty($key)){
+        ?>
+    
     <section>
         <div class="container com-sp pad-bot-70">
             <div class="row">
@@ -34,42 +38,22 @@ $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
             	    <div class="ed-about-sec1">
                         <div class="ed-advan">
                             <ul>
+                                <?php
+                                foreach($key as $val){
+                                    ?>
+                                
                                 <li>
                                     <div class="ed-ad-img">
-                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
+                                        <img src="<?php echo base_url()?>admin/upload/helpimg/<?php echo $val->key_img?>" alt="">
                                     </div>
                                     <div class="ed-ad-dec">
-                                        <h4>Assistance for working professionals and occupationists.</h4>
-                                        <p>Understand the diversity of Career options in the market.</p>
+                                        <h4><?php echo $val->key_title?></h4>
+                                        <?php echo $val->key_desc?>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="ed-ad-img">
-                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
-                                    </div>
-                                    <div class="ed-ad-dec">
-                                        <h4>Assignments and Career Counseling practice using Assessment Technology platform.</h4>
-                                        <p>Evaluate your learning and keep your knowledge in check.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="ed-ad-img">
-                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
-                                    </div>
-                                    <div class="ed-ad-dec">
-                                        <h4>Case Studies and Scenarios.</h4>
-                                        <p>Get knowledge from our Creer expert based on their experience to maximize your potential. </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="ed-ad-img">
-                                        <img src="<?php echo base_url(); ?>default/images/brain.png" alt="">
-                                    </div>
-                                    <div class="ed-ad-dec">
-                                        <h4>Webinars.</h4>
-                                        <p>Avail from our expert career analyst.</p>
-                                    </div>
-                                </li>
+                               <?php
+                           }
+                           ?>
                             </ul>
                         </div>
                     </div>
@@ -80,9 +64,14 @@ $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
             </div>
         </div>
     </section>
+    <?php
+}
+?>
     <!--SECTION END-->
 
-
+  <?php
+    if(!empty($learn)){
+        ?>
     <!--SECTION START-->
     <section>
         <div class="container com-sp pad-bot-70">
@@ -102,53 +91,33 @@ $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
                       <!-- End Carousel Inner -->
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active">
+                            <?php
+                            $l=0;
+                                foreach($learn as $val){
+                                    $cls='';
+                                    if($l==0){
+                                         $cls='active';
+                                    }else{
+                                        $cls=''; 
+                                    }
+                                    ?>
+                                
+                            <div class="item <?php echo $cls?>">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6" style="padding:80px 30px">
-                                            <h4>Career development strategies for professionals- </h4>
-                                            <ul>
-                                              <li>Understanding the concept of mid-life crisis. </li>
-                                              <li>Personal career advice.</li>
-                                              <li>Occupation analysis. </li>
-                                            </ul>
+                                            <h4><?php echo $val->learn_title?> </h4>
+                                           <?php echo $val->learn_desc?>
                                         </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>/default/images/2.jpg" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>admin/upload/helpimg/<?php echo $val->learn_img?>" class="img-responsive"></div>
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>/default/images/2.jpg" class="img-responsive"></div>
-                                        <div class="col-md-6" style="padding:80px 30px">
-                                            <h4>Develop advanced skills from expert training-</h4>
-                                            <ul>
-                                              <li>Methods of effective counseling. </li>
-                                              <li>Understanding the diversity of Career options in the market.</li>
-                                              <li>Learn how to deal with overwhelmed and confused individuals. </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-6" style="padding:80px 30px">
-                                            <h4> In-depth knowledge about the assessment technology platform-</h4>
-                                            <ul>
-                                              <li>Understanding the science behind the assessments. </li>
-                                              <li>Importance of assessment platform in applied career counseling. </li>
-                                              <li>Do’s and Don'ts for counseling.</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>/default/images/2.jpg" class="img-responsive"></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                          <?php
+                          $l++;
+                      }
+                      ?>
                             <!-- End Item -->
                         </div>
                         
@@ -168,16 +137,20 @@ $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
             </div>
         </div>
     </section>
+    <?php
+}
+?>
     <!--SECTION END-->
 
-
+<?php
+$site_choosementor=(isset($setting[0]->site_choosementor)!='')?$setting[0]->site_choosementor:"";
+?>
 
    
 
     <div class="who-choose-banner" id="scroll-why">
       <h3 class="h3-title">Why Choose Mentor?</h3>
-      <p class="p-title">Compare all leading career counselling platforms in India, to see how Mentor tops the
-         charts across all major elements of career guidance.
+      <p class="p-title"><?php echo $site_choosementor?>
       </p>
       <a class="custom-btn" href="<?php echo base_url(); ?>home/about_us">Read More <i class="fa fa-angle-double-right"></i></a>
    </div>

@@ -186,4 +186,49 @@ $this->db->select('p.*,c.cat_title,c.cat_id,s.subcat_title,s.subcat_id');
 		$res = $r->row_array();
 		return $res;
    }
+   function getfaq(){
+   	$this->db->select('*');
+		$this->db->from('tblfaq');
+		$this->db->where('Is_deleted','0');
+		//$this->db->where('Isactive','Active');
+		$r=$this->db->get();
+		$res = $r->result();
+		return $res;
+   }
+   function faq_insert(){
+
+   	$data = array(					
+			'faq_title' => $this->input->post('faq_title'),
+			'faq_desc' => $this->input->post('faq_desc'),
+			'Isactive' => $this->input->post('Isactive'),			
+			'created_date'=>date('Y-m-d')		
+			);
+		  
+	      
+		
+		$res=$this->db->insert('tblfaq',$data);		
+		return $res;
+   }
+   function faq_update(){
+   	$data = array(					
+			'faq_title' => $this->input->post('faq_title'),
+			'faq_desc' => $this->input->post('faq_desc'),
+			'Isactive' => $this->input->post('Isactive'),			
+			'created_date'=>date('Y-m-d')		
+			);
+		  
+	      
+		$this->db->where("faq_id",$this->input->post('faq_id'));
+		$res=$this->db->update('tblfaq',$data);		
+		return $res;
+   }
+   function getfaqbyid($pid){
+   	$this->db->select('*');
+		$this->db->from('tblfaq');
+		
+		$this->db->where('faq_id',$pid);
+		$r=$this->db->get();
+		$res = $r->row_array();
+		return $res;
+   }
  }

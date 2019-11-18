@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
 
 $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_title:"";
+$short_title=(isset($pro_det[0]->short_title)!='')?$pro_det[0]->short_title:"";
+$short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
 ?>
     <section>
         <div class="head-2 std11">
@@ -21,8 +23,31 @@ $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_titl
     </section>
 
     <!--SECTION START-->
+   
+    
     <section>
+
+
         <div class="container com-sp pad-bot-70">
+
+           <div class="row">
+                <div class="cor about-sp">
+                    <div class="ed-about-tit">
+                        <div class="con-title">
+                            <h2>Program <span> Overview</span></h2>
+                        </div>
+                        <div class="title-des">
+                            <h4><?php echo $short_title?></h4>
+                            <?php echo $short_desc?>
+                                                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <?php
+    if(!empty($help)){
+      ?>
             <div class="row">
                 <div class="cor">
                     <div class="ed-about-tit">
@@ -39,66 +64,51 @@ $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_titl
                       <!-- End Carousel Inner -->
                         <div class="controls">
                             <ul class="nav">
-                                <li data-target="#custom_carousel" data-slide-to="0" class="active">
-                                    <a href="#"><small>Pre-Counseling</small></a>
+                              <?php
+                              $x=0;
+                              foreach($help as $val){
+                                $cls='';
+                                if($x==0){
+                                  $cls='active';
+                                }
+                                ?>
+                              
+                                <li data-target="#custom_carousel" data-slide-to="<?php echo $x?>" class="<?php echo $cls?>">
+                                    <a href="#"><small><?php echo $val->help_title?></small></a>
                                 </li>
-                                <li data-target="#custom_carousel" data-slide-to="1">
-                                    <a href="#"><small>Career Assessment Test</small></a>
-                                </li>
-                                <li data-target="#custom_carousel" data-slide-to="2">
-                                    <a href="#"><small>Post Counseling</small></a>
-                                </li>
+                                <?php
+                                $x++;
+                              }
+                              ?>
+                               
                             </ul>
                         </div>
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
-                            <div class="item active">
+                           <?php
+                              $x=0;
+                              foreach($help as $val){
+                                $cls='';
+                                if($x==0){
+                                  $cls='active';
+                                }
+                                ?>
+                            <div class="item <?php echo $cls?>">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <h4>Bridging the gap of connections to understand you better.  </h4>
-                                            <ul>
-                                              <li>Understanding the concept of Career Values in-line with your core beliefs.</li>
-                                              <li>Identifying likes and dislikes in relation to personality.</li>
-                                              <li>Assimilating the subjective definition of your Career.</li>
-                                            </ul>
+                                            <h4><?php echo $val->help_subtitle?> </h4>
+                                           <?php echo $val->help_desc?>
                                         </div>
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/programs/pre-counseling.png" class="img-responsive"></div>
+                                        <div class="col-md-6"><img src="<?php echo base_url()?>admin/upload/helpimg/<?php echo $val->help_image?>" class="img-responsive"></div>
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-6"><img src="<?php echo base_url()?>default/images/programs/career-assesment-test.png" class="img-responsive"></div>
-                                        <div class="col-md-6">
-                                            <h4>Scientific Career Assessment and Evaluation. </h4>
-                                            <ul>
-                                              <li>Know about your attitude and aptitude by scientific means.TT </li>
-                                              <li>Align your personality type with your career choice.</li>
-                                              <li>Find out the highest degree of interest and skills to pursue your career path.   </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <h4>Avail Career Counseling Session by our Career Experts. </h4>
-                                            <ul>
-                                              <li>Connect your Education with your Career Planning and identify the top choice from your Career Cluster. </li>
-                                              <li>Get a road map which directly links your career interest to occupational interest. </li>
-                                              <li>Hand-holding until the successful establishment of Career.  </li>
-                                            </ul>
-                                        </div>
-                                         <div class="col-md-6"><img src="<?php echo base_url()?>default/images/programs/post-counseling.png" class="img-responsive"></div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+                         <?php
+                                $x++;
+                              }
+                              ?>
                             <!-- End Item -->
                         </div>
                         
@@ -115,9 +125,14 @@ $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_titl
 
                     </div>
                 </div>
+                 <?php
+  }
+  ?>
             </div>
+            
         </div>
     </section>
+   
     <!--SECTION END-->
 
     <!--SECTION START-->
@@ -132,119 +147,54 @@ $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_titl
                     </div>
                     <div class="pg-contact">
                       <!--Pricing 1-->
+                      <?php
+                      foreach($discover_plan as $plan){
+
+                        $price_plan=$this->home_model->getpricing($plan->price_id);
+                        ?>
+                      
                       <div class="col-lg-4 col-sm-6">
                         <div class="price-item text-center">
-                            <h3>PREVIEW</h3>
+
+                            <h3><?php echo $plan->price_title?></h3>
                             <span class="cl">Perfect Choice For Individual</span>
                             <div class="price-tag">
-                                <span><i class="fa fa-inr"></i> 0</span>
+                                <span><i class="fa fa-inr"></i> <?php echo $plan->price_amt?></span>
                             </div>
                             <div class="gap-p">
+                                <?php
+                                foreach($price_plan as $val){
+                                  ?>
+                                <?php
+                                if($val->priceplan_status=='Active'){
+                                  ?>
+                                
                                 <p>
                                   <i class="fa fa-check"></i>
-                                  <b>Stream Assessment</b><br>
-                                  Part 1 of 4-dimensional assessment to assess workstyle.
-                                </p>
-                                <p>
-                                  <i class="fa fa-check"></i>
-                                  <b>Career Content</b><br>
-                                  Well-researched information on hundreds of career options.
-                                </p>
-                                <p class="disabled">
+                                  <?php
+                                }else{
+                                  ?>
+                            <p class="disabled">
                                   <i class="fa fa-close"></i>
-                                  <b>25 Page Stream Report</b><br>
-                                  Detailed assessment report containing best-fit stream matches and personalized development plans.</p>
-                                <p class="disabled">
-                                  <i class="fa fa-close"></i>
-                                  <b>Career Counselling</b><br>
-                                  Face-to-face counselling sessions and guidance from career experts and online support.
+                                  <?php
+                                }
+                                ?>
+                                  <b><?php echo $val->plan_title?></b><br>
+                                 <?php echo $val->plan_desc?>
                                 </p>
-                                <p>
-                                  <input type="email"  value="" name="mail" placeholder="Email Your Email">
-                                </p>
+                                <?php
+                              }
+                              ?>
+                                
                             </div>
                             <div class="price-btn">
                                 <a href="#">Get Started</a>
                             </div>
                         </div>
                       </div>
-                      <!--Pricing 2-->
-                      <div class="col-lg-4 col-sm-6">
-                        <div class="price-item text-center">
-                            <h3>LEARN</h3>
-                            <span class="cl">Perfect Choice For Individual</span>
-                            <div class="price-tag">
-                                <span><i class="fa fa-inr"></i> 2,400</span>
-                            </div>
-                            <div class="gap-p">
-                                <p>
-                                  <i class="fa fa-check"></i>
-                                  <b>Stream Assessment</b><br>
-                                  4-dimensional career assessment with top stream recommendations.
-                                </p>
-                                <p>
-                                  <i class="fa fa-check"></i>
-                                  <b>Career Content</b><br>
-                                  Well-researched information on hundreds of career options.
-                                </p>
-                                <p>
-                                  <i class="fa fa-check"></i>
-                                  <b>25 Page Stream Report</b><br>
-                                  Detailed assessment report containing best-fit stream matches and personalized development plans.</p>
-                                <p class="disabled">
-                                 <i class="fa fa-close"></i>
-                                  <b>Career Counselling</b><br>
-                                  Face-to-face counselling sessions and guidance from career experts and online support.
-                                </p><br><br>
-                            </div>
-                            <div class="price-btn">
-                                <a href="#">Get Started</a>
-                            </div>
-                        </div>
-                      </div>
-                      <!--Pricing 3-->
-                      <div class="col-lg-4 col-sm-6">
-                        <div class="price-item text-center">
-                            <h3>EXPLORE</h3>
-                            <span class="cl">Perfect Choice For Individual</span>
-                            <div class="price-tag">
-                                <span><i class="fa fa-inr"></i> 9,400</span>
-                            </div>
-                            <div class="gap-p">
-                                 <p>
-                                 <i class="fa fa-check"></i>
-                                  <b>Stream Assessment</b><br>
-                                  Part 1 of 4-dimensional assessment to assess workstyle.
-                                </p>
-                                <p>
-                                 <i class="fa fa-check"></i>
-                                  <b>Career Content</b><br>
-                                  Well-researched information on hundreds of career options.
-                                </p>
-                                <p>
-                                 <i class="fa fa-check"></i>
-                                  <b>25 Page Stream Report</b><br>
-                                  Detailed assessment report containing best-fit stream matches and personalized development plans.</p>
-                                <p>
-                                 <i class="fa fa-check"></i>
-                                  <b>Career Counselling</b><br>
-                                  Face-to-face counselling sessions and guidance from career experts and online support.
-                                </p><br><br>
-                                <!-- <p class="text-center">
-                                  <b>Number of counselling sessions:</b><br>
-                                  <label class="radio-inline">
-                                  <input type="radio" name="optradio" checked>Option 1
-                                  </label>
-                                  <label class="radio-inline">
-                                  <input type="radio" name="optradio">Option 2
-                                  </label>
-                                </p> -->
-                              </div>
-                              <div class="price-btn">
-                                  <a href="#">Get Started</a>
-                              </div>
-                        </div>
-                      </div>
+                     <?php
+                   }
+                   ?>
                       
 
 
@@ -254,11 +204,12 @@ $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_titl
         </div>
     </section>
     <!--SECTION END-->
-
+<?php
+$site_choosementor=(isset($setting[0]->site_choosementor)!='')?$setting[0]->site_choosementor:"";
+?>
     <div class="who-choose-banner" id="scroll-why">
       <h3 class="h3-title">Why Choose Mentor?</h3>
-      <p class="p-title">Compare all leading career counselling platforms in India, to see how Mentor tops the
-         charts across all major elements of career guidance.
+      <p class="p-title"><?php echo $site_choosementor?>
       </p>
       <a class="custom-btn" href="<?php echo base_url(); ?>home/about_us">Read More <i class="fa fa-angle-double-right"></i></a>
    </div>
@@ -276,52 +227,31 @@ $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_titl
                     <div class="pg-contact">
                         <!--First stories-->
                         <div class="row">
-                          <div class="col-md-6" style="padding: 0">
-                                  <div class="s17-eve-time">
-                                      <div>
-                                        <h4>How should I reach MENTOR to book an appointment?</h4>
-                                        <p>Click here to fill the pre-counselling form and our Career experts will get back to you in no time.</p>
-                                      </div>
-                                  </div>
-                                  <div class="s17-eve-time">
-                                      <div>
-                                        <h4>Do you have special assessment for a PCM or PCB student?</h4>
-                                        <p>Yes, we understand the depth of the subject and also the options that comes along. It can be confusing even if you have selected a stream, but to choose an advanced option from the stream requires specific assessment and we can help generate career road map which is stream specific. </p>
-                                      </div>
-                                  </div>
-                                  <div class="s17-eve-time">
-                                      <div>
-                                        <h4>Is there any involvement of parents in the Career Counseling session?</h4>
-                                        <p>Parents are the most important source of motivation and we aim to bring the parent and the child on the same page. Career Counseling sessions help to create a window for an open discussion where hesitations are kept off the table.</p>
-                                      </div>
-                                  </div>
-                                  <div class="s17-eve-time">
-                                      <div>
-                                        <h4>What is the mode of Career Counseling session?</h4>
-                                        <p>We are here at your disposal by the means of online assessment and offline assessment both, which is the pen and paper test.</p>
-                                      </div>
-                                  </div>
-                          </div>
+                            <?php
+                            $i=0;
+                            foreach($faq as $val){
+                               if($i%4==0){
+                           ?>
                           <div class="col-md-6">
+                            <?php
+                          }
+                          ?>
                                   <div class="s17-eve-time">
                                       <div>
-                                        <h4>What is the duration of the assessment and career counseling session?</h4>
-                                        <p>The assessment takes 45 minutes to complete whereas the minimum duration of Career counseling session is 30 minutes and can last until all your career related doubts are resolved and eradicated. </p>
+                                        <h4><?php echo $val->faq_title?></h4>
+                                        <p><?php echo $val->faq_desc?></p>
                                       </div>
                                   </div>
-                                  <div class="s17-eve-time">
-                                      <div>
-                                        <h4>What does psychometric assessment have to do with Career Counseling?</h4>
-                                        <p>Psychometric assessment is backed up with science which helps you identify your aptitude and interest to create a career road map for a successful career life.  </p>
-                                      </div>
-                                  </div>
-                                  <div class="s17-eve-time">
-                                      <div>
-                                        <h4>How will Career Counseling help me?</h4>
-                                        <p>Career Counseling helps to deal with the uncertainty of the future in terms of career by providing you a road map and fulfil your dream. Get your hands on customized action plan for your career development and align your skills with your occupational interest.</p>
-                                      </div>
-                                  </div>
+                                <?php
+                                $i++;
+                                if($i%4==0){
+
+                               ?>
                           </div>
+                         <?php
+                       }
+                       }
+                       ?>
                       </div>
                      
                           

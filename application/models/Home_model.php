@@ -452,16 +452,75 @@ $this->db->select('cat_id');
     $query=$this->db->get();
     return $query->result();
   }
-  // function getprobyid(){
-  //  $this->db->select('p.*,c.cat_title,c.cat_id,s.subcat_title,s.subcat_id');
-  //   $this->db->from('tblprogram as p');
-  //    $this->db->join("tblprocategory as c",'p.cat_id=c.cat_id','left');
-  //     $this->db->join("tblprosubcategory as s",'s.subcat_id=p.subcat_id','left');
-  //   $this->db->where('p.Is_deleted','0');
-  //   $this->db->where('p.IsActive','Active');
-  //   $r=$this->db->get();
-  //   $res = $r->result();
-  //   return $res;
-  // }
+  function gethelpdata($hid){
+$this->db->select('*');
+    $this->db->from('tblhelp');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$hid);
+   
+    $query=$this->db->get();
+    return $query->result();
+  }
+ function getkeydata($pid){
+$this->db->select('*');
+    $this->db->from('tblkey');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getlearndata($pid){
+  $this->db->select('*');
+    $this->db->from('tbllearn');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getsetting(){
+  $this->db->select('*');
+    $this->db->from('tblsite_setting');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('status','Active');
+    $this->db->limit(1);
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getplan(){
+  $this->db->select('*');
+    $this->db->from('tblprice');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('Isactive','Active');
+   
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getpricing($pid){
+ $this->db->select('*');
+    $this->db->from('tblpriceplaning');
+    $this->db->where('price_id',$pid);
+    $this->db->where('Is_deleted','0');
+   
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getfaq(){
+  $this->db->select('*');
+    $this->db->from('tblfaq');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('Isactive','Active');
+   
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
  }
  

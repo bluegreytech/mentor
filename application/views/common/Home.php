@@ -613,37 +613,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </section>
 
-    <section>
-        <div class="container com-sp">
-            <div class="row">
-                <div class="con-title">
-                    <h2>Associated Partners</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div id="owl-demo" class="owl-carousel">
-                    <div class="itempro"> 
-                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
-                    </div>
-                     <div class="itempro"> 
-                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
-                    </div>
-                     <div class="itempro"> 
-                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
-                    </div>
-                     <div class="itempro"> 
-                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
-                    </div>
-                     <div class="itempro"> 
-                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
-                    </div>
-                     <div class="itempro"> 
-                            <center><img src="<?php echo base_url(); ?>default/images/partner-logo.png" class="img-responsive"></center>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
 
 <?php 

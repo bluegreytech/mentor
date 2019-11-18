@@ -267,4 +267,81 @@ class Programs extends CI_Controller {
 			die;
 
     }
+    function faqlist(){
+    	 $data['result']=$this->Program_model->getfaq();
+    	$this->load->view('programme/faq_list',$data);
+    }
+    function addfaq(){
+    	if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}   
+			
+			$data=array();	
+			$data['activeTab']="addfaq";	
+			$this->load->library("form_validation");
+			$this->form_validation->set_rules('faq_title', 'Faq title', 'required');			
+		
+		
+		if($this->form_validation->run() == FALSE){			
+			if(validation_errors())
+			{
+				$data["error"] = validation_errors();				
+			}else{
+				$data["error"] = "";
+			}
+         		$data['redirect_page']='faqlist';
+				$data['faq_id']=$this->input->post('faq_id');
+				$data['faq_title']=$this->input->post('faq_title');
+				$data['faq_desc']=$this->input->post('faq_desc');
+				$data['Isactive']=$this->input->post('Isactive');			
+			}
+			else
+			{
+				if($this->input->post("faq_id")!="")
+				{ //echo "hjjhgj";die;
+					$this->Program_model->faq_update();
+					$this->session->set_flashdata('success', 'Record has been Updated Succesfully!');
+					redirect('Programs/faqlist');					
+				}
+				else
+				{ 
+					$this->Program_model->faq_insert();
+					$this->session->set_flashdata('success', 'Record has been Inserted Succesfully!');
+					redirect('Programs/faqlist');				
+				}				
+			}
+			
+       $this->load->view('programme/addfaq',$data);
+    }
+    function editfaq($id){
+    	if(!check_admin_authentication())
+		{
+		redirect('login');
+		}
+
+		$data = array();	
+				
+		$result=$this->Program_model->getfaqbyid($id);	
+		//echo "<pre>";print_r($result);die;
+	  
+	     $data["faq_id"] 	= $result["faq_id"]; 
+	     $data["faq_title"] 	= $result["faq_title"]; 
+	     $data["faq_desc"] 	= $result["faq_desc"]; 
+
+       	$data['Isactive']=$result["Isactive"];          
+      	$this->load->view('programme/addfaq',$data);
+    }
+    function faq_delete(){
+    		if(!check_admin_authentication()){ 
+			redirect(base_url());
+		}
+			
+			$data= array('Is_deleted' =>'1');
+			$id=$this->input->post('id');
+			$this->db->where("faq_id",$id);			
+			$res=$this->db->update('tblfaq',$data);
+			//echo $this->db->last_query();die;
+			echo json_encode($res);
+			die;
+    }
 }
