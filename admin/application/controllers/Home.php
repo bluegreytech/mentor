@@ -16,12 +16,10 @@ class Home extends CI_Controller {
 
 		if(!check_admin_authentication()){ 
 				redirect(base_url());
-			}
-			$data=array();
-			$data['inquiry']=$this->login_model->getinquery();
-
-			$data['student']=$this->student_model->getstudent();
-			//echo "<pre>";print_r(count($data['student']));die;
+		}
+		$data=array();
+		$data['inquiry']=$this->login_model->getinquery();
+		$data['student']=$this->student_model->getstudent();		
 		$this->load->view('common/dashboard',$data);
 	}
 	public function profile()

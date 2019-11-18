@@ -22,18 +22,19 @@ class Payment extends CI_Controller
 	public function razorPaySuccess()
     { 
      $data = array('user_id' =>$this->session->userdata('user_id'),
-               'payment_id' => $this->input->post('razorpay_payment_id'),
+               'transaction_id' => $this->input->post('razorpay_payment_id'),
                'amount' => $this->input->post('totalAmount'),
-              
+
            );
               
            
-     $insert = $this->db->insert('payments', $data);
+     $insert = $this->db->insert('tblpayments', $data);
      $arr = array('msg' => 'Payment successfully credited', 'status' => true);  
 
     }
-    public function RazorThankYou()
+    public function MentorThankYou()
     {
-     $this->load->view('razorthankyou');
+    	//echo "Jhjhgj";die;
+     	$this->load->view('razorthankyou');
     }
 }

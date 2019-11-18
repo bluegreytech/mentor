@@ -380,15 +380,23 @@ return $this->db->count_all_results();
     return $query->result(); 
   }
   function getblogs($limit, $start){
-         $this->db->select('*');
+     $this->db->select('*');
     $this->db->from('tblblog');
     $this->db->where('is_deleted','0');
     $this->db->where('IsActive','Active');
-     $this->db->limit($limit, $start);
+    $this->db->limit($limit, $start);
     $this->db->order_by('blog_id' ,'DESC');
    // $this->db->limit('3'); 
     $query=$this->db->get();
     return $query->result();
+  }
+   function getstudentpayment(){   
+      $id=$this->session->userdata('user_id');
+      $this->db->select("*");
+      $this->db->from("tblpayments");   
+      $this->db->where("user_id",$id);
+      $query=$this->db->get();
+      return $query->row_array();    
   }
  }
  

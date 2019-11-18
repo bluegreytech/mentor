@@ -73,3 +73,5 @@ ERROR - 2019-11-15 10:05:01 --> 404 Page Not Found: Favicon/favicon-32.png
 ERROR - 2019-11-15 10:05:01 --> 404 Page Not Found: Favicon/favicon.ico
 ERROR - 2019-11-15 10:05:29 --> 404 Page Not Found: Favicon/favicon-32.png
 ERROR - 2019-11-15 10:05:29 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-11-15 12:48:29 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-11-15 12:48:29 --> 404 Page Not Found: Favicon/favicon.ico

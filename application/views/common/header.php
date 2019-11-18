@@ -78,8 +78,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <h5><a href="<?php echo base_url()?>home/contact_us/">Contact Us</a></h5>
                                       
                                     <?php if(check_user_authentication()){   ?>
-                                      <h5><a href="<?php echo base_url()?>/home/profile" >My Profile</a></h5>
-                                       <h5><a href="<?php echo base_url()?>/home/logout" >Logout</a></h5>
+                                      <h5><a href="<?php echo base_url()?>home/profile" >My Profile</a></h5>
+                                       <h5><a href="<?php echo base_url()?>home/logout" >Logout</a></h5>
                                     <?php }else{ ?>
                                     <h5><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></h5>
                                     <h5><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a></h5>
@@ -114,8 +114,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <li><a href="<?php echo base_url(); ?>home/about_us">About Us</a></li>
                                  <?php 
                                  if(check_user_authentication()){  ?>
-                                      <li><a href="<?php echo base_url()?>/home/profile" >My Profile</a></li>
-                                       <li><a href="<?php echo base_url()?>/home/logout" >Logout</a></li>
+                                      <li><a href="<?php echo base_url()?>home/profile" >My Profile</a></li>
+                                       <li><a href="<?php echo base_url()?>home/logout" >Logout</a></li>
                                     <?php }else{ ?>
                                     <li><a href="#!" data-toggle="modal" data-target="#modal1">Sign In</a></li>
                                     <li><a href="#!" data-toggle="modal" data-target="#modal2">Sign Up</a></li>
@@ -310,7 +310,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <a href="#" class="waves-effect dropdown-button" href="#" data-activates="top-menu2">Contact us <span class="fa fa-angle-down"></span></a>
                                     <!-- MEGA MENU 1 -->
                                     <ul id="top-menu2" class="dropdown-content top-menu-sty-custom">
-                                        <li><a href="<?php echo base_url()?>home/corporate_mentor/">Corporate Trainer</a></li>
+                                        <li><a href="<?php echo base_url()?>home/corporate_mentor/">Corporate Contact </a></li>
                                         <li class="divider"></li>
                                         <li><a href="<?php echo base_url()?>home/career_counsellor">Career Counsellor </a></li>
                                     </ul>

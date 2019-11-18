@@ -25,10 +25,8 @@ class Student_model extends CI_Model
     }
     function updateStudent(){
 
-      $user_image='';
-         //$image_settings=image_setting();
-
-                    
+    $user_image='';
+    //$image_settings=image_setting();                    
     $id=$this->input->post('user_id');
     $data=array(      
       'username'=>$this->input->post('username'),
@@ -36,12 +34,13 @@ class Student_model extends CI_Model
       'phone'=>$this->input->post('phone'),     
       'location'=>$this->input->post('location'),
       'status'=>$this->input->post('status'),
-        );
-   // echo "<pre>";print_r($data);die;  
+      );
+      // echo "<pre>";print_r($data);die;  
       $this->db->where("user_id",$id);
-    $this->db->update('tblusers',$data);   
+      $this->db->update('tblusers',$data);   
     
   }
+ 
 
 
 }

@@ -1316,5 +1316,18 @@
 		}
 	}
 
+	function getstudent_payment(){   
+	$CI =& get_instance();	
+  // 	echo "hghgf";die;	
+     $id=$CI->session->userdata('user_id'); 
+      $CI->db->select("*");
+      $CI->db->from("tblpayments");   
+      $CI->db->where("user_id",$id);
+     // echo $CI->db->last_query();die;
+      $query=$CI->db->get();
+
+      return $query->row_array();    
+  	}
+
 
 ?>

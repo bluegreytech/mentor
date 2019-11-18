@@ -1,4 +1,4 @@
-
+<?php ?>
 <aside>
          <div id="sidebar" class="nav-collapse md-box-shadowed">
             <!-- sidebar menu start-->
@@ -16,7 +16,7 @@
 
                                  $user_profile= get_one_user($this->session->userdata('user_id')); 
                                            // echo "<pre>";print_r($admin_profile);die;
-                                          
+                                         
                               ?>
                         <img src="<?php echo base_url(); ?>upload/user/<?php echo $user_profile->profile_image; ?>" style="margin-bottom: 10px;height: 75px;border-radius: 50px;">
                         <p>
@@ -33,9 +33,13 @@
                   </li>
                   <li id="tour2"><a href="<?php echo base_url().'home/change_password';?>" class="<?php echo ($activeTab == "change_password") ? "active" : ""; ?>"><span class="icon-home2 fa fa-key"></span><span class="nav-title">Change Password</span></a>
                   </li>
-
+                   <?php  $student_payment=getstudent_payment();
+                  // echo count($student_payment);die;
+                    // echo "<pre>";print_r($student_payment['transaction_id']);die;  
+                  if($$student_payment['transaction_id']!=''){ ?>                   
                   <li id="tour3"><a href="<?php echo base_url();?>Mytest" class="<?php echo ($activeTab == "Mytest") ? "active" : ""; ?>"><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Test</span></a>
                   </li>
+                  <?php } ?>
                     <li id="tour3"><a href="<?php echo base_url();?>" class=""><span class="icon-home2 fa fa-arrow-left"></span><span class="nav-title">Go to home</span></a>
                   </li>
                 <!--   <li id="tour8"><a href="<?php //echo base_url();?>Matches" ><span class="icon-home2 fa  fa-briefcase"></span><span class="nav-title">My Matches</span></a></li>

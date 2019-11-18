@@ -103,7 +103,7 @@ $this->load->view('common/sidebar_second');
     "amount":(totalAmount*100), // 2000 paise = INR 20
     "name": "Mentor pay",
     "description": "Student Payment",
-   // "image": "https://www.tutsmake.com/wp-content/uploads/2018/12/cropped-favicon-1024-1-180x180.png",
+    "image": "https://www.tutsmake.com/wp-content/uploads/2018/12/cropped-favicon-1024-1-180x180.png",
     "handler": function (response){
       console.log(response);
           $.ajax({
@@ -111,10 +111,10 @@ $this->load->view('common/sidebar_second');
             type: 'post',
             dataType: 'json',
             data: {
-                razorpay_payment_id: response.razorpay_payment_id , totalAmount : totalAmount
+                razorpay_payment_id:response.razorpay_payment_id,totalAmount:totalAmount
             }, 
             success: function (msg) { 
-               window.location.href = SITEURL + 'payment/RazorThankYou';
+               window.location.href = SITEURL + 'payment/MentorThankYou';
             }
         });
       

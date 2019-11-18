@@ -41,7 +41,6 @@ class Mytest extends CI_Controller {
 	}
     
     function Test_complete(){
-
     	if(!check_user_authentication()){			
 			redirect(base_url());
 		}	
@@ -49,8 +48,7 @@ class Mytest extends CI_Controller {
 		$sitedata=site_setting();
 		$data['student_payment']=$sitedata->student_payment;
 		//echo $sitedata->student_payment; die;
-		$this->load->view('payment/make_payment',$data);
-		
+		$this->load->view('payment/make_payment',$data);		
     }
 
     

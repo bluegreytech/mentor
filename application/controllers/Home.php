@@ -107,6 +107,8 @@ class Home extends CI_Controller
 		$data= array();
 		$data['activeTab'] = "dashboard";
 		$data['latest_blog']=$this->home_model->latest_blog();
+		$data['student_payment']=$this->home_model->getstudentpayment();
+		//echo "<pre>";print_r($data['student_payment']);die;
 	    $this->load->view('Dashboard/Dashboard',$data);
 
 	 }
