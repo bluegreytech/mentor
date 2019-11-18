@@ -143,6 +143,51 @@
                       </ul>
                     </li>
 
+                    <li class="nav-item">
+                      <a><i class="icon-list"></i><span data-i18n="nav.dash.main" class="menu-title">Program Page extra content</span>
+                      </a>
+                      <ul class="menu-content">
+                          <li>
+                           <a href="<?php echo base_url(); ?>Help/keylist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Key Highlights </a>
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>Help/helplist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of help </a>
+                          <li>
+                           <a href="<?php echo base_url(); ?>Help/learnlist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> What will you learn section </a>
+                          </li>
+                           <li>
+                           <a href="<?php echo base_url(); ?>Programs/faqlist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of faq </a>
+                          </li>
+                          </li>
+                      </ul>
+                    </li>
+
+                       <li class="nav-item">
+                      <a><i class="icon-list"></i><span data-i18n="nav.dash.main" class="menu-title">Programs</span>
+                      </a>
+                      <ul class="menu-content">
+                          <li>
+                        <!--   <a href="<?php echo base_url(); ?>Programs/addprogramme" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add Programs  </a> -->
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>Programs" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Programs </a>
+                          </li>
+
+                          <li>
+                         <!--  <a href="<?php echo base_url(); ?>Programs/addcat" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add  Program Category </a> -->
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>Programs/category" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Program category </a>
+                          </li>
+                            <li>
+                          <!-- <a href="<?php echo base_url(); ?>Programs/addsubcat" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i> Add  Program Subcategory </a> -->
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>Programs/subcategory" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> List of Program Subcategory </a>
+                          </li>
+                      </ul>
+                    </li>
+
              </li>
               <li class="nav-item">
                   <a href="<?php echo base_url(); ?>home/importotpdata"><i class="icon-upload"></i><span data-i18n="nav.dash.main" class="menu-title">Import OTP Code</span>

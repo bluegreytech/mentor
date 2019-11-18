@@ -390,6 +390,7 @@ return $this->db->count_all_results();
     $query=$this->db->get();
     return $query->result();
   }
+
    function getstudentpayment(){   
       $id=$this->session->userdata('user_id');
       $this->db->select("*");
@@ -398,5 +399,139 @@ return $this->db->count_all_results();
       $query=$this->db->get();
       return $query->row_array();    
   }
+
+  function getcategory(){
+     $this->db->select('*');
+    $this->db->from('tblprocategory');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+   
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getsubcatid($cid){
+    $this->db->select('*');
+    $this->db->from('tblprosubcategory');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('cat_id',$cid);
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getprobyid($sid,$cid){
+$this->db->select('*');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('cat_id',$cid);
+    $this->db->where('subcat_id',$sid);
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getprobycatid($cid){
+    $this->db->select('*');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('cat_id',$cid);
+    //$this->db->where('subcat_id',$sid);
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getcatid($pid){
+$this->db->select('cat_id');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+    //$this->db->where('subcat_id',$sid);
+    //echo $this->db->last_query;
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getprodet($pid){
+    $this->db->select('*');
+    $this->db->from('tblprogram');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+    //$this->db->where('subcat_id',$sid);
+    //echo $this->db->last_query;
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function gethelpdata($hid){
+$this->db->select('*');
+    $this->db->from('tblhelp');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$hid);
+   
+    $query=$this->db->get();
+    return $query->result();
+  }
+ function getkeydata($pid){
+$this->db->select('*');
+    $this->db->from('tblkey');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getlearndata($pid){
+  $this->db->select('*');
+    $this->db->from('tbllearn');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('IsActive','Active');
+    $this->db->where('pid',$pid);
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getsetting(){
+  $this->db->select('*');
+    $this->db->from('tblsite_setting');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('status','Active');
+    $this->db->limit(1);
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getplan(){
+  $this->db->select('*');
+    $this->db->from('tblprice');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('Isactive','Active');
+   
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getpricing($pid){
+ $this->db->select('*');
+    $this->db->from('tblpriceplaning');
+    $this->db->where('price_id',$pid);
+    $this->db->where('Is_deleted','0');
+   
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+ function getfaq(){
+  $this->db->select('*');
+    $this->db->from('tblfaq');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('Isactive','Active');
+   
+   
+    $query=$this->db->get();
+    return $query->result();
+ }
+
  }
  

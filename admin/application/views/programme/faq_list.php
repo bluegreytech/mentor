@@ -21,9 +21,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
        
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">List of Blog
+                <h4 class="card-title">List of Faq
                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                <a href="<?php echo base_url();?>blog/addblog/" class="btn btn-primary" style="float:right">Add Blog</a>
+                <a href="<?php echo base_url();?>Programs/addfaq/" class="btn btn-primary" style="float:right">Add Faq</a>
                 </h4>
             </div>
             <div class="card-body collapse in">
@@ -32,8 +32,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <thead class="thead-inverse">
                             <tr>
                                 <th>Sr No</th>
-                                <th>Blog Title</th>
-                                <th>Blog Image</th>
+                                <th>Faq Title</th>
+                                
                               
                              
 								<th>Status</th>
@@ -50,15 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <tr>
                             
                                     <td><?php echo $i; ?></td>                                   
-                                    <td><?php echo $row->blog_title; ?></td>
-                                   <td>
-                                        <img src="<?php echo base_url();?>upload/blogimage/<?php echo $row->blog_image;?>" class="img-thumbnail border-0" style="height: 50px;width:50px;">
-                                    </td>
-                                   
-                                    <!-- <td><?php// echo $row->BlogDescription; ?></td> -->
+                                    <td><?php echo $row->faq_title; ?></td>
+                                 
                                   
                                     <td>
-                                        <?php if($row->IsActive=='Active')
+                                        <?php if($row->Isactive=='Active')
                                             {
                                                 echo "Active";
                                             } 
@@ -69,8 +65,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         ?>
                                     </td>
                                     <td>
-                                      <?php echo anchor('blog/editblog/'.$row->blog_id,'<i class="ficon icon-pencil2"></i>'); ?>
-                                        <a href="javascript:void(0)" onclick="deletedata('<?php echo $row->blog_id; ?>','<?php echo $row->blog_image; ?>')" ><i class="ficon icon-bin"></i></a>     
+                                      <?php echo anchor('Programs/editfaq/'.$row->faq_id,'<i class="ficon icon-pencil2"></i>'); ?>
+                                        <a href="javascript:void(0)" onclick="deletedata('<?php echo $row->faq_id; ?>')" ><i class="ficon icon-bin"></i></a>     
                                     </td>  
                                 </tr>      
                                 <?php
@@ -120,16 +116,17 @@ $(function() {
    
 });
 
-function deletedata(id,image){  
+function deletedata(id){  
+
     $('#myModal').modal('show')
    
         $('#yes_btn').click(function(){
            
                 url="<?php echo base_url();?>"
                 $.ajax({
-                url: url+"blog/blog_delete/",
+                url: url+"Programs/faq_delete/",
                 type: "post",
-                data: {id:id,blog_image:image} ,
+                data: {id:id} ,
                 success: function (response) {   
                    
                // document.location.href = url+'blog/bloglist/';                  

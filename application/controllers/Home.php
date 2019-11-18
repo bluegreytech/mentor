@@ -6,12 +6,15 @@ class Home extends CI_Controller
 {
 	public function __construct()
 	{
+		error_reporting(E_ALL);
       	parent::__construct();
       	$this->load->model('home_model');
 		$this->load->library("pagination");
     }
 
     function index(){
+    	 $data['category1']=$this->home_model->getcategory();
+    	 
     	$data['latest_blog']=$this->home_model->latest_blog();
     	$this->load->view('common/Home',$data);
     }
@@ -615,6 +618,32 @@ class Home extends CI_Controller
 	{
 		$this->session->sess_destroy();
 		redirect('home');
+	}
+	public function program_detail($pid){
+		
+        $data['pro_det']=$this->home_model->getprodet($pid);
+        
+        $cat_id=$this->home_model->getcatid($pid);
+         $data['setting']=$this->home_model->getsetting();
+          $cid=isset($cat_id[0]->cat_id)!=''?$cat_id[0]->cat_id:"";
+          //echo $cid;
+         if($cid==1){
+         	$data['help']=$this->home_model->gethelpdata($pid);
+         	$data['discover_plan']=$this->home_model->getplan();
+         		$data['faq']=$this->home_model->getfaq();
+         	 $this->load->view('classes/program_det',$data);
+         }else if($cid==3){
+         	$this->load->view('classes/coming_soon',$data);
+
+         }else if($cid==4){
+         	$this->load->view('classes/coming_soon',$data);
+
+         }else if($cid==5){
+         	$data['key']=$this->home_model->getkeydata($pid);
+         		$data['learn']=$this->home_model->getlearndata($pid);
+         	$this->load->view('classes/counseler',$data);
+         }
+      
 	}
  }
 
