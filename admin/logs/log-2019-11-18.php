@@ -105,3 +105,9 @@ ERROR - 2019-11-18 07:31:07 --> 404 Page Not Found: Default/images
 ERROR - 2019-11-18 07:31:07 --> 404 Page Not Found: Default/images
 ERROR - 2019-11-18 08:10:34 --> 404 Page Not Found: Default/images
 ERROR - 2019-11-18 08:10:34 --> 404 Page Not Found: Default/images
+ERROR - 2019-11-18 11:32:48 --> 404 Page Not Found: Favicon/favicon-32.png
+ERROR - 2019-11-18 11:32:48 --> 404 Page Not Found: Favicon/favicon.ico
+ERROR - 2019-11-18 11:33:54 --> 404 Page Not Found: Default/images
+ERROR - 2019-11-18 11:33:54 --> 404 Page Not Found: Default/images
+ERROR - 2019-11-18 11:34:01 --> 404 Page Not Found: Default/images
+ERROR - 2019-11-18 11:34:01 --> 404 Page Not Found: Default/images
