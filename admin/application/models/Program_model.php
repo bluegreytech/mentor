@@ -120,6 +120,7 @@ class Program_model extends CI_Model
 			
 			'subcat_id' => $subcat_id,
 			'short_desc' => $this->input->post('short_desc'),
+			'long_desc' => $this->input->post('long_desc'),
 			'short_title' => $this->input->post('short_title'),
 			
 			'IsActive' => $this->input->post('IsActive')			
@@ -146,7 +147,7 @@ class Program_model extends CI_Model
 			'subcat_id' => $subcat_id,
 			'short_desc' => $this->input->post('short_desc'),
 			'short_title' => $this->input->post('short_title'),
-
+            'long_desc' => $this->input->post('long_desc'),
 			'IsActive' => $this->input->post('IsActive'),			
 			'created_date'=>date('Y-m-d')		
 			);

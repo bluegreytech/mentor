@@ -549,5 +549,62 @@ function getabout(){
     $query=$this->db->get();
     return $query->result();
   }
+  function getservice(){
+     $this->db->select("*");
+    $this->db->from("tblservices");
+    $this->db->order_by('services_id','ASC');
+    //$this->db->where('IsActive','Active');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('servicespage','home');
+    $this->db->limit(6);
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getcareerser(){
+    $this->db->select("*");
+    $this->db->from("tblservices");
+    $this->db->order_by('services_id','ASC');
+    //$this->db->where('IsActive','Active');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('servicespage','career_counsellor');
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getpartnercat(){
+     $this->db->select("*");
+    $this->db->from("tblpartnercat");
+    $this->db->order_by('pcid','ASC');
+    
+    $this->db->where('Is_deleted','0');
+     $this->db->where('IsActive','Active');
+   
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getpartner($cid){
+ $this->db->select("*");
+    $this->db->from("tblpartner");
+    $this->db->order_by('pid','ASC');
+    
+    $this->db->where('Is_deleted','0');
+     $this->db->where('IsActive','Active');
+     $this->db->where('cat_id',$cid);
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getabouser(){
+    $this->db->select("*");
+    $this->db->from("tblservices");
+    $this->db->order_by('services_id','ASC');
+    //$this->db->where('IsActive','Active');
+    $this->db->where('Is_deleted','0');
+    $this->db->where('servicespage','about_us');
+    
+    $query=$this->db->get();
+    return $query->result();
+  }
  }
  

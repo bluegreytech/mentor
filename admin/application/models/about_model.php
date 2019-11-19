@@ -241,10 +241,54 @@ class about_model extends CI_Model
 		return $res;
 	}
 	function partner_insert(){
+
+			$partner_img='';
+         	//$image_settings=image_setting();
+		if(isset($_FILES['partner_img']) &&  $_FILES['partner_img']['name']!='')
+        {
+             $this->load->library('upload');
+             $rand=rand(0,100000); 
+			  
+			$_FILES['userfile']['name']     =   $_FILES['partner_img']['name'];
+			$_FILES['userfile']['type']     =   $_FILES['partner_img']['type'];
+			$_FILES['userfile']['tmp_name'] =   $_FILES['partner_img']['tmp_name'];
+			$_FILES['userfile']['error']    =   $_FILES['partner_img']['error'];
+			$_FILES['userfile']['size']     =   $_FILES['partner_img']['size'];
+   
+			$config['file_name'] = $rand.'partnerimage';			
+			$config['upload_path'] = base_path().'upload/partnerimage/';		
+			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
+ 
+             $this->upload->initialize($config);
+ 
+              if (!$this->upload->do_upload())
+			  {
+				$error =  $this->upload->display_errors();
+				echo "<pre>";print_r($error);
+			  } 
+			$picture = $this->upload->data();	
+			//echo "<pre>";print_r($picture);die;		
+			$partner_img=$picture['file_name'];
+			if($this->input->post('pre_partner_img')!='')
+				{
+					if(file_exists(base_path().'upload/partnerimage/'.$this->input->post('pre_partner_img')))
+					{
+						$link=base_path().'upload/partnerimage/'.$this->input->post('pre_partner_img');
+						unlink($link);
+					}
+				}
+			} else {
+				if($this->input->post('pre_partner_img')!='')
+				{
+					$partner_img=$this->input->post('pre_partner_img');
+				}
+	   		 }
+
 		$data = array(					
 			'partner_nm' => trim($this->input->post('partner_nm')),
 			'partner_desg' => trim($this->input->post('partner_desg')),
 			'partner_desc' => trim($this->input->post('partner_desc')),
+			'partner_img' => $partner_img,
 			'cat_id' => trim($this->input->post('cat_id')),
 			'IsActive'=>$this->input->post('IsActive')
 					
@@ -255,10 +299,53 @@ class about_model extends CI_Model
 		return $res;	
 	}
 	function partner_update(){
+			$partner_img='';
+         	//$image_settings=image_setting();
+		if(isset($_FILES['partner_img']) &&  $_FILES['partner_img']['name']!='')
+        {
+             $this->load->library('upload');
+             $rand=rand(0,100000); 
+			  
+			$_FILES['userfile']['name']     =   $_FILES['partner_img']['name'];
+			$_FILES['userfile']['type']     =   $_FILES['partner_img']['type'];
+			$_FILES['userfile']['tmp_name'] =   $_FILES['partner_img']['tmp_name'];
+			$_FILES['userfile']['error']    =   $_FILES['partner_img']['error'];
+			$_FILES['userfile']['size']     =   $_FILES['partner_img']['size'];
+   
+			$config['file_name'] = $rand.'partnerimage';			
+			$config['upload_path'] = base_path().'upload/partnerimage/';		
+			$config['allowed_types'] = 'jpg|jpeg|gif|png|bmp';  
+ 
+             $this->upload->initialize($config);
+ 
+              if (!$this->upload->do_upload())
+			  {
+				$error =  $this->upload->display_errors();
+				echo "<pre>";print_r($error);
+			  } 
+			$picture = $this->upload->data();	
+			//echo "<pre>";print_r($picture);die;		
+			$partner_img=$picture['file_name'];
+			if($this->input->post('pre_partner_img')!='')
+				{
+					if(file_exists(base_path().'upload/partnerimage/'.$this->input->post('pre_partner_img')))
+					{
+						$link=base_path().'upload/partnerimage/'.$this->input->post('pre_partner_img');
+						unlink($link);
+					}
+				}
+			} else {
+				if($this->input->post('pre_partner_img')!='')
+				{
+					$partner_img=$this->input->post('pre_partner_img');
+				}
+	   		 }
+
 		$data = array(					
 			'partner_nm' => trim($this->input->post('partner_nm')),
 			'partner_desg' => trim($this->input->post('partner_desg')),
 			'partner_desc' => trim($this->input->post('partner_desc')),
+			'partner_img' => $partner_img,
 			'cat_id' => trim($this->input->post('cat_id')),
 			'IsActive'=>$this->input->post('IsActive')
 					

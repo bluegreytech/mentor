@@ -82,9 +82,9 @@
                   <i class="icon-blog"></i><span data-i18n="nav.dash.main" class="menu-title">Our Services</span>
                 </a>
                 <ul class="menu-content">
-                  <li>
+                  <!-- <li>
                     <a href="<?php echo base_url(); ?>services/addservices" data-i18n="nav.dash.main" class="menu-item"><i class="icon-plus"></i>Add Services</a>
-                  </li>
+                  </li> -->
                  
                   <li>
                     <a href="<?php echo base_url(); ?>services/serviceslist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i>List of services</a>

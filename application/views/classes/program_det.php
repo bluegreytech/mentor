@@ -5,6 +5,7 @@ $this->load->view('common/header');
 $program_title=(isset($pro_det[0]->program_title)!='')?$pro_det[0]->program_title:"";
 $short_title=(isset($pro_det[0]->short_title)!='')?$pro_det[0]->short_title:"";
 $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
+$long_desc=(isset($pro_det[0]->long_desc)!='')?$pro_det[0]->long_desc:"";
 ?>
     <section>
         <div class="head-2 std11">
@@ -38,8 +39,8 @@ $short_desc=(isset($pro_det[0]->short_desc)!='')?$pro_det[0]->short_desc:"";
                         </div>
                         <div class="title-des">
                             <h4><?php echo $short_title?></h4>
-                            <?php echo $short_desc?>
-                                                            
+                            <p class="bold"><?php echo $short_desc?></p>
+                            <?php echo $long_desc?>                  
                         </div>
                     </div>
                 </div>

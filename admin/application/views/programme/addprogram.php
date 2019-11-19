@@ -48,11 +48,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<input type="text" class="form-control" placeholder="Short  Title" name="short_title" value="<?php echo $short_title;?>"  minlength="3" maxlength="200">
 								</div>
 
-
-								<div class="form-group">
-									<label>  Description</label>
+                               <div class="form-group">
+									<label> Short  Description</label>
 									
-									<textarea id="editor1" class="form-control" name="short_desc" ><?php echo $short_desc;?></textarea>
+									<textarea rows="4" cols="4" class="form-control" name="short_desc" ><?php echo $short_desc;?></textarea>
+								</div>
+								<div class="form-group">
+									<label> Long  Description</label>
+									
+									<textarea id="editor1" class="form-control" name="long_desc" ><?php echo $long_desc;?></textarea>
 								</div>
 
 								

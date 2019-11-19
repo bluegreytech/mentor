@@ -251,7 +251,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   <p><?php
                                                                    $short_desc= $val1->short_desc;
 
-                                                                echo substr( $short_desc,0,100);
+                                                                echo $short_desc;
                                                                   ?> <br>
                                                                   <a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>">View More
                                                                       <span class="fa fa-angle-right"></span>
@@ -295,7 +295,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                   <strong><?php echo $val1->short_title?></strong>
                                                                   <p><?php  $short_desc= $val1->short_desc;
 
-                                                                echo substr( $short_desc,0,100);?> <br>
+                                                                echo $short_desc ;?> <br>
                                                                   <a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>">View More
                                                                       <span class="fa fa-angle-right"></span>
                                                                     </a>

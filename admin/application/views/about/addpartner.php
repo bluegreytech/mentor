@@ -51,6 +51,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 									<label>Partner Description</label>
 									<textarea class="form-control" name="partner_desc" rows="4" cols="6"><?php echo $partner_desc;?></textarea>
 								</div>
+
+									<div class="form-group">
+									<label>Partner Image</label>
+									<input type="hidden" name="pre_partner_img" value="<?php echo $partner_img;?>">
+									<input type="file" class="form-control" placeholder="Partner Image" value="<?php echo $partner_img; ?>" name="partner_img" onchange="readURLimg(this);">
+								</div>
+								<div class="preview">									
+									<?php if($partner_img){ ?>
+									<img id="blahimg" src="<?php echo base_url()?>upload/partnerimage/<?php echo $partner_img;?>" class="img-thumbnail border-0" style="display: block;  width: 100px; height: 100px;">
+									<?php } else{?>
+									<img id="blahimg" src="" class="img-thumbnail border-0" style="display: none;  width: 100px; height: 100px;">
+									<?php } ?>
+								</div>
+
 									<div class="form-group">
 									<label>Select partner category</label>
 									<select class="form-control" name="cat_id">

@@ -230,9 +230,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                                 <h3><?php echo $val1->program_title?></h3>
                                                             </a>
                                                             <h4><?php echo $val1->short_title?></h4>
-                                                          <?php
-                                                                  echo   $val1->short_desc;?>
-                                                                  <br>
+                                                              <p class="bold"><?php
+                                                                  echo   $val1->short_desc;?></p>
+                                                          
+                                                                  <p><?php
+                                                                    $ldesc =  $val1->long_desc;
+                                                                    echo substr($ldesc,0,100);?>
+                                                                  </p> 
                                                             <div class="hom-list-share">
                                                                 <ul>
                                                                     <li><a href="<?php echo base_url()?>home/program_detail/<?php echo $val1->pid?>"><i class="fa fa-bar-chart" aria-hidden="true"></i> View More </a> </li>
@@ -336,144 +340,45 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="col-md-6">
                     <div class="s18-age-event l-info-pack-days">
                         <ul>
+                          <?php
+                          $x=1;
+                          $y=11;
+
+                          foreach($service as $val){
+
+                           
+
+
+                              ?>
+
                             <li>
                                 <div class="age-eve-com age-eve-1">
-                                    <img src="<?php echo base_url(); ?>default/images/icon/understand.png" alt="">
+                                    <img src="<?php echo base_url()?>/admin/upload/Servicesimage/<?php echo $val->services_image?>" alt="">
                                 </div>
                                 <div class="s17-eve-time">
                                     <div class="s17-eve-time-tim">
-                                        <span>Step 1</span>
+                                        <span>Step <?php echo $x?></span>
                                     </div>
                                     <div class="s17-eve-time-msg">
-                                        <h4>Understand your current career planning stage.</h4>
-                                        <p class="program-title">Personal Profiling is the first milestone for a successful career assessment.</p>
-                                        <div class="time-hide time-hide-1" style="display: none;">
-                                            <p> The ultimate objective of planning is to take you from the current stage of career planning to the optimized stage of career planning. Personal profiling includes information about your current stage, risk involved and action plan for your career development.</p>
+                                        <h4><?php echo $val->services_title?></h4>
+                                        <p class="program-title"><?php echo $val->services_sdesc?></p>
+                                        <div class="time-hide time-hide-<?php echo $x?>" style="display: none;">
+                                            <p> <?php echo $val->services_ldesc?></p>
                                         </div>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-1-btn" style="display: block;">
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-<?php echo $x?>-btn" style="display: block;">
                                         <i class="fa fa-angle-down"></i>
                                         </a>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-11-btn hb-com" style="display: none;">
+                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-<?php echo $y?>-btn hb-com" style="display: none;">
                                         <i class="fa fa-angle-up"></i>
                                     </a>
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="<?php echo base_url(); ?>default/images/icon/acquainted.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 2</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Get acquainted with your Career Personality.</h4>
-                                        <p class="program-title">Personality assessment will help you understand yourself better as a person.</p>
-                                        <div class="time-hide time-hide-2" style="display: none;">
-                                             <p>It will help you expand your career options in alignment with your personality. Self-understanding and awareness can lead you to more appropriate and rewarding career choices.</p>
-                                        </div>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-2-btn" style="display: block;">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-22-btn hb-com" style="display: none;">
-                                        <i class="fa fa-angle-up"></i>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="<?php echo base_url(); ?>default/images/icon/interest.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 3</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Scoop out your Career Interest.</h4>
-                                        <p class="program-title">Let the Career Interest Assessment help you find your occupational interest.</p>
-                                        <div class="time-hide time-hide-3">
-                                           <p>Understand your top career interest to identify a career focus and begin your career planning and career exploration process. The Career Interest Assessment will help you understand which careers might be the best fit for you.</p>
-                                        </div>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-3-btn">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-33-btn hb-com">
-                                        <i class="fa fa-angle-up"></i>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="<?php echo base_url(); ?>default/images/icon/learning.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 4</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Identify your learning style.</h4>
-                                        <p class="program-title">Benefit from the customized learning strategies for improvement by our experts.</p>
-                                        <div class="time-hide time-hide-4">
-                                            <p>Understand how you gather information and pick your preferred style to ace your examination. It is scientifically proven that with individualised learning style can lessen the cognitive load and make the process of learning more engaging and fun.</p>
-                                        </div>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-4-btn">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-44-btn hb-com">
-                                        <i class="fa fa-angle-up"></i>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="<?php echo base_url(); ?>default/images/icon/equivalents.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 5</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Career Cluster and best-fit equivalents.</h4>
-                                        <p class="program-title">Connect you education and Career planning.</p>
-                                        <div class="time-hide time-hide-5">
-                                            <p>Career Clusters are groups of similar occupations and industries that require similar skills. It provides a career road map for pursuing further education and career opportunities. Career Cluster help you narrow down your occupational choices based on your assessment responses.</p>
-                                        </div>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-5-btn">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-55-btn hb-com">
-                                        <i class="fa fa-angle-up"></i>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="age-eve-com age-eve-1">
-                                    <img src="<?php echo base_url(); ?>default/images/icon/benefit.png" alt="">
-                                </div>
-                                <div class="s17-eve-time">
-                                    <div class="s17-eve-time-tim">
-                                        <span>Step 6</span>
-                                    </div>
-                                    <div class="s17-eve-time-msg">
-                                        <h4>Benefit from your Career Path Analysis by our experts.</h4>
-                                        <p class="program-title">Know about the market value of your career.</p>
-                                        <div class="time-hide time-hide-6">
-                                            <p>The Career Path Analysis contains four important parameters to have a better insight into the most suitable career path.</p>
-                                        </div>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-6-btn">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                        <a href="#!" class="s17-sprit age-dwarr-btn time-hide-66-btn hb-com">
-                                        <i class="fa fa-angle-up"></i>
-                                    </a>
-                                    </div>
-                                </div>
-                            </li>
+                          <?php
+                          $x++;
+                          $y++;
+                        }
+                        ?>
                             
                         </ul>
                     </div>

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="card-header">
                 <h4 class="card-title">List of Services
                 <a class="heading-elements-toggle"><i class="icon-ellipsis font-medium-3"></i></a>
-                <a href="<?php echo base_url();?>services/addservices/" class="btn btn-primary" style="float:right">Add services</a>
+                <!-- <a href="<?php echo base_url();?>services/addservices/" class="btn btn-primary" style="float:right">Add services</a>  -->
                 </h4>
             </div>
             <div class="card-body collapse in">

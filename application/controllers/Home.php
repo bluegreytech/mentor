@@ -17,6 +17,7 @@ class Home extends CI_Controller
     	 $data['about']=$this->home_model->getabout();
 	     $data['setting']=$this->home_model->getsetting();
     	$data['latest_blog']=$this->home_model->latest_blog();
+    	$data['service']=$this->home_model->getservice();
     	$this->load->view('common/Home',$data);
     }
 
@@ -357,6 +358,7 @@ class Home extends CI_Controller
 	public function About_us()
 	{	
 		$data['about']=$this->home_model->getabout();
+        $data['service']=$this->home_model->getabouser();
 
 		$this->load->view('common/Aboutus',$data);
 	}
@@ -472,7 +474,9 @@ class Home extends CI_Controller
 		//echo "not yet";die;
 		//$this->load->view('common/career_library');
 		//$data['career']=$this->home_model->getcareerdata();
-		$this->load->view('common/career_counsellor');
+		$data['service']=$this->home_model->getcareerser();
+		$data['partner_cat']=$this->home_model->getpartnercat();
+		$this->load->view('common/career_counsellor',$data);
 	}
 	function corporate_mentor(){
 		 $data = array();

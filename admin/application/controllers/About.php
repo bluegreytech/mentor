@@ -225,6 +225,7 @@ class About extends CI_Controller {
 				$data['partner_nm']=$this->input->post('partner_nm');
 				$data['partner_desc']=$this->input->post('partner_desc');
 				$data['partner_desg']=$this->input->post('partner_desg');
+				$data['partner_img']=$this->input->post('partner_img');
 			    $data['cat_id']=$this->input->post('cat_id');
 				$data['IsActive']=$this->input->post('IsActive');			
 			}
@@ -259,6 +260,7 @@ class About extends CI_Controller {
 		$data["partner_nm"] 	= $result["partner_nm"];
 	    $data["partner_desg"] 	= $result["partner_desg"];
 	    $data["partner_desc"] 	= $result["partner_desc"];
+	     $data["partner_img"] 	= $result["partner_img"];
 	     $data["cat_id"] 	= $result["cat_id"];
        	$data['IsActive']=$result["IsActive"]; 
        	$data['partnercat']=$this->about_model->getpartnercatactive();         
