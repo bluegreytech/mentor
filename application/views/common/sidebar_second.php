@@ -35,8 +35,8 @@
                   </li>
                    <?php  $student_payment=getstudent_payment();
                   // echo count($student_payment);die;
-                    // echo "<pre>";print_r($student_payment['transaction_id']);die;  
-                  if($$student_payment['transaction_id']!=''){ ?>                   
+                     //echo "<pre>";print_r($student_payment['transaction_id']);
+                  if(empty($student_payment['transaction_id']!='')){ ?>                   
                   <li id="tour3"><a href="<?php echo base_url();?>Mytest" class="<?php echo ($activeTab == "Mytest") ? "active" : ""; ?>"><span class="icon-home2 fa fa-list"></span><span class="nav-title">My Test</span></a>
                   </li>
                   <?php } ?>

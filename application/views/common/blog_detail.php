@@ -32,6 +32,7 @@ $this->load->view('common/header');
                             </div>
                           </div>
                           <div class="text-center pad-top-20">  
+                            <a href="http://www.facebook.com/share.php?u=<url>" onclick="return fbs_click()" target="_blank"><img src="ADD_IMAGE_URL_HERE" alt="Share on Facebook" /></a>
                           <a href="<?php echo base_url()?>" class="custom-btn"><i class="fa fa-angle-double-left"></i> Back </a>
                           </div>
                     </div>
@@ -43,3 +44,10 @@ $this->load->view('common/header');
 
 
 <?php include 'footer.php';?>
+<script>
+  function fbs_click() {
+    u=location.href;t=document.title;
+    window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');
+    return false;
+  }
+</script>

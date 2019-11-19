@@ -73,7 +73,8 @@ class Services_model extends CI_Model
 		return $res;
 	}
 	function services_update(){
-        $services_image='';         	
+        $services_image='';
+        //	echo "<pre>";print_r($_FILES);die;         	
 		if(isset($_FILES['servicesimage']) &&  $_FILES['servicesimage']['name']!='')
         {
             $this->load->library('upload');
@@ -93,7 +94,7 @@ class Services_model extends CI_Model
               if (!$this->upload->do_upload())
 			  {
 				$error =  $this->upload->display_errors();
-				echo "<pre>";print_r($error);
+				//echo "<pre>";print_r($error); die;
 			  } 
 			$picture = $this->upload->data();			
 			$services_image=$picture['file_name'];
@@ -120,7 +121,7 @@ class Services_model extends CI_Model
 			'services_ldesc' => trim($this->input->post('servicesldesc')),
 			'services_image'=>$services_image,	
 			);
-			// echo "<pre>";print_r($data);die;
+		 	//echo "<pre>";print_r($data);die;
 		    $this->db->where("services_id",$this->input->post('servicesid'));
 			$res=$this->db->update('tblservices',$data);		
 			return $res;

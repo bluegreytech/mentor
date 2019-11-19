@@ -58,8 +58,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</div>
 								<div class="form-group">
 									<label>Services Image</label>
-									<input type="hidden" name="pre_Services_image" value="<?php echo $servicesimage;?>">
-									<input type="file" class="form-control" placeholder="Testimonial Image" value="<?php echo $servicesimage; ?>" name="Servicesimage" onchange="readURLimg(this);">
+									<input type="hidden" name="pre_Services_image" value="<?php echo $servicesimage; ?> ">
+									<input type="file" class="form-control" placeholder="Testimonial Image" value="<?php echo $servicesimage; ?>" name="servicesimage" onchange="readURLimg(this);">
 								</div>
 								<div class="preview">									
 									<?php if($servicesimage){ ?>

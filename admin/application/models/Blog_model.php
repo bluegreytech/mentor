@@ -39,8 +39,27 @@ class Blog_model extends CI_Model
 				$error =  $this->upload->display_errors();
 				echo "<pre>";print_r($error);
 			  } 
-			$picture = $this->upload->data();	
-			//echo "<pre>";print_r($picture);die;		
+				$picture = $this->upload->data();	
+              $this->load->library('image_lib');		   
+              $this->image_lib->clear();
+			  $gd_var='gd2';
+
+              $this->image_lib->initialize(array(
+				'image_library' => $gd_var,
+				'source_image' => base_path().'upload/blogimage_orig/'.$picture['file_name'],
+				'new_image' => base_path().'upload/blogimage_orig/'.$picture['file_name'],
+				'maintain_ratio' => FALSE,
+				'quality' => '100%',
+				'width' => 300,
+				'height' => 300
+			 ));
+			if(!$this->image_lib->resize())
+			{
+				$error = $this->image_lib->display_errors();
+				echo "<pre>";print_r($error);die;	
+			}
+			
+				
 			$blog_image=$picture['file_name'];
 			if($this->input->post('pre_blog_image')!='')
 				{
@@ -92,9 +111,28 @@ class Blog_model extends CI_Model
               if (!$this->upload->do_upload())
 			  {
 				$error =  $this->upload->display_errors();
-				echo "<pre>";print_r($error);
+				
 			  } 
-			$picture = $this->upload->data();			
+				$picture = $this->upload->data();
+              $this->load->library('image_lib');		   
+              $this->image_lib->clear();
+			  $gd_var='gd2';
+
+              $this->image_lib->initialize(array(
+				'image_library' => $gd_var,
+				'source_image' => base_path().'upload/blogimage_orig/'.$picture['file_name'],
+				'new_image' => base_path().'upload/blogimage_orig/'.$picture['file_name'],
+				'maintain_ratio' => FALSE,
+				'quality' => '100%',
+				'width' => 300,
+				'height' => 300
+			 ));
+			if(!$this->image_lib->resize())
+			{
+				$error = $this->image_lib->display_errors();
+				//echo "<pre>";print_r($error);die;	
+			}
+				//echo "<pre>";print_r($picture['file_name']);die;	
 			$blog_image=$picture['file_name'];
 			if($this->input->post('pre_blog_image')!='')
 				{
@@ -117,7 +155,7 @@ class Blog_model extends CI_Model
 			'blog_desc' => trim($this->input->post('blogdesc')),
 			'blog_image'=>$blog_image,		
 			'IsActive' => $this->input->post('IsActive'),			
-			'created_date'=>date('Y-m-d  H:i:s')		
+			'created_date'=>date('Y-m-d H:i:s')		
 			);
 			// echo "<pre>";print_r($data);die;
 		    $this->db->where("blog_id",$this->input->post('blogid'));
