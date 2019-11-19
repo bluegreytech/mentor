@@ -189,6 +189,27 @@
                     </li>
 
              </li>
+
+              <li class="nav-item">
+                      <a><i class="icon-list"></i><span data-i18n="nav.dash.main" class="menu-title">About</span>
+                      </a>
+                      <ul class="menu-content">
+                          
+                          <li>
+                          <a href="<?php echo base_url(); ?>About/" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> About </a>
+                          </li>
+                           <li>
+                          <a href="<?php echo base_url(); ?>About/contact_list" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> Contact list </a>
+                          </li>
+                           <li>
+                          <a href="<?php echo base_url(); ?>About/partnercatlist" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> Partners category </a>
+                          </li>
+                          <li>
+                          <a href="<?php echo base_url(); ?>About/partners" data-i18n="nav.dash.main" class="menu-item"><i class="icon-file-text2"></i> Partners  </a>
+                          </li>
+                      </ul>
+                    </li>
+
               <li class="nav-item">
                   <a href="<?php echo base_url(); ?>home/importotpdata"><i class="icon-upload"></i><span data-i18n="nav.dash.main" class="menu-title">Import OTP Code</span>
                   </a>

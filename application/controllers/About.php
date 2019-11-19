@@ -6,11 +6,12 @@ class About extends CI_Controller {
 	public function __construct()
 	{
       	parent::__construct();
-		//$this->load->model('Login_model');
+		$this->load->model('Blog_model');
       
 	}
 	
 	 public function index(){
+	 	//$data['about']=$this->Blog_model->getabout();
 		$this->load->view('About/Aboutus');
 	 }
 

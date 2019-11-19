@@ -38,7 +38,10 @@
 									<label>Why choose Mentor?</label>
 									<textarea type="text" class="form-control" name="choosementor" id="choosementor"><?php echo $site_choosementor; ?></textarea>
 								</div>
-
+                               <div class="form-group">
+									<label>6 Steps Assessment Youtube link</label>
+									<input type="text" class="form-control" name="mentor_step_link" id="mentor_step_link" value="<?php echo $mentor_step_link;?>">
+								</div>
 								<h4 class="form-section"><i class="icon-link4"></i>Social link</h4>
 							    <br>
 								<div class="form-group">

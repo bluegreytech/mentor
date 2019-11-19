@@ -532,6 +532,22 @@ $this->db->select('*');
     $query=$this->db->get();
     return $query->result();
  }
-
+function getabout(){
+    $this->db->select("*");
+    $this->db->from("tblabout");
+    $this->db->order_by('about_id','DESC');
+    $this->db->limit(1);
+    $query=$this->db->get();
+    return $query->result();
+  }
+  function getcontacts(){
+    $this->db->select("*");
+    $this->db->from("tblcontact");
+    $this->db->order_by('cid','ASC');
+    $this->db->where('IsActive','Active');
+    $this->db->where('Is_deleted','0');
+    $query=$this->db->get();
+    return $query->result();
+  }
  }
  

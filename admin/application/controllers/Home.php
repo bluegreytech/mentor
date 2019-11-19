@@ -482,6 +482,7 @@ class Home extends CI_Controller {
 		//echo "<pre>";print_r($result);die;
 		//$result=get_one_record('tblsitesetting',$this->session->userdata('AdminId'));
 		$data['sitesetting_id']	=$result['sitesetting_id'];
+		$data['mentor_step_link']=$result['mentor_step_link'];
 		$data['student_payment']=$result['student_payment'];	
 		$data['tollfree_number']=$result['tollfree_number'];
 		$data["facebook_link"] 	= $result['facebook_link'];

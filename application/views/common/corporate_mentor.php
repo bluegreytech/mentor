@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
+$site_address=(isset($setting[0]->site_address)!='')?$setting[0]->site_address:"";
 ?>
 
    <!--SECTION START-->
@@ -20,79 +21,36 @@ $this->load->view('common/header');
                             <div class="row">
                                 <div class="col-md-12 col-sm-6 col-xs-12 new-con new-con3">
                                     <h4>Address</h4>
-                                    <p>Payal Complex, Mentor , 305 , <br>D Wing Above Manish Book, Opp. M.S. University, Vadodara, Gujarat.</p>
+                                    <p><?php echo $site_address?></p>
                                 </div>
                             </div>
+                            <?php
+                            $x=0;
+                            foreach($contacts as $val){
+                                if($x%2==0){
+
+
+                              ?>
+
                             <div class="row">
+                                <?php
+                                }
+                            ?>
                                 <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Personal Career Counselling of Students / Working Professionals  </h4>
-                                    <p> <a href="tel:+919662246708" class="contact-icon">Phone:  +91 9662 246708</a>
-                                         <br> <a href="mailto:togethermentor01@gmail.com" class="contact-icon">Email: togethermentor01@gmail.com</a> 
-                                    </p>
+                                    <h4><?php echo $val->contact_title?> </h4>
+                                  <?php echo $val->contact_desc?>
                                 </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Becoming An Independent Career Counsellor in your Location </h4>
-                                    <p> <a href="tel:+919662246708" class="contact-icon">Phone: +91 96622 46708</a>
-                                         <br> <a href="mailto:togethermentor01@gmail.com" class="contact-icon">Email: togethermentor01@gmail.com</a> 
-                                    </p>
-                                </div>
+                            <?php
+                            $x++;
+                            if($x%2==0){
+                                ?>
+                            
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For WorldWide Higher Education / Study Abroad & Scholarships Applications  </h4>
-                                    <p> <a href="tel:+918128738522" class="contact-icon">Phone: +91 81287 38522</a><br>
-                                        <a href="tel:+919825503811" class="contact-icon">Phone: + 91 98255 03811</a><br>
-                                        <a href="mailto:mentor.study01@gmail.com" class="contact-icon">Email: mentor.study01@gmail.com   </a> <br>
-                                        <a href="mailto:mentorcare.info@gmail.com" class="contact-icon">Email: mentorcare.info@gmail.com </a> 
-                                    </p>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For MBBS, Post Graduation in Medicine, FMGE, USMLE, AMC  </h4>
-                                    <p> <a href="tel:+919099511711" class="contact-icon">Phone: +91 90995 11711</a></br>
-                                        <a href="tel:+919662912631" class="contact-icon">Phone: +91 96629 12631</a><br>
-                                        <a href="mailto:mentorcare@gmail.com" class="contact-icon">Email: mentorcare@gmail.com </a> <br>
-                                        <a href="mailto:indiamentor7@gmail.com" class="contact-icon">Email: indiamentor7@gmail.com  </a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>To Know More About Our Specialised Seminars or Workshops For School / College / University </h4>
-                                    <p> <a href="tel:+919662246708" class="contact-icon">Phone: +91 9662 246708</a>
-                                         <br> <a href="mailto:togethermentor01@gmail.com" class="contact-icon">Email: togethermentor01@gmail.com</a> 
-                                    </p>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Getting Touch with Accounts Department </h4>
-                                    <p> <a href="tel:+919157934938" class="contact-icon">Phone: +91 91579 34938</a>
-                                         <br> <a href="mailto:accounts.vadodara.mentor@gmail.com " class="contact-icon">Email: accounts.vadodara.mentor@gmail.com </a> 
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Getting Your Article Published In Our Career Magazine & Our Blogs </h4>
-                                    <p> <a href="mailto: mentor.trust05@gmail.com" class="contact-icon">Email:  mentor.trust05@gmail.com </a> 
-                                    </p>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Corporate Associations / Partnerships</h4>
-                                    <p> <a href="mailto:mentorcare@gmail.com" class="contact-icon">Email: mentorcare@gmail.com </a> 
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Career With Us </h4>
-                                    <p> <a href="mailto:mentor.study01@gmail.com" class="contact-icon">Email: mentor.study01@gmail.com </a> 
-                                    </p>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-12 new-con new-con3">
-                                    <h4>For Becoming A Career Ambassador  </h4>
-                                    <p> <a href="mailto:mentor.trust01@gmail.com" class="contact-icon">Email: mentor.trust01@gmail.com</a> 
-                                    </p>
-                                </div>
-                            </div>
+                            <?php
+                        }
+                        }
+                        ?>
+                           
                         </div>
                     </div>
                    

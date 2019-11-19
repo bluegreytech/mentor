@@ -478,8 +478,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </ul>
                     </div>
                     </div>
+                    <?php 
+                    $mentor_step_link=(isset($setting[0]->mentor_step_link)!='')?$setting[0]->mentor_step_link:"";
+                    ?>
                     <div class="col-md-6" style="padding:20px 0px">
-                        <iframe width="100%" height="450" src="https://www.youtube.com/embed/24HqSC9antg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="100%" height="450" src="<?php echo $mentor_step_link?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -587,22 +590,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
         </div>
     </section>
-
+<?php
+$about_title=(isset($about[0]->about_title)!='')?$about[0]->about_title:"";
+$about_desc=(isset($about[0]->about_desc)!='')?$about[0]->about_desc:"";
+$about_img=(isset($about[0]->about_img)!='')?$about[0]->about_img:"";
+?>
     <section style="background-color: #f5f5f5;">
         <div class="container com-sp">
             <div class="row">
                 <div class="con-title">
-                    <h2>About Us</h2>
+                    <h2><?php echo $about_title  ?></h2>
                 </div>
             </div>
             <div class="row">
                 <!--First Blog-->
                 <div class="col-md-6 text-justify">
-                    <p>MENTOR Knowledge Management Pvt Ltd is creating wonders positively since 2004 by assisting parents and students to improve the way they are taking decisions and also the way they are implementing them in terms of education and career for a better tomorrow.  It is associating career life cycle with the fusion of technology and human intervene involving all three stages of career life cycle i.e Career Mentoring, Career Establishing and Career Habitatiating which ensures the better and brighter career of a student and contentment for parents. MENTOR FPG associates includes universities, colleges, schools and educators from various fields in education sector world wide.</p>
-                    <p>Mentor FPG is an initiative of Mentor Knowledge Management Pvt ltd and Sanskar Bharti Foundation, an education and research organization, founded in 2004 with a vision of becoming “First Choice of People”. </p>
+                   <?php echo $about_desc  ?>
                 </div>
                 <div class="col-md-6">
-                    <img src="<?php base_url(); ?>default/images/about-us.png" class="img-responsive">
+                    <img src="<?php base_url(); ?>admin/upload/helpimg/<?php echo  $about_img?>" class="img-responsive">
                 </div>
                 <!--Second Blog-->
             </div>

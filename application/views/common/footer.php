@@ -1,5 +1,11 @@
  <?php $sitedata=site_setting();
  //echo "<pre>";print_r($sitedata);die;
+
+  $sql = "SELECT * FROM tblabout ORDER BY about_id DESC limit 1";
+ $query = $this->db->query($sql);
+ $about=($query->result());
+ $about_desc=(isset($about[0]->about_desc)!='')?$about[0]->about_desc:"";
+ $desc=substr($about_desc,0,200);
  ?>
 <!-- FOOTER -->
     <section class="wed-hom-footer">
@@ -7,13 +13,13 @@
             <div class="row wed-foot-link">
                 <div class="col-md-4 foot-tc-mar-t-o">
                     <h4>How We Help</h4>
-                    <p>At the Center for Academic and Career Development at MENTOR FPG , we envision the education & career development as a journey. Beginning with a student’s first step outside home , onto any campus and continuing through participation...<a href="<?php echo base_url()?>home/about_us" style="color:#bb342f;">Read More</a></p>
+                    <p><?php echo $desc?>...<a href="<?php echo base_url()?>home/about_us" style="color:#bb342f;">Read More</a></p>
                 </div>
                 <div class="col-md-4">
                     <h4>Popular Careers</h4>
                     <ul>
                         <?php
-                             $sql = "SELECT * FROM tblcareer_library  ORDER BY id DESC limit 5";
+                             $sql = "SELECT * FROM tblcareer_library  where Is_deleted='0' ORDER BY id DESC limit 5";
  $query = $this->db->query($sql);
  $career=($query->result());
  foreach($career as $val){
@@ -33,7 +39,7 @@
                     <h4>Popular Blogs</h4>
                     <ul>
                           <?php
-                             $sql1 = "SELECT * FROM tblblog  ORDER BY blog_id DESC limit 5";
+                             $sql1 = "SELECT * FROM tblblog  where Is_deleted='0' AND IsActive='Active' ORDER BY blog_id DESC limit 5";
  $query1 = $this->db->query($sql1);
  $blog=($query1->result());
  foreach($blog as $val){

@@ -376,6 +376,7 @@ class Login_model extends CI_Model
       $data=array(       
         'site_address'=>$this->input->post('address'),
         'student_payment'=>$this->input->post('student_payment'),
+        'mentor_step_link'=>$this->input->post('mentor_step_link'),
         'tollfree_number'=>$this->input->post('tollfree_number'),          
         'site_choosementor'=>$this->input->post('choosementor'),
         'facebook_link'=>$this->input->post('fblink'),

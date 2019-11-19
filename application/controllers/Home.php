@@ -14,7 +14,8 @@ class Home extends CI_Controller
 
     function index(){
     	 $data['category1']=$this->home_model->getcategory();
-    	 
+    	 $data['about']=$this->home_model->getabout();
+	     $data['setting']=$this->home_model->getsetting();
     	$data['latest_blog']=$this->home_model->latest_blog();
     	$this->load->view('common/Home',$data);
     }
@@ -355,7 +356,9 @@ class Home extends CI_Controller
 	}
 	public function About_us()
 	{	
-		$this->load->view('common/Aboutus');
+		$data['about']=$this->home_model->getabout();
+
+		$this->load->view('common/Aboutus',$data);
 	}
 	function success(){
 		//$data['success']=$this->home_model->getsuccess();
@@ -506,7 +509,9 @@ class Home extends CI_Controller
 			$this->home_model->insertcontact();
 			redirect('home/corporate_mentor');
 		}
-		$this->load->view('common/corporate_mentor');
+		$data['setting']=$this->home_model->getsetting();
+		$data['contacts']=$this->home_model->getcontacts();
+		$this->load->view('common/corporate_mentor',$data);
 
 	}
 	function pricing_plan(){

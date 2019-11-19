@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 $this->load->view('common/header');
+$about_desc=(isset($about[0]->about_desc)!='')?$about[0]->about_desc:"";
+//echo $about_desc;
 ?>
 
 
@@ -17,7 +19,7 @@ $this->load->view('common/header');
                     </div>
                     <div class="pg-contact">
                         <div class="col-md-12 text-justify">
-                            <p>Mentor Education & Career Development Center is an initiative of MENTOR Knowledge Management Pvt Ltd which is creating wonders positively since 2004 by assisting parents and students to improve the way they are taking career decisions and also the way they are implementing them for a better tomorrow. It is associating career life cycle with the fusion of technology and human intervene involving all three stages of career life cycle i.e Career Mentoring, Career Establishing and Career Habitatiating which ensures the better and brighter career of a student and contentment for parents. MENTOR associates includes universities, colleges, schools and educators from various fields in education sector world wide.</p>
+                            <p><?php echo $about_desc?></p>
                         </div>
                     </div>
                 </div>
